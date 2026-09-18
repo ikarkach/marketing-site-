@@ -1,0 +1,33 @@
+{{- $title := printf "%s%s" (.Title | markdownify) (cond (ne .Title .Site.Title) (printf " - %s" (.Site.Title | markdownify)) "") -}}
+{{- $desc := cond (ne .Description "") .Description .Site.Params.description -}}
+
+<link rel="canonical" href="{{ .Permalink }}"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:description" content="{{ $desc }}"/>
+<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:site_name" content="{{ .Site.Title | markdownify }}"/>
+
+{{ $ogImages := slice }}
+{{ with .Resources.ByType "image" }}
+{{ range first 5 (sort . "Params.weight") }}
+{{ $ogImages = $ogImages | append .Permalink }}
+<meta property="og:image" content="{{ .Permalink }}"/>
+{{ end }}
+{{ else }}
+{{ with .Site.GetPage "page" "/home" }}
+{{ range first 5 (.Resources.ByType "image") }}
+{{ $ogImages = $ogImages | append .Permalink }}
+<meta property="og:image" content="{{ .Permalink }}"/>
+{{ end }}
+{{ end }}
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="{{ if $ogImages }}summary_large_image{{ else }}summary{{ end }}" />
+{{ with .Site.Params.twitteruser }}<meta name="twitter:site" content="@{{ . }}" />{{ end }}
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $desc }}" />
+{{ with index $ogImages 0 }}<meta name="twitter:image" content="{{ . }}" />{{ end }}

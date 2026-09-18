@@ -1,0 +1,9 @@
+[build]
+  base = "."
+  publish = "docs"
+  command = "npm run build && npm run check:html"
+
+[build.environment]
+  HUGO_VERSION = "0.165.0"
+  NODE_VERSION = "24"
+  NPM_FLAGS = "--ignore-scripts"

@@ -1,0 +1,39 @@
+name: test-versions
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        hugo: ['0.163.0', 'latest']
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Install locked build tools
+        run: npm ci --ignore-scripts
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ matrix.hugo }}
+          extended: true
+      - name: Test production build regressions
+        run: npm test
+      - name: Build example site
+        run: npm run build
+      - name: Check generated HTML links and assets
+        run: npm run check:html

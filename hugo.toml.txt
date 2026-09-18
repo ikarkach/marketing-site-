@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+gitbaseURL = 'https://example.org/'
 locale = 'ru-RU'
 title = 'USPLIT'
 theme = 'introduction'

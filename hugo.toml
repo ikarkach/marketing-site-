@@ -8,7 +8,7 @@ theme = 'introduction'
   showMenu      = true
   fadeIn        = true
   favicon       = "favicon.png"
-  customCSS     = ["css/tables.css"]
+  customCSS     = ["css/tables.css", "css/buttons.css"]
   dateFormat    = "2 January 2006"
   email         = "karkachev2010@yandex.ru"
   description   = "Продажа, монтаж и сервисное обслуживание кондиционеров и вентиляции"
@@ -35,6 +35,14 @@ theme = 'introduction'
     url       = "tel:+79604777114"
     icon      = "phone"
     icon_pack = "fas"
+  [[params.social]]
+    url       = "https://wa.me/79604777114"
+    icon      = "whatsapp"
+    icon_pack = "fab"
+  [[params.social]]
+    url       = "https://t.me/+79604777114"
+    icon      = "telegram"
+    icon_pack = "fab"
 
 [taxonomies]
   tag = "tags"

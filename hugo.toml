@@ -1,12 +1,13 @@
 baseURL = 'https://example.org/'
 locale = 'ru-RU'
-title = 'USPLIT'
+title = 'Usplit'
 theme = 'introduction'
 
 [params]
   themeStyle    = "auto"                                   # "light", "dark" или "auto"
   showMenu      = true
   fadeIn        = true
+  favicon       = "favicon.png"
   customCSS     = ["css/tables.css"]
   dateFormat    = "2 January 2006"
   email         = "karkachev2010@yandex.ru"

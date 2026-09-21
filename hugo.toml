@@ -27,7 +27,7 @@ theme = 'introduction'
     pinterest = false
 
   [[params.social]]
-    url       = "mailto:info@climat-service.ru"
+    url       = "mailto:karkachev2010@yandex.ru"
     icon      = "paper-plane"
     icon_pack = "fas"
   [[params.social]]

@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 locale = 'ru-RU'
-title = 'КлиматСервис'
+title = 'USPLIT'
 theme = 'introduction'
 
 [params]
@@ -8,7 +8,7 @@ theme = 'introduction'
   showMenu      = true
   fadeIn        = true
   dateFormat    = "2 January 2006"
-  email         = "info@climat-service.ru"
+  email         = "karkachev2010@yandex.ru"
   description   = "Продажа, монтаж и сервисное обслуживание кондиционеров и вентиляции"
 
   [params.home]
@@ -30,7 +30,7 @@ theme = 'introduction'
     icon      = "paper-plane"
     icon_pack = "fas"
   [[params.social]]
-    url       = "tel:+70000000000"
+    url       = "tel:+79604777114"
     icon      = "phone"
     icon_pack = "fas"
 

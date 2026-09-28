@@ -81,7 +81,7 @@ jobs:
             echo "host_bucket = %(bucket)s.s3.storage.selcloud.ru"
             echo "bucket_location = ru-1"
             echo "use_https = True"
-            echo "signature_v2 = False"
+            echo "signature_v2 = True"
           } > "$HOME/.s3cfg"
 
       - name: Upload to bucket

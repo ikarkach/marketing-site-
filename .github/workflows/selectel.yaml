@@ -1,0 +1,90 @@
+name: Deploy to Selectel S3
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: selectel
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.166.0
+      SITE_URL: https://usplitonline.ru/
+      S3_ACCESS_KEY: ${{ secrets.SELECTEL_S3_ACCESS_KEY }}
+      S3_SECRET_KEY: ${{ secrets.SELECTEL_S3_SECRET_KEY }}
+      S3_BUCKET: ${{ secrets.SELECTEL_S3_BUCKET }}
+    steps:
+      - name: Check secrets
+        id: check
+        run: |
+          if [ -z "$S3_ACCESS_KEY" ] || [ -z "$S3_SECRET_KEY" ] || [ -z "$S3_BUCKET" ]; then
+            echo "::warning::Secrets SELECTEL_S3_ACCESS_KEY, SELECTEL_S3_SECRET_KEY, SELECTEL_S3_BUCKET are not set - deploy skipped."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install Hugo (extended)
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          wget -O "${RUNNER_TEMP}/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+
+      - name: Checkout
+        if: steps.check.outputs.ready == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: steps.check.outputs.ready == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install theme dependencies (PostCSS)
+        if: steps.check.outputs.ready == 'true'
+        working-directory: themes/introduction
+        run: npm ci --ignore-scripts
+
+      - name: Build site
+        if: steps.check.outputs.ready == 'true'
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          export PATH="$PWD/themes/introduction/node_modules/.bin:$PATH"
+          hugo --gc --minify --baseURL "$SITE_URL"
+
+      - name: Install s3cmd
+        if: steps.check.outputs.ready == 'true'
+        run: pip install s3cmd
+
+      - name: Configure s3cmd for Selectel (ru-1)
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          umask 077
+          {
+            echo "[default]"
+            echo "access_key = ${S3_ACCESS_KEY}"
+            echo "secret_key = ${S3_SECRET_KEY}"
+            echo "host_base = s3.ru-1.storage.selcloud.ru"
+            echo "host_bucket = %(bucket)s.s3.ru-1.storage.selcloud.ru"
+            echo "bucket_location = ru-1"
+            echo "use_https = True"
+            echo "signature_v2 = False"
+          } > "$HOME/.s3cfg"
+
+      - name: Upload to bucket
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          s3cmd sync --acl-public --delete-removed --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/"

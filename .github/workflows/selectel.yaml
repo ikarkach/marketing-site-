@@ -87,5 +87,5 @@ jobs:
       - name: Upload to bucket
         if: steps.check.outputs.ready == 'true'
         run: |
-          s3mcd sync --acl-public --delete-removed --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/" 
+        s3cmd sync --acl-public --delete-removed --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/" 
           

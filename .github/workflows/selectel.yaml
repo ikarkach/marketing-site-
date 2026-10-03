@@ -89,11 +89,12 @@ jobs:
             echo "host_base = s3.ru-1.storage.selcloud.ru"
             echo "host_bucket = %(bucket)s.s3.ru-1.storage.selcloud.ru"
             echo "bucket_location = ru-1"
-            echo "use_https = True"
-            echo "signature_v2 = False"
+            echo "use_https = true"
+            echo "signature_v2 = false"
           } > "$HOME/.s3cfg"
 
       - name: Upload to bucket
         if: steps.check.outputs.ready == 'true'
         run: |
           s3cmd sync --acl-public --delete-removed --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/"
+          

@@ -1,0 +1,2671 @@
+{
+ "priceDate": "15.09.2026",
+ "pages": {
+  "hisense-nastennye": [
+   {
+    "id": "sensation",
+    "title": "Hisense Sensation Slider Pro",
+    "images": [
+     {
+      "file": "sensation-1.webp",
+      "alt": "Hisense Sensation Slider Pro — внутренний блок",
+      "w": 716,
+      "h": 272
+     }
+    ],
+    "features": [
+     "Класс эффективности A+++/A+++",
+     "FULL ICE CLEAN Очистка всех теплообменников",
+     "Голосовое управление",
+     "От 18 дБ(А) Низкий уровень шума",
+     "Precision flow уникальная жалюзи с поворотом на 90 градусов",
+     "FULL 3 DC Inverter, ЭРВ"
+    ],
+    "tables": [
+     {
+      "title": "Superior",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-10UW4RWMQK00",
+        "cool": "2,95",
+        "heat": "3,55",
+        "eff": "A+++/A+++",
+        "noise": "18–36",
+        "price": 109990
+       },
+       {
+        "model": "AS-13UW4RWMQK00",
+        "cool": "3,9",
+        "heat": "4,45",
+        "eff": "A+++/A+++",
+        "noise": "18–36",
+        "price": 119990
+       }
+      ]
+     },
+     {
+      "title": "Carbon Superior",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-10UW4RWMQK00(B)",
+        "cool": "2,95",
+        "heat": "3,55",
+        "eff": "A+++/A+++",
+        "noise": "18–36",
+        "price": 119490
+       },
+       {
+        "model": "AS-13UW4RWMQK00(B)",
+        "cool": "3,9",
+        "heat": "4,45",
+        "eff": "A+++/A+++",
+        "noise": "18–36",
+        "price": 127490
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "vision",
+    "title": "Hisense Vision Pro 2.0",
+    "images": [],
+    "features": [
+     "Класс эффективности A+++/A+++",
+     "FULL ICE CLEAN Очистка всех теплообменников",
+     "Wi-Fi управление (стандартно)",
+     "От 18 дБ(А) Низкий уровень шума",
+     "Интеллектуальный режим Assistant Intelligent",
+     "FULL 3 DC Inverter, ЭРВ"
+    ],
+    "tables": [
+     {
+      "title": "Superior",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-10UW4RXVQH01A",
+        "cool": "2,8",
+        "heat": "3,5",
+        "eff": "A+++/A+++",
+        "noise": "18–33",
+        "price": 84490
+       },
+       {
+        "model": "AS-13UW4RXVQH02",
+        "cool": "3,75",
+        "heat": "4,3",
+        "eff": "A+++/A+++",
+        "noise": "18–33",
+        "price": 91890
+       },
+       {
+        "model": "AS-18UW4RBVQH01",
+        "cool": "5,7",
+        "heat": "5,75",
+        "eff": "A++/A++",
+        "noise": "23–42",
+        "price": 133890
+       }
+      ]
+     },
+     {
+      "title": "Carbon Superior",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-10UW4RXVQH01A(B)",
+        "cool": "2,8",
+        "heat": "3,5",
+        "eff": "A+++/A+++",
+        "noise": "18–33",
+        "price": 92190
+       },
+       {
+        "model": "AS-13UW4RXVQH02(B)",
+        "cool": "3,75",
+        "heat": "4,3",
+        "eff": "A+++/A+++",
+        "noise": "18–33",
+        "price": 101490
+       },
+       {
+        "model": "AS-18UW4RBVQH01(B)",
+        "cool": "5,7",
+        "heat": "5,75",
+        "eff": "A++/A++",
+        "noise": "23–42",
+        "price": 146990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "vibe",
+    "title": "Hisense Vibe Pro EU",
+    "images": [
+     {
+      "file": "vibe-1.webp",
+      "alt": "Hisense Vibe Pro — серебристый",
+      "w": 763,
+      "h": 249
+     },
+     {
+      "file": "vibe-2.webp",
+      "alt": "Hisense Vibe Pro — чёрный",
+      "w": 745,
+      "h": 242
+     },
+     {
+      "file": "vibe-3.webp",
+      "alt": "Hisense Vibe Pro — шампань",
+      "w": 776,
+      "h": 253
+     }
+    ],
+    "features": [
+     "Класс эффективности A++",
+     "Низкий уровень шума от 21 дБ(А)",
+     "Wi-Fi управление (встроенный модуль)",
+     "Дежурный обогрев +8°C",
+     "Антибактериальное покрытие теплообменника",
+     "Silver ion фильтр, фотокаталитический фильтр"
+    ],
+    "tables": [
+     {
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-10UW4RLCHB00(B)",
+        "cool": "2,75",
+        "heat": "2,8",
+        "eff": "A++/A+",
+        "noise": "21–35",
+        "price": 49990
+       },
+       {
+        "model": "AS-13UW4RLCHB00(B)",
+        "cool": "3,7",
+        "heat": "3,8",
+        "eff": "A++/A+",
+        "noise": "21,5–36",
+        "price": 58990
+       },
+       {
+        "model": "AS-18UW4RXPHB00(B)",
+        "cool": "5,85",
+        "heat": "6,05",
+        "eff": "A++/A+",
+        "noise": "24–42",
+        "price": 91990
+       },
+       {
+        "model": "AS-10UW4RLCHD00(S)",
+        "cool": "2,75",
+        "heat": "2,8",
+        "eff": "A++/A+",
+        "noise": "21–35",
+        "price": 49990
+       },
+       {
+        "model": "AS-13UW4RLCHD00(S)",
+        "cool": "3,7",
+        "heat": "3,8",
+        "eff": "A++/A+",
+        "noise": "21,5–36",
+        "price": 58990
+       },
+       {
+        "model": "AS-10UW4RLCHD00(C)",
+        "cool": "2,75",
+        "heat": "2,8",
+        "eff": "A++/A+",
+        "noise": "21–35",
+        "price": 49990
+       },
+       {
+        "model": "AS-13UW4RLCHD00(C)",
+        "cool": "3,7",
+        "heat": "3,8",
+        "eff": "A++/A+",
+        "noise": "21,5–36",
+        "price": 58990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "expert",
+    "title": "Hisense Expert Pro 2.0 EU",
+    "images": [
+     {
+      "file": "expert-1.webp",
+      "alt": "Hisense Expert Pro — внутренний блок",
+      "w": 800,
+      "h": 240
+     }
+    ],
+    "features": [
+     "Класс эффективности A++",
+     "Низкий уровень шума от 20,5 дБ(А)",
+     "Wi-Fi управление (встроенный модуль)",
+     "Дежурный обогрев +8°C",
+     "Антибактериальное покрытие теплообменника",
+     "Silver ion фильтр, фотокаталитический фильтр"
+    ],
+    "tables": [
+     {
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07UW4RLCHC01",
+        "cool": "2,5",
+        "heat": "2,55",
+        "eff": "A++/A+",
+        "noise": "20,5–35",
+        "price": 37690
+       },
+       {
+        "model": "AS-10UW4RLCHC00",
+        "cool": "2,75",
+        "heat": "2,8",
+        "eff": "A++/A+",
+        "noise": "21–35",
+        "price": 40990
+       },
+       {
+        "model": "AS-13UW4RLCHC00",
+        "cool": "3,7",
+        "heat": "3,8",
+        "eff": "A++/A+",
+        "noise": "21,5–36",
+        "price": 49490
+       },
+       {
+        "model": "AS-18UW4RXPHC00",
+        "cool": "5,85",
+        "heat": "6,05",
+        "eff": "A++/A+",
+        "noise": "24–42",
+        "price": 83490
+       },
+       {
+        "model": "AS-24UW4RFWHC00",
+        "cool": "7,6",
+        "heat": "7,7",
+        "eff": "A++/A+",
+        "noise": "25–44",
+        "price": 101990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "goal",
+    "title": "Hisense Goal 2.0",
+    "images": [
+     {
+      "file": "goal-1.webp",
+      "alt": "Hisense Goal 2.0 — внутренний блок",
+      "w": 800,
+      "h": 252
+     }
+    ],
+    "features": [
+     "Класс эффективности A",
+     "Низкий уровень шума от 22,5 дБ(А)",
+     "Wi-Fi управление (встроенный модуль)",
+     "4D Auto Air",
+     "5 скоростей вентилятора",
+     "Фотокаталитический фильтр, Угольный фильтр"
+    ],
+    "tables": [
+     {
+      "title": "Инверторные",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07UW4RYRKJ00",
+        "cool": "2,3",
+        "heat": "2,3",
+        "eff": "A/A",
+        "noise": "22,5–33",
+        "price": 33990
+       },
+       {
+        "model": "AS-09UW4RYRKJ05",
+        "cool": "2,72",
+        "heat": "2,75",
+        "eff": "A/A",
+        "noise": "22,5–37,5",
+        "price": 37290
+       },
+       {
+        "model": "AS-13UW4RYRKJ04",
+        "cool": "3,7",
+        "heat": "3,75",
+        "eff": "A/A",
+        "noise": "23–39",
+        "price": 45290
+       },
+       {
+        "model": "AS-18UW4RMSKJ01",
+        "cool": "5,65",
+        "heat": "5,75",
+        "eff": "A/A",
+        "noise": "27–43",
+        "price": 75990
+       },
+       {
+        "model": "AS-24UW4RBTKJ00",
+        "cool": "7,55",
+        "heat": "7,53",
+        "eff": "A/A",
+        "noise": "31–43",
+        "price": 93890
+       }
+      ]
+     },
+     {
+      "title": "Классические (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07HW4RLRKJ00A",
+        "cool": "2,4",
+        "heat": "2,5",
+        "eff": "A/A",
+        "noise": "23,5–31,5",
+        "price": 27490
+       },
+       {
+        "model": "AS-09HW4RLRKJ01A",
+        "cool": "2,7",
+        "heat": "2,7",
+        "eff": "A/A",
+        "noise": "23,5–31,5",
+        "price": 29790
+       },
+       {
+        "model": "AS-12HW4RLRKJ01A",
+        "cool": "3,45",
+        "heat": "3,55",
+        "eff": "A/A",
+        "noise": "27,5–34",
+        "price": 40390
+       },
+       {
+        "model": "AS-18HW4RMSKJ00",
+        "cool": "5,5",
+        "heat": "5,7",
+        "eff": "A/A",
+        "noise": "33,5–42",
+        "price": 65290
+       },
+       {
+        "model": "AS-24HW4RBSKJ00",
+        "cool": "7",
+        "heat": "7,1",
+        "eff": "A/B",
+        "noise": "33,5–43",
+        "price": 81190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "city",
+    "title": "Hisense City 2.0",
+    "images": [
+     {
+      "file": "city-1.webp",
+      "alt": "Hisense City 2.0 — внутренний блок",
+      "w": 800,
+      "h": 228
+     }
+    ],
+    "features": [
+     "Класс эффективности A",
+     "Низкий уровень шума от 22,5 дБ(А)",
+     "Wi-Fi управление (встроенный модуль)",
+     "Защитная накладка на вентили",
+     "5 скоростей вентилятора",
+     "Двухстороннее подключение дренажа"
+    ],
+    "tables": [
+     {
+      "title": "Инверторные",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07UW4RYRKA01",
+        "cool": "2,3",
+        "heat": "2,3",
+        "eff": "A/A",
+        "noise": "22,5–33",
+        "price": 32490
+       },
+       {
+        "model": "AS-09UW4RYRKA06",
+        "cool": "2,72",
+        "heat": "2,75",
+        "eff": "A/A",
+        "noise": "22,5–37,5",
+        "price": 35690
+       },
+       {
+        "model": "AS-13UW4RYRKA05",
+        "cool": "3,7",
+        "heat": "3,75",
+        "eff": "A/A",
+        "noise": "23–39",
+        "price": 42890
+       },
+       {
+        "model": "AS-18UW4RMSKA01",
+        "cool": "5,65",
+        "heat": "5,75",
+        "eff": "A/A",
+        "noise": "27–43",
+        "price": 71790
+       },
+       {
+        "model": "AS-24UW4RBTKA00",
+        "cool": "7,55",
+        "heat": "7,53",
+        "eff": "A/A",
+        "noise": "31–43",
+        "price": 89790
+       }
+      ]
+     },
+     {
+      "title": "Классические (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07HW4RLRKA00",
+        "cool": "2,35",
+        "heat": "2,45",
+        "eff": "A/A",
+        "noise": "23,5–32",
+        "price": 25390
+       },
+       {
+        "model": "AS-09HW4RLRKA01",
+        "cool": "2,6",
+        "heat": "2,6",
+        "eff": "A/A",
+        "noise": "23,5–32",
+        "price": 27790
+       },
+       {
+        "model": "AS-12HW4RLRKA01",
+        "cool": "3,4",
+        "heat": "3,4",
+        "eff": "A/A",
+        "noise": "27,5–35",
+        "price": 37790
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "zoom",
+    "title": "Hisense Zoom 2.0",
+    "images": [],
+    "features": [
+     "Класс эффективности A",
+     "Дежурный обогрев +8°C",
+     "Wi-Fi управление (встроенный модуль)",
+     "ULTRA High Density",
+     "Серия устойчива к перепадам напряжения сети",
+     "Низкий уровень шума от 22,5 дБ(А)"
+    ],
+    "tables": [
+     {
+      "title": "Инверторные",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07UW4RYRKB01",
+        "cool": "2,3",
+        "heat": "2,3",
+        "eff": "A/A",
+        "noise": "22,5–33",
+        "price": 30490
+       },
+       {
+        "model": "AS-09UW4RYRKB06",
+        "cool": "2,72",
+        "heat": "2,75",
+        "eff": "A/A",
+        "noise": "22,5–37,5",
+        "price": 34290
+       },
+       {
+        "model": "AS-13UW4RYRKB05",
+        "cool": "3,7",
+        "heat": "3,75",
+        "eff": "A/A",
+        "noise": "23–39",
+        "price": 42190
+       },
+       {
+        "model": "AS-18UW4RMSKB02",
+        "cool": "5,65",
+        "heat": "5,75",
+        "eff": "A/A",
+        "noise": "27–43",
+        "price": 70790
+       },
+       {
+        "model": "AS-24UW4RBTKB01",
+        "cool": "7,55",
+        "heat": "7,53",
+        "eff": "A/A",
+        "noise": "31–43",
+        "price": 88190
+       }
+      ]
+     },
+     {
+      "title": "Классические (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07HW4RLRKB00",
+        "cool": "2,35",
+        "heat": "2,45",
+        "eff": "A/A",
+        "noise": "23,5–32",
+        "price": 22490
+       },
+       {
+        "model": "AS-09HW4RLRKB01",
+        "cool": "2,6",
+        "heat": "2,6",
+        "eff": "A/A",
+        "noise": "23,5–32",
+        "price": 24590
+       },
+       {
+        "model": "AS-12HW4RLRKB01",
+        "cool": "3,4",
+        "heat": "3,4",
+        "eff": "A/A",
+        "noise": "27,5–35",
+        "price": 33890
+       },
+       {
+        "model": "AS-18HW4RMSKB00",
+        "cool": "5,5",
+        "heat": "5,7",
+        "eff": "A/A",
+        "noise": "33,5–42",
+        "price": 56090
+       },
+       {
+        "model": "AS-24HW4RBSKB00",
+        "cool": "7",
+        "heat": "7,1",
+        "eff": "A/B",
+        "noise": "33,5–43",
+        "price": 70690
+       },
+       {
+        "model": "AS-30HR4RBFKB00",
+        "cool": "8,81",
+        "heat": "8,55",
+        "eff": "A/A",
+        "noise": "35–49",
+        "price": 88490
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "zoomw",
+    "title": "Hisense Zoom 2.0 с доработкой зимним комплектом",
+    "images": [],
+    "features": [],
+    "tables": [
+     {
+      "title": "Инверторные",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07UW4RYRKB01 с Зимним комплектом",
+        "cool": "2,3",
+        "heat": "2,3",
+        "eff": "A/A",
+        "noise": "22,5–33",
+        "price": 45390
+       },
+       {
+        "model": "AS-09UW4RYRKB06 с Зимним комплектом",
+        "cool": "2,72",
+        "heat": "2,75",
+        "eff": "A/A",
+        "noise": "22,5–37,5",
+        "price": 49190
+       },
+       {
+        "model": "AS-13UW4RYRKB05 с Зимним комплектом",
+        "cool": "3,7",
+        "heat": "3,75",
+        "eff": "A/A",
+        "noise": "23–39",
+        "price": 57090
+       },
+       {
+        "model": "AS-24UW4RBTKB01 с Зимним комплектом",
+        "cool": "7,55",
+        "heat": "7,53",
+        "eff": "A/A",
+        "noise": "31–43",
+        "price": 103090
+       }
+      ]
+     },
+     {
+      "title": "Классические (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-07HW4RLRKB00 с зимним комплектом",
+        "cool": "2,35",
+        "heat": "2,45",
+        "eff": "A/A",
+        "noise": "23,5–32",
+        "price": 34290
+       },
+       {
+        "model": "AS-09HW4RLRKB01 с зимним комплектом",
+        "cool": "2,6",
+        "heat": "2,6",
+        "eff": "A/A",
+        "noise": "23,5–32",
+        "price": 36390
+       },
+       {
+        "model": "AS-12HW4RLRKB01 с зимним комплектом",
+        "cool": "3,4",
+        "heat": "3,4",
+        "eff": "A/A",
+        "noise": "27,5–35",
+        "price": 45690
+       },
+       {
+        "model": "AS-18HW4RMSKB00 с зимним комплектом",
+        "cool": "5,5",
+        "heat": "5,7",
+        "eff": "A/A",
+        "noise": "33,5–42",
+        "price": 67890
+       },
+       {
+        "model": "AS-24HW4RBSKB00 с зимним комплектом",
+        "cool": "7",
+        "heat": "7,1",
+        "eff": "A/B",
+        "noise": "33,5–43",
+        "price": 82490
+       },
+       {
+        "model": "AS-30HR4RBFKB00 с зимним комплектом",
+        "cool": "8,81",
+        "heat": "8,55",
+        "eff": "A/A",
+        "noise": "35–49",
+        "price": 100290
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "strong",
+    "title": "Hisense Strong Vibe Classic A",
+    "images": [
+     {
+      "file": "strong-1.webp",
+      "alt": "Hisense Strong Vibe Classic A — внутренний блок",
+      "w": 800,
+      "h": 266
+     }
+    ],
+    "features": [
+     "Энергоэффективность класса А",
+     "7 скоростей вентилятора",
+     "Wi-Fi управление (встроенный модуль)",
+     "LTC Filter, Active carbon filter",
+     "4D-AUTO Air",
+     "Шумоизоляция компрессора"
+    ],
+    "tables": [
+     {
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AS-36HW4RKZHB",
+        "cool": "10",
+        "heat": "10,5",
+        "eff": "A/A",
+        "noise": "38–49",
+        "price": 133990
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "hisense-polupromyshlennye": [
+   {
+    "id": "kass",
+    "title": "Кассетные",
+    "images": [
+     {
+      "file": "kass-1.webp",
+      "alt": "Hisense кассетный кондиционер",
+      "w": 571,
+      "h": 425
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "title": "Классические HEAVY 2.0 (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AUC-18HR4RCC2 + PE-QEA/LD + AUW-18H4RS2",
+        "cool": "5,3",
+        "heat": "5,8",
+        "eff": "A/A",
+        "noise": "38–46",
+        "price": 82490
+       },
+       {
+        "model": "AUC-24HR4RJC2 + PE-QFA/CD + AUW-24H4RF2",
+        "cool": "7,4",
+        "heat": "8",
+        "eff": "A/A",
+        "noise": "36–41",
+        "price": 105890
+       },
+       {
+        "model": "AUC-36HR4RKC2 + PE-QFA/CD + AUW-36H6RK2",
+        "cool": "11,1",
+        "heat": "11,5",
+        "eff": "A/A",
+        "noise": "44–50",
+        "price": 139690
+       },
+       {
+        "model": "AUC-48HR4RKC2 + PE-QFA/CD + AUW-48H6RQ2",
+        "cool": "14,6",
+        "heat": "15,5",
+        "eff": "A/A",
+        "noise": "47–53",
+        "price": 160790
+       },
+       {
+        "model": "AUC-60HR4RKC2 + PE-QFA/CD + AUW-60H6RN2",
+        "cool": "17",
+        "heat": "17,6",
+        "eff": "A/A",
+        "noise": "47–53",
+        "price": 196190
+       }
+      ]
+     },
+     {
+      "title": "Инверторные HEAVY EU DC Inverter A++",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "ACT-12UR4RCC8/AUW-12U4RS8/PE-QEA/LD",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A++/A++",
+        "noise": "30–38",
+        "price": 115990
+       },
+       {
+        "model": "ACT-18UR4RCC8/AUW-18U4RS7/PE-QEA/LD",
+        "cool": "5",
+        "heat": "5,5",
+        "eff": "A++/A+",
+        "noise": "34–42",
+        "price": 123290
+       },
+       {
+        "model": "ACT-24UR4RJC8/AUW-24U4RJ7/PE-QFA/CD",
+        "cool": "7",
+        "heat": "8",
+        "eff": "A++/A+",
+        "noise": "37–43",
+        "price": 147690
+       },
+       {
+        "model": "AUC-36UR4RKC8/AUW-36U4RK7/PE-QFA/CD",
+        "cool": "10",
+        "heat": "11",
+        "eff": "A++/A+",
+        "noise": "42–50",
+        "price": 203790
+       },
+       {
+        "model": "AUC-48UR4RKC8/AUW-48U6RN8/PE-QFA/CD",
+        "cool": "13,5",
+        "heat": "16",
+        "eff": "A+/A+",
+        "noise": "46–52",
+        "price": 245890
+       },
+       {
+        "model": "AUC-60UR4RKC8/AUW-60U6RW8/PE-QFA/CD",
+        "cool": "16",
+        "heat": "17,5",
+        "eff": "A++/A+",
+        "noise": "48–54",
+        "price": 265490
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "duct",
+    "title": "Канальные",
+    "images": [
+     {
+      "file": "duct-1.webp",
+      "alt": "Hisense канальный кондиционер",
+      "w": 533,
+      "h": 223
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "title": "Классические HEAVY 2.0 (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AUD-18HX4RV2/AUW-18H4RS2",
+        "cool": "5,2",
+        "heat": "5,8",
+        "eff": "A/A",
+        "noise": "27–37",
+        "price": 78590
+       },
+       {
+        "model": "AUD-24HX4RGM2/AUW-24H4RF2",
+        "cool": "7,3",
+        "heat": "8",
+        "eff": "A/A",
+        "noise": "34–40",
+        "price": 102090
+       },
+       {
+        "model": "AUD-36HX4RFM2/AUW-36H6RK2",
+        "cool": "11,1",
+        "heat": "11,5",
+        "eff": "A/A",
+        "noise": "36–42",
+        "price": 145590
+       },
+       {
+        "model": "AUD-48HX4REM2/AUW-48H6RQ2",
+        "cool": "14,1",
+        "heat": "15,5",
+        "eff": "A/A",
+        "noise": "39–46",
+        "price": 171890
+       },
+       {
+        "model": "AUD-60HX4REM2/AUW-60H6RN2",
+        "cool": "16,15",
+        "heat": "17,5",
+        "eff": "A/A",
+        "noise": "39–46",
+        "price": 190890
+       }
+      ]
+     },
+     {
+      "title": "Инверторные HEAVY EU DC Inverter A++",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "ADT-09UX4RBL8/AUW-09U4RS8 WI-FI",
+        "cool": "2,6",
+        "heat": "3,2",
+        "eff": "A++/A++",
+        "noise": "30–36",
+        "price": 93890
+       },
+       {
+        "model": "ADT-12UX4RBL8/AUW-12U4RS8 WI-FI",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A++/A++",
+        "noise": "30–36",
+        "price": 105790
+       },
+       {
+        "model": "ADT-18UX4RCL8/AUW-18U4RS7 WI-FI",
+        "cool": "5",
+        "heat": "5,5",
+        "eff": "A++/A+",
+        "noise": "33–41",
+        "price": 118990
+       },
+       {
+        "model": "AUD-24UX4RFM8/AUW-24U4RJ7 WI-FI",
+        "cool": "7",
+        "heat": "8",
+        "eff": "A++/A+",
+        "noise": "34–40",
+        "price": 145890
+       },
+       {
+        "model": "AUD-36UX4REH8/AUW-36U4RK7 WI-FI",
+        "cool": "10",
+        "heat": "11",
+        "eff": "A++/A+",
+        "noise": "36–42",
+        "price": 206090
+       },
+       {
+        "model": "AUD-48UX4REH8/AUW-48U6RN8 WI-FI",
+        "cool": "13,5",
+        "heat": "16",
+        "eff": "A+/A+",
+        "noise": "37–43",
+        "price": 233590
+       },
+       {
+        "model": "AUD-60UX4REH8/AUW-60U6RW8 WI-FI",
+        "cool": "16",
+        "heat": "17",
+        "eff": "A++/A+",
+        "noise": "38–44",
+        "price": 269290
+       },
+       {
+        "model": "AUD-85UX4RPH8/AUW-85U6RZ8",
+        "cool": "23",
+        "heat": "25",
+        "eff": "A+/A",
+        "noise": "52–58",
+        "price": 465890
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "floor",
+    "title": "Напольно-потолочные и консольные",
+    "images": [
+     {
+      "file": "floor-1.webp",
+      "alt": "Hisense напольно-потолочный кондиционер",
+      "w": 507,
+      "h": 412
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "title": "Классические HEAVY 2.0 (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AUV-18HR4RE2/AUW-18H4RS2",
+        "cool": "5,2",
+        "heat": "5,6",
+        "eff": "A/A",
+        "noise": "31–41",
+        "price": 86490
+       },
+       {
+        "model": "AUV-24HR4RE2/AUW-24H4RF2",
+        "cool": "7,35",
+        "heat": "8",
+        "eff": "A/A",
+        "noise": "37–43",
+        "price": 103490
+       },
+       {
+        "model": "AUV-36HR4RE2/AUW-36H6RK2",
+        "cool": "11,1",
+        "heat": "11,5",
+        "eff": "A/A",
+        "noise": "42–51",
+        "price": 135890
+       },
+       {
+        "model": "AUV-48HR4RF2/AUW-48H6RQ2",
+        "cool": "14,1",
+        "heat": "16",
+        "eff": "A/A",
+        "noise": "44–51",
+        "price": 163990
+       },
+       {
+        "model": "AUV-60HR4RF2/AUW-60H6RN2",
+        "cool": "16,15",
+        "heat": "18",
+        "eff": "A/D",
+        "noise": "44–51",
+        "price": 185590
+       }
+      ]
+     },
+     {
+      "title": "Инверторные HEAVY EU DC Inverter A++",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AVT-24UR4RB8/AUW-24U4RJ7 WI-FI",
+        "cool": "7",
+        "heat": "8",
+        "eff": "A++/A+",
+        "noise": "42–50",
+        "price": 145490
+       },
+       {
+        "model": "AUV-36UR4RC8/AUW-36U4RK7 WI-FI",
+        "cool": "9,5",
+        "heat": "11",
+        "eff": "A++/A+",
+        "noise": "48–56",
+        "price": 197390
+       },
+       {
+        "model": "AUV-48UR4RC8/AUW-48U6RN8 WI-FI",
+        "cool": "13,5",
+        "heat": "16",
+        "eff": "A+/A+",
+        "noise": "48–56",
+        "price": 240490
+       },
+       {
+        "model": "AUV-60UR4RC8/AUW-60U6RW8 WI-FI",
+        "cool": "16",
+        "heat": "17,5",
+        "eff": "A+/A",
+        "noise": "49–57",
+        "price": 272190
+       },
+       {
+        "model": "AKT-09UR4RK8/AUW-09U4RS8 WI-FI",
+        "cool": "2,6",
+        "heat": "3,2",
+        "eff": "A++/A+",
+        "noise": "33–40",
+        "price": 93590
+       },
+       {
+        "model": "AKT-12UR4RK8/AUW-12U4RS8 WI-FI",
+        "cool": "3,5",
+        "heat": "3,7",
+        "eff": "A++/A+",
+        "noise": "33–40",
+        "price": 104090
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "column",
+    "title": "Колонные",
+    "images": [],
+    "features": [],
+    "tables": [
+     {
+      "title": "Классические HEAVY 2.0 (on/off)",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AUF-24ER4RC2/AUW-24H4RF2",
+        "cool": "7,2",
+        "heat": "8,15",
+        "eff": "A/A",
+        "noise": "40–47",
+        "price": 132690
+       },
+       {
+        "model": "AUF-48ER4RM2/AUW-48H6RQ2",
+        "cool": "14,2",
+        "heat": "15,6",
+        "eff": "A/A",
+        "noise": "45–52",
+        "price": 215390
+       },
+       {
+        "model": "AUF-60ER4RM2/AUW-60H6RN2",
+        "cool": "16,15",
+        "heat": "17,5",
+        "eff": "A/A",
+        "noise": "45–52",
+        "price": 259790
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "hisense-multi-split": [
+   {
+    "id": "outdoor",
+    "title": "Наружные блоки мульти-сплит систем",
+    "images": [],
+    "features": [],
+    "tables": [
+     {
+      "title": "Наружные блоки Multi EU DC Inverter (R32)",
+      "kind": "outdoor",
+      "rows": [
+       {
+        "model": "AMW2-14U4RGC",
+        "cool": "4,1",
+        "heat": "4,5",
+        "eff": "A++/A+",
+        "noise": "47",
+        "pipe": "30",
+        "price": 67990
+       },
+       {
+        "model": "AMW2-18U4RXC",
+        "cool": "5",
+        "heat": "5,5",
+        "eff": "A++/A+",
+        "noise": "49",
+        "pipe": "30",
+        "price": 73790
+       },
+       {
+        "model": "AMW3-18U4RJC",
+        "cool": "5,2",
+        "heat": "6",
+        "eff": "A++/A+",
+        "noise": "49",
+        "pipe": "45",
+        "price": 101490
+       },
+       {
+        "model": "AMW3-24U4RJC",
+        "cool": "7",
+        "heat": "8",
+        "eff": "A++/A+",
+        "noise": "50",
+        "pipe": "50",
+        "price": 104990
+       },
+       {
+        "model": "AMW4-27U4RJC",
+        "cool": "8",
+        "heat": "9",
+        "eff": "A++/A+",
+        "noise": "51",
+        "pipe": "60",
+        "price": 121290
+       },
+       {
+        "model": "AMW5-36U4RQC",
+        "cool": "10",
+        "heat": "11",
+        "eff": "A++/A+",
+        "noise": "55",
+        "pipe": "60",
+        "price": 169390
+       },
+       {
+        "model": "AMW5-42U4RTA",
+        "cool": "12,5",
+        "heat": "13,5",
+        "eff": "A++/A",
+        "noise": "61",
+        "pipe": "80",
+        "price": 185190
+       }
+      ]
+     },
+     {
+      "title": "Наружные блоки Multi EU DC Inverter LP (R32)",
+      "kind": "outdoor",
+      "rows": [
+       {
+        "model": "AMW2-14U4RGC LP",
+        "cool": "4,1",
+        "heat": "4,5",
+        "eff": "A++/A+",
+        "noise": "47",
+        "pipe": "60",
+        "price": 71390
+       },
+       {
+        "model": "AMW2-18U4RXC LP",
+        "cool": "5",
+        "heat": "5,5",
+        "eff": "A++/A+",
+        "noise": "49",
+        "pipe": "80",
+        "price": 79090
+       },
+       {
+        "model": "AMW3-18U4RJC LP",
+        "cool": "5,2",
+        "heat": "6",
+        "eff": "A++/A+",
+        "noise": "49",
+        "pipe": "90",
+        "price": 106890
+       },
+       {
+        "model": "AMW3-24U4RJC LP",
+        "cool": "7",
+        "heat": "8",
+        "eff": "A++/A+",
+        "noise": "50",
+        "pipe": "100",
+        "price": 110190
+       },
+       {
+        "model": "AMW4-27U4RJC LP",
+        "cool": "8",
+        "heat": "9",
+        "eff": "A++/A+",
+        "noise": "51",
+        "pipe": "110",
+        "price": 126390
+       },
+       {
+        "model": "AMW5-36U4RQC LP",
+        "cool": "10",
+        "heat": "11",
+        "eff": "A++/A+",
+        "noise": "55",
+        "pipe": "120",
+        "price": 177990
+       },
+       {
+        "model": "AMW5-42U4RTA LP",
+        "cool": "12,5",
+        "heat": "13,5",
+        "eff": "A++/A",
+        "noise": "61",
+        "pipe": "130",
+        "price": 193790
+       }
+      ]
+     },
+     {
+      "title": "Наружные блоки Ultra Multi DC Inverter (R410A)",
+      "kind": "outdoor",
+      "rows": [
+       {
+        "model": "AMW-42U4SE",
+        "cool": "12,5",
+        "heat": "14,5",
+        "eff": "A/A",
+        "noise": "59",
+        "pipe": "100",
+        "price": 178090
+       },
+       {
+        "model": "AMW-60U6SP",
+        "cool": "16",
+        "heat": "18",
+        "eff": "C/B",
+        "noise": "60",
+        "pipe": "100",
+        "price": 190790
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "indoor",
+    "title": "Внутренние блоки",
+    "images": [],
+    "features": [],
+    "tables": [
+     {
+      "title": "Настенные: Sensation Slider Pro Multi Superior DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AS-10UW4RWMQK00G",
+        "cool": "2,6",
+        "heat": "3,2",
+        "eff": "A++/A+",
+        "noise": "18–33",
+        "price": 38500
+       },
+       {
+        "model": "AS-13UW4RWMQK00G",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A++/A+",
+        "noise": "18–34",
+        "price": 42000
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Sensation Slider Pro Carbon Multi Superior DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AS-10UW4RWMQK00G(B)",
+        "cool": "2,6",
+        "heat": "3,2",
+        "eff": "A++/A+",
+        "noise": "18–33",
+        "price": 48000
+       },
+       {
+        "model": "AS-13UW4RWMQK00G(B)",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A++/A+",
+        "noise": "18–34",
+        "price": 49500
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Vision Pro 2.0 Multi Superior DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AS-10UW4RXVQH01AG",
+        "cool": "2,6",
+        "heat": "3,2",
+        "eff": "A++/A+",
+        "noise": "18–33",
+        "price": 29600
+       },
+       {
+        "model": "AS-13UW4RXVQH02G",
+        "cool": "3,5",
+        "heat": "4,2",
+        "eff": "A++/A+",
+        "noise": "18–33",
+        "price": 32200
+       },
+       {
+        "model": "AS-18UW4RBVQH01G",
+        "cool": "5",
+        "heat": "5,2",
+        "eff": "A++/A+",
+        "noise": "23–41",
+        "price": 46900
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Vision Pro 2.0 Carbon Multi Superior DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AS-10UW4RXVQH01AG(B)",
+        "cool": "2,6",
+        "heat": "3,2",
+        "eff": "A++/A+",
+        "noise": "18–33",
+        "price": 37300
+       },
+       {
+        "model": "AS-13UW4RXVQH02G(B)",
+        "cool": "3,5",
+        "heat": "4,2",
+        "eff": "A++/A+",
+        "noise": "18–33",
+        "price": 41800
+       },
+       {
+        "model": "AS-18UW4RBVQH01G(B)",
+        "cool": "5",
+        "heat": "5,2",
+        "eff": "A++/A+",
+        "noise": "23–41",
+        "price": 60000
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Vibe Pro Silver Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AMS-09UW4RYCHD00(S)",
+        "cool": "2,6",
+        "heat": "3",
+        "eff": "A++/A+",
+        "noise": "21–38",
+        "price": 27090
+       },
+       {
+        "model": "AMS-12UW4RWUHD00(S)",
+        "cool": "3,5",
+        "heat": "3,9",
+        "eff": "A++/A+",
+        "noise": "21,5–38",
+        "price": 30490
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Vibe Pro Champagne Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AMS-09UW4RYCHD00(C)",
+        "cool": "2,6",
+        "heat": "3",
+        "eff": "A++/A+",
+        "noise": "21–38",
+        "price": 27090
+       },
+       {
+        "model": "AMS-12UW4RWUHD00(C)",
+        "cool": "3,5",
+        "heat": "3,9",
+        "eff": "A++/A+",
+        "noise": "21,5–38",
+        "price": 30490
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Vibe Pro Carbon Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AMS-09UW4RYCHB00(B)",
+        "cool": "2,6",
+        "heat": "3",
+        "eff": "A++/A+",
+        "noise": "21–38",
+        "price": 27090
+       },
+       {
+        "model": "AMS-12UW4RWUHB00(B)",
+        "cool": "3,5",
+        "heat": "3,9",
+        "eff": "A++/A+",
+        "noise": "21,5–38",
+        "price": 30490
+       },
+       {
+        "model": "AMS-18UW4RXPHB00(B)",
+        "cool": "5",
+        "heat": "5,4",
+        "eff": "A++/A+",
+        "noise": "24–39",
+        "price": 35490
+       },
+       {
+        "model": "AMS-24UW4RFWHB00(B)",
+        "cool": "7",
+        "heat": "6,8",
+        "eff": "A++/A+",
+        "noise": "26–42",
+        "price": 39290
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Vibe Pro Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AMS-09UW4RYCHB00",
+        "cool": "2,6",
+        "heat": "3",
+        "eff": "A++/A+",
+        "noise": "21–38",
+        "price": 21190
+       },
+       {
+        "model": "AMS-12UW4RWUHB00",
+        "cool": "3,5",
+        "heat": "3,9",
+        "eff": "A++/A+",
+        "noise": "21,5–38",
+        "price": 23790
+       },
+       {
+        "model": "AMS-18UW4RXPHB00",
+        "cool": "5",
+        "heat": "5,4",
+        "eff": "A++/A+",
+        "noise": "24–39",
+        "price": 28490
+       },
+       {
+        "model": "AMS-24UW4RFWHB00",
+        "cool": "7",
+        "heat": "6,8",
+        "eff": "A++/A+",
+        "noise": "26–42",
+        "price": 32690
+       }
+      ]
+     },
+     {
+      "title": "Настенные: Zoom Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AMS-07UW4RMRKB00",
+        "cool": "2,15",
+        "heat": "2,5",
+        "eff": "A++/A+",
+        "noise": "22–38",
+        "price": 18690
+       },
+       {
+        "model": "AMS-09UW4RMRKB00",
+        "cool": "2,6",
+        "heat": "2,7",
+        "eff": "A++/A+",
+        "noise": "22,5–38",
+        "price": 19090
+       },
+       {
+        "model": "AMS-12UW4RXRKB00",
+        "cool": "3,5",
+        "heat": "3,8",
+        "eff": "A++/A+",
+        "noise": "23–38",
+        "price": 20790
+       },
+       {
+        "model": "AMS-18UW4RXSKB01",
+        "cool": "5",
+        "heat": "5,6",
+        "eff": "A++/A+",
+        "noise": "30–42,5",
+        "price": 25490
+       },
+       {
+        "model": "AMS-24UW4RBTKB02",
+        "cool": "6,5",
+        "heat": "7,1",
+        "eff": "A++/A+",
+        "noise": "30–45",
+        "price": 30690
+       }
+      ]
+     },
+     {
+      "title": "Консольные: Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AKT-09UR4RK8",
+        "cool": "2,8",
+        "heat": "3",
+        "eff": "A++/A+",
+        "noise": "33–40",
+        "price": 40690
+       },
+       {
+        "model": "AKT-12UR4RK8",
+        "cool": "3,52",
+        "heat": "3,8",
+        "eff": "A++/A+",
+        "noise": "33–40",
+        "price": 43890
+       }
+      ]
+     },
+     {
+      "title": "Канальные: Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "ADT-09UX4RBL8",
+        "cool": "2,6",
+        "heat": "3",
+        "eff": "A++/A+",
+        "noise": "30–36",
+        "price": 40990
+       },
+       {
+        "model": "ADT-12UX4RBL8",
+        "cool": "3,2",
+        "heat": "3,7",
+        "eff": "A++/A+",
+        "noise": "30–36",
+        "price": 45590
+       },
+       {
+        "model": "ADT-18UX4RCL8",
+        "cool": "5",
+        "heat": "5,5",
+        "eff": "A++/A+",
+        "noise": "33–41",
+        "price": 53590
+       }
+      ]
+     },
+     {
+      "title": "Кассетные: Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "ACT-12UR4RCC8/PE-QEA/LD Wi-Fi",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A++/A+",
+        "noise": "30–38",
+        "price": 55790
+       },
+       {
+        "model": "ACT-18UR4RCC8/PE-QEA/LD Wi-Fi",
+        "cool": "5",
+        "heat": "5,5",
+        "eff": "A++/A+",
+        "noise": "34–42",
+        "price": 57890
+       },
+       {
+        "model": "ACT-24UR4RJC8/PE-QFA/CD Wi-Fi",
+        "cool": "6,5",
+        "heat": "7,1",
+        "eff": "A++/A+",
+        "noise": "37–43",
+        "price": 68890
+       }
+      ]
+     },
+     {
+      "title": "Напольно-потолочные: Multi EU DC Inverter",
+      "kind": "indoor",
+      "rows": [
+       {
+        "model": "AVT-24UR4RB8",
+        "cool": "6,5",
+        "heat": "7,1",
+        "eff": "A++/A+",
+        "noise": "42–50",
+        "price": 66690
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "hisense-mobilnye": [
+   {
+    "id": "mobile-v",
+    "title": "Мобильные кондиционеры серии V",
+    "images": [
+     {
+      "file": "mobile-v-1.webp",
+      "alt": "Hisense мобильный кондиционер",
+      "w": 336,
+      "h": 326
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AP-07CR4GKVS00",
+        "cool": "2,05",
+        "eff": "A",
+        "noise": "48–51",
+        "price": 27990
+       },
+       {
+        "model": "AP-09CR4GKVS00",
+        "cool": "2,49",
+        "eff": "A",
+        "noise": "48–52",
+        "price": 31990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "mobile-w",
+    "title": "Мобильные кондиционеры серии W",
+    "images": [],
+    "features": [],
+    "tables": [
+     {
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AP-07CR4GKWS00",
+        "cool": "2,05",
+        "eff": "A",
+        "noise": "48–51",
+        "price": 27990
+       },
+       {
+        "model": "AP-09CR4GKWS00",
+        "cool": "2,49",
+        "eff": "A",
+        "noise": "48–52",
+        "price": 31990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "mobile-c",
+    "title": "Мобильные кондиционеры серии C",
+    "images": [],
+    "features": [],
+    "tables": [
+     {
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "AP-09CW4GNCS00",
+        "cool": "2,6",
+        "eff": "A",
+        "noise": "50–52",
+        "price": 36990
+       },
+       {
+        "model": "AP-12CW4GQCS00",
+        "cool": "3,5",
+        "eff": "A",
+        "noise": "52–54",
+        "price": 41990
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "lg": [
+   {
+    "id": "deluxepro",
+    "title": "LG Deluxe Pro",
+    "images": [
+     {
+      "file": "deluxepro-1.webp",
+      "alt": "LG Deluxe Pro — внутренний блок",
+      "w": 410,
+      "h": 161
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "kind": "lgkit",
+      "rows": [
+       {
+        "model": "H09S1D.NS1R / H09S1D.U12R",
+        "cap": "9K",
+        "cool": "2,5",
+        "heat": "3,2",
+        "eff": "A+++/A++",
+        "noise": "19–47",
+        "price": 87990
+       },
+       {
+        "model": "H12S1D.NS1R / H12S1D.U12R",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A+++/A++",
+        "noise": "19–47",
+        "price": 101990
+       },
+       {
+        "model": "H18S1D.NS1R / H18S1D.U18R",
+        "cap": "18K",
+        "cool": "5",
+        "heat": "5,8",
+        "eff": "A++/A+",
+        "noise": "29–49",
+        "price": 147990
+       },
+       {
+        "model": "H24S1D.NS1R / H24S1D.U24R",
+        "cap": "24K",
+        "cool": "6,6",
+        "heat": "7,5",
+        "eff": "A++/A+",
+        "noise": "31–51",
+        "price": 179990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "artcoolmirror",
+    "title": "LG ARTCOOL Mirror",
+    "images": [
+     {
+      "file": "artcoolmirror-1.webp",
+      "alt": "LG ARTCOOL Mirror — внутренний блок",
+      "w": 401,
+      "h": 203
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "kind": "lgkit",
+      "rows": [
+       {
+        "model": "AC09BK.NSJR / AC09BK.UA3R",
+        "cap": "9K",
+        "cool": "2,5",
+        "heat": "3,3",
+        "eff": "A++/A+",
+        "noise": "19–45",
+        "price": 91990
+       },
+       {
+        "model": "AC12BK.NSJR / AC12BK.UA3R",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "4",
+        "eff": "A++/A+",
+        "noise": "19–45",
+        "price": 98990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "procool",
+    "title": "LG ProCool",
+    "images": [
+     {
+      "file": "procool-1.webp",
+      "alt": "LG ProCool — внутренний блок",
+      "w": 507,
+      "h": 254
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "kind": "lgkit",
+      "rows": [
+       {
+        "model": "B07TS.NSJ / B07TS.UA3",
+        "cap": "7K",
+        "cool": "2,14",
+        "heat": "2,5",
+        "eff": "A/A",
+        "noise": "19–36",
+        "price": 59990
+       },
+       {
+        "model": "B09TS.NSJ / B09TS.UA3",
+        "cap": "9K",
+        "cool": "2,7",
+        "heat": "2,93",
+        "eff": "A/A",
+        "noise": "19–42",
+        "price": 63990
+       },
+       {
+        "model": "B12TS.NSJ / B12TS.UA3",
+        "cap": "12K",
+        "cool": "3,52",
+        "heat": "3,52",
+        "eff": "A/A",
+        "noise": "19–42",
+        "price": 71990
+       },
+       {
+        "model": "B18TS.NSK / B18TS.UL2",
+        "cap": "18K",
+        "cool": "5,28",
+        "heat": "5,42",
+        "eff": "A/A",
+        "noise": "32–55",
+        "price": 99990
+       },
+       {
+        "model": "B24TS.NSKC / B24TS.U24C",
+        "cap": "24K",
+        "cool": "6,45",
+        "heat": "6,45",
+        "eff": "A/B",
+        "noise": "32–56",
+        "price": 123990
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "promulti",
+    "title": "LG ProMulti 2.0 — мульти-сплит системы (R32)",
+    "images": [
+     {
+      "file": "promulti-1.webp",
+      "alt": "LG ProMulti 2.0 — схема мульти-сплит системы",
+      "w": 457,
+      "h": 464
+     }
+    ],
+    "features": [],
+    "tables": [
+     {
+      "title": "Наружные блоки",
+      "kind": "lgout",
+      "rows": [
+       {
+        "model": "MU2R15.U13",
+        "cap": "15K",
+        "cool": "4,1",
+        "heat": "4,69",
+        "eff": "A+++",
+        "units": "2",
+        "price": 132200
+       },
+       {
+        "model": "MU2R17.U13",
+        "cap": "17K",
+        "cool": "4,69",
+        "heat": "5,1",
+        "eff": "A+++",
+        "units": "2",
+        "price": 146700
+       },
+       {
+        "model": "MU3R19.U23",
+        "cap": "19K",
+        "cool": "5,27",
+        "heat": "6,33",
+        "eff": "A+++",
+        "units": "3",
+        "price": 174700
+       },
+       {
+        "model": "MU3R21.U23",
+        "cap": "21K",
+        "cool": "6,15",
+        "heat": "7,03",
+        "eff": "A+++",
+        "units": "3",
+        "price": 188700
+       },
+       {
+        "model": "MU4R25.U22",
+        "cap": "25K",
+        "cool": "7,03",
+        "heat": "8,09",
+        "eff": "A++",
+        "units": "4",
+        "price": 233400
+       },
+       {
+        "model": "MU4R27.U42",
+        "cap": "27K",
+        "cool": "7,9",
+        "heat": "9,09",
+        "eff": "A++",
+        "units": "4",
+        "price": 242300
+       },
+       {
+        "model": "MU5R30.U42",
+        "cap": "30K",
+        "cool": "8,8",
+        "heat": "10,1",
+        "eff": "A++",
+        "units": "5",
+        "price": 261400
+       },
+       {
+        "model": "MU5R40.U42",
+        "cap": "40K",
+        "cool": "11,2",
+        "heat": "12,51",
+        "eff": "A++",
+        "units": "5",
+        "price": 329100
+       }
+      ]
+     },
+     {
+      "title": "Внутренние блоки — настенные, серия Standard",
+      "kind": "lgin",
+      "rows": [
+       {
+        "model": "PM07SP.NSJR0",
+        "cap": "7K",
+        "cool": "2,1",
+        "heat": "2,3",
+        "price": 32700
+       },
+       {
+        "model": "PM09SP.NSJ",
+        "cap": "9K",
+        "cool": "2,5",
+        "heat": "3,2",
+        "price": 33700
+       },
+       {
+        "model": "PM12SP.NSJR0",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "3,8",
+        "price": 39900
+       },
+       {
+        "model": "PM18SP.NSKR0",
+        "cap": "18K",
+        "cool": "5",
+        "heat": "5,8",
+        "price": 51000
+       }
+      ]
+     },
+     {
+      "title": "Внутренние блоки — канальные",
+      "kind": "lgin",
+      "rows": [
+       {
+        "model": "CL09R.N20",
+        "cap": "9K",
+        "cool": "2,5",
+        "heat": "3,2",
+        "price": 83600
+       },
+       {
+        "model": "CL12R.N20",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "4",
+        "price": 94300
+       },
+       {
+        "model": "CL18R.N20",
+        "cap": "18K",
+        "cool": "5",
+        "heat": "5,8",
+        "price": 96600
+       }
+      ]
+     },
+     {
+      "title": "Внутренние блоки — настенные, серия Deluxe Pro",
+      "kind": "lgin",
+      "rows": [
+       {
+        "model": "H09S1D.NS1R",
+        "cap": "9K",
+        "cool": "2,5",
+        "heat": "3,2",
+        "price": 35100
+       },
+       {
+        "model": "H12S1D.NS1R",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "4",
+        "price": 40900
+       },
+       {
+        "model": "H18S1D.NS1R",
+        "cap": "18K",
+        "cool": "5",
+        "heat": "5,8",
+        "price": 59200
+       },
+       {
+        "model": "H24S1D.NS1R",
+        "cap": "24K",
+        "cool": "6,6",
+        "heat": "7,5",
+        "price": 71900
+       }
+      ]
+     },
+     {
+      "title": "Внутренние блоки — настенные, серия ARTCOOL Mirror",
+      "kind": "lgin",
+      "rows": [
+       {
+        "model": "AC09BK.NSJR",
+        "cap": "9K",
+        "cool": "2,5",
+        "heat": "3,3",
+        "price": 41300
+       },
+       {
+        "model": "AC12BK.NSJR",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "4",
+        "price": 44500
+       }
+      ]
+     },
+     {
+      "title": "Внутренние блоки — настенные, серия ARTCOOL Gallery",
+      "kind": "lgin",
+      "rows": [
+       {
+        "model": "A09GA1.NSER",
+        "cap": "9K",
+        "cool": "2,6",
+        "heat": "3,7",
+        "price": 84000
+       },
+       {
+        "model": "A12GA1.NSER",
+        "cap": "12K",
+        "cool": "3,7",
+        "heat": "4",
+        "price": 86700
+       }
+      ]
+     },
+     {
+      "title": "Внутренние блоки — кассетные однопоточные",
+      "kind": "lgin",
+      "rows": [
+       {
+        "model": "MT09R.NU1",
+        "cap": "9K",
+        "cool": "2,6",
+        "heat": "2,9",
+        "price": 75200
+       },
+       {
+        "model": "MT11R.NU1",
+        "cap": "12K",
+        "cool": "3,5",
+        "heat": "3,9",
+        "price": 79000
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "osushiteli": [
+  {
+   "model": "DH-12S4GLU00",
+   "perday": "12",
+   "tank": "2",
+   "air": "100",
+   "noise": "40",
+   "dims": "310х400х203",
+   "price": 13590
+  }
+ ],
+ "accessories": [
+  {
+   "brand": "Hisense",
+   "category": "Аксессуары для мобильных кондиционеров",
+   "rows": [
+    {
+     "name": "LA-WKS-04M",
+     "desc": "Оконный адаптер для мобильного кондиционера совместив со всеми мобильными кондиционерами. Адаптер крепится к раме и створке окна. Данный адаптер подходит для распашных окон.",
+     "price": 1599
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Wi-Fi модули, адаптеры, пульты",
+   "rows": [
+    {
+     "name": "AEH-W4G1",
+     "desc": "Wi-Fi модуль для всех кондиционеров Hisense, оснащенных функцией wi-fi ready",
+     "price": 3490
+    },
+    {
+     "name": "YXE-E01U(E)",
+     "desc": "Индивидуальный проводной пульт",
+     "price": 10070
+    },
+    {
+     "name": "YJE-C01T(E)",
+     "desc": "Центральный контроллер",
+     "price": 19625
+    },
+    {
+     "name": "B544 (E)",
+     "desc": "Адаптер преобразования сигнала, для подключения сплит-систем Hisense к системам центрального управления и диспетчеризации BACnet/Modbus",
+     "price": 7234
+    },
+    {
+     "name": "B545(E)",
+     "desc": "Адаптер преобразования сигнала, для подключения сплит-систем Hisense к системе диспетчеризации KNX",
+     "price": 10990
+    },
+    {
+     "name": "L1-12",
+     "desc": "Базовый ИК пульт дистанционного управления L1-12",
+     "price": 1313
+    },
+    {
+     "name": "RCH-RVD01",
+     "desc": "Премиальный ИК пульт дистанционного управления RCH-RVD01",
+     "price": 5030
+    },
+    {
+     "name": "CABLE+8M",
+     "desc": "Удлинительный кабель для увеличения расстояния подключения проводного пульта. 8 метров, 4 жильный, 24AWG (0,2 мм2)",
+     "price": 2490
+    },
+    {
+     "name": "RCH-RSY5-0",
+     "desc": "Новый ИК пульт дистанционного управления RCH-RSY5-0",
+     "price": 3690
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Дренажные насосы",
+   "rows": [
+    {
+     "name": "LP015-15FL",
+     "desc": "MINI FLOW, 15 л/ч",
+     "price": 3280
+    },
+    {
+     "name": "LP020-15FL",
+     "desc": "GREEN FLOW, 20 л/ч",
+     "price": 4040
+    },
+    {
+     "name": "LP038-20FL",
+     "desc": "GREEN FLOW, 38 л/ч",
+     "price": 4290
+    },
+    {
+     "name": "LP020-15WA",
+     "desc": "WHITE WALL, 20 л/ч",
+     "price": 4040
+    },
+    {
+     "name": "LP038-20WA",
+     "desc": "WHITE WALL, 38 л/ч",
+     "price": 4540
+    },
+    {
+     "name": "LP500-08TN",
+     "desc": "GREEN TANK, 500 л/ч",
+     "price": 4470
+    },
+    {
+     "name": "LP010-20CS",
+     "desc": "10",
+     "price": 5040
+    },
+    {
+     "name": "LP015-60CS",
+     "desc": "15",
+     "price": 9260
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Зимние комплекты и устройства ротаций",
+   "rows": [
+    {
+     "name": "LA3-SD30 Зимний комплект до -30С LAMPRECHT",
+     "desc": "Зимний комплект до -30С",
+     "price": 4450
+    },
+    {
+     "name": "LA4-SD40 Зимний комплект до -40С LAMPRECHT",
+     "desc": "Зимний комплект до -40С",
+     "price": 5000
+    },
+    {
+     "name": "БУРР-1М",
+     "desc": "Блок ротации управляющий",
+     "price": 7330
+    },
+    {
+     "name": "БИС-1М",
+     "desc": "Блок ротации исполнительный (на каждый кондиционер)",
+     "price": 2620
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "ЗИМНИЙ КОМПЛЕКТ (Работа на охлаждение до -40℃)",
+   "rows": [
+    {
+     "name": "Комплект зимнего регулирования РДК",
+     "desc": "РДК 9,6 с установкой. Предустанавливается на внешний блок сплит-системы и поставляется как единая система",
+     "price": 11800
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Экраны-отражатели",
+   "rows": [
+    {
+     "name": "LA-NW840-SS",
+     "desc": "Для настенных внутренних блоков, шириной до 84см",
+     "price": 2280
+    },
+    {
+     "name": "LA-NW1200-SS",
+     "desc": "Для настенных внутренних блоков, шириной до 120см",
+     "price": 3020
+    },
+    {
+     "name": "LA-NW400-CA",
+     "desc": "Для декор. панелей кассетных сплит-систем до 650мм",
+     "price": 2230
+    },
+    {
+     "name": "LA-NW600-CA",
+     "desc": "Для декор. панелей кассетных сплит-систем до 950мм",
+     "price": 2270
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Вакуумные насосы",
+   "rows": [
+    {
+     "name": "LT-VP120-R410",
+     "desc": "1-ступ., 60л/мин, 60 microns, 1/4\"SAE",
+     "price": 6710
+    },
+    {
+     "name": "LT-VP220-R410",
+     "desc": "2-ступ., 60л/мин, 15 microns, 1/4\"SAE",
+     "price": 12690
+    },
+    {
+     "name": "LT-VP220-R32",
+     "desc": "2-ступ., 60л/мин, 15 microns, 1/4\"SAE, R32",
+     "price": 13380
+    },
+    {
+     "name": "LT-VG46",
+     "desc": "Масло для вакуумных насосов, 0,25л",
+     "price": 350
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Манометрические коллекторы",
+   "rows": [
+    {
+     "name": "LT-1MGL-01",
+     "desc": "1-вент, R22/R32/R134/R410, F1/4, без шлангов",
+     "price": 1060
+    },
+    {
+     "name": "LT-1MGL-03",
+     "desc": "1-вент, R22/R32/R134/R410, F1/4, без шлангов",
+     "price": 1790
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Шланги и аксессуары",
+   "rows": [
+    {
+     "name": "LT-3HS120",
+     "desc": "Шланги 120см, красный/синий 1/4х5/16\"; желтый: 1/4х1/4\", 55 bar",
+     "price": 1540
+    },
+    {
+     "name": "LT-3HS200",
+     "desc": "Шланги 200см, красный/синий 1/4х5/16\"; желтый: 1/4х1/4\", 55 bar",
+     "price": 2470
+    },
+    {
+     "name": "LT-3HS300",
+     "desc": "Шланги 300см, красный/синий 1/4х5/16\"; желтый: 1/4х1/4\", 55 bar",
+     "price": 3710
+    },
+    {
+     "name": "LT-AD78",
+     "desc": "Переходник угловой 45°; с R410А на R22, 2 шт.",
+     "price": 390
+    },
+    {
+     "name": "LT-10TG1/4",
+     "desc": "Прокладки для шлангов 1/4\", 10шт",
+     "price": 90
+    },
+    {
+     "name": "LT-10TG5/16",
+     "desc": "Прокладки для шлангов 5/16\", 10шт",
+     "price": 140
+    },
+    {
+     "name": "LT-SV-1/4",
+     "desc": "Адаптер с нажимом на ниппель, диаметр 1/4\", 1шт",
+     "price": 990
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Инструмент ручной",
+   "rows": [
+    {
+     "name": "LT-FT808-01",
+     "desc": "Развальцовка эксцентриковая 1/4\", 5/16\",3/8\",1/2\",5/8\",3/4\"",
+     "price": 3240
+    },
+    {
+     "name": "LT-FT809-01",
+     "desc": "Развальцовка эксцентриковая с трещеткой 1/4\", 5/16\",3/8\",1/2\",5/8\",3/4\"",
+     "price": 4390
+    },
+    {
+     "name": "LT-TC032-01",
+     "desc": "Труборез 1/4 - 1-1/8\"",
+     "price": 1230
+    },
+    {
+     "name": "LT-DT207-01",
+     "desc": "Риммер-ручка алюм.",
+     "price": 590
+    },
+    {
+     "name": "LT-SP102-01",
+     "desc": "Набор трубогибов пружинных 1/4'', 5/16'', 3/8'', 1/2'', 5/8''",
+     "price": 360
+    },
+    {
+     "name": "LT-TE023-01",
+     "desc": "Труборасширитель экспанд. 1/4'', 5/16'', 3/8'', 1/2'', 5/8'', 3/4'', 7/8''",
+     "price": 1550
+    },
+    {
+     "name": "LT-BL101-01",
+     "desc": "Лезвие для риммера RT-DT101-N01, компл. 10шт",
+     "price": 640
+    }
+   ]
+  },
+  {
+   "brand": "Hisense",
+   "category": "Универсальные фильтры",
+   "rows": [
+    {
+     "name": "LP-CSF",
+     "desc": "Carbon sponge filter. Губчатый фильтр угольный для установки на сетчатый фильтр",
+     "price": 160
+    },
+    {
+     "name": "LP-SIF",
+     "desc": "Silver Ion filter. Губчатый фильтр с ионами серебра для установки на сетчатый фильтр",
+     "price": 200
+    },
+    {
+     "name": "LP-BSH",
+     "desc": "Bio-sterilizing HEPA. Хепа фильтр тонкой очистки для установки на сетчатый фильтр",
+     "price": 290
+    }
+   ]
+  },
+  {
+   "brand": "LG",
+   "category": "Принадлежности к мульти-сплит системам",
+   "rows": [
+    {
+     "name": "PWLSSB21H.ENCXLEU — Беспроводной пульт",
+     "price": 17800
+    },
+    {
+     "name": "PWFMDD200.ENCXLEU — Wi-Fi модуль",
+     "price": 11500
+    },
+    {
+     "name": "PT-UAHG0.ENCXGLO — Панель для однопоточной кассеты",
+     "price": 22100
+    },
+    {
+     "name": "PWLSSB21H.ENCXLEU — Беспроводной пульт",
+     "price": 17800
+    },
+    {
+     "name": "PWFMDD200.ENCXLEU — Wi-Fi модуль",
+     "price": 11500
+    }
+   ]
+  }
+ ],
+ "roland": [
+  {
+   "page": "favorite-ii-inverter",
+   "title": "Roland FAVORITE II INVERTER",
+   "rows": [
+    {
+     "model": "FIU-07HSS010/N5",
+     "cap": "2,25 (1,17–2,95) / 2,45 (0,90–2,99)",
+     "noise": "22–35",
+     "price": 27390
+    },
+    {
+     "model": "FIU-09HSS010/N5",
+     "cap": "2,80 (1,17–3,05) / 2,96 (0,90–3,10)",
+     "noise": "22–35",
+     "price": 29090
+    },
+    {
+     "model": "FIU-12HSS010/N5",
+     "cap": "3,55 (1,29–3,78) / 3,66 (1,06–4,05)",
+     "noise": "23,5–37,5",
+     "price": 35290
+    }
+   ]
+  },
+  {
+   "page": "favorite-ii",
+   "title": "Roland FAVORITE II",
+   "rows": [
+    {
+     "model": "FU-07HSS010/N6",
+     "cap": "2,37 / 2,48",
+     "noise": "24–37",
+     "price": 21790
+    },
+    {
+     "model": "FU-09HSS010/N6",
+     "cap": "2,65 / 2,70",
+     "noise": "24–38",
+     "price": 23690
+    },
+    {
+     "model": "FU-12HSS010/N6",
+     "cap": "3,52 / 3,66",
+     "noise": "26–38",
+     "price": 31690
+    },
+    {
+     "model": "FU-18HSS010/N6",
+     "cap": "5,28 / 5,57",
+     "noise": "32–39,5",
+     "price": 52490
+    },
+    {
+     "model": "FU-24HSS010/N6",
+     "cap": "7,05 / 7,10",
+     "noise": "33–46,5",
+     "price": 66890
+    }
+   ]
+  },
+  {
+   "page": "maestro",
+   "title": "Roland MAESTRO",
+   "rows": [
+    {
+     "model": "RD-MS07HSS/R1",
+     "cap": "2,25 / 2,50",
+     "noise": "23,5–38",
+     "price": 23290
+    },
+    {
+     "model": "RD-MS09HSS/R1",
+     "cap": "2,75 / 2,80",
+     "noise": "23,5–38",
+     "price": 25090
+    },
+    {
+     "model": "RD-MS12HSS/R1",
+     "cap": "3,53 / 3,70",
+     "noise": "25–37",
+     "price": 32690
+    },
+    {
+     "model": "RD-MS18HSS/R1",
+     "cap": "5,50 / 5,55",
+     "noise": "30–42",
+     "price": 54390
+    },
+    {
+     "model": "RD-MS24HSS/R1",
+     "cap": "7,30 / 7,40",
+     "noise": "32–45",
+     "price": 67190
+    }
+   ]
+  }
+ ]
+}

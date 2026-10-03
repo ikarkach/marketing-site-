@@ -4,6 +4,13 @@ locale = 'ru-RU'
 title = 'Usplit'
 theme = 'introduction'
 
+# robots.txt собирается шаблоном layouts/robots.txt, адрес sitemap берётся из baseURL
+enableRobotsTXT = true
+# lastmod в sitemap.xml берётся из даты последнего коммита файла
+enableGitInfo = true
+# служебные страницы тегов не нужны: тонкий контент, в sitemap не попадают
+disableKinds = ['taxonomy', 'term']
+
 [params]
   themeStyle    = "auto"                                   # "light", "dark" или "auto"
   showMenu      = true

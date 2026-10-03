@@ -21,16 +21,17 @@ disableKinds = ['taxonomy', 'term']
   email         = "karkachev2010@yandex.ru"
   description   = "Продажа, монтаж и сервисное обслуживание кондиционеров и вентиляции"
 
+  # --- Аналитика и подтверждение прав (эти ключи должны стоять здесь, выше любых [params.*]) ---
+  # TODO: замените заглушки на реальные коды (пока заглушка, подтверждение прав не сработает; при сборке Hugo выводит предупреждение)
+  yandexVerification = "ВСТАВИТЬ_КОД_ЯНДЕКС"   # Яндекс.Вебмастер → Права доступа → «Мета-тег» → значение content
+  googleVerification = "ВСТАВИТЬ_КОД_GOOGLE"   # Search Console → Настройки → Подтверждение права → «Метатег» → значение content
+  # yandexMetrika    = 12345678                 # TODO: номер счётчика Яндекс.Метрики (раскомментируйте и впишите)
+
   [params.home]
     introHeight            = "fullheight"
     showLatest             = true
     showAllPosts           = false
     numberOfProjectsToShow = 3
-
-  # --- Аналитика и подтверждение прав: раскомментируйте строку и впишите значение ---
-  # yandexMetrika      = 12345678       # номер счётчика: Яндекс.Метрика → Счётчики → нужный счётчик → номер
-  # yandexVerification = "КОД_ЯНДЕКС"   # Яндекс.Вебмастер → Права доступа → «Мета-тег» → значение content
-  # googleVerification = "КОД_GOOGLE"   # Search Console → Настройки → Подтверждение права → «Метатег» → значение content
 
   # Контакты для кнопок связи (единый компонент layouts/partials/contact-buttons.html)
   [params.contact]

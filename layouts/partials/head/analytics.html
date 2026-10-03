@@ -1,8 +1,10 @@
 {{- /* Подтверждение прав и Яндекс.Метрика. Значения задаются в hugo.toml, [params]; пока не заданы, ничего не выводится. */ -}}
 {{- with site.Params.yandexVerification }}
+{{- if strings.Contains . "ВСТАВИТЬ" }}{{ warnf "hugo.toml: yandexVerification всё ещё заглушка, вставьте код из Яндекс.Вебмастера" }}{{ end }}
 <meta name="yandex-verification" content="{{ . }}">
 {{- end }}
 {{- with site.Params.googleVerification }}
+{{- if strings.Contains . "ВСТАВИТЬ" }}{{ warnf "hugo.toml: googleVerification всё ещё заглушка, вставьте код из Google Search Console" }}{{ end }}
 <meta name="google-site-verification" content="{{ . }}">
 {{- end }}
 {{- with site.Params.yandexMetrika }}

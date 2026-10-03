@@ -123,7 +123,14 @@
   text-align: left;
 }
 
-.markdown .table-wrap tbody tr:nth-child(even) td {
+/* нечётные строки тема красит в светло-серый (#dedede), в тёмной теме это давало белый текст на сером */
+.markdown .table-wrap tbody tr:nth-child(odd) td,
+.markdown .table-wrap tbody tr:nth-child(odd) th {
+  background: transparent;
+}
+
+.markdown .table-wrap tbody tr:nth-child(even) td,
+.markdown .table-wrap tbody tr:nth-child(even) th {
   background: rgba(128, 128, 128, 0.14);
 }
 

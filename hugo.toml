@@ -33,8 +33,19 @@ disableKinds = ['taxonomy', 'term']
     showAllPosts           = false
     numberOfProjectsToShow = 3
 
+  # Данные компании для JSON-LD (HVACBusiness) и подвала. Только то, что указано на сайте.
+  [params.business]
+    name          = "Usplit"
+    city          = "Краснодар"
+    country       = "RU"
+    # TODO: на сайте не указаны, впишите точные данные (пустое значение в разметку не попадает):
+    streetAddress = ""      # улица и дом шоурума
+    postalCode    = ""      # почтовый индекс
+    openingHours  = []      # например ["Mo-Fr 09:00-18:00", "Sa 10:00-15:00"]
+
   # Контакты для кнопок связи (единый компонент layouts/partials/contact-buttons.html)
   [params.contact]
+    phoneDisplay = "8 (960) 477-71-14"           # как телефон выводится на сайте (то же, что в разделе «Контакты»)
     phone        = "+79604777114"                # ссылка tel:
     whatsapp     = "79604777114"                 # https://wa.me/<номер без +>
     telegram     = "+79604777114"                # https://t.me/<номер с + или имя пользователя>

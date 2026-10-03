@@ -1,0 +1,24 @@
+{{- /* schema.org HVACBusiness (подтип LocalBusiness) для главной. Данные только из [params.business], [params.contact] и email в hugo.toml. */ -}}
+{{- if .IsHome }}
+{{- with site.Params.business }}
+{{- $b := . }}
+{{- $address := dict "@type" "PostalAddress" "addressLocality" $b.city "addressCountry" $b.country }}
+{{- with $b.streetAddress }}{{ $address = merge $address (dict "streetAddress" .) }}{{ end }}
+{{- with $b.postalCode }}{{ $address = merge $address (dict "postalCode" .) }}{{ end }}
+{{- $data := dict
+    "@context" "https://schema.org"
+    "@type" "HVACBusiness"
+    "name" $b.name
+    "url" site.Home.Permalink
+    "logo" ("logo.png" | absURL)
+    "image" ("og-image.png" | absURL)
+    "description" (cond (ne $.Description "") $.Description site.Params.description)
+    "telephone" site.Params.contact.phone
+    "email" site.Params.email
+    "address" $address
+    "areaServed" (slice (dict "@type" "City" "name" $b.city) (dict "@type" "Country" "name" "Россия"))
+}}
+{{- with $b.openingHours }}{{ $data = merge $data (dict "openingHours" .) }}{{ end }}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- end }}
+{{- end }}

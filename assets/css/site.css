@@ -199,3 +199,7 @@
     font-size: 1.1em;
   }
 }
+
+/* Подвал: название, город, телефон и e-mail (одинаково с разделом «Контакты») */
+.footer-nap { margin-bottom: .5rem; }
+.footer-nap a { text-decoration: underline; }

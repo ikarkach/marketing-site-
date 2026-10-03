@@ -1,0 +1,18 @@
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+    {{ with site.Params.business }}
+        <p class="footer-nap">
+            <strong>{{ .name }}</strong> — {{ .city }}
+            {{ with site.Params.contact }}· <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>{{ end }}
+            {{ with site.Params.email }}· <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        </p>
+    {{ end }}
+    {{ with .Site.Params.footerText }}
+        {{ . | markdownify }}
+    {{ else }}
+        <span class="footer-text">
+            {{ i18n "footer_text" . | markdownify }}
+        </span>
+    {{ end }}
+    </div>
+</div>

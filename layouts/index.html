@@ -8,9 +8,11 @@
         {{ partial "head/favicons.html" . }}
         {{ partial "head/css.html" . }}
         {{ partial "css/owlCarousel.html" . }}
+        {{ partial "head/analytics.html" . }}
     </head>
 
     <body>
+        {{ partial "body-analytics.html" . }}
         {{ with .Site.GetPage "/home" }}
         <section id="top" class="hero is-{{ .Site.Params.home.introHeight | default "fullheight" }}">
             <!-- Hero head section to play nice with Bulma -->

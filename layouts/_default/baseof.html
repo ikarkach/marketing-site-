@@ -8,12 +8,14 @@
         {{ partial "head/schema.html" . }}
         {{ partial "head/favicons.html" . }}
         {{ partial "head/css.html" . }}
+        {{ partial "head/analytics.html" . }}
         {{ end }}
         <!-- Include page specific css -->
         {{ block "customCSS" . }}
         {{ end }}
     </head>
     <body>
+        {{ partial "body-analytics.html" . }}
         <section id="top" class="section">
             <!-- Begin Title -->
             <div class="container hero {{ if .Site.Params.fadeIn | default true }} fade-in one {{ end }}">

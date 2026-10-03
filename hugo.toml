@@ -27,6 +27,11 @@ disableKinds = ['taxonomy', 'term']
     showAllPosts           = false
     numberOfProjectsToShow = 3
 
+  # --- Аналитика и подтверждение прав: раскомментируйте строку и впишите значение ---
+  # yandexMetrika      = 12345678       # номер счётчика: Яндекс.Метрика → Счётчики → нужный счётчик → номер
+  # yandexVerification = "КОД_ЯНДЕКС"   # Яндекс.Вебмастер → Права доступа → «Мета-тег» → значение content
+  # googleVerification = "КОД_GOOGLE"   # Search Console → Настройки → Подтверждение права → «Метатег» → значение content
+
   # Контакты для кнопок связи (единый компонент layouts/partials/contact-buttons.html)
   [params.contact]
     phone        = "+79604777114"                # ссылка tel:

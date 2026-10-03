@@ -89,3 +89,7 @@ disableKinds = ['taxonomy', 'term']
     guessSyntax = false
     style       = "solarized-dark"
     tabWidth    = 4
+
+# Сжатие HTML оставляет кавычки у атрибутов: проверка метатега Яндекс.Вебмастера не находила <meta name=yandex-verification ...> без кавычек
+[minify.tdewolff.html]
+  keepQuotes = true

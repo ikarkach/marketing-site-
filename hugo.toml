@@ -1,4 +1,5 @@
-baseURL = 'https://usplitonline.ru/'
+# Единственный источник базового адреса сайта. Только с www: адрес без www не работает (404).
+baseURL = 'https://www.usplitonline.ru/'
 locale = 'ru-RU'
 title = 'Usplit'
 theme = 'introduction'

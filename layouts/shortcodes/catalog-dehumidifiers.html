@@ -1,0 +1,4 @@
+{{- /* {{< catalog-dehumidifiers >}}: таблица осушителей из data/catalog.json */ -}}
+{{- with hugo.Data.catalog.osushiteli }}
+{{ partial "catalog-table.html" (dict "kind" "dehum" "rows" .) }}
+{{- end }}

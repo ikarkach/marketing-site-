@@ -3,6 +3,7 @@ title: "Roland FAVORITE II"
 seoTitle: "Купить кондиционер Roland Favorite II в Краснодаре | Usplit"
 h1: "Купить кондиционер Roland Favorite II в Краснодаре"
 description: "Roland Favorite II: классическая сплит-система с Wi-Fi, 5 моделей от 2,37 до 7,05 кВт. Узнайте цену и наличие в Краснодаре — напишите в WhatsApp или позвоните."
+brand: "Roland"
 weight: 2
 resources:
   - src: photo.png

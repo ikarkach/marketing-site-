@@ -95,6 +95,10 @@
             {{ end }}
             {{ end }}
 
+            {{ with .Site.GetPage "/price" }}
+            <a class="navbar-item" href="{{ .RelPermalink }}">Прайс-лист</a>
+            {{ end }}
+
             {{ with .Site.GetPage "/home" }}
             {{ with .Resources.GetMatch "contact.md" }}
             {{ if not .Draft }}

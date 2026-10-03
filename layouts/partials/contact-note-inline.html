@@ -1,0 +1,3 @@
+{{- with site.Params.contact }}
+<p class="catalog-note">Цены указаны в рублях, рекомендованные розничные, действуют с {{ hugo.Data.catalog.priceDate }} (Roland — с 18.09.2026). Наличие и актуальную стоимость уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
+{{- end }}

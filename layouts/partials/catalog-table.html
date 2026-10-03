@@ -1,0 +1,51 @@
+{{- /* Таблица каталога из data/catalog.json. Вход: словарь {title, kind, rows}. Разметка та же, что у таблиц из Markdown (карточки на телефоне). */ -}}
+{{- $t := . -}}
+{{- $hasHeat := false -}}
+{{- range $t.rows }}{{ if .heat }}{{ $hasHeat = true }}{{ end }}{{ end -}}
+{{- $kw := cond $hasHeat "Охлаждение / нагрев, кВт" "Охлаждение, кВт" -}}
+{{- $cols := slice -}}
+{{- if eq $t.kind "kit" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" $kw "k" "kw") (dict "l" "Класс энергоэфф." "k" "eff") (dict "l" "Шум внутр. блока, дБ(А)" "k" "noise") (dict "l" "Цена комплекта, ₽" "k" "price") -}}
+{{- else if eq $t.kind "outdoor" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Охлаждение / нагрев, кВт" "k" "kw") (dict "l" "Класс энергоэфф." "k" "eff") (dict "l" "Шум, дБ(А)" "k" "noise") (dict "l" "Макс. длина трассы, м" "k" "pipe") (dict "l" "Цена блока, ₽" "k" "price") -}}
+{{- else if eq $t.kind "indoor" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Охлаждение / нагрев, кВт" "k" "kw") (dict "l" "Класс энергоэфф." "k" "eff") (dict "l" "Шум, дБ(А)" "k" "noise") (dict "l" "Цена блока, ₽" "k" "price") -}}
+{{- else if eq $t.kind "lgkit" -}}
+  {{- $cols = slice (dict "l" "Модель (внутр. / наруж. блок)" "k" "model") (dict "l" "Типоразмер" "k" "cap") (dict "l" "Охлаждение / нагрев, кВт" "k" "kw") (dict "l" "Класс энергоэфф." "k" "eff") (dict "l" "Шум внутр. блока, дБ(А)" "k" "noise") (dict "l" "Цена комплекта, ₽" "k" "price") -}}
+{{- else if eq $t.kind "lgout" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Типоразмер" "k" "cap") (dict "l" "Охлаждение / нагрев, кВт" "k" "kw") (dict "l" "Класс энергоэфф." "k" "eff") (dict "l" "Внутренних блоков" "k" "units") (dict "l" "Цена блока, ₽" "k" "price") -}}
+{{- else if eq $t.kind "lgin" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Типоразмер" "k" "cap") (dict "l" "Охлаждение / нагрев, кВт" "k" "kw") (dict "l" "Цена блока, ₽" "k" "price") -}}
+{{- else if eq $t.kind "roland" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Охлаждение / нагрев, кВт" "k" "capraw") (dict "l" "Шум внутр. блока, дБ(А)" "k" "noise") (dict "l" "Цена комплекта, ₽" "k" "price") -}}
+{{- else if eq $t.kind "dehum" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Производительность, л/сутки" "k" "perday") (dict "l" "Бак, л" "k" "tank") (dict "l" "Расход воздуха, м³/ч" "k" "air") (dict "l" "Шум, дБ(А)" "k" "noise") (dict "l" "Габариты (Д×В×Г), мм" "k" "dims") (dict "l" "Цена, ₽" "k" "price") -}}
+{{- else -}}
+  {{- $cols = slice (dict "l" "Артикул" "k" "name") (dict "l" "Описание" "k" "desc") (dict "l" "Цена, ₽" "k" "price") -}}
+{{- end -}}
+{{- with $t.title }}<h3>{{ . }}</h3>{{ end }}
+<div class="table-wrap catalog-table"{{ with $t.title }} data-title="{{ . }}"{{ end }}>
+<table>
+    <thead>
+        <tr>{{ range $cols }}<th>{{ .l }}</th>{{ end }}</tr>
+    </thead>
+    <tbody>
+    {{- range $r := $t.rows }}
+        <tr>
+        {{- range $cols }}
+            {{- $k := .k }}
+            {{- if eq $k "price" }}
+            <td data-label="{{ .l }}" class="is-price">{{ partial "rub.html" $r.price }}</td>
+            {{- else if eq $k "kw" }}
+            <td data-label="{{ .l }}">{{ with $r.cool }}{{ . }}{{ if $r.heat }} / {{ $r.heat }}{{ end }}{{ else }}—{{ end }}</td>
+            {{- else if eq $k "capraw" }}
+            <td data-label="{{ .l }}">{{ $r.cap }}</td>
+            {{- else }}
+            <td data-label="{{ .l }}">{{ with index $r $k }}{{ . }}{{ else }}—{{ end }}</td>
+            {{- end }}
+        {{- end }}
+        </tr>
+    {{- end }}
+    </tbody>
+</table>
+</div>

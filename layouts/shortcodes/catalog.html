@@ -1,0 +1,23 @@
+{{- /* {{< catalog page="hisense-nastennye" >}}: разделы страницы каталога из data/catalog.json (фото лежат рядом со страницей) */ -}}
+{{- $page := .Get "page" -}}
+{{- $p := .Page -}}
+{{- range index hugo.Data.catalog.pages $page }}
+<section class="catalog-section" id="{{ .id }}">
+<h2>{{ .title }}</h2>
+{{- with .images }}
+<div class="catalog-figures">
+{{- range . }}{{ $img := . }}{{ with $p.Resources.GetMatch $img.file }}
+    <figure><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $img.alt }}" loading="lazy" decoding="async"></figure>
+{{- end }}{{ end }}
+</div>
+{{- end }}
+{{- with .features }}
+<ul class="catalog-features">
+{{- range . }}<li>{{ . }}</li>{{ end }}
+</ul>
+{{- end }}
+{{- range .tables }}
+{{ partial "catalog-table.html" . }}
+{{- end }}
+</section>
+{{- end }}

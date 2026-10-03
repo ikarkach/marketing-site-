@@ -223,3 +223,43 @@
 
 /* Названия в карточках оборудования — h3 вместо h1, вид прежний */
 .card-content h3 { font-size: inherit; font-weight: inherit; line-height: inherit; margin: 0; }
+
+/* ===== Каталог: страницы серий и прайс-лист (layouts/shortcodes/catalog.html, layouts/price/list.html) ===== */
+.catalog-section { margin: 2rem 0 1.25rem; }
+.catalog-section h2 { font-size: clamp(1.4rem, 3.2vw, 1.9rem); line-height: 1.2; margin: 0 0 .75rem; }
+.catalog-section h3,
+.price-block h3,
+.price-block h4 { font-size: 1.1rem; margin: 1.1rem 0 .5rem; }
+.catalog-figures { display: flex; flex-wrap: wrap; gap: 12px; margin: .5rem 0 1rem; }
+.catalog-figures figure { background: #fff; border-radius: 8px; padding: 8px; margin: 0; }
+.catalog-figures img { display: block; width: auto; max-width: 100%; max-height: 190px; height: auto; }
+.catalog-features { list-style: disc; margin: .25rem 0 1rem 1.25rem; }
+.catalog-features li { margin: .15rem 0; }
+.catalog-note { margin: 1.25rem 0; }
+.catalog-brand { margin-bottom: 1rem; }
+.catalog-brand-section.section { padding-top: 1rem; padding-bottom: 0; }
+
+.price-tools { margin: 1rem 0 1.5rem; }
+.price-label { display: block; margin-bottom: .35rem; font-weight: 600; }
+.price-search { width: 100%; max-width: 520px; padding: .6rem .8rem; font-size: 1rem; border: 1px solid #8a8f98; border-radius: 6px; background: #fff; color: #1a1a1a; }
+.price-brands { display: flex; flex-wrap: wrap; gap: 8px; margin: .75rem 0 .25rem; }
+.price-brand { padding: .45rem .9rem; border: 1px solid #8a8f98; border-radius: 999px; background: transparent; color: inherit; cursor: pointer; font-size: .95rem; }
+.price-brand.is-active { background: #035fb5; border-color: #035fb5; color: #fff; }
+.price-count { margin: .5rem 0 0; font-size: .95rem; opacity: .85; }
+.price-group { margin: 2rem 0; }
+.price-group > h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin-bottom: .5rem; }
+.price-page-title { font-size: 1.25rem; margin: 1.5rem 0 .25rem; }
+.price-group [hidden], .price-page [hidden], tr[hidden] { display: none !important; }
+
+/* таблицы каталога: длинные названия моделей переносятся, широкая таблица не раздвигает страницу */
+.markdown .catalog-table td:first-child { white-space: normal; overflow-wrap: anywhere; }
+@media (min-width: 641px) { .markdown .catalog-table { overflow-x: auto; } }
+
+/* меню стало длиннее (добавлен «Прайс-лист»): на средних экранах пункты переносятся, а не раздвигают страницу */
+@media (min-width: 769px) {
+  .navbar-menu { flex-wrap: wrap; max-width: 100%; }
+}
+
+/* длинные названия карточек («Hisense: полупромышленные сплит-системы») не выходят за край на узком экране */
+.card-content h3 { overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 480px) { .card-content { font-size: 1.2rem; } }

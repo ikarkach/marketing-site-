@@ -1,0 +1,144 @@
+{{ define "main" }}
+{{- $cat := hugo.Data.catalog -}}
+{{- $names := dict
+    "hisense-nastennye" "Настенные сплит-системы"
+    "hisense-polupromyshlennye" "Полупромышленные сплит-системы"
+    "hisense-multi-split" "Мульти-сплит системы"
+    "hisense-mobilnye" "Мобильные кондиционеры"
+    "lg" "Сплит-системы и мульти-сплит" -}}
+<div class="container markdown top-pad price-page">
+    {{ .Content }}
+
+    <div class="price-tools">
+        <label for="price-search" class="price-label">Поиск по модели, серии или названию</label>
+        <input type="search" id="price-search" class="price-search" placeholder="Например: Vibe, 12, ARTCOOL, пульт" autocomplete="off">
+        <div class="price-brands" role="group" aria-label="Бренд">
+            <button type="button" class="price-brand is-active" data-brand="">Все</button>
+            <button type="button" class="price-brand" data-brand="Roland">Roland</button>
+            <button type="button" class="price-brand" data-brand="Hisense">Hisense</button>
+            <button type="button" class="price-brand" data-brand="LG">LG</button>
+            <button type="button" class="price-brand" data-brand="Аксессуары">Аксессуары</button>
+        </div>
+        <p id="price-count" class="price-count" aria-live="polite"></p>
+    </div>
+
+    {{/* ---- Roland: цены берутся из страниц каталога ---- */}}
+    <section class="price-group" data-brand="Roland" id="roland">
+        <h2>Roland</h2>
+        {{- range $cat.roland }}
+        <div class="price-block" data-tags="{{ .title }}">
+            <h3><a href="{{ printf "projects/%s/" .page | relURL }}">{{ .title }}</a></h3>
+            {{ partial "catalog-table.html" (dict "kind" "roland" "rows" .rows) }}
+        </div>
+        {{- end }}
+    </section>
+
+    {{/* ---- Hisense ---- */}}
+    <section class="price-group" data-brand="Hisense" id="hisense">
+        <h2>Hisense</h2>
+        {{- range $page := slice "hisense-nastennye" "hisense-polupromyshlennye" "hisense-multi-split" "hisense-mobilnye" }}
+        <h3 class="price-page-title"><a href="{{ printf "projects/%s/" $page | relURL }}">{{ index $names $page }}</a></h3>
+        {{- range index $cat.pages $page }}
+        <div class="price-block" data-tags="{{ .title }}">
+            <h4>{{ .title }}</h4>
+            {{- range .tables }}
+            {{ partial "catalog-table.html" . }}
+            {{- end }}
+        </div>
+        {{- end }}
+        {{- end }}
+        <h3 class="price-page-title"><a href="{{ "projects/osushiteli/" | relURL }}">Осушители</a></h3>
+        <div class="price-block">
+            {{ partial "catalog-table.html" (dict "kind" "dehum" "rows" $cat.osushiteli) }}
+        </div>
+    </section>
+
+    {{/* ---- LG ---- */}}
+    <section class="price-group" data-brand="LG" id="lg">
+        <h2>LG</h2>
+        <h3 class="price-page-title"><a href="{{ "projects/lg/" | relURL }}">{{ index $names "lg" }}</a></h3>
+        {{- range index $cat.pages "lg" }}
+        <div class="price-block" data-tags="{{ .title }}">
+            <h4>{{ .title }}</h4>
+            {{- range .tables }}
+            {{ partial "catalog-table.html" . }}
+            {{- end }}
+        </div>
+        {{- end }}
+    </section>
+
+    {{/* ---- Аксессуары, инструмент, принадлежности ---- */}}
+    <section class="price-group" data-brand="Аксессуары" id="aksessuary">
+        <h2>Аксессуары, инструмент и принадлежности</h2>
+        {{- range $cat.accessories }}
+        <div class="price-block">
+            <h3>{{ .brand }}: {{ .category }}</h3>
+            {{ partial "catalog-table.html" (dict "kind" "acc" "rows" .rows) }}
+        </div>
+        {{- end }}
+    </section>
+
+    {{ partial "contact-note-inline.html" . }}
+</div>
+{{ end }}
+
+{{ define "customScripts" }}
+<script>
+(function () {
+  var input = document.getElementById('price-search');
+  var count = document.getElementById('price-count');
+  var buttons = document.querySelectorAll('.price-brand');
+  var groups = document.querySelectorAll('.price-group');
+  if (!input) return;
+  var brand = '';
+  function apply() {
+    var q = input.value.trim().toLowerCase();
+    var tokens = q ? q.split(/\s+/) : [];
+    var shown = 0, total = 0;
+    groups.forEach(function (g) {
+      var okBrand = !brand || g.getAttribute('data-brand') === brand;
+      var groupHas = false;
+      g.querySelectorAll('.price-block, .table-wrap').forEach(function (b) { b.hidden = false; });
+      g.querySelectorAll('tbody tr').forEach(function (tr) {
+        total++;
+        var wrap = tr.closest('.table-wrap'), block = tr.closest('.price-block');
+        var hay = (tr.textContent + ' ' + (wrap ? wrap.getAttribute('data-title') || '' : '') + ' ' +
+                   (block ? block.getAttribute('data-tags') || '' : '') + ' ' + g.getAttribute('data-brand')).toLowerCase();
+        var match = okBrand && tokens.every(function (t) { return hay.indexOf(t) !== -1; });
+        tr.hidden = !match;
+        if (match) { shown++; groupHas = true; }
+      });
+      g.querySelectorAll('.table-wrap').forEach(function (w) {
+        w.hidden = !w.querySelector('tbody tr:not([hidden])');
+        var h = w.previousElementSibling;
+        while (h && !/^H[2-6]$/.test(h.tagName) && h.classList && !h.classList.contains('table-wrap')) h = h.previousElementSibling;
+        if (h && /^H[3-6]$/.test(h.tagName) && !h.classList.contains('price-page-title')) h.hidden = w.hidden;
+      });
+      g.querySelectorAll('.price-block').forEach(function (b) {
+        b.hidden = !b.querySelector('tbody tr:not([hidden])');
+      });
+      g.querySelectorAll('.price-page-title').forEach(function (t) {
+        var n = t.nextElementSibling, vis = false;
+        while (n && !n.classList.contains('price-page-title')) {
+          if (n.classList.contains('price-block') && !n.hidden) vis = true;
+          n = n.nextElementSibling;
+        }
+        t.hidden = !vis;
+      });
+      g.hidden = !groupHas;
+    });
+    count.textContent = shown === total && !q && !brand ? 'Позиций в прайсе: ' + total : 'Найдено позиций: ' + shown;
+  }
+  input.addEventListener('input', apply);
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      buttons.forEach(function (x) { x.classList.remove('is-active'); });
+      b.classList.add('is-active');
+      brand = b.getAttribute('data-brand');
+      apply();
+    });
+  });
+  apply();
+})();
+</script>
+{{ end }}

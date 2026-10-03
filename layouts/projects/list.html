@@ -1,15 +1,22 @@
 {{ define "main" }}
     <div class="container markdown top-pad">
         {{ .Content }}
+        {{ with site.GetPage "/price" }}<p class="catalog-note"><a href="{{ .RelPermalink }}">Полный прайс-лист по всем брендам</a> — с поиском по моделям.</p>{{ end }}
     </div>
     <div class="container">
-        <div class="section">
+        {{ $list := .Pages.ByWeight }}
+        {{ $brands := slice "Roland" "Hisense" "LG" "Вентиляция и осушители" }}
+        {{ range $brands }}
+        {{ $brand := . }}
+        {{ $items := where $list "Params.brand" $brand }}
+        {{ if $items }}
+        <div class="section catalog-brand-section">
+            <h2 class="title is-3 catalog-brand">{{ $brand }}</h2>
             <div class="columns is-multiline">
-                {{ $numberOfPages := len .Pages}}
-                {{ range .Pages.ByWeight }}
+                {{ range $items }}
                 {{ $width := "302x" }}
                 {{ $columWidth := "is-one-third" }}
-                {{ if .Site.Params.projects.useTwoColumns }}
+                {{ if site.Params.projects.useTwoColumns }}
                   {{ $columWidth = "is-half" }}
                   {{ $width = "490x" }}
                 {{ end}}
@@ -39,5 +46,7 @@
                 {{ end }}
             </div>
         </div>
+        {{ end }}
+        {{ end }}
     </div>
 {{ end }}

@@ -32,6 +32,7 @@
                         {{ partial "home/social.html" . }}
                     </div>
                     <!-- End top social icons -->
+                    {{ partial "contact-buttons.html" (dict "variant" "hero") }}
                 </div>
             </div> <!-- End of Hero body -->
             {{ end }}
@@ -127,6 +128,8 @@
         {{ end }}
 
         {{ partial "footer/text.html" . }}
+
+        {{ partial "contact-buttons.html" (dict "variant" "sticky") }}
 
         <!-- End of fade in three section -->
         {{ partial "footer/scripts.html" . }}

@@ -1,0 +1,10 @@
+{{- /* Кнопки связи. Вызов: partial "contact-buttons.html" (dict "variant" "hero|inline|section|sticky") */ -}}
+{{- $variant := .variant | default "inline" -}}
+{{- with site.Params.contact -}}
+{{- $wa := printf "https://wa.me/%s?text=%s" .whatsapp (.whatsappText | urlquery | replace "+" "%20") -}}
+<div class="cta cta--{{ $variant }}" role="group" aria-label="Связаться с нами">
+    <a class="cta-btn cta-call" href="tel:{{ .phone }}" data-goal="call_click"><i class="fas fa-phone" aria-hidden="true"></i><span>Позвонить</span></a>
+    <a class="cta-btn cta-wa" href="{{ $wa }}" target="_blank" rel="noopener" data-goal="whatsapp_click"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a class="cta-btn cta-tg" href="https://t.me/{{ .telegram }}" target="_blank" rel="noopener" data-goal="telegram_click"><i class="fab fa-telegram" aria-hidden="true"></i><span>Telegram</span></a>
+</div>
+{{- end -}}

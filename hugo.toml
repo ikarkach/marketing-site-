@@ -16,7 +16,7 @@ disableKinds = ['taxonomy', 'term']
   showMenu      = true
   fadeIn        = true
   favicon       = "favicon.png"
-  customCSS     = ["css/tables.css", "css/buttons.css", "css/site.css"]
+  customCSS     = ["css/site.css"]
   dateFormat    = "2 January 2006"
   email         = "karkachev2010@yandex.ru"
   description   = "Продажа, монтаж и сервисное обслуживание кондиционеров и вентиляции"
@@ -26,6 +26,13 @@ disableKinds = ['taxonomy', 'term']
     showLatest             = true
     showAllPosts           = false
     numberOfProjectsToShow = 3
+
+  # Контакты для кнопок связи (единый компонент layouts/partials/contact-buttons.html)
+  [params.contact]
+    phone        = "+79604777114"                # ссылка tel:
+    whatsapp     = "79604777114"                 # https://wa.me/<номер без +>
+    telegram     = "+79604777114"                # https://t.me/<номер с + или имя пользователя>
+    whatsappText = "Здравствуйте! Хочу получить консультацию по климатической технике."
 
   [params.projects]
     useTwoColumns = true

@@ -25,6 +25,10 @@
             <div class="section {{ if .Site.Params.fadeIn | default true }} fade-in two {{ end }}">
                 {{ partial "nav.html" . }}
 
+                <div class="container">
+                    {{ partial "contact-buttons.html" (dict "variant" "inline") }}
+                </div>
+
                 {{ block "main" . }}
                 {{ end }}
 
@@ -34,6 +38,7 @@
                 {{ end }}
             </div>
         </section>
+        {{ partial "contact-buttons.html" (dict "variant" "sticky") }}
         {{ block "js-include" . }}
         {{ partial "footer/scripts.html" . }}
         {{ end }}

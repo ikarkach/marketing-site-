@@ -8,3 +8,187 @@
   opacity: 1;
   animation: none;
 }
+
+/* ===== Заголовок страницы не должен распирать узкий экран =====
+   Длинное слово («Оборудование») при 3rem не помещалось в 320 px и давало горизонтальный скролл. */
+.bold-title {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 480px) {
+  .bold-title,
+  .bold-title.is-1 {
+    font-size: clamp(1.75rem, 9vw, 3rem);
+  }
+}
+
+/* ===== Кнопки связи (layouts/partials/contact-buttons.html) ===== */
+:root {
+  --cta-call: #035fb5;   /* белый текст: 6,35:1 */
+  --cta-wa: #0e7c3a;     /* белый текст: 5,30:1 */
+  --cta-tg: #0f6fa6;     /* белый текст: 5,46:1 */
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none !important;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+.cta-call { background: var(--cta-call); }
+.cta-wa { background: var(--cta-wa); }
+.cta-tg { background: var(--cta-tg); }
+
+.cta--hero { margin: 28px 0 8px; }
+
+/* Закреплённая панель: только на телефонах и планшетах */
+.cta--sticky { display: none; }
+
+@media (max-width: 768px) {
+  .cta--sticky {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .cta--sticky .cta-btn {
+    flex-direction: column;
+    gap: 4px;
+    min-height: 52px;
+    padding: 6px 4px;
+    font-size: 13px;
+  }
+
+  /* панель не должна перекрывать конец страницы */
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-color-scheme: dark) {
+  .cta--sticky { background: rgba(14, 26, 38, 0.97); }
+}
+
+/* ===== Таблицы из Markdown (layouts/_default/_markup/render-table.html) =====
+   Компьютер: обычная таблица. Телефон (до 640 px): каждая строка становится карточкой,
+   цена всегда сразу под названием модели, ничего не уезжает за край экрана. */
+.markdown .table-wrap { max-width: 100%; }
+
+.markdown .table-wrap table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.markdown .table-wrap th,
+.markdown .table-wrap td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.markdown .table-wrap tbody tr:nth-child(even) td {
+  background: rgba(128, 128, 128, 0.14);
+}
+
+.markdown .table-wrap td:first-child { white-space: nowrap; }
+.markdown .table-wrap td.is-price { font-weight: 700; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .markdown .table-wrap table,
+  .markdown .table-wrap tbody,
+  .markdown .table-wrap tr,
+  .markdown .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .markdown .table-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .markdown .table-wrap tr {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 14px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .markdown .table-wrap td {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border: 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.25);
+    text-align: right;
+    white-space: normal;
+  }
+
+  .markdown .table-wrap td::before {
+    content: attr(data-label);
+    flex: 0 0 48%;
+    font-weight: 600;
+    text-align: left;
+    opacity: 0.8;
+  }
+
+  .markdown .table-wrap td:first-child {
+    order: 0;
+    justify-content: flex-start;
+    border-top: 0;
+    background: rgba(3, 95, 181, 0.12);
+    font-size: 1.05em;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .markdown .table-wrap td:first-child::before { content: none; }
+
+  .markdown .table-wrap td.is-price {
+    order: 1;
+    font-size: 1.1em;
+  }
+}

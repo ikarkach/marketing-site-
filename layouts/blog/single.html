@@ -1,7 +1,5 @@
 {{ define "title" }}
-{{ with .Site.GetPage "/blog" }}
-<h1 class="bold-title is-1">{{ .Title | markdownify }}</h1>
-{{ end }}
+<h1 class="bold-title is-1">{{ with .Params.h1 }}{{ . }}{{ else }}{{ .Title | markdownify }}{{ end }}</h1>
 {{ end }}
 
 {{ define "main" }}

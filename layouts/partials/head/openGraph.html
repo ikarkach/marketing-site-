@@ -1,0 +1,34 @@
+{{- $title := partial "seo-title.html" . -}}
+{{- $desc := cond (ne .Description "") .Description .Site.Params.description -}}
+{{- $isPost := and .IsPage (eq .Section "blog") -}}
+
+<link rel="canonical" href="{{ .Permalink }}"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:type" content="{{ if $isPost }}article{{ else }}website{{ end }}" />
+<meta property="og:description" content="{{ $desc }}"/>
+<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:site_name" content="{{ .Site.Title | markdownify }}"/>
+<meta property="og:locale" content="ru_RU" />
+
+{{ $ogImages := slice }}
+{{ with .Resources.ByType "image" }}
+{{ range first 1 (sort . "Params.weight") }}
+{{ $ogImages = $ogImages | append .Permalink }}
+<meta property="og:image" content="{{ .Permalink }}"/>
+{{ end }}
+{{ else }}
+{{- /* у страницы нет своей картинки: общая картинка сайта 1200x630 */ -}}
+{{ $ogImages = $ogImages | append ("og-image.png" | absURL) }}
+<meta property="og:image" content="{{ "og-image.png" | absURL }}"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+{{ with .Site.Params.twitteruser }}<meta name="twitter:site" content="@{{ . }}" />{{ end }}
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $desc }}" />
+{{ with index $ogImages 0 }}<meta name="twitter:image" content="{{ . }}" />{{ end }}

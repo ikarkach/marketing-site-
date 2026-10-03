@@ -33,9 +33,9 @@
                         </div>
                         {{ end }}
                         <div class="card-content has-text-centered top-pad">
-                            <h1><a href="{{ .Params.external_link | default .RelPermalink }}"{{ if not .Params.external_link }} aria-haspopup="dialog" aria-controls="project-{{ $index }}"{{ end }}>
+                            <h3><a href="{{ .Params.external_link | default .RelPermalink }}"{{ if not .Params.external_link }} aria-haspopup="dialog" aria-controls="project-{{ $index }}"{{ end }}>
                                 {{ .Title | markdownify }}
-                            </a></h1>
+                            </a></h3>
                             {{ if .Params.project_timeframe }}
                             <p class="fa-xs">{{ .Params.project_timeframe }}</p>
                             {{ end }}

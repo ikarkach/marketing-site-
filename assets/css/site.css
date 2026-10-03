@@ -16,10 +16,17 @@
   hyphens: auto;
 }
 
+/* H1 внутренних страниц стал длиннее (ключевая фраза + «Краснодар»): 6rem из темы слишком крупно */
+.bold-title,
+.bold-title.is-1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
 @media (max-width: 480px) {
   .bold-title,
   .bold-title.is-1 {
-    font-size: clamp(1.75rem, 9vw, 3rem);
+    font-size: clamp(1.5rem, 7.5vw, 2rem);
   }
 }
 
@@ -203,3 +210,16 @@
 /* Подвал: название, город, телефон и e-mail (одинаково с разделом «Контакты») */
 .footer-nap { margin-bottom: .5rem; }
 .footer-nap a { text-decoration: underline; }
+
+/* ===== Главная: логотип отдельно, видимый H1 под ним ===== */
+.hero-logo { margin-bottom: .5rem; }
+.hero-h1 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: .25rem 0 1rem;
+  overflow-wrap: break-word;
+}
+
+/* Названия в карточках оборудования — h3 вместо h1, вид прежний */
+.card-content h3 { font-size: inherit; font-weight: inherit; line-height: inherit; margin: 0; }

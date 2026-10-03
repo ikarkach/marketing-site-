@@ -1,0 +1,2 @@
+{{- /* Текст <title> и og:title: seoTitle из front matter, иначе «Заголовок | Usplit» */ -}}
+{{- with .Params.seoTitle }}{{ . }}{{ else }}{{ .Title | plainify }}{{ if ne .Title site.Title }} | {{ site.Title }}{{ end }}{{ end -}}

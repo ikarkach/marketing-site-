@@ -17,13 +17,12 @@
           items:
             - {title: Hisense мульти-сплит, url: /projects/hisense-multi-split/}
             - {title: LG ProMulti, url: "/projects/lg/#promulti"}
-        - title: Полупромышленные и мобильные
-          items:
-            - {title: Hisense полупромышленные, url: /projects/hisense-polupromyshlennye/}
-            - {title: Hisense мобильные, url: /projects/hisense-mobilnye/}
         - title: Промышленные
           items:
-            - {title: Промышленные кондиционеры, url: /projects/promyshlennye/}
+            - {title: Промышленные кондиционеры Hisense, url: /projects/promyshlennye/}
+        - title: Мобильные
+          items:
+            - {title: Hisense мобильные, url: /projects/hisense-mobilnye/}
     - title: Вентиляция и влажность
       groups:
         - items:

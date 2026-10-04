@@ -1,7 +1,7 @@
 {{- /* Каталог с фильтрами. Карточки серий берутся из data/series.json (его собирает scripts/build_catalog.py); фильтры работают в assets/js/catalog.js */ -}}
 {{ define "main" }}
 {{- $series := hugo.Data.series -}}
-{{- $types := slice (dict "k" "wall" "t" "Настенные") (dict "k" "multi" "t" "Мульти-сплит") (dict "k" "semi" "t" "Полупромышленные") (dict "k" "mobile" "t" "Мобильные") (dict "k" "dehum" "t" "Осушители") (dict "k" "vent" "t" "Вентиляция") -}}
+{{- $types := slice (dict "k" "wall" "t" "Настенные") (dict "k" "multi" "t" "Мульти-сплит") (dict "k" "semi" "t" "Промышленные") (dict "k" "mobile" "t" "Мобильные") (dict "k" "dehum" "t" "Осушители") (dict "k" "vent" "t" "Вентиляция") -}}
 <div class="container catalog-page">
     <div class="markdown top-pad">
         {{ .Content }}
@@ -13,7 +13,6 @@
         {{- range $types }}
         <button type="button" class="catalog-tab" data-type="{{ .k }}" aria-pressed="false">{{ .t }}</button>
         {{- end }}
-        <a class="catalog-tab catalog-tab--link" href="{{ "projects/promyshlennye/" | relURL }}">Промышленные</a>
     </div>
 
     <div class="catalog-layout">

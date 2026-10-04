@@ -23,7 +23,7 @@ PHOTOS = {
         'city': [('H', 'image40.png', 'Hisense City 2.0 — внутренний блок')],
         'strong': [('H', 'image61.png', 'Hisense Strong Vibe Classic A — внутренний блок')],
     },
-    'hisense-polupromyshlennye': {
+    'promyshlennye': {
         'kass': [('H', 'image97.png', 'Hisense кассетный кондиционер')],
         'duct': [('H', 'image98.png', 'Hisense канальный кондиционер')],
         'floor': [('H', 'image100.png', 'Hisense напольно-потолочный кондиционер')],

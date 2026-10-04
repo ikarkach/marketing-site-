@@ -2,7 +2,7 @@
 {{- $cat := hugo.Data.catalog -}}
 {{- $names := dict
     "hisense-nastennye" "Настенные сплит-системы"
-    "hisense-polupromyshlennye" "Полупромышленные сплит-системы"
+    "promyshlennye" "Промышленные кондиционеры"
     "hisense-multi-split" "Мульти-сплит системы"
     "hisense-mobilnye" "Мобильные кондиционеры"
     "lg" "Сплит-системы и мульти-сплит" -}}
@@ -36,7 +36,7 @@
     {{/* ---- Hisense ---- */}}
     <section class="price-group" data-brand="Hisense" id="hisense">
         <h2>Hisense</h2>
-        {{- range $page := slice "hisense-nastennye" "hisense-polupromyshlennye" "hisense-multi-split" "hisense-mobilnye" }}
+        {{- range $page := slice "hisense-nastennye" "promyshlennye" "hisense-multi-split" "hisense-mobilnye" }}
         <h3 class="price-page-title"><a href="{{ printf "projects/%s/" $page | relURL }}">{{ index $names $page }}</a></h3>
         {{- range index $cat.pages $page }}
         <div class="price-block" data-tags="{{ .title }}">

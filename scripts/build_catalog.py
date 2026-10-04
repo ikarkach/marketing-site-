@@ -263,7 +263,7 @@ def build_hisense(path, pages, accessories, include_clearance):
             r['model'] = txt(c.get(2)).replace(' | ', ' + ')
             if r['_flag'] and clearance(r['_flag']) and not include_clearance:
                 report['excluded_clearance'].append(f"{r['model']} ({r['price']} ₽)"); continue
-            sec = pages.section('hisense-polupromyshlennye', cur['sid'], cur['ttl'])
+            sec = pages.section('promyshlennye', cur['sid'], cur['ttl'])
             t = pages.table(sec, cur['var'], cur['var'], 'kit')
         elif mode == 'multi_out':
             r = dict(model=txt(c.get(2)), cool=nominal(c.get(3)), heat=nominal(c.get(4)), eff=eff(c.get(5)),
@@ -450,7 +450,7 @@ def read_roland():
 # ---------- сборка ----------
 def finalize(pages, osushiteli):
     out = OrderedDict()
-    order = {'hisense-nastennye': list(WALL_TITLES), 'hisense-polupromyshlennye': SEMI_ORDER}
+    order = {'hisense-nastennye': list(WALL_TITLES), 'promyshlennye': SEMI_ORDER}
     for page, secs in pages.items():
         if page.startswith('_'):
             continue
@@ -469,7 +469,7 @@ def finalize(pages, osushiteli):
 # Инверторность серий, у которых в таблицах нет разбивки «Инверторные / Классические»: по названиям серий в прайсах
 SERIES_TECH = {'sensation': 'yes', 'vision': 'yes', 'vibe': 'yes', 'expert': 'yes', 'strong': 'no',
                'deluxepro': 'yes', 'artcoolmirror': 'yes', 'procool': 'yes', 'promulti': 'yes'}
-SERIES_TYPE = {'hisense-nastennye': 'wall', 'hisense-polupromyshlennye': 'semi', 'hisense-multi-split': 'multi',
+SERIES_TYPE = {'hisense-nastennye': 'wall', 'promyshlennye': 'semi', 'hisense-multi-split': 'multi',
                'hisense-mobilnye': 'mobile', 'lg': 'wall'}
 SERIES_TITLE = {'kass': 'Hisense кассетные сплит-системы', 'duct': 'Hisense канальные сплит-системы',
                 'floor': 'Hisense напольно-потолочные и консольные сплит-системы', 'column': 'Hisense колонные сплит-системы',
@@ -508,7 +508,7 @@ def build_series(cat):
         out.append(dict(id='roland-' + r['page'], title=r['title'], brand='Roland', type='wall',
                         tech='yes' if r['page'] == 'favorite-ii-inverter' else 'no', url=f"/projects/{r['page']}/",
                         page=r['page'], image=dict(page=r['page'], file='photo.png'), **_series_stats(rows)))
-    order = ['hisense-nastennye', 'hisense-polupromyshlennye', 'hisense-multi-split', 'hisense-mobilnye', 'lg']
+    order = ['hisense-nastennye', 'promyshlennye', 'hisense-multi-split', 'hisense-mobilnye', 'lg']
     for page in order:
         for s in cat['pages'].get(page, []):
             rows = [x for t in s['tables'] for x in t['rows']]

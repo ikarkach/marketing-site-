@@ -253,15 +253,15 @@
   ]
  },
  {
-  "id": "hisense-polupromyshlennye-kass",
+  "id": "promyshlennye-kass",
   "title": "Hisense кассетные сплит-системы",
   "brand": "Hisense",
   "type": "semi",
   "tech": "both",
-  "url": "/projects/hisense-polupromyshlennye/#kass",
-  "page": "hisense-polupromyshlennye",
+  "url": "/projects/promyshlennye/#kass",
+  "page": "promyshlennye",
   "image": {
-   "page": "hisense-polupromyshlennye",
+   "page": "promyshlennye",
    "file": "kass-1.webp"
   },
   "models": 11,
@@ -277,15 +277,15 @@
   ]
  },
  {
-  "id": "hisense-polupromyshlennye-duct",
+  "id": "promyshlennye-duct",
   "title": "Hisense канальные сплит-системы",
   "brand": "Hisense",
   "type": "semi",
   "tech": "both",
-  "url": "/projects/hisense-polupromyshlennye/#duct",
-  "page": "hisense-polupromyshlennye",
+  "url": "/projects/promyshlennye/#duct",
+  "page": "promyshlennye",
   "image": {
-   "page": "hisense-polupromyshlennye",
+   "page": "promyshlennye",
    "file": "duct-1.webp"
   },
   "models": 13,
@@ -301,15 +301,15 @@
   ]
  },
  {
-  "id": "hisense-polupromyshlennye-floor",
+  "id": "promyshlennye-floor",
   "title": "Hisense напольно-потолочные и консольные сплит-системы",
   "brand": "Hisense",
   "type": "semi",
   "tech": "both",
-  "url": "/projects/hisense-polupromyshlennye/#floor",
-  "page": "hisense-polupromyshlennye",
+  "url": "/projects/promyshlennye/#floor",
+  "page": "promyshlennye",
   "image": {
-   "page": "hisense-polupromyshlennye",
+   "page": "promyshlennye",
    "file": "floor-1.webp"
   },
   "models": 11,
@@ -325,13 +325,13 @@
   ]
  },
  {
-  "id": "hisense-polupromyshlennye-column",
+  "id": "promyshlennye-column",
   "title": "Hisense колонные сплит-системы",
   "brand": "Hisense",
   "type": "semi",
   "tech": "no",
-  "url": "/projects/hisense-polupromyshlennye/#column",
-  "page": "hisense-polupromyshlennye",
+  "url": "/projects/promyshlennye/#column",
+  "page": "promyshlennye",
   "models": 3,
   "priceMin": 132690,
   "priceMax": 259790,

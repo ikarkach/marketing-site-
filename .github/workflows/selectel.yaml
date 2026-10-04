@@ -97,4 +97,14 @@ jobs:
         if: steps.check.outputs.ready == 'true'
         run: |
           s3cmd sync --acl-public --delete-removed --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/"
-          
+
+      - name: Set correct Content-Type for CSS
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          # s3cmd (через python-magic) определяет .css как text/plain, и Safari/Chrome не применяют такие стили:
+          # страницы выглядят без оформления. Перезаливаем все .css с правильным типом при каждом деплое
+          # (sync не обновляет файлы, у которых изменился только тип).
+          find public -type f -name '*.css' -print0 | while IFS= read -r -d '' f; do
+            s3cmd put --acl-public --no-progress --no-guess-mime-type --mime-type="text/css" "$f" "s3://${S3_BUCKET}/${f#public/}"
+          done
+

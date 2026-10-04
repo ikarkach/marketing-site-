@@ -3,11 +3,11 @@
 {{- with site.Params.contact -}}
 {{- $wa := printf "https://wa.me/%s?text=%s" .whatsapp (.whatsappText | urlquery | replace "+" "%20") -}}
 <div class="cta cta--{{ $variant }}" role="group" aria-label="Связаться с нами">
-    <a class="cta-btn cta-call" href="tel:{{ .phone }}" data-goal="call_click"><i class="fas fa-phone" aria-hidden="true"></i><span>Позвонить</span></a>
-    <a class="cta-btn cta-wa" href="{{ $wa }}" target="_blank" rel="noopener" data-goal="whatsapp_click"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a class="cta-btn cta-call" href="tel:{{ .phone }}" data-goal="call_click"><span class="cta-ico cta-ico--call"><i class="fas fa-phone" aria-hidden="true"></i></span><span>Позвонить</span></a>
+    <a class="cta-btn cta-wa" href="{{ $wa }}" target="_blank" rel="noopener" data-goal="whatsapp_click"><span class="cta-ico cta-ico--wa"><i class="fab fa-whatsapp" aria-hidden="true"></i></span><span>WhatsApp</span></a>
     {{- with .max }}
-    <a class="cta-btn cta-max" href="{{ . }}" target="_blank" rel="noopener" data-goal="dg_social_click_max"><i class="fas fa-comment-dots" aria-hidden="true"></i><span>MAX</span></a>
+    <a class="cta-btn cta-max" href="{{ . }}" target="_blank" rel="noopener" data-goal="dg_social_click_max"><span class="cta-ico cta-ico--max"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><linearGradient id="cta-max-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f9bff"/><stop offset="1" stop-color="#8a3ff5"/></linearGradient></defs><path fill="url(#cta-max-grad)" d="M12 2C6.5 2 2 6.1 2 11.2c0 2.6 1.2 5 3.1 6.7L4.5 22l4.3-2.2c1 .3 2 .4 3.2.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2z"/></svg></span><span>MAX</span></a>
     {{- end }}
-    <a class="cta-btn cta-tg" href="https://t.me/{{ .telegram }}" target="_blank" rel="noopener" data-goal="telegram_click"><i class="fab fa-telegram" aria-hidden="true"></i><span>Telegram</span></a>
+    <a class="cta-btn cta-tg" href="https://t.me/{{ .telegram }}" target="_blank" rel="noopener" data-goal="telegram_click"><span class="cta-ico cta-ico--tg"><i class="fab fa-telegram" aria-hidden="true"></i></span><span>Telegram</span></a>
 </div>
 {{- end -}}

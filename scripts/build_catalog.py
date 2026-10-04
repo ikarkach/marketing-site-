@@ -465,6 +465,73 @@ def finalize(pages, osushiteli):
     return out
 
 
+# ---------- индекс серий для каталога с фильтрами (data/series.json) ----------
+# Инверторность серий, у которых в таблицах нет разбивки «Инверторные / Классические»: по названиям серий в прайсах
+SERIES_TECH = {'sensation': 'yes', 'vision': 'yes', 'vibe': 'yes', 'expert': 'yes', 'strong': 'no',
+               'deluxepro': 'yes', 'artcoolmirror': 'yes', 'procool': 'yes', 'promulti': 'yes'}
+SERIES_TYPE = {'hisense-nastennye': 'wall', 'hisense-polupromyshlennye': 'semi', 'hisense-multi-split': 'multi',
+               'hisense-mobilnye': 'mobile', 'lg': 'wall'}
+SERIES_TITLE = {'kass': 'Hisense кассетные сплит-системы', 'duct': 'Hisense канальные сплит-системы',
+                'floor': 'Hisense напольно-потолочные и консольные сплит-системы', 'column': 'Hisense колонные сплит-системы',
+                'outdoor': 'Hisense: наружные блоки мульти-сплит', 'indoor': 'Hisense: внутренние блоки мульти-сплит'}
+
+
+def _first_num(s):
+    m = re.match(r'\s*(\d+(?:[.,]\d+)?)', str(s or ''))
+    return float(m.group(1).replace(',', '.')) if m else None
+
+
+def _series_stats(rows, eff_key='eff'):
+    prices = [r['price'] for r in rows if r.get('price')]
+    kws = [k for k in (_first_num(r.get('cool')) for r in rows) if k is not None]
+    noises = [n for n in (_first_num(r.get('noise')) for r in rows) if n is not None]
+    effs = sorted({r[eff_key].split('/')[0] for r in rows if r.get(eff_key)})
+    return dict(models=len(rows), priceMin=min(prices) if prices else None, priceMax=max(prices) if prices else None,
+                kwMin=min(kws) if kws else None, kwMax=max(kws) if kws else None,
+                noiseMin=min(noises) if noises else None, eff=effs)
+
+
+def build_series(cat):
+    """Одна карточка = одна серия (раздел страницы каталога или страница Roland). Все данные берутся из catalog.json."""
+    out = []
+
+    def tech_of(sid, tables):
+        if sid in SERIES_TECH:
+            return SERIES_TECH[sid]
+        t = ' '.join((x.get('title') or '') for x in tables).lower()
+        inv = 'инвертор' in t or 'inverter' in t
+        cls = 'классическ' in t or 'on/off' in t
+        return 'both' if inv and cls else 'yes' if inv else 'no' if cls else ''
+
+    for r in cat['roland']:
+        rows = [dict(price=x['price'], cool=x['cap'], noise=x['noise'], eff='A') for x in r['rows']]
+        out.append(dict(id='roland-' + r['page'], title=r['title'], brand='Roland', type='wall',
+                        tech='yes' if r['page'] == 'favorite-ii-inverter' else 'no', url=f"/projects/{r['page']}/",
+                        page=r['page'], image=dict(page=r['page'], file='photo.png'), **_series_stats(rows)))
+    order = ['hisense-nastennye', 'hisense-polupromyshlennye', 'hisense-multi-split', 'hisense-mobilnye', 'lg']
+    for page in order:
+        for s in cat['pages'].get(page, []):
+            rows = [x for t in s['tables'] for x in t['rows']]
+            typ = 'multi' if s['id'] == 'promulti' else SERIES_TYPE[page]
+            title = SERIES_TITLE.get(s['id'], s['title'])
+            if page == 'hisense-mobilnye':
+                title = 'Hisense ' + s['title'][0].lower() + s['title'][1:]
+            img = s['images'][0]['file'] if s.get('images') else None
+            out.append(dict(id=f"{page}-{s['id']}", title=title, brand='LG' if page == 'lg' else 'Hisense', type=typ,
+                            tech=tech_of(s['id'], s['tables']), url=f"/projects/{page}/#{s['id']}", page=page,
+                            image=dict(page=page, file=img) if img else None, **_series_stats(rows)))
+    dh = cat.get('osushiteli') or []
+    if dh:
+        out.append(dict(id='hisense-osushiteli', title='Hisense Air Go Pro (осушитель)', brand='Hisense', type='dehum', tech='',
+                        url='/projects/osushiteli/', page='osushiteli', image=None, models=len(dh),
+                        priceMin=min(x['price'] for x in dh), priceMax=max(x['price'] for x in dh),
+                        kwMin=None, kwMax=None, noiseMin=None, eff=[]))
+    out.append(dict(id='ventilyaciya', title='Вентиляция', brand='', type='vent', tech='', url='/projects/ventilyaciya/',
+                    page='ventilyaciya', image=None, models=0, priceMin=None, priceMax=None, kwMin=None, kwMax=None,
+                    noiseMin=None, eff=[]))
+    return out
+
+
 def strip_private(o):
     if isinstance(o, dict):
         return {k: strip_private(v) for k, v in o.items() if not k.startswith('_') and v is not None}
@@ -500,6 +567,10 @@ def main():
     os.makedirs(os.path.join(ROOT, 'data'), exist_ok=True)
     with open(os.path.join(ROOT, 'data', 'catalog.json'), 'w', encoding='utf-8') as f:
         json.dump(strip_private(cat), f, ensure_ascii=False, indent=1)
+    series = build_series(strip_private(cat))
+    with open(os.path.join(ROOT, 'data', 'series.json'), 'w', encoding='utf-8') as f:
+        json.dump(strip_private(series), f, ensure_ascii=False, indent=1)
+    print(f'Серий в каталоге с фильтрами: {len(series)}')
 
     n = sum(len(t['rows']) for secs in finalized.values() for s in secs for t in s['tables'])
     print(f'Позиции на страницах: {n}; аксессуары: {sum(len(x) for x in accessories.values())}; осушители: {len(osush)}')

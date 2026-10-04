@@ -1,0 +1,554 @@
+[
+ {
+  "id": "roland-favorite-ii-inverter",
+  "title": "Roland FAVORITE II INVERTER",
+  "brand": "Roland",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/favorite-ii-inverter/",
+  "page": "favorite-ii-inverter",
+  "image": {
+   "page": "favorite-ii-inverter",
+   "file": "photo.png"
+  },
+  "models": 3,
+  "priceMin": 27390,
+  "priceMax": 35290,
+  "kwMin": 2.25,
+  "kwMax": 3.55,
+  "noiseMin": 22.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "roland-favorite-ii",
+  "title": "Roland FAVORITE II",
+  "brand": "Roland",
+  "type": "wall",
+  "tech": "no",
+  "url": "/projects/favorite-ii/",
+  "page": "favorite-ii",
+  "image": {
+   "page": "favorite-ii",
+   "file": "photo.png"
+  },
+  "models": 5,
+  "priceMin": 21790,
+  "priceMax": 66890,
+  "kwMin": 2.37,
+  "kwMax": 7.05,
+  "noiseMin": 24.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "roland-maestro",
+  "title": "Roland MAESTRO",
+  "brand": "Roland",
+  "type": "wall",
+  "tech": "no",
+  "url": "/projects/maestro/",
+  "page": "maestro",
+  "image": {
+   "page": "maestro",
+   "file": "photo.png"
+  },
+  "models": 5,
+  "priceMin": 23290,
+  "priceMax": 67190,
+  "kwMin": 2.25,
+  "kwMax": 7.3,
+  "noiseMin": 23.5,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-sensation",
+  "title": "Hisense Sensation Slider Pro",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/hisense-nastennye/#sensation",
+  "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "sensation-1.webp"
+  },
+  "models": 4,
+  "priceMin": 109990,
+  "priceMax": 127490,
+  "kwMin": 2.95,
+  "kwMax": 3.9,
+  "noiseMin": 18.0,
+  "eff": [
+   "A+++"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-vision",
+  "title": "Hisense Vision Pro 2.0",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/hisense-nastennye/#vision",
+  "page": "hisense-nastennye",
+  "models": 6,
+  "priceMin": 84490,
+  "priceMax": 146990,
+  "kwMin": 2.8,
+  "kwMax": 5.7,
+  "noiseMin": 18.0,
+  "eff": [
+   "A++",
+   "A+++"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-vibe",
+  "title": "Hisense Vibe Pro EU",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/hisense-nastennye/#vibe",
+  "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "vibe-1.webp"
+  },
+  "models": 7,
+  "priceMin": 49990,
+  "priceMax": 91990,
+  "kwMin": 2.75,
+  "kwMax": 5.85,
+  "noiseMin": 21.0,
+  "eff": [
+   "A++"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-expert",
+  "title": "Hisense Expert Pro 2.0 EU",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/hisense-nastennye/#expert",
+  "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "expert-1.webp"
+  },
+  "models": 5,
+  "priceMin": 37690,
+  "priceMax": 101990,
+  "kwMin": 2.5,
+  "kwMax": 7.6,
+  "noiseMin": 20.5,
+  "eff": [
+   "A++"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-goal",
+  "title": "Hisense Goal 2.0",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "both",
+  "url": "/projects/hisense-nastennye/#goal",
+  "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "goal-1.webp"
+  },
+  "models": 10,
+  "priceMin": 27490,
+  "priceMax": 93890,
+  "kwMin": 2.3,
+  "kwMax": 7.55,
+  "noiseMin": 22.5,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-city",
+  "title": "Hisense City 2.0",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "both",
+  "url": "/projects/hisense-nastennye/#city",
+  "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "city-1.webp"
+  },
+  "models": 8,
+  "priceMin": 25390,
+  "priceMax": 89790,
+  "kwMin": 2.3,
+  "kwMax": 7.55,
+  "noiseMin": 22.5,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-zoom",
+  "title": "Hisense Zoom 2.0",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "both",
+  "url": "/projects/hisense-nastennye/#zoom",
+  "page": "hisense-nastennye",
+  "models": 11,
+  "priceMin": 22490,
+  "priceMax": 88490,
+  "kwMin": 2.3,
+  "kwMax": 8.81,
+  "noiseMin": 22.5,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-zoomw",
+  "title": "Hisense Zoom 2.0 с доработкой зимним комплектом",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "both",
+  "url": "/projects/hisense-nastennye/#zoomw",
+  "page": "hisense-nastennye",
+  "models": 10,
+  "priceMin": 34290,
+  "priceMax": 103090,
+  "kwMin": 2.3,
+  "kwMax": 8.81,
+  "noiseMin": 22.5,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-nastennye-strong",
+  "title": "Hisense Strong Vibe Classic A",
+  "brand": "Hisense",
+  "type": "wall",
+  "tech": "no",
+  "url": "/projects/hisense-nastennye/#strong",
+  "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "strong-1.webp"
+  },
+  "models": 1,
+  "priceMin": 133990,
+  "priceMax": 133990,
+  "kwMin": 10.0,
+  "kwMax": 10.0,
+  "noiseMin": 38.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-polupromyshlennye-kass",
+  "title": "Hisense кассетные сплит-системы",
+  "brand": "Hisense",
+  "type": "semi",
+  "tech": "both",
+  "url": "/projects/hisense-polupromyshlennye/#kass",
+  "page": "hisense-polupromyshlennye",
+  "image": {
+   "page": "hisense-polupromyshlennye",
+   "file": "kass-1.webp"
+  },
+  "models": 11,
+  "priceMin": 82490,
+  "priceMax": 265490,
+  "kwMin": 3.5,
+  "kwMax": 17.0,
+  "noiseMin": 30.0,
+  "eff": [
+   "A",
+   "A+",
+   "A++"
+  ]
+ },
+ {
+  "id": "hisense-polupromyshlennye-duct",
+  "title": "Hisense канальные сплит-системы",
+  "brand": "Hisense",
+  "type": "semi",
+  "tech": "both",
+  "url": "/projects/hisense-polupromyshlennye/#duct",
+  "page": "hisense-polupromyshlennye",
+  "image": {
+   "page": "hisense-polupromyshlennye",
+   "file": "duct-1.webp"
+  },
+  "models": 13,
+  "priceMin": 78590,
+  "priceMax": 465890,
+  "kwMin": 2.6,
+  "kwMax": 23.0,
+  "noiseMin": 27.0,
+  "eff": [
+   "A",
+   "A+",
+   "A++"
+  ]
+ },
+ {
+  "id": "hisense-polupromyshlennye-floor",
+  "title": "Hisense напольно-потолочные и консольные сплит-системы",
+  "brand": "Hisense",
+  "type": "semi",
+  "tech": "both",
+  "url": "/projects/hisense-polupromyshlennye/#floor",
+  "page": "hisense-polupromyshlennye",
+  "image": {
+   "page": "hisense-polupromyshlennye",
+   "file": "floor-1.webp"
+  },
+  "models": 11,
+  "priceMin": 86490,
+  "priceMax": 272190,
+  "kwMin": 2.6,
+  "kwMax": 16.15,
+  "noiseMin": 31.0,
+  "eff": [
+   "A",
+   "A+",
+   "A++"
+  ]
+ },
+ {
+  "id": "hisense-polupromyshlennye-column",
+  "title": "Hisense колонные сплит-системы",
+  "brand": "Hisense",
+  "type": "semi",
+  "tech": "no",
+  "url": "/projects/hisense-polupromyshlennye/#column",
+  "page": "hisense-polupromyshlennye",
+  "models": 3,
+  "priceMin": 132690,
+  "priceMax": 259790,
+  "kwMin": 7.2,
+  "kwMax": 16.15,
+  "noiseMin": 40.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-multi-split-outdoor",
+  "title": "Hisense: наружные блоки мульти-сплит",
+  "brand": "Hisense",
+  "type": "multi",
+  "tech": "yes",
+  "url": "/projects/hisense-multi-split/#outdoor",
+  "page": "hisense-multi-split",
+  "models": 16,
+  "priceMin": 67990,
+  "priceMax": 193790,
+  "kwMin": 4.1,
+  "kwMax": 16.0,
+  "noiseMin": 47.0,
+  "eff": [
+   "A",
+   "A++",
+   "C"
+  ]
+ },
+ {
+  "id": "hisense-multi-split-indoor",
+  "title": "Hisense: внутренние блоки мульти-сплит",
+  "brand": "Hisense",
+  "type": "multi",
+  "tech": "yes",
+  "url": "/projects/hisense-multi-split/#indoor",
+  "page": "hisense-multi-split",
+  "models": 36,
+  "priceMin": 18690,
+  "priceMax": 68890,
+  "kwMin": 2.15,
+  "kwMax": 7.0,
+  "noiseMin": 18.0,
+  "eff": [
+   "A++"
+  ]
+ },
+ {
+  "id": "hisense-mobilnye-mobile-v",
+  "title": "Hisense мобильные кондиционеры серии V",
+  "brand": "Hisense",
+  "type": "mobile",
+  "tech": "",
+  "url": "/projects/hisense-mobilnye/#mobile-v",
+  "page": "hisense-mobilnye",
+  "image": {
+   "page": "hisense-mobilnye",
+   "file": "mobile-v-1.webp"
+  },
+  "models": 2,
+  "priceMin": 27990,
+  "priceMax": 31990,
+  "kwMin": 2.05,
+  "kwMax": 2.49,
+  "noiseMin": 48.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-mobilnye-mobile-w",
+  "title": "Hisense мобильные кондиционеры серии W",
+  "brand": "Hisense",
+  "type": "mobile",
+  "tech": "",
+  "url": "/projects/hisense-mobilnye/#mobile-w",
+  "page": "hisense-mobilnye",
+  "models": 2,
+  "priceMin": 27990,
+  "priceMax": 31990,
+  "kwMin": 2.05,
+  "kwMax": 2.49,
+  "noiseMin": 48.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "hisense-mobilnye-mobile-c",
+  "title": "Hisense мобильные кондиционеры серии C",
+  "brand": "Hisense",
+  "type": "mobile",
+  "tech": "",
+  "url": "/projects/hisense-mobilnye/#mobile-c",
+  "page": "hisense-mobilnye",
+  "models": 2,
+  "priceMin": 36990,
+  "priceMax": 41990,
+  "kwMin": 2.6,
+  "kwMax": 3.5,
+  "noiseMin": 50.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "lg-deluxepro",
+  "title": "LG Deluxe Pro",
+  "brand": "LG",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/lg/#deluxepro",
+  "page": "lg",
+  "image": {
+   "page": "lg",
+   "file": "deluxepro-1.webp"
+  },
+  "models": 4,
+  "priceMin": 87990,
+  "priceMax": 179990,
+  "kwMin": 2.5,
+  "kwMax": 6.6,
+  "noiseMin": 19.0,
+  "eff": [
+   "A++",
+   "A+++"
+  ]
+ },
+ {
+  "id": "lg-artcoolmirror",
+  "title": "LG ARTCOOL Mirror",
+  "brand": "LG",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/lg/#artcoolmirror",
+  "page": "lg",
+  "image": {
+   "page": "lg",
+   "file": "artcoolmirror-1.webp"
+  },
+  "models": 2,
+  "priceMin": 91990,
+  "priceMax": 98990,
+  "kwMin": 2.5,
+  "kwMax": 3.5,
+  "noiseMin": 19.0,
+  "eff": [
+   "A++"
+  ]
+ },
+ {
+  "id": "lg-procool",
+  "title": "LG ProCool",
+  "brand": "LG",
+  "type": "wall",
+  "tech": "yes",
+  "url": "/projects/lg/#procool",
+  "page": "lg",
+  "image": {
+   "page": "lg",
+   "file": "procool-1.webp"
+  },
+  "models": 5,
+  "priceMin": 59990,
+  "priceMax": 123990,
+  "kwMin": 2.14,
+  "kwMax": 6.45,
+  "noiseMin": 19.0,
+  "eff": [
+   "A"
+  ]
+ },
+ {
+  "id": "lg-promulti",
+  "title": "LG ProMulti 2.0 — мульти-сплит системы (R32)",
+  "brand": "LG",
+  "type": "multi",
+  "tech": "yes",
+  "url": "/projects/lg/#promulti",
+  "page": "lg",
+  "image": {
+   "page": "lg",
+   "file": "promulti-1.webp"
+  },
+  "models": 25,
+  "priceMin": 32700,
+  "priceMax": 329100,
+  "kwMin": 2.1,
+  "kwMax": 11.2,
+  "eff": [
+   "A++",
+   "A+++"
+  ]
+ },
+ {
+  "id": "hisense-osushiteli",
+  "title": "Hisense Air Go Pro (осушитель)",
+  "brand": "Hisense",
+  "type": "dehum",
+  "tech": "",
+  "url": "/projects/osushiteli/",
+  "page": "osushiteli",
+  "models": 1,
+  "priceMin": 13590,
+  "priceMax": 13590,
+  "eff": []
+ },
+ {
+  "id": "ventilyaciya",
+  "title": "Вентиляция",
+  "brand": "",
+  "type": "vent",
+  "tech": "",
+  "url": "/projects/ventilyaciya/",
+  "page": "ventilyaciya",
+  "models": 0,
+  "eff": []
+ }
+]

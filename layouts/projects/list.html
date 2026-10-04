@@ -1,52 +1,118 @@
+{{- /* Каталог с фильтрами. Карточки серий берутся из data/series.json (его собирает scripts/build_catalog.py); фильтры работают в assets/js/catalog.js */ -}}
 {{ define "main" }}
-    <div class="container markdown top-pad">
+{{- $series := hugo.Data.series -}}
+{{- $types := slice (dict "k" "wall" "t" "Настенные") (dict "k" "multi" "t" "Мульти-сплит") (dict "k" "semi" "t" "Полупромышленные") (dict "k" "mobile" "t" "Мобильные") (dict "k" "dehum" "t" "Осушители") (dict "k" "vent" "t" "Вентиляция") -}}
+<div class="container catalog-page">
+    <div class="markdown top-pad">
         {{ .Content }}
-        {{ with site.GetPage "/price" }}<p class="catalog-note"><a href="{{ .RelPermalink }}">Полный прайс-лист по всем брендам</a> — с поиском по моделям.</p>{{ end }}
+        {{ with site.GetPage "/price" }}<p class="catalog-note"><a href="{{ .RelPermalink }}">Полный прайс-лист по всем моделям</a> с поиском. Монтаж и расчёт стоимости: <a href="{{ "montazh-i-raschet/" | relURL }}">узнать подробнее</a>.</p>{{ end }}
     </div>
-    <div class="container">
-        {{ $list := .Pages.ByWeight }}
-        {{ $brands := slice "Roland" "Hisense" "LG" "Вентиляция и осушители" }}
-        {{ range $brands }}
-        {{ $brand := . }}
-        {{ $items := where $list "Params.brand" $brand }}
-        {{ if $items }}
-        <div class="section catalog-brand-section">
-            <h2 class="title is-3 catalog-brand">{{ $brand }}</h2>
-            <div class="columns is-multiline">
-                {{ range $items }}
-                {{ $width := "302x" }}
-                {{ $columWidth := "is-one-third" }}
-                {{ if site.Params.projects.useTwoColumns }}
-                  {{ $columWidth = "is-half" }}
-                  {{ $width = "490x" }}
-                {{ end}}
-                <div class="column {{ $columWidth }}">
-                    <div class="card">
-                        {{ if .Resources.ByType "image" }}
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <a href="{{ if .Params.external_link }}{{ .Params.external_link }}{{ else }}{{ .RelPermalink }}{{ end }}">
-                                    {{ with .Resources.ByType "image" }}
-                                    {{ range first 1 (sort . "Params.weight") }}
-                                    {{ $image := .Resize $width }}
-                                    <img src="{{ $image.RelPermalink }}" alt ="{{ $image.Name }}">
-                                    {{ end }}
-                                    {{ end }}
-                                </a>
-                            </figure>
-                        </div>
-                        {{ end }}
-                        <div class="card-content has-text-centered top-pad">
-                            <h3><a href="{{ if .Params.external_link }}{{ .Params.external_link }}{{ else }}{{ .RelPermalink }}{{ end }}">
-                                {{ .Title | markdownify }}
-                            </a></h3>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
+
+    <div class="catalog-tabs" role="group" aria-label="Тип оборудования">
+        <button type="button" class="catalog-tab is-active" data-type="" aria-pressed="true">Все</button>
+        {{- range $types }}
+        <button type="button" class="catalog-tab" data-type="{{ .k }}" aria-pressed="false">{{ .t }}</button>
+        {{- end }}
+        <a class="catalog-tab catalog-tab--link" href="{{ "projects/promyshlennye/" | relURL }}">Промышленные</a>
+    </div>
+
+    <div class="catalog-layout">
+        <aside class="catalog-filters" aria-label="Фильтры каталога">
+            <details class="catalog-filters__box" id="catalog-filters-box" open>
+                <summary>Фильтр</summary>
+                <form id="catalog-filters" autocomplete="off">
+                    <fieldset>
+                        <legend>Бренд</legend>
+                        {{- range slice "Roland" "Hisense" "LG" }}
+                        <label class="filter-opt"><input type="checkbox" name="brand" value="{{ . }}"> {{ . }}</label>
+                        {{- end }}
+                    </fieldset>
+                    <fieldset>
+                        <legend>Технология</legend>
+                        <label class="filter-opt"><input type="checkbox" name="tech" value="yes"> Инверторные</label>
+                        <label class="filter-opt"><input type="checkbox" name="tech" value="no"> Классические (on/off)</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Класс энергоэффективности</legend>
+                        {{- range slice "A+++" "A++" "A+" "A" }}
+                        <label class="filter-opt"><input type="checkbox" name="eff" value="{{ . }}"> {{ . }}</label>
+                        {{- end }}
+                    </fieldset>
+                    <fieldset>
+                        <legend>Мощность охлаждения, кВт</legend>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="a" data-min="0" data-max="2.5"> до 2,5</label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="b" data-min="2.5" data-max="3.5"> 2,5–3,5</label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="c" data-min="3.5" data-max="5"> 3,5–5</label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="d" data-min="5" data-max="7"> 5–7</label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="e" data-min="7" data-max="1000"> от 7</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Цена, ₽</legend>
+                        <label class="filter-opt"><input type="checkbox" name="price" value="a" data-min="0" data-max="30000"> до 30 000</label>
+                        <label class="filter-opt"><input type="checkbox" name="price" value="b" data-min="30000" data-max="60000"> 30 000–60 000</label>
+                        <label class="filter-opt"><input type="checkbox" name="price" value="c" data-min="60000" data-max="100000"> 60 000–100 000</label>
+                        <label class="filter-opt"><input type="checkbox" name="price" value="d" data-min="100000" data-max="200000"> 100 000–200 000</label>
+                        <label class="filter-opt"><input type="checkbox" name="price" value="e" data-min="200000" data-max="100000000"> от 200 000</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Шум внутреннего блока, дБ(А)</legend>
+                        <label class="filter-opt"><input type="radio" name="noise" value="" checked> Любой</label>
+                        <label class="filter-opt"><input type="radio" name="noise" value="20"> до 20</label>
+                        <label class="filter-opt"><input type="radio" name="noise" value="25"> до 25</label>
+                        <label class="filter-opt"><input type="radio" name="noise" value="30"> до 30</label>
+                    </fieldset>
+                    <button type="reset" class="filter-reset" id="catalog-reset">Сбросить фильтры</button>
+                </form>
+            </details>
+        </aside>
+
+        <div class="catalog-results">
+            <div class="catalog-bar">
+                <p id="catalog-count" class="catalog-count" aria-live="polite"></p>
+                <label class="catalog-sort">Сортировать
+                    <select id="catalog-sort">
+                        <option value="default">По умолчанию</option>
+                        <option value="title">По названию</option>
+                        <option value="price-asc">Сначала дешевле</option>
+                        <option value="price-desc">Сначала дороже</option>
+                    </select>
+                </label>
             </div>
+            <ul class="catalog-grid" id="catalog-grid">
+                {{- range $i, $s := $series }}
+                {{- $m := mod (int $s.models) 10 }}
+                {{- $h := mod (int $s.models) 100 }}
+                <li class="series-card" data-order="{{ $i }}" data-title="{{ $s.title }}" data-brand="{{ $s.brand }}" data-type="{{ $s.type }}" data-tech="{{ $s.tech }}" data-eff="{{ delimit $s.eff " " }}" data-kw-min="{{ with $s.kwMin }}{{ . }}{{ end }}" data-kw-max="{{ with $s.kwMax }}{{ . }}{{ end }}" data-price-min="{{ with $s.priceMin }}{{ . }}{{ end }}" data-price-max="{{ with $s.priceMax }}{{ . }}{{ end }}" data-noise="{{ with $s.noiseMin }}{{ . }}{{ end }}">
+                    <a class="series-card__link" href="{{ $s.url | relURL }}">
+                        <span class="series-card__img">
+                            {{- $shown := false }}
+                            {{- with $s.image }}
+                            {{- $pg := site.GetPage (printf "/projects/%s" .page) }}
+                            {{- with $pg }}
+                            {{- with .Resources.GetMatch $s.image.file }}
+                            {{- $r := .Fit "420x260" }}
+                            <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="" loading="lazy" decoding="async">
+                            {{- $shown = true }}
+                            {{- end }}
+                            {{- end }}
+                            {{- end }}
+                            {{- if not $shown }}<span class="series-card__ph" aria-hidden="true">{{ with $s.brand }}{{ . }}{{ else }}Usplit{{ end }}</span>{{ end }}
+                        </span>
+                        <span class="series-card__title">{{ $s.title }}</span>
+                        <span class="series-card__row"><span>{{ with $s.brand }}Бренд: <b>{{ . }}</b>{{ else }}Подбор и монтаж{{ end }}</span>
+                            {{- if $s.models }}<span>В серии: {{ $s.models }} {{ if and (eq $m 1) (ne $h 11) }}модель{{ else if and (ge $m 2) (le $m 4) (not (and (ge $h 12) (le $h 14))) }}модели{{ else }}моделей{{ end }}</span>{{ end }}</span>
+                        {{- if $s.priceMin }}<span class="series-card__price">от {{ partial "rub.html" $s.priceMin }}</span>{{ else }}<span class="series-card__price series-card__price--none">Цена по запросу</span>{{ end }}
+                    </a>
+                </li>
+                {{- end }}
+            </ul>
+            <p id="catalog-empty" class="catalog-empty" hidden>По выбранным параметрам серий не найдено. Измените фильтры или позвоните нам: подберём оборудование вручную.</p>
         </div>
-        {{ end }}
-        {{ end }}
     </div>
+</div>
+{{ end }}
+
+{{ define "customScripts" }}
+{{- $js := resources.Get "js/catalog.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
 {{ end }}

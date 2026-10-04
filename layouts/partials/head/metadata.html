@@ -18,5 +18,7 @@
 {{ with or .Description .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 {{- /* title: seoTitle из front matter; запасной вариант — заголовок страницы + «| Usplit» */}}
 <title>{{ partial "seo-title.html" . }}</title>
+{{- /* страницы-заглушки (noindex: true в front matter) не индексируются, пока раздел не наполнен */}}
+{{ if .Params.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
 <!-- RSS -->
 {{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}

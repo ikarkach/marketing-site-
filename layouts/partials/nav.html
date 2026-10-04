@@ -1,127 +1,59 @@
-{{ if .Site.Params.showMenu | default true }}
-<!-- Begin Nav bar -->
+{{- /* Главное меню. Состав — data/menu.yaml; поведение — assets/js/nav.js; стили — assets/css/site.css («Главное меню») */ -}}
+{{- if .Site.Params.showMenu | default true }}
+{{- $page := . }}
+{{- $cur := $page.RelPermalink }}
 <div class="container">
     <hr>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        {{ $isHome := .Page.IsHome }}
-        <button type="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" aria-controls="navMenu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+    <nav class="site-nav{{ if $page.IsHome }} site-nav--up{{ end }}" aria-label="Основное меню">
+        <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-list">
+            <span class="nav-burger__bars" aria-hidden="true"></span>
+            <span class="nav-burger__label">Меню</span>
         </button>
-        <div class="navbar-menu {{ if $isHome }}has-content-centered{{ end }}" id="navMenu">
-            <!-- look for custom menu and include it -->
-            {{ if .Site.Menus.main }}
-            {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
-            <a class="navbar-item"  href="{{ .URL }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
-            </a>
-            {{ range .Children }}
-            <!-- TODO: style children diffrent then parents-->
-            <a class="navbar-item" href="{{ .URL }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
-            </a>
-            {{ end }}
-            {{ else }}
-            <a class="navbar-item" href="{{ .URL }}">
-                {{ .Pre }}
-                {{ .Name }}
-                {{ .Post }}
-            </a>
-            {{ end }}
-            {{ end }}
-            {{ else }}
-            <!-- use default menu -->
-            {{ if not $isHome }}
-            <a class="navbar-item" href="{{ "" | relLangURL }}">{{ i18n "nav_main" . }}</a>
-            {{ end }}
-
-            {{ with .Site.GetPage "/home" }}
-            {{ $pages := where (.Resources.ByType "page") "Draft" false }}
-
-            {{ with .Site.GetPage "/blog" }}
-                {{ $pages = $pages | append . }}
-            {{ end }}
-
-            {{ with .Site.GetPage "/projects" }}
-                {{ $pages = $pages | append . }}
-            {{ end }}
-
-            {{ range sort $pages "Params.weight" }}
-            {{ if ne .Name "contact.md" }}
-            {{ if and .IsSection (eq .Section "projects") }}
-                <!-- Now for some cool projects -->
-                {{ if $isHome }}
-                <a class="navbar-item" href="{{ printf "#%s" ( .Title | urlize) | relLangURL }}">{{ .Title | markdownify }}</a>
-                {{ else }}
-                {{ $pageIsInProjects := eq $.Page.Section "projects"}}
-                {{ if not (and $pageIsInProjects (eq $.Page.Kind "section")) }}
-                  <a class="navbar-item" href="{{ .RelPermalink }}">
-                  {{ if $pageIsInProjects }}
-                  {{ i18n "nav_backToSection" . }}
-                  {{ else }}
-                  <!-- fix-224 -->
-                  {{ .Title }}
-                  <!-- end fix-224 -->
-                  {{ end }}
-                  </a>
-                {{ end }}
-                {{ end }}
-            {{ else if and .IsSection (eq .Section "blog") }}
-                <!-- Let`s show some blog posts -->
-                {{ if $isHome }}
-                <a class="navbar-item" href="{{ printf "#%s" ( .Title | urlize) | relLangURL }}">{{ .Title | markdownify }}</a>
-                {{ else }}
-                {{ $pageIsInBlog := eq $.Page.Section "blog"}}
-                {{ if not (and $pageIsInBlog (eq $.Page.Kind "section")) }}
-                  <a class="navbar-item" href="{{ .RelPermalink }}">
-                  {{ if $pageIsInBlog }}
-                  {{ i18n "nav_backToSection" . }}
-                  {{ else }}
-                  {{ .Title | singularize}}
-                  {{ end }}
-                  </a>
-                {{ end }}
-                {{ end }}
-            {{ else }}
-            <a class="navbar-item" href="{{ if $isHome }}#{{ .File.TranslationBaseName }}{{ else }}{{ printf "#%s" (.File.TranslationBaseName | urlize) | relLangURL }}{{ end }}">{{ .Title | markdownify }}</a>
-            {{ end }}
-            {{ end }}
-            {{ end }}
-            {{ end }}
-
-            {{ with .Site.GetPage "/price" }}
-            <a class="navbar-item" href="{{ .RelPermalink }}">Прайс-лист</a>
-            {{ end }}
-
-            {{ with .Site.GetPage "/home" }}
-            {{ with .Resources.GetMatch "contact.md" }}
-            {{ if not .Draft }}
-            <a class="navbar-item" href="{{ if $isHome }}#{{ .File.TranslationBaseName }}{{ else }}{{ printf "#%s" (.File.TranslationBaseName | urlize) | relLangURL }}{{ end }}">{{ .Title | markdownify }}</a>
-            {{ end }}
-            {{ end }}
-            {{ end }}
-
-            {{ range $.Site.Home.AllTranslations }}
-            {{ if ne .Language.Name $.Language.Name }}
-            <a class="navbar-item" href="{{ .RelPermalink }}">{{ .Language.Label | default .Language.Name }}</a>
-            {{ end }}
-            {{ end }}
-
-            {{ if .Site.Params.showRSSButton }}
-            {{ with .Site.Home.OutputFormats.Get "RSS" }}
-            <a class="navbar-item" href="{{ .RelPermalink }}" aria-label="RSS"><i class="fas fa-rss" aria-hidden="true"></i></a>
-            {{ end }}
-            {{ end }}
-            {{ end }}
-        </div>
+        <ul class="nav-list" id="nav-list">
+            {{- range $i, $it := hugo.Data.menu }}
+            {{- $isCurrent := and $it.active (hasPrefix $cur $it.active) }}
+            {{- $hasSub := or $it.columns $it.items }}
+            {{- if $hasSub }}
+            <li class="nav-item nav-item--sub{{ if $it.mega }} nav-item--mega{{ end }}{{ if $isCurrent }} is-current{{ end }}">
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-sub-{{ $i }}">{{ $it.title }}</button>
+                <div class="nav-panel{{ if $it.mega }} nav-panel--mega{{ end }}" id="nav-sub-{{ $i }}">
+                    {{- if $it.columns }}
+                    {{- range $it.columns }}
+                    <div class="nav-col">
+                        <p class="nav-col__title">{{ .title }}</p>
+                        {{- range .groups }}
+                        {{- with .title }}<p class="nav-group__title">{{ . }}</p>{{ end }}
+                        <ul class="nav-sublist">
+                            {{- range .items }}
+                            <li><a href="{{ .url }}"{{ if eq $cur .url }} aria-current="page"{{ end }}>{{ .title }}</a></li>
+                            {{- end }}
+                        </ul>
+                        {{- end }}
+                    </div>
+                    {{- end }}
+                    {{- with $it.footer }}
+                    <div class="nav-panel__foot">
+                        {{- range . }}<a href="{{ .url }}"{{ if eq $cur .url }} aria-current="page"{{ end }}>{{ .title }} →</a>{{ end }}
+                    </div>
+                    {{- end }}
+                    {{- else }}
+                    <ul class="nav-sublist">
+                        {{- range $it.items }}
+                        <li><a href="{{ .url }}"{{ if eq $cur .url }} aria-current="page"{{ end }}>{{ .title }}</a></li>
+                        {{- end }}
+                    </ul>
+                    {{- end }}
+                </div>
+            </li>
+            {{- else }}
+            <li class="nav-item{{ if $isCurrent }} is-current{{ end }}">
+                <a class="nav-link" href="{{ $it.url }}"{{ if eq $cur $it.url }} aria-current="page"{{ end }}>{{ $it.title }}</a>
+            </li>
+            {{- end }}
+            {{- end }}
+        </ul>
     </nav>
+    <noscript><style>.nav-panel{display:block!important;position:static!important}.nav-list{display:flex!important}.nav-burger{display:none!important}</style></noscript>
     <hr>
 </div>
-<!-- End Nav bar -->
-{{ end }}
+{{- end }}

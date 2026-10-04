@@ -1,0 +1,67 @@
+# Главное меню сайта (layouts/partials/nav.html). Адреса существующих страниц не менять.
+# mega: true — крупная панель с колонками; columns -> groups -> items. Без columns/items пункт — обычная ссылка.
+- title: Каталог
+  active: /projects/
+  mega: true
+  columns:
+    - title: Кондиционеры
+      groups:
+        - title: Настенные сплит-системы
+          items:
+            - {title: Roland FAVORITE II INVERTER, url: /projects/favorite-ii-inverter/}
+            - {title: Roland FAVORITE II, url: /projects/favorite-ii/}
+            - {title: Roland MAESTRO, url: /projects/maestro/}
+            - {title: Hisense настенные, url: /projects/hisense-nastennye/}
+            - {title: "LG Deluxe Pro, ARTCOOL, ProCool", url: /projects/lg/}
+        - title: Мульти-сплит
+          items:
+            - {title: Hisense мульти-сплит, url: /projects/hisense-multi-split/}
+            - {title: LG ProMulti, url: "/projects/lg/#promulti"}
+        - title: Полупромышленные и мобильные
+          items:
+            - {title: Hisense полупромышленные, url: /projects/hisense-polupromyshlennye/}
+            - {title: Hisense мобильные, url: /projects/hisense-mobilnye/}
+        - title: Промышленные
+          items:
+            - {title: Промышленные кондиционеры, url: /projects/promyshlennye/}
+    - title: Вентиляция и влажность
+      groups:
+        - items:
+            - {title: Вентиляция, url: /projects/ventilyaciya/}
+            - {title: Осушители и увлажнители, url: /projects/osushiteli/}
+    - title: Аксессуары
+      groups:
+        - items:
+            - {title: Аксессуары и монтажные материалы, url: "/price/#aksessuary"}
+        - title: Бренды в прайсе
+          items:
+            - {title: Roland, url: "/price/#roland"}
+            - {title: Hisense, url: "/price/#hisense"}
+            - {title: LG, url: "/price/#lg"}
+  footer:
+    - {title: Весь каталог с фильтрами, url: /projects/}
+
+- title: Прайс-лист
+  url: /price/
+  active: /price/
+
+- title: Монтаж и расчёт
+  url: /montazh-i-raschet/
+  active: /montazh-i-raschet/
+
+- title: Компания
+  active: ""
+  items:
+    - {title: О компании, url: "/#about"}
+    - {title: Что мы предлагаем, url: "/#offer"}
+    - {title: Почему Usplit, url: "/#why"}
+    - {title: Как начать, url: "/#start"}
+    - {title: Для кого мы работаем, url: /blog/dlya-kogo-my-rabotaem/}
+
+- title: Блог
+  url: /blog/
+  active: /blog/
+
+- title: Контакты
+  url: /kontakty/
+  active: /kontakty/

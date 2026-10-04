@@ -26,7 +26,7 @@ disableKinds = ['taxonomy', 'term']
   # Мета-теги подтверждения нужны только как запасной способ: раскомментируйте и впишите значение content, тег появится на всех страницах.
   yandexVerification = "127c5b3560824f5b"   # Яндекс.Вебмастер → Права доступа → «Мета-тег» → значение content
   # googleVerification = ""   # Search Console → Настройки → Подтверждение права → «Метатег» → значение content
-  # yandexMetrika    = 12345678                 # TODO: номер счётчика Яндекс.Метрики (раскомментируйте и впишите)
+  yandexMetrika      = 113383403                # номер счётчика Яндекс.Метрики (код счётчика собирается шаблоном layouts/partials/head/analytics.html)
 
   [params.home]
     introHeight            = "fullheight"

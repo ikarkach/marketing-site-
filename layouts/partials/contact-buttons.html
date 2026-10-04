@@ -5,6 +5,9 @@
 <div class="cta cta--{{ $variant }}" role="group" aria-label="Связаться с нами">
     <a class="cta-btn cta-call" href="tel:{{ .phone }}" data-goal="call_click"><i class="fas fa-phone" aria-hidden="true"></i><span>Позвонить</span></a>
     <a class="cta-btn cta-wa" href="{{ $wa }}" target="_blank" rel="noopener" data-goal="whatsapp_click"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+    {{- with .max }}
+    <a class="cta-btn cta-max" href="{{ . }}" target="_blank" rel="noopener" data-goal="dg_social_click_max"><i class="fas fa-comment-dots" aria-hidden="true"></i><span>MAX</span></a>
+    {{- end }}
     <a class="cta-btn cta-tg" href="https://t.me/{{ .telegram }}" target="_blank" rel="noopener" data-goal="telegram_click"><i class="fab fa-telegram" aria-hidden="true"></i><span>Telegram</span></a>
 </div>
 {{- end -}}

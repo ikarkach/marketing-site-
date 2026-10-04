@@ -53,6 +53,7 @@ disableKinds = ['taxonomy', 'term']
     phone        = "+79604777114"                # ссылка tel:
     whatsapp     = "79604777114"                 # https://wa.me/<номер без +>
     telegram     = "+79604777114"                # https://t.me/<номер с + или имя пользователя>
+    max          = "https://max.ru/u/f9LHodD0cOLi2m8ObHAzmKK0CEbdvwbTKNkPch3A4ED34-iTmpeHDKa6Chw"   # ссылка на профиль в MAX (кнопка не выводится, если пусто)
     whatsappText = "Здравствуйте! Хочу получить консультацию по климатической технике."
 
   [params.projects]

@@ -4,6 +4,7 @@
 {{- $b := . }}
 {{- $address := dict "@type" "PostalAddress" "addressLocality" $b.city "addressCountry" $b.country }}
 {{- with $b.streetAddress }}{{ $address = merge $address (dict "streetAddress" .) }}{{ end }}
+{{- with $b.region }}{{ $address = merge $address (dict "addressRegion" .) }}{{ end }}
 {{- with $b.postalCode }}{{ $address = merge $address (dict "postalCode" .) }}{{ end }}
 {{- $data := dict
     "@context" "https://schema.org"

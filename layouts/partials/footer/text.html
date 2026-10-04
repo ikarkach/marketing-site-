@@ -2,9 +2,10 @@
     <div class="container has-text-centered">
     {{ with site.Params.business }}
         <p class="footer-nap">
-            <strong>{{ .name }}</strong> — {{ .city }}
+            <strong>{{ .name }}</strong> — {{ with .addressText }}{{ . }}{{ else }}{{ .city }}{{ end }}
             {{ with site.Params.contact }}· <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>{{ end }}
             {{ with site.Params.email }}· <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+            {{ with .hoursText }}<br>{{ . }}{{ end }}
         </p>
     {{ end }}
     {{ with .Site.Params.footerText }}

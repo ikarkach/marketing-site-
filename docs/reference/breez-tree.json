@@ -1,0 +1,708 @@
+{
+ "source": "https://breez.ru/ (публичная часть, меню «Каталог»), снято 2026-10-06",
+ "note": "Дерево используется только как ориентир структуры. Тексты и фото поставщика не копируются.",
+ "tree": [
+  {
+   "title": "Кондиционирование",
+   "url": null,
+   "relevance": "берём",
+   "children": [
+    {
+     "title": "Бытовые сплит-системы",
+     "url": "/catalog/kondicionirovanie/split-systems/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Мульти сплит-системы",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Наружные блоки мульти сплит-систем",
+       "url": "/catalog/kondicionirovanie/multi-systems/outdoor/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Внутренние блоки мульти сплит-систем",
+       "url": "/catalog/kondicionirovanie/multi-systems/indoor/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Полупромышленные сплит-системы",
+     "url": "/catalog/kondicionirovanie/poluprom-split-systems/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Мобильные кондиционеры",
+     "url": "/catalog/kondicionirovanie/mobilnie-kondicioneri/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Аксессуары для сплит-систем",
+     "url": "/catalog/kondicionirovanie/split-accessories/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "наш основной раздел: сплит, мульти-сплит, полупромышленные, мобильные, аксессуары"
+  },
+  {
+   "title": "Центральное и специальное кондиционирование, холодоснабжение",
+   "url": null,
+   "relevance": "возможно",
+   "children": [
+    {
+     "title": "Системы Чиллер-Фанкойлы",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Чиллеры",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/chillers/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Фанкойлы",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/fancoils/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Аксессуары для систем чиллер-фанкойл",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/accessories-chillers/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Гидромодули",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/hydromodules/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Пластинчатые теплообменники",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/plate-heat-exchangers/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Выносные конденсаторы",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/remote-condensers/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Градирни",
+       "url": "/catalog/central-air-conditioning/systems-chiller-fankoyli/towers/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "VRF-системы",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Наружные блоки VRF-системы",
+       "url": "/catalog/central-air-conditioning/vrf-systems/outdoor-vrf/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Внутренние блоки VRF-cистемы",
+       "url": "/catalog/central-air-conditioning/vrf-systems/indoor-vrf/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Опции для VRF-систем",
+       "url": "/catalog/central-air-conditioning/vrf-systems/options-vrf/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Аксессуары для VRF-систем",
+       "url": "/catalog/central-air-conditioning/vrf-systems/accessories-vrf/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Тепловые насосы «Воздух-вода»",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Наружные блоки тепловых насосов",
+       "url": "/catalog/central-air-conditioning/tepl-nasos/naruj-tepl-nasos/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Внутренние блоки тепловых насосов",
+       "url": "/catalog/central-air-conditioning/tepl-nasos/vnutr-tepl-nasos/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Опции для тепловых насосов",
+       "url": "/catalog/central-air-conditioning/tepl-nasos/opcii-tepl-nasos/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Водяные баки",
+       "url": "/catalog/central-air-conditioning/tepl-nasos/vodyanie-baki/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Компрессорно-конденсаторные блоки",
+     "url": "/catalog/central-air-conditioning/kkb/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Прецизионные кондиционеры",
+     "url": "/catalog/central-air-conditioning/precizionnie-kondicioneri/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Холодные стены для ЦОД",
+     "url": "/catalog/central-air-conditioning/holodnie-steni-dlya-cod/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "основа для нашего раздела «Промышленные кондиционеры» (VRF, чиллеры), когда появятся прайсы"
+  },
+  {
+   "title": "Бытовое оборудование",
+   "url": null,
+   "relevance": "частично",
+   "children": [
+    {
+     "title": "Бытовые осушители воздуха",
+     "url": "/catalog/plug-n-play/bitovie-osushiteli/",
+     "relevance": "берём",
+     "children": []
+    },
+    {
+     "title": "Воздухоочистители",
+     "url": "/catalog/plug-n-play/vozduhoochistiteli/",
+     "relevance": "берём",
+     "children": []
+    },
+    {
+     "title": "Бытовые увлажнители воздуха",
+     "url": "/catalog/plug-n-play/bitovie-uvlazhniteli/",
+     "relevance": "берём",
+     "children": []
+    },
+    {
+     "title": "Мойки воздуха",
+     "url": "/catalog/plug-n-play/air-wash/",
+     "relevance": "берём",
+     "children": []
+    },
+    {
+     "title": "Фильтры и картриджи для увлажнителей и очистителей воздуха",
+     "url": "/catalog/plug-n-play/filters-wash/",
+     "relevance": "берём",
+     "children": []
+    },
+    {
+     "title": "Вентиляторы",
+     "url": "/catalog/plug-n-play/fans/",
+     "relevance": "не берём",
+     "children": []
+    },
+    {
+     "title": "Тепловентиляторы",
+     "url": "/catalog/plug-n-play/fan-heaters/",
+     "relevance": "не берём",
+     "children": []
+    }
+   ],
+   "note": "берём осушители, увлажнители, очистители/мойки воздуха; вентиляторы и тепловентиляторы не берём"
+  },
+  {
+   "title": "Тепловая техника",
+   "url": null,
+   "relevance": "не берём",
+   "children": [
+    {
+     "title": "Конвекторы",
+     "url": "/catalog/heat/konvektori/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Масляные радиаторы",
+     "url": "/catalog/heat/maslianie/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Водяные тепловентиляторы",
+     "url": "/catalog/heat/vodianie-teploventiliatori/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Инфракрасные электрические обогреватели",
+     "url": "/catalog/heat/infrakrasnie-obogrevateli/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Инфракрасные потолочные обогреватели",
+     "url": "/catalog/heat/infrakrasnie-potolochnie/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Тепловые пушки",
+     "url": "/catalog/heat/teplovie-pushki/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Тепловые завесы",
+     "url": "/catalog/heat/vozdushnie-zavesi/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Аксессуары для инфракрасных потолочных обогревателей",
+     "url": "/catalog/heat/accessories-ceiling-heaters/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "нет в нашем ассортименте"
+  },
+  {
+   "title": "Водоснабжение и отопление",
+   "url": null,
+   "relevance": "не берём",
+   "children": [
+    {
+     "title": "Накопительные водонагреватели",
+     "url": "/catalog/water-supply/vodonagrevateli/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Проточные водонагреватели",
+     "url": "/catalog/water-supply/protochnie-vodonagrevateli/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Аксессуары для водонагревателей",
+     "url": "/catalog/water-supply/accessories-water-heater/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Газовые котлы",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Двухконтурные газовые котлы",
+       "url": "/catalog/water-supply/gazovie-kotli/dvuhkonturnie-gazovie-kotli/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Электрические полотенцесушители",
+     "url": "/catalog/water-supply/polotencesushiteli/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "нет в нашем ассортименте"
+  },
+  {
+   "title": "Бытовые вентиляционные установки и аксессуары",
+   "url": null,
+   "relevance": "берём",
+   "children": [
+    {
+     "title": "Бытовые вентиляционные установки",
+     "url": "/catalog/ventilation-units/household-units/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Аксессуары и сменные фильтры для бытовых вентиляционных установок",
+     "url": "/catalog/ventilation-units/accessory-vent/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "раздел «Вентиляция»"
+  },
+  {
+   "title": "Оборудование для систем вентиляции",
+   "url": null,
+   "relevance": "берём",
+   "children": [
+    {
+     "title": "Компактные моноблочные вентиляционные установки",
+     "url": "/catalog/equipment-vent/compact-ventilation-units/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Аксессуары и сменные фильтры для компактных моноблочных вентиляционных установок",
+     "url": "/catalog/equipment-vent/accessory-compact-vent/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Центральные кондиционеры (Каркасно-панельные)",
+     "url": "/catalog/equipment-vent/central-conditioners/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Наборные системы вентиляции",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Вентиляторы для наборных систем",
+       "url": "/catalog/equipment-vent/nabornaya-ventiliacia/fans-stacking/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Вентиляторы специального назначения",
+       "url": "/catalog/equipment-vent/nabornaya-ventiliacia/special-fans/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Сетевые элементы",
+       "url": "/catalog/equipment-vent/nabornaya-ventiliacia/net-elements/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Рекуператоры",
+       "url": "/catalog/equipment-vent/nabornaya-ventiliacia/recuperators/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Охладители и нагреватели",
+       "url": "/catalog/equipment-vent/nabornaya-ventiliacia/coolers-heaters/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Системы управления и автоматизации",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Смесительные узлы",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/mixing-units/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Циркуляционные насосы",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/circulation-pumps/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Водяные клапаны",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/water-valves/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Шкафы управления",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/control-cabinets/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Частотные преобразователи и регуляторы скорости",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/frequency-converters/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Электроприводы для воздушных и водяных клапанов",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/valve-actuators/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Датчики, преобразователи и реле",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/sensors/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Прочие элементы автоматики",
+       "url": "/catalog/equipment-vent/systemi-avtomatiki/another-act/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Решетки и диффузоры",
+     "url": "/catalog/equipment-vent/grilles-diffusers/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Гибкие воздуховоды",
+     "url": "/catalog/equipment-vent/flexible-ducts/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "раздел «Вентиляция»"
+  },
+  {
+   "title": "Системы регулирования влажности",
+   "url": null,
+   "relevance": "берём",
+   "children": [
+    {
+     "title": "Профессиональные пароувлажнители",
+     "url": "/catalog/humidity-control/professionalnie-parouvlazhniteli/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Аксессуары для пароувлажнителей",
+     "url": "/catalog/humidity-control/accessory-par/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Осушители для бассейнов",
+     "url": "/catalog/humidity-control/osushiteli-dlia-basseynov/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "раздел «Осушители и увлажнители» (профессиональные)"
+  },
+  {
+   "title": "Расходные материалы, инструмент",
+   "url": null,
+   "relevance": "частично",
+   "children": [
+    {
+     "title": "Трубы медные",
+     "url": "/catalog/rashodnie-materiali/copper-pipes/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Кронштейны и металлоконструкции",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Кронштейны",
+       "url": "/catalog/rashodnie-materiali/metal-structures/brackets/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Ограждения",
+       "url": "/catalog/rashodnie-materiali/metal-structures/fences/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Козырьки",
+       "url": "/catalog/rashodnie-materiali/metal-structures/visors/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Подставки",
+       "url": "/catalog/rashodnie-materiali/metal-structures/stand/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Теплоизоляция",
+     "url": "/catalog/rashodnie-materiali/thermal-insulation/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Шланг дренажный",
+     "url": "/catalog/rashodnie-materiali/drain-hose/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Фреон",
+     "url": "/catalog/rashodnie-materiali/freon/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Экраны-отражатели",
+     "url": "/catalog/rashodnie-materiali/reflector-screens/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Устройства зимнего пуска",
+     "url": "/catalog/rashodnie-materiali/winter-start-devices/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Устройства ротации",
+     "url": "/catalog/rashodnie-materiali/rotation-devices/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Насосы дренажные",
+     "url": "/catalog/rashodnie-materiali/drainage-pumps/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Инструмент для монтажа",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Труборезы, трубогибы",
+       "url": "/catalog/rashodnie-materiali/mounting-tool/pipe-cutters/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Вальцовки, труборасширители",
+       "url": "/catalog/rashodnie-materiali/mounting-tool/rollers/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Наборы инструментов",
+       "url": "/catalog/rashodnie-materiali/mounting-tool/tool-kits/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Кабель-каналы",
+     "url": "/catalog/rashodnie-materiali/cable-channels/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Вакуумирование и дозаправка",
+     "url": null,
+     "relevance": null,
+     "children": [
+      {
+       "title": "Насосы вакуумные",
+       "url": "/catalog/rashodnie-materiali/vacuuming-refueling/vacuum-pumps/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Манометрические коллекторы",
+       "url": "/catalog/rashodnie-materiali/vacuuming-refueling/manometric-manifolds/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Шланги заправочные",
+       "url": "/catalog/rashodnie-materiali/vacuuming-refueling/refueling-hoses/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Аксессуары для шлангов",
+       "url": "/catalog/rashodnie-materiali/vacuuming-refueling/hose-accessories/",
+       "relevance": null,
+       "children": []
+      },
+      {
+       "title": "Масла и химия",
+       "url": "/catalog/rashodnie-materiali/vacuuming-refueling/chemistry/",
+       "relevance": null,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "Ленты клейкие",
+     "url": "/catalog/rashodnie-materiali/adhesive-tapes/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "Измерительный инструмент",
+     "url": "/catalog/rashodnie-materiali/izmeritelniy-instrument/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "наши аксессуары и монтажные материалы (в прайсе: трубы, кронштейны, инструмент, хладон), если появятся в ассортименте"
+  },
+  {
+   "title": "Системы водоочистки",
+   "url": null,
+   "relevance": "не берём",
+   "children": [
+    {
+     "title": "PHILIPS Системы фильтрации",
+     "url": "/catalog/sistemy-vodoochistki/philips-filtration-systems/",
+     "relevance": null,
+     "children": []
+    },
+    {
+     "title": "PHILIPS Аксессуары",
+     "url": "/catalog/sistemy-vodoochistki/philips-accessories/",
+     "relevance": null,
+     "children": []
+    }
+   ],
+   "note": "нет в нашем ассортименте"
+  }
+ ]
+}

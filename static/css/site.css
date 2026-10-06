@@ -1,0 +1,398 @@
+/* ===== Контент виден сразу =====
+   Тема прятала блоки (opacity: 0) и показывала их с задержкой 0,7-1,8 с + 1 с анимации.
+   Теперь весь контент виден в исходном HTML и на первой отрисовке, без JavaScript. */
+.fade-in,
+.fade-in.one,
+.fade-in.two,
+.fade-in.three {
+  opacity: 1;
+  animation: none;
+}
+
+/* ===== Заголовок страницы не должен распирать узкий экран =====
+   Длинное слово («Оборудование») при 3rem не помещалось в 320 px и давало горизонтальный скролл. */
+.bold-title {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* H1 внутренних страниц стал длиннее (ключевая фраза + «Краснодар»): 6rem из темы слишком крупно */
+.bold-title,
+.bold-title.is-1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+  .bold-title,
+  .bold-title.is-1 {
+    font-size: clamp(1.5rem, 7.5vw, 2rem);
+  }
+}
+
+/* ===== Кнопки связи (layouts/partials/contact-buttons.html) ===== */
+:root {
+  --cta-call: #035fb5;   /* белый текст: 6,35:1 */
+  --cta-wa: #0e7c3a;     /* белый текст: 5,30:1 */
+  --cta-tg: #0f6fa6;     /* белый текст: 5,46:1 */
+  --cta-max: #5b3fe0;    /* белый текст: 6,5:1 */
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none !important;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+.cta-call { background: var(--cta-call); }
+.cta-wa { background: var(--cta-wa); }
+.cta-tg { background: var(--cta-tg); }
+.cta-max { background: var(--cta-max); }
+
+.cta--hero { margin: 28px 0 8px; }
+
+/* Закреплённая панель: только на телефонах и планшетах */
+.cta--sticky { display: none; }
+
+@media (max-width: 768px) {
+  .cta--sticky {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 6px;
+    margin: 0;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .cta--sticky .cta-btn {
+    flex-direction: column;
+    gap: 4px;
+    min-height: 52px;
+    padding: 6px 2px;
+    font-size: 12px;
+  }
+
+  /* панель не должна перекрывать конец страницы */
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-color-scheme: dark) {
+  .cta--sticky { background: rgba(14, 26, 38, 0.97); }
+}
+
+/* ===== Таблицы из Markdown (layouts/_default/_markup/render-table.html) =====
+   Компьютер: обычная таблица. Телефон (до 640 px): каждая строка становится карточкой,
+   цена всегда сразу под названием модели, ничего не уезжает за край экрана. */
+.markdown .table-wrap { max-width: 100%; }
+
+.markdown .table-wrap table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.markdown .table-wrap th,
+.markdown .table-wrap td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+/* нечётные строки тема красит в светло-серый (#dedede), в тёмной теме это давало белый текст на сером */
+.markdown .table-wrap tbody tr:nth-child(odd) td,
+.markdown .table-wrap tbody tr:nth-child(odd) th {
+  background: transparent;
+}
+
+.markdown .table-wrap tbody tr:nth-child(even) td,
+.markdown .table-wrap tbody tr:nth-child(even) th {
+  background: rgba(128, 128, 128, 0.14);
+}
+
+.markdown .table-wrap td:first-child { white-space: nowrap; }
+.markdown .table-wrap td.is-price { font-weight: 700; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .markdown .table-wrap table,
+  .markdown .table-wrap tbody,
+  .markdown .table-wrap tr,
+  .markdown .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .markdown .table-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .markdown .table-wrap tr {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 14px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .markdown .table-wrap td {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border: 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.25);
+    text-align: right;
+    white-space: normal;
+  }
+
+  .markdown .table-wrap td::before {
+    content: attr(data-label);
+    flex: 0 0 48%;
+    font-weight: 600;
+    text-align: left;
+    opacity: 0.8;
+  }
+
+  .markdown .table-wrap td:first-child {
+    order: 0;
+    justify-content: flex-start;
+    border-top: 0;
+    background: rgba(3, 95, 181, 0.12);
+    font-size: 1.05em;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .markdown .table-wrap td:first-child::before { content: none; }
+
+  .markdown .table-wrap td.is-price {
+    order: 1;
+    font-size: 1.1em;
+  }
+}
+
+/* Подвал: название, город, телефон и e-mail (одинаково с разделом «Контакты») */
+.footer-nap { margin-bottom: .5rem; }
+.footer-nap a { text-decoration: underline; }
+
+/* ===== Главная: логотип отдельно, видимый H1 под ним ===== */
+.hero-logo { margin-bottom: .5rem; }
+.hero-h1 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: .25rem 0 1rem;
+  overflow-wrap: break-word;
+}
+
+/* Названия в карточках оборудования — h3 вместо h1, вид прежний */
+.card-content h3 { font-size: inherit; font-weight: inherit; line-height: inherit; margin: 0; }
+
+/* ===== Каталог: страницы серий и прайс-лист (layouts/shortcodes/catalog.html, layouts/price/list.html) ===== */
+.catalog-section { margin: 2rem 0 1.25rem; }
+.catalog-section h2 { font-size: clamp(1.4rem, 3.2vw, 1.9rem); line-height: 1.2; margin: 0 0 .75rem; }
+.catalog-section h3,
+.price-block h3,
+.price-block h4 { font-size: 1.1rem; margin: 1.1rem 0 .5rem; }
+.catalog-figures { display: flex; flex-wrap: wrap; gap: 12px; margin: .5rem 0 1rem; }
+.catalog-figures figure { background: #fff; border-radius: 8px; padding: 8px; margin: 0; }
+.catalog-figures img { display: block; width: auto; max-width: 100%; max-height: 190px; height: auto; }
+.catalog-features { list-style: disc; margin: .25rem 0 1rem 1.25rem; }
+.catalog-features li { margin: .15rem 0; }
+.catalog-note { margin: 1.25rem 0; }
+.catalog-brand { margin-bottom: 1rem; }
+.catalog-brand-section.section { padding-top: 1rem; padding-bottom: 0; }
+
+.price-tools { margin: 1rem 0 1.5rem; }
+.price-label { display: block; margin-bottom: .35rem; font-weight: 600; }
+.price-search { width: 100%; max-width: 520px; padding: .6rem .8rem; font-size: 1rem; border: 1px solid #8a8f98; border-radius: 6px; background: #fff; color: #1a1a1a; }
+.price-brands { display: flex; flex-wrap: wrap; gap: 8px; margin: .75rem 0 .25rem; }
+.price-brand { padding: .45rem .9rem; border: 1px solid #8a8f98; border-radius: 999px; background: transparent; color: inherit; cursor: pointer; font-size: .95rem; }
+.price-brand.is-active { background: #035fb5; border-color: #035fb5; color: #fff; }
+.price-count { margin: .5rem 0 0; font-size: .95rem; opacity: .85; }
+.price-group { margin: 2rem 0; }
+.price-group > h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin-bottom: .5rem; }
+.price-page-title { font-size: 1.25rem; margin: 1.5rem 0 .25rem; }
+.price-group [hidden], .price-page [hidden], tr[hidden] { display: none !important; }
+
+/* таблицы каталога: длинные названия моделей переносятся, широкая таблица не раздвигает страницу */
+.markdown .catalog-table td:first-child { white-space: normal; overflow-wrap: anywhere; }
+@media (min-width: 641px) { .markdown .catalog-table { overflow-x: auto; } }
+
+/* меню стало длиннее (добавлен «Прайс-лист»): на средних экранах пункты переносятся, а не раздвигают страницу */
+@media (min-width: 769px) {
+  .navbar-menu { flex-wrap: wrap; max-width: 100%; }
+}
+
+/* длинные названия карточек («Hisense: полупромышленные сплит-системы») не выходят за край на узком экране */
+.card-content h3 { overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 480px) { .card-content { font-size: 1.2rem; } }
+
+/* ===== Цветные иконки на кнопках связи ===== */
+.cta-ico { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 30px; height: 30px; border-radius: 50%; background: #fff; font-size: 15px; line-height: 1; }
+.cta-ico--call { color: #035fb5; }
+.cta-ico--wa { color: #25d366; font-size: 21px; }
+.cta-ico--tg { color: #229ed9; font-size: 22px; }
+.cta-ico svg { display: block; width: 20px; height: 20px; }
+@media (max-width: 768px) {
+  .cta--sticky .cta-ico { width: 26px; height: 26px; font-size: 13px; }
+  .cta--sticky .cta-ico--wa { font-size: 19px; }
+  .cta--sticky .cta-ico--tg { font-size: 20px; }
+  .cta--sticky .cta-ico svg { width: 18px; height: 18px; }
+}
+
+/* ===== Главное меню (layouts/partials/nav.html, assets/js/nav.js, data/menu.yaml) ===== */
+:root {
+  --nav-panel-bg: #ffffff;
+  --nav-panel-fg: #1a1a1a;
+  --nav-line: rgba(128, 128, 128, 0.35);
+  --nav-hover: rgba(3, 95, 181, 0.12);
+  --nav-accent: #035fb5;
+  --nav-focus: #1d6fd1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nav-panel-bg: #1c2128;
+    --nav-panel-fg: #f1f3f5;
+    --nav-hover: rgba(80, 160, 255, 0.18);
+    --nav-accent: #5aa9ff;
+    --nav-focus: #7ab8ff;
+  }
+}
+.site-nav { position: relative; padding: 2px 0; }
+.nav-burger { display: none; }
+.nav-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 4px; margin: 0; padding: 0; list-style: none; }
+.nav-item { position: relative; margin: 0; }
+.nav-link, .nav-toggle {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 12px;
+  font: inherit; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  color: inherit !important; text-decoration: none !important; background: none; border: 0; border-radius: 6px; cursor: pointer;
+}
+.nav-link:hover, .nav-toggle:hover, .nav-item.is-open > .nav-toggle { background: var(--nav-hover); }
+.nav-item.is-current > .nav-link, .nav-item.is-current > .nav-toggle { box-shadow: inset 0 -3px 0 var(--nav-accent); border-radius: 6px 6px 0 0; }
+.nav-toggle::after {
+  content: ""; width: 7px; height: 7px; margin-top: -3px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.15s ease;
+}
+.nav-item.is-open > .nav-toggle::after { transform: rotate(225deg); margin-top: 3px; }
+.nav-link:focus-visible, .nav-toggle:focus-visible, .nav-burger:focus-visible, .nav-panel a:focus-visible,
+.catalog-tab:focus-visible, .filter-opt input:focus-visible, .filter-reset:focus-visible, .catalog-filters summary:focus-visible,
+.catalog-sort select:focus-visible, .series-card__link:focus-visible { outline: 3px solid var(--nav-focus); outline-offset: 2px; }
+
+.nav-panel {
+  display: none; position: absolute; top: 100%; left: 0; z-index: 900; min-width: 270px; padding: 12px 14px;
+  background: var(--nav-panel-bg); color: var(--nav-panel-fg); border: 1px solid var(--nav-line); border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28); text-align: left; text-transform: none; letter-spacing: 0;
+}
+.nav-item.is-open > .nav-panel { display: block; }
+.nav-item--mega { position: static; }
+.nav-item--mega.is-open > .nav-panel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 28px; left: 0; right: 0; }
+.nav-sublist { margin: 0; padding: 0; list-style: none; }
+.nav-panel a { display: block; padding: 7px 8px; border-radius: 6px; color: inherit !important; font-size: 0.95rem; line-height: 1.3; text-decoration: none !important; }
+.nav-panel a:hover { background: var(--nav-hover); }
+.nav-panel a[aria-current="page"] { font-weight: 700; box-shadow: inset 3px 0 0 var(--nav-accent); }
+.nav-col__title { margin: 0 0 4px; padding: 0 8px; font-size: 1rem; font-weight: 700; color: var(--nav-accent); }
+.nav-group__title { margin: 10px 0 2px; padding: 0 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.7; }
+.nav-panel__foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 4px; padding-top: 10px; border-top: 1px solid var(--nav-line); }
+.nav-panel__foot a { display: inline-block; font-weight: 700; }
+/* на главной меню внизу экрана: списки открываются вверх */
+.site-nav--up .nav-panel { top: auto; bottom: 100%; }
+
+@media (max-width: 768px) {
+  .nav-burger {
+    display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 48px; padding: 0 12px;
+    font: inherit; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    color: inherit; background: none; border: 1px solid var(--nav-line); border-radius: 8px; cursor: pointer;
+  }
+  .nav-burger__bars, .nav-burger__bars::before, .nav-burger__bars::after { display: block; width: 20px; height: 2px; background: currentColor; border-radius: 2px; content: ""; position: relative; }
+  .nav-burger__bars::before { position: absolute; top: -6px; }
+  .nav-burger__bars::after { position: absolute; top: 6px; }
+  .nav-list { display: none; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; gap: 0; max-height: 70vh; margin-top: 6px; overflow-y: auto; }
+  .nav-list.is-open { display: flex; }
+  .nav-link, .nav-toggle { display: flex; justify-content: space-between; width: 100%; min-height: 48px; padding: 0 6px; font-size: 0.9rem; border-bottom: 1px solid var(--nav-line); border-radius: 0; }
+  .nav-item.is-current > .nav-link, .nav-item.is-current > .nav-toggle { box-shadow: inset 4px 0 0 var(--nav-accent); border-radius: 0; padding-left: 12px; }
+  .nav-panel, .site-nav--up .nav-panel { position: static; min-width: 0; padding: 4px 6px 10px; background: transparent; color: inherit; border: 0; border-radius: 0; box-shadow: none; }
+  .nav-item--mega.is-open > .nav-panel { display: block; }
+  .nav-col + .nav-col { margin-top: 10px; }
+  .nav-panel a { padding: 10px 8px; }
+}
+
+/* ===== Каталог с фильтрами (layouts/projects/list.html, assets/js/catalog.js) ===== */
+.catalog-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 18px; }
+.catalog-tab { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; font: inherit; font-size: 0.9rem; font-weight: 600; color: inherit !important; text-decoration: none !important; background: transparent; border: 1px solid var(--nav-line); border-radius: 8px; cursor: pointer; }
+.catalog-tab:hover { background: var(--nav-hover); }
+.catalog-tab.is-active { color: #fff !important; background: #035fb5; border-color: #035fb5; }
+.catalog-layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 28px; align-items: start; margin-bottom: 40px; }
+.catalog-filters__box { padding: 14px 16px; border: 1px solid var(--nav-line); border-radius: 10px; }
+.catalog-filters summary { font-size: 1.15rem; font-weight: 700; cursor: pointer; }
+.catalog-filters fieldset { margin: 16px 0 0; padding: 0; border: 0; }
+.catalog-filters legend { margin-bottom: 4px; padding: 0; font-weight: 700; }
+.filter-opt { display: flex; align-items: center; gap: 8px; min-height: 32px; font-size: 0.95rem; cursor: pointer; }
+.filter-opt input { width: 18px; height: 18px; flex: none; accent-color: #035fb5; }
+.filter-reset { margin-top: 18px; min-height: 40px; padding: 0 16px; font: inherit; font-weight: 600; color: inherit; background: transparent; border: 1px solid var(--nav-line); border-radius: 8px; cursor: pointer; }
+.filter-reset:hover { background: var(--nav-hover); }
+.catalog-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 14px; }
+.catalog-count { margin: 0; font-weight: 600; }
+.catalog-sort { display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+.catalog-sort select { min-height: 38px; padding: 0 10px; font: inherit; color: #1a1a1a; background: #fff; border: 1px solid #8a8f98; border-radius: 6px; }
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.series-card { margin: 0; border: 1px solid var(--nav-line); border-radius: 10px; overflow: hidden; background: transparent; }
+.series-card[hidden] { display: none; }
+.series-card__link { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 0 0 14px; color: inherit !important; text-decoration: none !important; }
+.series-card__link:hover { background: var(--nav-hover); }
+.series-card__img { display: flex; align-items: center; justify-content: center; height: 170px; background: #fff; }
+.series-card__img img { max-width: 92%; max-height: 150px; width: auto; height: auto; object-fit: contain; }
+.series-card__ph { font-size: 1.4rem; font-weight: 700; color: #8a8f98; letter-spacing: 0.04em; }
+.series-card__title { padding: 0 14px; font-size: 1.05rem; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.series-card__row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; padding: 0 14px; font-size: 0.85rem; opacity: 0.85; }
+.series-card__price { margin-top: auto; padding: 0 14px; font-size: 1.1rem; font-weight: 700; }
+.series-card__price--none { font-size: 0.95rem; font-weight: 600; opacity: 0.8; }
+.catalog-empty { padding: 20px; border: 1px dashed var(--nav-line); border-radius: 10px; }
+.catalog-empty[hidden] { display: none; }
+@media (max-width: 768px) {
+  .catalog-layout { grid-template-columns: 1fr; gap: 14px; }
+  .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .series-card__img { height: 130px; }
+  .series-card__img img { max-height: 112px; }
+  .series-card__title { font-size: 0.95rem; }
+  .series-card__row { font-size: 0.8rem; }
+}

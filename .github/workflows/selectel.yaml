@@ -96,7 +96,13 @@ jobs:
       - name: Upload to bucket
         if: steps.check.outputs.ready == 'true'
         run: |
-          s3cmd sync --acl-public --delete-removed --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/"
+          # 1) Загружаем всё новое и изменённое, ничего не удаляя. Старые css/js/картинки с хэшем в имени остаются:
+          #    CDN и браузеры держат HTML до суток, и закешированная страница должна находить свои стили (иначе страница без оформления).
+          s3cmd sync --acl-public --no-progress --guess-mime-type public/ "s3://${S3_BUCKET}/"
+          # 2) Удаляем из бакета только удалённые страницы и файлы, а css/js/fonts/обработанные картинки (имена с хэшем) не трогаем.
+          s3cmd sync --acl-public --delete-removed --no-progress --guess-mime-type \
+            --exclude 'css/*' --exclude 'js/*' --exclude 'fonts/*' --exclude '*_hu_*' \
+            public/ "s3://${S3_BUCKET}/"
 
       - name: Set correct Content-Type for CSS
         if: steps.check.outputs.ready == 'true'

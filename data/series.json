@@ -12,6 +12,7 @@
    "file": "photo.png"
   },
   "models": 3,
+  "hp": "yes",
   "priceMin": 27390,
   "priceMax": 35290,
   "kwMin": 2.25,
@@ -34,6 +35,7 @@
    "file": "photo.png"
   },
   "models": 5,
+  "hp": "yes",
   "priceMin": 21790,
   "priceMax": 66890,
   "kwMin": 2.37,
@@ -56,6 +58,7 @@
    "file": "photo.png"
   },
   "models": 5,
+  "hp": "yes",
   "priceMin": 23290,
   "priceMax": 67190,
   "kwMin": 2.25,
@@ -78,6 +81,7 @@
    "file": "sensation-1.webp"
   },
   "models": 4,
+  "hp": "yes",
   "priceMin": 109990,
   "priceMax": 127490,
   "kwMin": 2.95,
@@ -95,7 +99,12 @@
   "tech": "yes",
   "url": "/projects/hisense-nastennye/#vision",
   "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "vision-1.webp"
+  },
   "models": 6,
+  "hp": "yes",
   "priceMin": 84490,
   "priceMax": 146990,
   "kwMin": 2.8,
@@ -119,6 +128,7 @@
    "file": "vibe-1.webp"
   },
   "models": 7,
+  "hp": "yes",
   "priceMin": 49990,
   "priceMax": 91990,
   "kwMin": 2.75,
@@ -141,6 +151,7 @@
    "file": "expert-1.webp"
   },
   "models": 5,
+  "hp": "yes",
   "priceMin": 37690,
   "priceMax": 101990,
   "kwMin": 2.5,
@@ -163,6 +174,7 @@
    "file": "goal-1.webp"
   },
   "models": 10,
+  "hp": "yes",
   "priceMin": 27490,
   "priceMax": 93890,
   "kwMin": 2.3,
@@ -185,6 +197,7 @@
    "file": "city-1.webp"
   },
   "models": 8,
+  "hp": "yes",
   "priceMin": 25390,
   "priceMax": 89790,
   "kwMin": 2.3,
@@ -202,7 +215,12 @@
   "tech": "both",
   "url": "/projects/hisense-nastennye/#zoom",
   "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "zoom-1.webp"
+  },
   "models": 11,
+  "hp": "yes",
   "priceMin": 22490,
   "priceMax": 88490,
   "kwMin": 2.3,
@@ -220,7 +238,12 @@
   "tech": "both",
   "url": "/projects/hisense-nastennye/#zoomw",
   "page": "hisense-nastennye",
+  "image": {
+   "page": "hisense-nastennye",
+   "file": "zoomw-1.webp"
+  },
   "models": 10,
+  "hp": "yes",
   "priceMin": 34290,
   "priceMax": 103090,
   "kwMin": 2.3,
@@ -243,6 +266,7 @@
    "file": "strong-1.webp"
   },
   "models": 1,
+  "hp": "yes",
   "priceMin": 133990,
   "priceMax": 133990,
   "kwMin": 10.0,
@@ -265,6 +289,7 @@
    "file": "kass-1.webp"
   },
   "models": 11,
+  "hp": "yes",
   "priceMin": 82490,
   "priceMax": 265490,
   "kwMin": 3.5,
@@ -289,6 +314,7 @@
    "file": "duct-1.webp"
   },
   "models": 13,
+  "hp": "yes",
   "priceMin": 78590,
   "priceMax": 465890,
   "kwMin": 2.6,
@@ -313,6 +339,7 @@
    "file": "floor-1.webp"
   },
   "models": 11,
+  "hp": "yes",
   "priceMin": 86490,
   "priceMax": 272190,
   "kwMin": 2.6,
@@ -332,7 +359,12 @@
   "tech": "no",
   "url": "/projects/promyshlennye/#column",
   "page": "promyshlennye",
+  "image": {
+   "page": "promyshlennye",
+   "file": "column-1.webp"
+  },
   "models": 3,
+  "hp": "yes",
   "priceMin": 132690,
   "priceMax": 259790,
   "kwMin": 7.2,
@@ -350,7 +382,12 @@
   "tech": "yes",
   "url": "/projects/hisense-multi-split/#outdoor",
   "page": "hisense-multi-split",
+  "image": {
+   "page": "hisense-multi-split",
+   "file": "outdoor-1.webp"
+  },
   "models": 16,
+  "hp": "yes",
   "priceMin": 67990,
   "priceMax": 193790,
   "kwMin": 4.1,
@@ -370,7 +407,12 @@
   "tech": "yes",
   "url": "/projects/hisense-multi-split/#indoor",
   "page": "hisense-multi-split",
+  "image": {
+   "page": "hisense-multi-split",
+   "file": "indoor-1.webp"
+  },
   "models": 36,
+  "hp": "yes",
   "priceMin": 18690,
   "priceMax": 68890,
   "kwMin": 2.15,
@@ -393,6 +435,7 @@
    "file": "mobile-v-1.webp"
   },
   "models": 2,
+  "hp": "no",
   "priceMin": 27990,
   "priceMax": 31990,
   "kwMin": 2.05,
@@ -410,7 +453,12 @@
   "tech": "",
   "url": "/projects/hisense-mobilnye/#mobile-w",
   "page": "hisense-mobilnye",
+  "image": {
+   "page": "hisense-mobilnye",
+   "file": "mobile-w-1.webp"
+  },
   "models": 2,
+  "hp": "no",
   "priceMin": 27990,
   "priceMax": 31990,
   "kwMin": 2.05,
@@ -428,7 +476,12 @@
   "tech": "",
   "url": "/projects/hisense-mobilnye/#mobile-c",
   "page": "hisense-mobilnye",
+  "image": {
+   "page": "hisense-mobilnye",
+   "file": "mobile-c-1.webp"
+  },
   "models": 2,
+  "hp": "no",
   "priceMin": 36990,
   "priceMax": 41990,
   "kwMin": 2.6,
@@ -451,6 +504,7 @@
    "file": "deluxepro-1.webp"
   },
   "models": 4,
+  "hp": "yes",
   "priceMin": 87990,
   "priceMax": 179990,
   "kwMin": 2.5,
@@ -474,6 +528,7 @@
    "file": "artcoolmirror-1.webp"
   },
   "models": 2,
+  "hp": "yes",
   "priceMin": 91990,
   "priceMax": 98990,
   "kwMin": 2.5,
@@ -496,6 +551,7 @@
    "file": "procool-1.webp"
   },
   "models": 5,
+  "hp": "yes",
   "priceMin": 59990,
   "priceMax": 123990,
   "kwMin": 2.14,
@@ -518,6 +574,7 @@
    "file": "promulti-1.webp"
   },
   "models": 25,
+  "hp": "yes",
   "priceMin": 32700,
   "priceMax": 329100,
   "kwMin": 2.1,
@@ -536,6 +593,7 @@
   "url": "/projects/osushiteli/",
   "page": "osushiteli",
   "models": 1,
+  "hp": "",
   "priceMin": 13590,
   "priceMax": 13590,
   "eff": []
@@ -549,6 +607,7 @@
   "url": "/projects/ventilyaciya/",
   "page": "ventilyaciya",
   "models": 0,
+  "hp": "",
   "eff": []
  }
 ]

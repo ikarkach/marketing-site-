@@ -486,7 +486,8 @@ def _series_stats(rows, eff_key='eff'):
     kws = [k for k in (_first_num(r.get('cool')) for r in rows) if k is not None]
     noises = [n for n in (_first_num(r.get('noise')) for r in rows) if n is not None]
     effs = sorted({r[eff_key].split('/')[0] for r in rows if r.get(eff_key)})
-    return dict(models=len(rows), priceMin=min(prices) if prices else None, priceMax=max(prices) if prices else None,
+    hp = 'yes' if any(r.get('heat') for r in rows) else 'no'  # «тепловой насос»: у серии есть режим обогрева
+    return dict(models=len(rows), hp=hp, priceMin=min(prices) if prices else None, priceMax=max(prices) if prices else None,
                 kwMin=min(kws) if kws else None, kwMax=max(kws) if kws else None,
                 noiseMin=min(noises) if noises else None, eff=effs)
 
@@ -504,7 +505,7 @@ def build_series(cat):
         return 'both' if inv and cls else 'yes' if inv else 'no' if cls else ''
 
     for r in cat['roland']:
-        rows = [dict(price=x['price'], cool=x['cap'], noise=x['noise'], eff='A') for x in r['rows']]
+        rows = [dict(price=x['price'], cool=x['cap'], heat=('1' if '/' in x['cap'] else None), noise=x['noise'], eff='A') for x in r['rows']]
         out.append(dict(id='roland-' + r['page'], title=r['title'], brand='Roland', type='wall',
                         tech='yes' if r['page'] == 'favorite-ii-inverter' else 'no', url=f"/projects/{r['page']}/",
                         page=r['page'], image=dict(page=r['page'], file='photo.png'), **_series_stats(rows)))
@@ -523,11 +524,11 @@ def build_series(cat):
     dh = cat.get('osushiteli') or []
     if dh:
         out.append(dict(id='hisense-osushiteli', title='Hisense Air Go Pro (осушитель)', brand='Hisense', type='dehum', tech='',
-                        url='/projects/osushiteli/', page='osushiteli', image=None, models=len(dh),
+                        url='/projects/osushiteli/', page='osushiteli', image=None, models=len(dh), hp='',
                         priceMin=min(x['price'] for x in dh), priceMax=max(x['price'] for x in dh),
                         kwMin=None, kwMax=None, noiseMin=None, eff=[]))
     out.append(dict(id='ventilyaciya', title='Вентиляция', brand='', type='vent', tech='', url='/projects/ventilyaciya/',
-                    page='ventilyaciya', image=None, models=0, priceMin=None, priceMax=None, kwMin=None, kwMax=None,
+                    page='ventilyaciya', image=None, models=0, hp='', priceMin=None, priceMax=None, kwMin=None, kwMax=None,
                     noiseMin=None, eff=[]))
     return out
 

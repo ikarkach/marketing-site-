@@ -8,9 +8,9 @@
     "images": [
      {
       "file": "sensation-1.webp",
-      "alt": "Hisense Sensation Slider Pro — внутренний блок",
-      "w": 716,
-      "h": 272
+      "alt": "Hisense Sensation Slider Pro Superior — внутренний блок",
+      "w": 1000,
+      "h": 510
      }
     ],
     "features": [
@@ -71,7 +71,20 @@
    {
     "id": "vision",
     "title": "Hisense Vision Pro 2.0",
-    "images": [],
+    "images": [
+     {
+      "file": "vision-1.webp",
+      "alt": "Hisense Vision Pro 2.0 Superior — внутренний блок",
+      "w": 928,
+      "h": 524
+     },
+     {
+      "file": "vision-2.webp",
+      "alt": "Hisense Vision Pro 2.0 Carbon — внутренний блок",
+      "w": 808,
+      "h": 490
+     }
+    ],
     "features": [
      "Класс эффективности A+++/A+++",
      "FULL ICE CLEAN Очистка всех теплообменников",
@@ -150,20 +163,20 @@
      {
       "file": "vibe-1.webp",
       "alt": "Hisense Vibe Pro — серебристый",
-      "w": 763,
-      "h": 249
+      "w": 1000,
+      "h": 404
      },
      {
       "file": "vibe-2.webp",
       "alt": "Hisense Vibe Pro — чёрный",
-      "w": 745,
-      "h": 242
+      "w": 756,
+      "h": 335
      },
      {
       "file": "vibe-3.webp",
       "alt": "Hisense Vibe Pro — шампань",
-      "w": 776,
-      "h": 253
+      "w": 981,
+      "h": 396
      }
     ],
     "features": [
@@ -244,9 +257,9 @@
     "images": [
      {
       "file": "expert-1.webp",
-      "alt": "Hisense Expert Pro — внутренний блок",
-      "w": 800,
-      "h": 240
+      "alt": "Hisense Expert Pro 2.0 — внутренний блок",
+      "w": 947,
+      "h": 418
      }
     ],
     "features": [
@@ -311,9 +324,15 @@
     "images": [
      {
       "file": "goal-1.webp",
-      "alt": "Hisense Goal 2.0 — внутренний блок",
-      "w": 800,
-      "h": 252
+      "alt": "Hisense Goal 2.0 инверторный — внутренний блок",
+      "w": 1000,
+      "h": 442
+     },
+     {
+      "file": "goal-2.webp",
+      "alt": "Hisense Goal 2.0 классический — внутренний блок",
+      "w": 1000,
+      "h": 442
      }
     ],
     "features": [
@@ -425,9 +444,15 @@
     "images": [
      {
       "file": "city-1.webp",
-      "alt": "Hisense City 2.0 — внутренний блок",
-      "w": 800,
-      "h": 228
+      "alt": "Hisense City 2.0 инверторный — внутренний блок",
+      "w": 1000,
+      "h": 381
+     },
+     {
+      "file": "city-2.webp",
+      "alt": "Hisense City 2.0 классический — внутренний блок",
+      "w": 1000,
+      "h": 409
      }
     ],
     "features": [
@@ -520,7 +545,20 @@
    {
     "id": "zoom",
     "title": "Hisense Zoom 2.0",
-    "images": [],
+    "images": [
+     {
+      "file": "zoom-1.webp",
+      "alt": "Hisense Zoom 2.0 инверторный — внутренний блок",
+      "w": 888,
+      "h": 509
+     },
+     {
+      "file": "zoom-2.webp",
+      "alt": "Hisense Zoom 2.0 классический — внутренний блок",
+      "w": 738,
+      "h": 424
+     }
+    ],
     "features": [
      "Класс эффективности A",
      "Дежурный обогрев +8°C",
@@ -635,7 +673,14 @@
    {
     "id": "zoomw",
     "title": "Hisense Zoom 2.0 с доработкой зимним комплектом",
-    "images": [],
+    "images": [
+     {
+      "file": "zoomw-1.webp",
+      "alt": "Hisense Zoom 2.0 с зимним комплектом — внутренний блок",
+      "w": 888,
+      "h": 509
+     }
+    ],
     "features": [],
     "tables": [
      {
@@ -739,8 +784,8 @@
      {
       "file": "strong-1.webp",
       "alt": "Hisense Strong Vibe Classic A — внутренний блок",
-      "w": 800,
-      "h": 266
+      "w": 880,
+      "h": 456
      }
     ],
     "features": [
@@ -775,9 +820,9 @@
     "images": [
      {
       "file": "kass-1.webp",
-      "alt": "Hisense кассетный кондиционер",
-      "w": 571,
-      "h": 425
+      "alt": "Hisense кассетный кондиционер HEAVY",
+      "w": 920,
+      "h": 811
      }
     ],
     "features": [],
@@ -890,9 +935,9 @@
     "images": [
      {
       "file": "duct-1.webp",
-      "alt": "Hisense канальный кондиционер",
-      "w": 533,
-      "h": 223
+      "alt": "Hisense канальный кондиционер HEAVY",
+      "w": 824,
+      "h": 331
      }
     ],
     "features": [],
@@ -1021,9 +1066,9 @@
     "images": [
      {
       "file": "floor-1.webp",
-      "alt": "Hisense напольно-потолочный кондиционер",
-      "w": 507,
-      "h": 412
+      "alt": "Hisense напольно-потолочный кондиционер HEAVY",
+      "w": 737,
+      "h": 431
      }
     ],
     "features": [],
@@ -1133,7 +1178,14 @@
    {
     "id": "column",
     "title": "Колонные",
-    "images": [],
+    "images": [
+     {
+      "file": "column-1.webp",
+      "alt": "Hisense колонный кондиционер HEAVY 2.0",
+      "w": 291,
+      "h": 1000
+     }
+    ],
     "features": [],
     "tables": [
      {
@@ -1173,7 +1225,14 @@
    {
     "id": "outdoor",
     "title": "Наружные блоки мульти-сплит систем",
-    "images": [],
+    "images": [
+     {
+      "file": "outdoor-1.webp",
+      "alt": "Hisense наружный блок мульти-сплит системы",
+      "w": 254,
+      "h": 167
+     }
+    ],
     "features": [],
     "tables": [
      {
@@ -1343,7 +1402,14 @@
    {
     "id": "indoor",
     "title": "Внутренние блоки",
-    "images": [],
+    "images": [
+     {
+      "file": "indoor-1.webp",
+      "alt": "Hisense внутренний блок мульти-сплит системы",
+      "w": 864,
+      "h": 289
+     }
+    ],
     "features": [],
     "tables": [
      {
@@ -1722,9 +1788,9 @@
     "images": [
      {
       "file": "mobile-v-1.webp",
-      "alt": "Hisense мобильный кондиционер",
-      "w": 336,
-      "h": 326
+      "alt": "Hisense мобильный кондиционер серии V",
+      "w": 485,
+      "h": 875
      }
     ],
     "features": [],
@@ -1753,7 +1819,14 @@
    {
     "id": "mobile-w",
     "title": "Мобильные кондиционеры серии W",
-    "images": [],
+    "images": [
+     {
+      "file": "mobile-w-1.webp",
+      "alt": "Hisense мобильный кондиционер серии W",
+      "w": 426,
+      "h": 935
+     }
+    ],
     "features": [],
     "tables": [
      {
@@ -1780,7 +1853,14 @@
    {
     "id": "mobile-c",
     "title": "Мобильные кондиционеры серии C",
-    "images": [],
+    "images": [
+     {
+      "file": "mobile-c-1.webp",
+      "alt": "Hisense мобильный кондиционер серии C",
+      "w": 411,
+      "h": 727
+     }
+    ],
     "features": [],
     "tables": [
      {
@@ -1813,8 +1893,8 @@
      {
       "file": "deluxepro-1.webp",
       "alt": "LG Deluxe Pro — внутренний блок",
-      "w": 410,
-      "h": 161
+      "w": 925,
+      "h": 364
      }
     ],
     "features": [],
@@ -1869,8 +1949,8 @@
      {
       "file": "artcoolmirror-1.webp",
       "alt": "LG ARTCOOL Mirror — внутренний блок",
-      "w": 401,
-      "h": 203
+      "w": 1000,
+      "h": 358
      }
     ],
     "features": [],
@@ -1907,8 +1987,8 @@
      {
       "file": "procool-1.webp",
       "alt": "LG ProCool — внутренний блок",
-      "w": 507,
-      "h": 254
+      "w": 1000,
+      "h": 347
      }
     ],
     "features": [],
@@ -1971,9 +2051,9 @@
     "images": [
      {
       "file": "promulti-1.webp",
-      "alt": "LG ProMulti 2.0 — схема мульти-сплит системы",
-      "w": 457,
-      "h": 464
+      "alt": "LG ProMulti 2.0 — мульти-сплит система",
+      "w": 558,
+      "h": 406
      }
     ],
     "features": [],

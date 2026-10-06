@@ -34,21 +34,8 @@
   --muted: #6b7686;
   --focus: #1d6fd1;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --c-primary: #2670c4;
-    --c-primary-text: #6db3ff;
-    --c-primary-light: #1b2430;
-    --c-text: #e8eaed;
-    --c-line: rgba(255, 255, 255, 0.14);
-    --bg: #1f2227;
-    --panel: #1b2128;
-    --nav-fg: #9ac7ff;
-    --muted: #9aa5b5;
-    --focus: #7ab8ff;
-    --shadow-panel: 0 8px 40px rgba(0, 0, 0, 0.5);
-  }
-}
+/* сайт всегда светлый: тёмная тема отключена (hugo.toml: themeStyle = "light") */
+:root { color-scheme: light; }
 
 html { scroll-padding-top: calc(var(--header-h) + 12px); }
 body { font-family: var(--font-body); }
@@ -256,12 +243,6 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
 .series-card:hover .series-card__info, .series-card:focus-within .series-card__info { color: #fff; }
 .series-card__tip { display: none; position: absolute; top: 24px; right: -6px; z-index: 5; width: 210px; padding: 10px 12px; font: 400 12px/1.5 var(--font-body); color: var(--c-text); background: var(--panel); border: 1px solid var(--c-line); border-radius: var(--radius); box-shadow: var(--shadow-panel); }
 .series-card__info:hover .series-card__tip, .series-card__info:focus .series-card__tip { display: block; }
-/* фото техники всегда на белом: карточки остаются белыми и в тёмной теме, синий фон появляется только при наведении */
-@media (prefers-color-scheme: dark) {
-  .series-card { background: #fff; border-color: #d9dee6; }
-  .series-card__link { color: #333 !important; }
-  .series-card__info { color: #6b7686; }
-}
 .catalog-empty { margin-top: 20px; padding: 22px; border: 1px dashed var(--c-line); border-radius: var(--radius); }
 .catalog-empty[hidden] { display: none; }
 
@@ -298,7 +279,6 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
 
 /* ---------- таблицы моделей: подсветка строки ---------- */
 .markdown .table-wrap tbody tr:hover td, .markdown .table-wrap tbody tr:active td { background: rgba(21, 94, 172, 0.12); }
-@media (prefers-color-scheme: dark) { .markdown .table-wrap tbody tr:hover td, .markdown .table-wrap tbody tr:active td { background: rgba(90, 169, 255, 0.2); } }
 @media (max-width: 640px) { .markdown .table-wrap tbody tr:hover, .markdown .table-wrap tbody tr:active { background: transparent; } }
 
 /* ---------- окно «Оставить заявку» ---------- */

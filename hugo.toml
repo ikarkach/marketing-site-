@@ -12,7 +12,7 @@ enableGitInfo = true
 disableKinds = ['taxonomy', 'term']
 
 [params]
-  themeStyle    = "auto"                                   # "light", "dark" или "auto"
+  themeStyle    = "light"                                  # только светлая тема: тёмная (auto) давала чёрный фон страниц
   showMenu      = true
   fadeIn        = true
   favicon       = "favicon.png"

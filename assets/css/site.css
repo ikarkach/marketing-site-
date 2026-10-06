@@ -108,10 +108,6 @@
   body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
 }
 
-@media (prefers-color-scheme: dark) {
-  .cta--sticky { background: rgba(14, 26, 38, 0.97); }
-}
-
 /* ===== Таблицы из Markdown (layouts/_default/_markup/render-table.html) =====
    Компьютер: обычная таблица. Телефон (до 640 px): каждая строка становится карточкой,
    цена всегда сразу под названием модели, ничего не уезжает за край экрана. */

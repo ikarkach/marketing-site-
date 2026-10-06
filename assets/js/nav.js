@@ -1,31 +1,33 @@
-/* Главное меню: выпадающие списки (наведение, клик, клавиатура) и бургер на телефонах. Без библиотек. */
+/* Шапка и меню: мега-меню «Каталог» (3 колонки), простые выпадающие списки, бургер на телефонах. Без библиотек.
+   Десктоп: клик или наведение (с задержкой ~150 мс) открывает «Каталог»; в левой колонке категория выбирается наведением/кликом;
+   Esc и клик вне меню закрывают; стрелки, Tab и Enter работают. Телефон (<1024 px): полноэкранное меню, вложенность «гармошкой». */
 (function () {
-  var nav = document.querySelector('.site-nav');
-  if (!nav) return;
-  var burger = nav.querySelector('.nav-burger');
-  var list = nav.querySelector('.nav-list');
-  var items = [].slice.call(nav.querySelectorAll('.nav-item--sub'));
-  var desktop = window.matchMedia('(min-width: 769px)');
+  var header = document.getElementById('site-header');
+  if (!header) return;
+  var nav = header.querySelector('.site-nav');
+  var burger = header.querySelector('.nav-burger');
+  var items = [].slice.call(header.querySelectorAll('.nav-item--mega, .nav-item--sub'));
+  var desktop = window.matchMedia('(min-width: 1024px)');
   var canHover = window.matchMedia('(hover: hover)');
   var timers = new WeakMap();
+  var HOVER_DELAY = 150;
 
-  function toggleOf(item) { return item.querySelector('.nav-toggle'); }
-  function panelLinks(item) { return [].slice.call(item.querySelectorAll('.nav-panel a')); }
+  function toggleOf(item) { return item.querySelector(':scope > .nav-toggle'); }
   function setOpen(item, open) {
     item.classList.toggle('is-open', open);
-    toggleOf(item).setAttribute('aria-expanded', open ? 'true' : 'false');
+    var t = toggleOf(item);
+    if (t) t.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
-  function closeAll(except) {
-    items.forEach(function (it) { if (it !== except) setOpen(it, false); });
-  }
+  function closeAll(except) { items.forEach(function (it) { if (it !== except) setOpen(it, false); }); }
   function hoverMode() { return desktop.matches && canHover.matches; }
+  function links(root) { return [].slice.call(root.querySelectorAll('a[href], button:not([disabled])')).filter(function (e) { return e.offsetParent !== null; }); }
 
-  items.forEach(function (item, idx) {
+  items.forEach(function (item) {
     var btn = toggleOf(item);
 
     btn.addEventListener('click', function (e) {
-      // мышь на компьютере: список уже открыт наведением, клик его не закрывает; клавиатура и телефон: переключение
-      if (hoverMode() && e.detail > 0) { closeAll(item); setOpen(item, true); return; }
+      // мышь на компьютере: наведение уже открыло список, клик закрепляет его; клавиатура и телефон: переключатель
+      if (hoverMode() && e.detail > 0 && item.classList.contains('is-open')) return;
       var open = !item.classList.contains('is-open');
       if (desktop.matches) closeAll(item);
       setOpen(item, open);
@@ -34,76 +36,103 @@
     item.addEventListener('mouseenter', function () {
       if (!hoverMode()) return;
       clearTimeout(timers.get(item));
-      closeAll(item);
-      setOpen(item, true);
+      timers.set(item, setTimeout(function () { closeAll(item); setOpen(item, true); }, HOVER_DELAY));
     });
     item.addEventListener('mouseleave', function () {
       if (!hoverMode()) return;
-      timers.set(item, setTimeout(function () { setOpen(item, false); }, 180));
+      clearTimeout(timers.get(item));
+      timers.set(item, setTimeout(function () { setOpen(item, false); }, HOVER_DELAY));
     });
-
-    // фокус ушёл на другой элемент вне пункта: закрыть
     item.addEventListener('focusout', function (e) {
-      if (e.relatedTarget && !item.contains(e.relatedTarget)) setOpen(item, false);
+      if (desktop.matches && e.relatedTarget && !item.contains(e.relatedTarget)) setOpen(item, false);
     });
 
     btn.addEventListener('keydown', function (e) {
-      var links = panelLinks(item);
-      if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        closeAll(item); setOpen(item, true);
-        if (links[0]) links[0].focus();
-      } else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-        var all = [].slice.call(nav.querySelectorAll('.nav-toggle, .nav-link'));
-        var i = all.indexOf(btn) + (e.key === 'ArrowRight' ? 1 : -1);
-        if (desktop.matches && all[i]) { e.preventDefault(); all[i].focus(); }
+      if (e.key === 'ArrowDown' && desktop.matches) {
+        e.preventDefault(); closeAll(item); setOpen(item, true);
+        var first = item.querySelector('.mega__cat-btn, .nav-panel a');
+        if (first) first.focus();
       }
-    });
-
-    item.querySelector('.nav-panel').addEventListener('keydown', function (e) {
-      var links = panelLinks(item);
-      var i = links.indexOf(document.activeElement);
-      if (e.key === 'ArrowDown' && i < links.length - 1) { e.preventDefault(); links[i + 1].focus(); }
-      else if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) links[i - 1].focus(); else btn.focus(); }
-      else if (e.key === 'Escape') { e.preventDefault(); setOpen(item, false); btn.focus(); }
     });
   });
 
-  // стрелки между простыми ссылками верхнего уровня
-  [].slice.call(nav.querySelectorAll('.nav-link')).forEach(function (a) {
-    a.addEventListener('keydown', function (e) {
-      if (!desktop.matches) return;
-      var all = [].slice.call(nav.querySelectorAll('.nav-toggle, .nav-link'));
-      var i = all.indexOf(a) + (e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0);
-      if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && all[i]) { e.preventDefault(); all[i].focus(); }
+  // стрелки между пунктами верхнего уровня
+  [].slice.call(header.querySelectorAll('.nav-link, .nav-toggle')).forEach(function (el) {
+    el.addEventListener('keydown', function (e) {
+      if (!desktop.matches || (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft')) return;
+      var all = [].slice.call(header.querySelectorAll('.nav-link, .nav-toggle'));
+      var i = all.indexOf(el) + (e.key === 'ArrowRight' ? 1 : -1);
+      if (all[i]) { e.preventDefault(); all[i].focus(); }
+    });
+  });
+
+  // мега-меню: выбор категории в левой колонке
+  [].slice.call(header.querySelectorAll('.mega')).forEach(function (mega) {
+    var cats = [].slice.call(mega.querySelectorAll('.mega__cat'));
+    function activate(cat) {
+      cats.forEach(function (c) {
+        var on = c === cat;
+        c.classList.toggle('is-active', on);
+        c.querySelector('.mega__cat-btn').setAttribute('aria-expanded', on ? 'true' : 'false');
+      });
+    }
+    cats.forEach(function (cat, idx) {
+      var b = cat.querySelector('.mega__cat-btn');
+      b.addEventListener('mouseenter', function () { if (hoverMode()) activate(cat); });
+      b.addEventListener('focus', function () { if (desktop.matches) activate(cat); });
+      b.addEventListener('click', function () {
+        if (desktop.matches) { activate(cat); return; }
+        var open = !cat.classList.contains('is-open');          // телефон: «гармошка»
+        cats.forEach(function (c) { c.classList.remove('is-open'); c.querySelector('.mega__cat-btn').setAttribute('aria-expanded', 'false'); });
+        cat.classList.toggle('is-open', open);
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      b.addEventListener('keydown', function (e) {
+        if (!desktop.matches) return;
+        if (e.key === 'ArrowDown' && cats[idx + 1]) { e.preventDefault(); cats[idx + 1].querySelector('.mega__cat-btn').focus(); }
+        else if (e.key === 'ArrowUp' && cats[idx - 1]) { e.preventDefault(); cats[idx - 1].querySelector('.mega__cat-btn').focus(); }
+        else if (e.key === 'ArrowRight') { var l = links(cat.querySelector('.mega__sub')); if (l[0]) { e.preventDefault(); l[0].focus(); } }
+        else if (e.key === 'Home') { e.preventDefault(); cats[0].querySelector('.mega__cat-btn').focus(); }
+        else if (e.key === 'End') { e.preventDefault(); cats[cats.length - 1].querySelector('.mega__cat-btn').focus(); }
+      });
+      cat.querySelector('.mega__sub').addEventListener('keydown', function (e) {
+        if (!desktop.matches) return;
+        var l = links(cat.querySelector('.mega__sub')); var i = l.indexOf(document.activeElement);
+        if (e.key === 'ArrowDown' && i < l.length - 1) { e.preventDefault(); l[i + 1].focus(); }
+        else if (e.key === 'ArrowUp' && i > 0) { e.preventDefault(); l[i - 1].focus(); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); b.focus(); }
+      });
+    });
+    // третий уровень: стрелка раскрывает список
+    [].slice.call(mega.querySelectorAll('.mega__chev')).forEach(function (chev) {
+      chev.addEventListener('click', function () {
+        var li = chev.closest('.mega__item'); var open = !li.classList.contains('is-open');
+        li.classList.toggle('is-open', open); chev.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
     });
   });
 
   // бургер (телефон)
-  if (burger) {
-    burger.addEventListener('click', function () {
-      var open = !list.classList.contains('is-open');
-      list.classList.toggle('is-open', open);
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open && !desktop.matches ? 'hidden' : '';
   }
+  if (burger) burger.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
 
-  // клик вне меню и Esc закрывают списки
-  document.addEventListener('click', function (e) { if (!nav.contains(e.target)) closeAll(); });
+  document.addEventListener('click', function (e) { if (desktop.matches && !header.contains(e.target)) closeAll(); });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     var open = items.filter(function (it) { return it.classList.contains('is-open'); });
     closeAll();
-    if (open[0] && nav.contains(document.activeElement)) toggleOf(open[0]).focus();
-    if (burger && list.classList.contains('is-open') && !desktop.matches) {
-      list.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); burger.focus();
-    }
+    if (open[0] && header.contains(document.activeElement)) { var t = toggleOf(open[0]); if (t) t.focus(); }
+    if (burger && nav.classList.contains('is-open') && !desktop.matches) { setMenu(false); burger.focus(); }
   });
+  // ссылка внутри мобильного меню: закрыть меню
+  nav.addEventListener('click', function (e) { if (!desktop.matches && e.target.closest('a')) setMenu(false); });
+  // кнопка «Рассчитать стоимость» / «Оставить заявку» из меню: закрыть меню, окно откроет lead.js
+  header.addEventListener('click', function (e) { if (e.target.closest('.js-lead')) { closeAll(); if (!desktop.matches) setMenu(false); } });
 
-  // переход между десктопом и телефоном: сбросить состояние
-  desktop.addEventListener && desktop.addEventListener('change', function () {
-    closeAll();
-    if (list) list.classList.remove('is-open');
-    if (burger) burger.setAttribute('aria-expanded', 'false');
-  });
+  var onChange = function () { closeAll(); setMenu(false); };
+  if (desktop.addEventListener) desktop.addEventListener('change', onChange);
 })();

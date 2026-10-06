@@ -1,0 +1,132 @@
+{{- /* Страница категории «Кондиционеры»: баннер, «таблетки» типов, панель фильтров, сортировка и карточки серий.
+       Данные: data/series.json (собирает scripts/build_catalog.py). Поведение: assets/js/catalog.js. Состояние фильтров пишется в адрес (?brand=hisense&inverter=1). */ -}}
+{{ define "title" }}{{ partial "page-banner.html" (dict "page" . "toggle" true) }}{{ end }}
+
+{{ define "main" }}
+{{- $series := slice }}
+{{- range hugo.Data.series }}{{ if in (slice "wall" "multi" "semi" "mobile") .type }}{{ $series = $series | append . }}{{ end }}{{ end }}
+{{- $types := slice (dict "k" "wall" "t" "Настенные сплит-системы") (dict "k" "multi" "t" "Мульти-сплит системы") (dict "k" "semi" "t" "Промышленные кондиционеры") (dict "k" "mobile" "t" "Мобильные кондиционеры") -}}
+<div class="container catalog-page">
+    {{- if .Content }}<div class="markdown catalog-intro">{{ .Content }}</div>{{ end }}
+
+    <div class="catalog-chips" role="group" aria-label="Тип оборудования">
+        <button type="button" class="chip is-active" data-type="" aria-pressed="true">Все кондиционеры</button>
+        {{- range $types }}
+        <button type="button" class="chip" data-type="{{ .k }}" aria-pressed="false">{{ .t }}</button>
+        {{- end }}
+        <a class="chip chip--link" href="{{ "price/#aksessuary" | relURL }}">Аксессуары</a>
+    </div>
+
+    <div class="catalog-layout">
+        <aside class="catalog-filters" id="catalog-filters-panel" aria-label="Фильтры каталога">
+            <div class="catalog-filters__head">
+                <h2 class="catalog-filters__title">Фильтр</h2>
+                <button type="button" class="catalog-filters__close" id="catalog-filters-close" aria-label="Закрыть фильтр"></button>
+            </div>
+            <form id="catalog-filters" autocomplete="off">
+                <fieldset class="filter-group" data-group="brand">
+                    <legend>Бренд</legend>
+                    <div class="filter-options">
+                        {{- range slice (dict "v" "roland" "t" "Roland") (dict "v" "hisense" "t" "Hisense") (dict "v" "lg" "t" "LG") }}
+                        <label class="filter-opt"><input type="checkbox" name="brand" value="{{ .v }}"><span class="filter-opt__t">{{ .t }}</span><span class="filter-opt__n"></span></label>
+                        {{- end }}
+                    </div>
+                </fieldset>
+                <fieldset class="filter-group" data-group="series" data-limit="6">
+                    <legend>Серия</legend>
+                    <div class="filter-options">
+                        {{- range $series }}
+                        <label class="filter-opt"><input type="checkbox" name="series" value="{{ .id }}"><span class="filter-opt__t">{{ .title }}</span><span class="filter-opt__n"></span></label>
+                        {{- end }}
+                    </div>
+                    <button type="button" class="filter-more" hidden></button>
+                </fieldset>
+                <fieldset class="filter-group" data-group="inverter">
+                    <legend>Инверторная технология</legend>
+                    <div class="filter-options">
+                        <label class="filter-opt"><input type="checkbox" name="inverter" value="1"><span class="filter-opt__t">да</span><span class="filter-opt__n"></span></label>
+                        <label class="filter-opt"><input type="checkbox" name="inverter" value="0"><span class="filter-opt__t">нет</span><span class="filter-opt__n"></span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="filter-group" data-group="hp">
+                    <legend>Тепловой насос</legend>
+                    <div class="filter-options">
+                        <label class="filter-opt"><input type="checkbox" name="hp" value="1"><span class="filter-opt__t">да</span><span class="filter-opt__n"></span></label>
+                        <label class="filter-opt"><input type="checkbox" name="hp" value="0"><span class="filter-opt__t">нет</span><span class="filter-opt__n"></span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="filter-group" data-group="eff">
+                    <legend>Класс энергоэффективности</legend>
+                    <div class="filter-options">
+                        {{- range slice (dict "v" "a3" "t" "A+++") (dict "v" "a2" "t" "A++") (dict "v" "a1" "t" "A+") (dict "v" "a0" "t" "A") }}
+                        <label class="filter-opt"><input type="checkbox" name="eff" value="{{ .v }}"><span class="filter-opt__t">{{ .t }}</span><span class="filter-opt__n"></span></label>
+                        {{- end }}
+                    </div>
+                </fieldset>
+                <fieldset class="filter-group" data-group="kw">
+                    <legend>Мощность охлаждения, кВт</legend>
+                    <div class="filter-options">
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="a" data-min="0" data-max="2.5"><span class="filter-opt__t">до 2,5</span><span class="filter-opt__n"></span></label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="b" data-min="2.5" data-max="3.5"><span class="filter-opt__t">2,5–3,5</span><span class="filter-opt__n"></span></label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="c" data-min="3.5" data-max="5"><span class="filter-opt__t">3,5–5</span><span class="filter-opt__n"></span></label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="d" data-min="5" data-max="7"><span class="filter-opt__t">5–7</span><span class="filter-opt__n"></span></label>
+                        <label class="filter-opt"><input type="checkbox" name="kw" value="e" data-min="7" data-max="1000"><span class="filter-opt__t">от 7</span><span class="filter-opt__n"></span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="filter-group filter-group--price" data-group="price">
+                    <legend>Цена, ₽</legend>
+                    <div class="filter-price">
+                        <label>от <input type="number" inputmode="numeric" name="pmin" min="0" step="1000" placeholder="0"></label>
+                        <label>до <input type="number" inputmode="numeric" name="pmax" min="0" step="1000" placeholder="500 000"></label>
+                    </div>
+                </fieldset>
+                <fieldset class="filter-group" data-group="noise">
+                    <legend>Шум внутреннего блока, дБ(А)</legend>
+                    <div class="filter-options">
+                        {{- range slice "20" "25" "30" }}
+                        <label class="filter-opt"><input type="radio" name="noise" value="{{ . }}"><span class="filter-opt__t">до {{ . }}</span><span class="filter-opt__n"></span></label>
+                        {{- end }}
+                        <label class="filter-opt"><input type="radio" name="noise" value="" checked><span class="filter-opt__t">любой</span></label>
+                    </div>
+                </fieldset>
+                <button type="reset" class="filter-reset" id="catalog-reset">Сбросить фильтр</button>
+            </form>
+            <button type="button" class="btn btn--primary catalog-filters__apply" id="catalog-filters-apply">Показать <span id="catalog-apply-count"></span></button>
+        </aside>
+        <div class="catalog-overlay" id="catalog-overlay" hidden></div>
+
+        <div class="catalog-results">
+            <div class="catalog-bar">
+                <button type="button" class="btn btn--outline catalog-filters-open" id="catalog-filters-open">Фильтры <span class="catalog-filters-count" id="catalog-filters-count" hidden></span></button>
+                <p id="catalog-count" class="catalog-count" aria-live="polite"></p>
+                <div class="catalog-sort">
+                    <label for="catalog-sort">Сортировать:</label>
+                    <select id="catalog-sort">
+                        <option value="default">по умолчанию</option>
+                        <option value="name">по названию</option>
+                        <option value="price">по цене</option>
+                        <option value="kw">по мощности</option>
+                    </select>
+                    <button type="button" class="sort-dir" id="catalog-dir" data-dir="asc" aria-label="Направление сортировки: по возрастанию" title="Направление сортировки"></button>
+                </div>
+            </div>
+            <ul class="catalog-grid" id="catalog-grid">
+                {{- range $i, $s := $series }}
+                {{ partial "series-card.html" (dict "s" $s "i" $i) }}
+                {{- end }}
+            </ul>
+            <p id="catalog-empty" class="catalog-empty" hidden>По выбранным параметрам серий не найдено. Измените фильтры или позвоните нам: подберём оборудование вручную.</p>
+        </div>
+    </div>
+
+    {{- /* разметка ItemList для поисковиков */}}
+    {{- $items := slice }}
+    {{- range $i, $s := $series }}{{ $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $s.title "url" ($s.url | absURL)) }}{{ end }}
+    <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "name" .Title "itemListElement" $items | jsonify | safeJS }}</script>
+</div>
+{{ end }}
+
+{{ define "customScripts" }}
+{{- $js := resources.Get "js/catalog.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}

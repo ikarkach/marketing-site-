@@ -4,6 +4,8 @@ seoTitle: "Промышленные кондиционеры Hisense в Крас
 h1: "Промышленные кондиционеры Hisense в Краснодаре — цены"
 description: "Промышленные и полупромышленные кондиционеры Hisense HEAVY: кассетные, канальные, напольно-потолочные, колонные. Цены за комплект. Рассчитаем и подберём — звоните."
 brand: "Hisense"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 catalog: true
 weight: 11
 aliases:

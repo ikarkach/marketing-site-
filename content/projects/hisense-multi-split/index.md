@@ -4,6 +4,8 @@ seoTitle: "Мульти-сплит системы Hisense в Краснодар�
 h1: "Мульти-сплит системы Hisense в Краснодаре — цены"
 description: "Мульти-сплит системы Hisense: наружные и внутренние блоки разных типов, от настенных до кассетных. Цены за блок. Соберём систему под ваши комнаты — звоните."
 brand: "Hisense"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 catalog: true
 weight: 12
 ---

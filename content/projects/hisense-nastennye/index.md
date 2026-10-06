@@ -4,6 +4,8 @@ seoTitle: "Настенные кондиционеры Hisense в Краснод
 h1: "Настенные кондиционеры Hisense в Краснодаре — цены"
 description: "Настенные сплит-системы Hisense: инверторные и классические, серии Sensation Slider Pro, Vision Pro, Vibe Pro, Goal, City, Zoom. Цены за комплект. Звоните."
 brand: "Hisense"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 catalog: true
 weight: 10
 resources:

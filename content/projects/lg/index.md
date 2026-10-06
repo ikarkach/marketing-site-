@@ -4,6 +4,8 @@ seoTitle: "Кондиционеры LG в Краснодаре — цены на
 h1: "Кондиционеры LG в Краснодаре — цены на сплит-системы"
 description: "Сплит-системы LG Deluxe Pro, ARTCOOL Mirror, ProCool и мульти-сплит ProMulti 2.0. Цены за комплект. Подберём модель, рассчитаем стоимость монтажа — позвоните."
 brand: "LG"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 catalog: true
 weight: 20
 resources:

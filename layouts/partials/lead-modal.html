@@ -1,0 +1,13 @@
+{{- /* Окно «Оставить заявку»: выбор мессенджера. Данные посетителя нигде не сохраняются: сообщение с названием модели уходит в WhatsApp, а в MAX и Telegram текст копируется для вставки. Скрипт: assets/js/lead.js */ -}}
+{{- with site.Params.contact }}
+<dialog class="lead" id="lead-dialog" aria-labelledby="lead-title" data-wa="{{ .whatsapp }}" data-tg="{{ .telegram }}" data-max="{{ .max }}" data-phone="{{ .phone }}">
+    <form method="dialog" class="lead__box">
+        <button type="submit" class="lead__close" aria-label="Закрыть"></button>
+        <h2 class="lead__title" id="lead-title">Оставить заявку</h2>
+        <p class="lead__what" id="lead-what"></p>
+        <p class="lead__hint">Выберите, где вам удобнее написать. Мы ответим в рабочее время: Пн–Пт с 9:00 до 17:00. Ваши данные на сайте не сохраняются.</p>
+        {{ partial "contact-buttons.html" (dict "variant" "lead") }}
+        <p class="lead__copied" id="lead-copied" role="status" hidden>Текст сообщения скопирован: вставьте его в чат.</p>
+    </form>
+</dialog>
+{{- end }}

@@ -4,6 +4,8 @@ seoTitle: "Купить кондиционер Roland Maestro в Краснод�
 h1: "Купить кондиционер Roland Maestro в Краснодаре"
 description: "Roland Maestro: сплит-система с матовой панелью 3D Air Flow и Wi-Fi, 5 моделей от 2,25 до 7,3 кВт. Узнайте цену и условия монтажа — позвоните или напишите."
 brand: "Roland"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 weight: 3
 resources:
   - src: photo.png

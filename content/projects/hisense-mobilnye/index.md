@@ -4,6 +4,8 @@ seoTitle: "Мобильные кондиционеры Hisense в Краснод
 h1: "Мобильные кондиционеры Hisense в Краснодаре — цены"
 description: "Мобильные кондиционеры Hisense серий V, W и C для квартир и небольших помещений. Цены за единицу. Узнайте наличие и условия доставки по Краснодару — позвоните."
 brand: "Hisense"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 catalog: true
 weight: 13
 resources:

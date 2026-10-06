@@ -4,6 +4,8 @@ seoTitle: "Кондиционер Roland Favorite II Inverter в Краснод�
 h1: "Кондиционер Roland Favorite II Inverter в Краснодаре"
 description: "Roland Favorite II Inverter: инверторная сплит-система с Wi-Fi, внутренний блок от 22 дБ(А), нагрев до −15 °C. Цена и монтаж в Краснодаре — оставьте заявку."
 brand: "Roland"
+category: "Кондиционеры"
+categoryUrl: "/projects/kondicionery/"
 weight: 1
 resources:
   - src: photo.png

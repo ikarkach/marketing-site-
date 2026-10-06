@@ -1,0 +1,17 @@
+{{- /* Синий баннер раздела: крошки, H1 и (для каталога) переключатель вида. Вызов: partial "page-banner.html" (dict "page" . "toggle" true) */ -}}
+{{- $p := .page -}}
+<section class="page-banner" id="top">
+    <div class="page-banner__in">
+        <div class="page-banner__text">
+            {{ partial "breadcrumbs.html" $p }}
+            <h1>{{ with $p.Params.h1 }}{{ . }}{{ else }}{{ $p.Title | markdownify }}{{ end }}</h1>
+        </div>
+        {{- if .toggle }}
+        <div class="view-toggle" role="group" aria-label="Тип отображения">
+            <span class="view-toggle__label">Тип отображения</span>
+            <button type="button" class="view-toggle__btn" data-view="list" aria-pressed="false" aria-label="Показать списком" title="Показать списком"><span class="view-ico view-ico--list" aria-hidden="true"></span></button>
+            <button type="button" class="view-toggle__btn is-active" data-view="tiles" aria-pressed="true" aria-label="Показать плиткой" title="Показать плиткой"><span class="view-ico view-ico--grid" aria-hidden="true"></span></button>
+        </div>
+        {{- end }}
+    </div>
+</section>

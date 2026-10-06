@@ -1,0 +1,26 @@
+{{- /* Копия themes/introduction/layouts/partials/head/css.html с одним отличием: файлы из customCSS склеиваются и минифицируются
+       в один файл (один запрос вместо нескольких, меньше размер). Тема не изменена. */ -}}
+{{ $bundleRaw := resources.Get "sass/style.sass" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
+
+{{ if hugo.IsServer }}
+{{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
+{{ $bundle := $bundleRaw | css.Sass $cssOpts }}
+<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen">
+{{ else }}
+{{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
+{{ $postCSSOpts := (dict "use" "autoprefixer" ) }}
+{{ $bundle := $bundleRaw | css.Sass $cssOpts | css.PostCSS $postCSSOpts | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
+{{ end }}
+
+<!-- Custom css -->
+{{- $custom := slice }}
+{{- range .Site.Params.customCSS }}{{ with resources.Get . }}{{ $custom = $custom | append . }}{{ end }}{{ end }}
+{{- with $custom }}
+{{- if hugo.IsServer }}
+{{- range . }}<link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">{{ end }}
+{{- else }}
+{{- $site := resources.Concat "css/site.bundle.css" . | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $site.RelPermalink }}" integrity="{{ $site.Data.Integrity }}" crossorigin="anonymous" media="screen">
+{{- end }}
+{{- end }}

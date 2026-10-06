@@ -1,13 +1,16 @@
-{{- /* {{< catalog page="hisense-nastennye" >}}: разделы страницы каталога из data/catalog.json (фото лежат рядом со страницей) */ -}}
+{{- /* {{< catalog page="hisense-nastennye" >}}: разделы страницы каталога из data/catalog.json (фото лежат рядом со страницей).
+       У каждой серии: фото, особенности, кнопки заявки («Узнать цену», «Заказать с монтажом»), таблицы моделей и разметка Product с ценами. */ -}}
 {{- $page := .Get "page" -}}
 {{- $p := .Page -}}
-{{- range index hugo.Data.catalog.pages $page }}
+{{- $brand := cond (eq $page "lg") "LG" "Hisense" -}}
+{{- range $si, $_ := index hugo.Data.catalog.pages $page }}
+{{- $sec := . }}
 <section class="catalog-section" id="{{ .id }}">
 <h2>{{ .title }}</h2>
 {{- with .images }}
 <div class="catalog-figures">
-{{- range . }}{{ $img := . }}{{ with $p.Resources.GetMatch $img.file }}
-    <figure><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $img.alt }}" loading="lazy" decoding="async"></figure>
+{{- range $ii, $img := . }}{{ with $p.Resources.GetMatch $img.file }}
+    <figure><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $img.alt }}"{{ if and (eq $si 0) (eq $ii 0) }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async"></figure>
 {{- end }}{{ end }}
 </div>
 {{- end }}
@@ -16,8 +19,23 @@
 {{- range . }}<li>{{ . }}</li>{{ end }}
 </ul>
 {{- end }}
+<p class="series-cta">
+    <button type="button" class="btn btn--primary js-lead" data-lead="{{ .title }}">Узнать цену</button>
+    <button type="button" class="btn btn--outline js-lead" data-lead="{{ .title }} (заказ с монтажом)">Заказать с монтажом</button>
+</p>
 {{- range .tables }}
 {{ partial "catalog-table.html" . }}
+{{- end }}
+{{- /* Product + AggregateOffer: диапазон розничных цен серии */ -}}
+{{- $prices := slice }}
+{{- range .tables }}{{ range .rows }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}{{ end }}
+{{- if $prices }}
+{{- $img := "" }}
+{{- with $sec.images }}{{ with $p.Resources.GetMatch (index . 0).file }}{{ $img = .Permalink }}{{ end }}{{ end }}
+{{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (index (sort $prices) 0) "highPrice" (index (sort $prices "value" "desc") 0) "offerCount" (len $prices) "url" (printf "%s#%s" $p.Permalink $sec.id) }}
+{{- $prod := dict "@context" "https://schema.org" "@type" "Product" "name" $sec.title "brand" (dict "@type" "Brand" "name" $brand) "offers" $offer }}
+{{- if $img }}{{ $prod = merge $prod (dict "image" $img) }}{{ end }}
+<script type="application/ld+json">{{ $prod | jsonify | safeJS }}</script>
 {{- end }}
 </section>
 {{- end }}

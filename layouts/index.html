@@ -8,12 +8,15 @@
         {{ partial "head/favicons.html" . }}
         {{ partial "head/css.html" . }}
         {{ partial "css/owlCarousel.html" . }}
+        {{ partial "head/fonts.html" . }}
         {{ partial "head/analytics.html" . }}
         {{ partial "head/localbusiness.html" . }}
     </head>
 
     <body>
         {{ partial "body-analytics.html" . }}
+        {{ partial "site-header.html" . }}
+        <main id="main">
         {{ with .Site.GetPage "/home" }}
         <section id="top" class="hero is-{{ .Site.Params.home.introHeight | default "fullheight" }}">
             <!-- Hero head section to play nice with Bulma -->
@@ -40,11 +43,6 @@
                 </div>
             </div> <!-- End of Hero body -->
             {{ end }}
-
-            <div class="hero-foot {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
-                <!-- Tell them all about it! -->
-                {{ partial "nav.html" . }}
-            </div>
         </section> <!-- Done with Hero -->
 
         {{ with .Site.GetPage "/home" }}
@@ -132,8 +130,10 @@
         {{ end }}
 
         {{ partial "footer/text.html" . }}
+        </main>
 
         {{ partial "contact-buttons.html" (dict "variant" "sticky") }}
+        {{ partial "lead-modal.html" . }}
 
         <!-- End of fade in three section -->
         {{ partial "footer/scripts.html" . }}

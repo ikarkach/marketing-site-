@@ -1,0 +1,34 @@
+{{- /* Карточка серии. Вход: словарь {s: серия из data/series.json, i: порядковый номер}. Данные для фильтров лежат в data-атрибутах. */ -}}
+{{- $s := .s -}}
+{{- $m := mod (int $s.models) 10 -}}
+{{- $h := mod (int $s.models) 100 -}}
+{{- $slug := replaceRE `[^a-z0-9]+` "" ($s.brand | lower) -}}
+<li class="series-card" data-order="{{ .i }}" data-id="{{ $s.id }}" data-title="{{ $s.title }}" data-brand="{{ $slug }}" data-type="{{ $s.type }}" data-tech="{{ $s.tech }}" data-hp="{{ $s.hp }}" data-eff="{{ delimit $s.eff " " }}" data-kw-min="{{ with $s.kwMin }}{{ . }}{{ end }}" data-kw-max="{{ with $s.kwMax }}{{ . }}{{ end }}" data-price-min="{{ with $s.priceMin }}{{ . }}{{ end }}" data-price-max="{{ with $s.priceMax }}{{ . }}{{ end }}" data-noise="{{ with $s.noiseMin }}{{ . }}{{ end }}">
+    <a class="series-card__link" href="{{ $s.url | relURL }}">
+        <span class="series-card__img">
+            {{- $shown := false }}
+            {{- with $s.image }}
+            {{- $pg := site.GetPage (printf "/projects/%s" .page) }}
+            {{- with $pg }}
+            {{- with .Resources.GetMatch $s.image.file }}
+            {{- $r := .Fit "460x300" }}
+            <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $s.title }}"{{ if lt (int $.i) 3 }}{{ if eq (int $.i) 0 }} fetchpriority="high"{{ end }}{{ else }} loading="lazy"{{ end }} decoding="async">
+            {{- $shown = true }}
+            {{- end }}
+            {{- end }}
+            {{- end }}
+            {{- if not $shown }}<span class="series-card__ph" aria-hidden="true">{{ with $s.brand }}{{ . }}{{ else }}Usplit{{ end }}</span>{{ end }}
+        </span>
+        <span class="series-card__title">{{ $s.title }}</span>
+        <span class="series-card__row">
+            <span>{{ with $s.brand }}Бренд: <b>{{ . }}</b>{{ else }}Подбор и монтаж{{ end }}</span>
+            {{- if $s.models }}<span>В серии: <b>{{ $s.models }} {{ if and (eq $m 1) (ne $h 11) }}модель{{ else if and (ge $m 2) (le $m 4) (not (and (ge $h 12) (le $h 14))) }}модели{{ else }}моделей{{ end }}</b></span>{{ end }}
+        </span>
+        {{- if $s.priceMin }}<span class="series-card__price">от {{ partial "rub.html" $s.priceMin }}</span>{{ else }}<span class="series-card__price series-card__price--none">Цена по запросу</span>{{ end }}
+    </a>
+    {{- if $s.kwMin }}
+    <span class="series-card__info" tabindex="0" role="note" aria-label="Характеристики серии: мощность {{ $s.kwMin }}–{{ $s.kwMax }} кВт{{ with $s.eff }}, класс {{ index . 0 }}{{ end }}{{ with $s.noiseMin }}, шум от {{ . }} дБ(А){{ end }}">
+        <span class="series-card__tip">Мощность охлаждения: {{ $s.kwMin }}–{{ $s.kwMax }} кВт{{ with $s.eff }}<br>Класс энергоэффективности: {{ delimit . ", " }}{{ end }}{{ with $s.noiseMin }}<br>Шум от {{ . }} дБ(А){{ end }}</span>
+    </span>
+    {{- end }}
+</li>

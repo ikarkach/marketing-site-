@@ -1,0 +1,24 @@
+{{- /* Хлебные крошки + разметка BreadcrumbList. Вход: страница. Категория берётся из front matter (category, categoryUrl). */ -}}
+{{- $p := . -}}
+{{- $crumbs := slice (dict "t" "Главная" "u" "/") -}}
+{{- if eq $p.Section "projects" -}}
+  {{- if ne $p.RelPermalink "/projects/" }}{{ $crumbs = $crumbs | append (dict "t" "Каталог" "u" "/projects/") }}{{ end -}}
+  {{- with $p.Params.category }}{{ $crumbs = $crumbs | append (dict "t" . "u" $p.Params.categoryUrl) }}{{ end -}}
+{{- else if and $p.IsPage (eq $p.Section "blog") -}}
+  {{- $crumbs = $crumbs | append (dict "t" "Блог" "u" "/blog/") -}}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "t" ($p.Params.crumb | default ($p.Title | plainify)) "u" $p.RelPermalink) -}}
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol>
+        {{- range $i, $c := $crumbs }}
+        {{- if eq (add $i 1) (len $crumbs) }}
+        <li aria-current="page">{{ $c.t }}</li>
+        {{- else }}
+        <li><a href="{{ $c.u }}">{{ $c.t }}</a></li>
+        {{- end }}
+        {{- end }}
+    </ol>
+</nav>
+{{- $items := slice }}
+{{- range $i, $c := $crumbs }}{{ $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $c.t "item" ($c.u | absURL)) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items | jsonify | safeJS }}</script>

@@ -1,44 +1,57 @@
-# Главное меню сайта (layouts/partials/nav.html). Адреса существующих страниц не менять.
-# mega: true — крупная панель с колонками; columns -> groups -> items. Без columns/items пункт — обычная ссылка.
+# Главное меню сайта (layouts/partials/site-header.html, assets/js/nav.js). Адреса существующих страниц не менять.
+# Пункт «Каталог» — мега-меню из трёх колонок: категории (слева) → подкатегории (в центре) → промо (справа).
+# Третий уровень (items внутри подкатегории) раскрывается стрелкой.
 - title: Каталог
   active: /projects/
-  mega: true
-  columns:
-    - title: Кондиционеры
-      groups:
-        - title: Настенные сплит-системы
-          items:
-            - {title: Roland FAVORITE II INVERTER, url: /projects/favorite-ii-inverter/}
-            - {title: Roland FAVORITE II, url: /projects/favorite-ii/}
-            - {title: Roland MAESTRO, url: /projects/maestro/}
-            - {title: Hisense настенные, url: /projects/hisense-nastennye/}
-            - {title: "LG Deluxe Pro, ARTCOOL, ProCool", url: /projects/lg/}
-        - title: Мульти-сплит
-          items:
-            - {title: Hisense мульти-сплит, url: /projects/hisense-multi-split/}
-            - {title: LG ProMulti, url: "/projects/lg/#promulti"}
-        - title: Промышленные
-          items:
-            - {title: Промышленные кондиционеры Hisense, url: /projects/promyshlennye/}
-        - title: Мобильные
-          items:
-            - {title: Hisense мобильные, url: /projects/hisense-mobilnye/}
-    - title: Вентиляция и влажность
-      groups:
-        - items:
-            - {title: Вентиляция, url: /projects/ventilyaciya/}
-            - {title: Осушители и увлажнители, url: /projects/osushiteli/}
-    - title: Аксессуары
-      groups:
-        - items:
-            - {title: Аксессуары и монтажные материалы, url: "/price/#aksessuary"}
-        - title: Бренды в прайсе
-          items:
-            - {title: Roland, url: "/price/#roland"}
-            - {title: Hisense, url: "/price/#hisense"}
-            - {title: LG, url: "/price/#lg"}
-  footer:
-    - {title: Весь каталог с фильтрами, url: /projects/}
+  mega:
+    promo:
+      title: Монтаж под ключ в Краснодаре
+      text: Подберём модель под ваше помещение, рассчитаем стоимость и установим оборудование.
+      button: Рассчитать стоимость
+      lead: Расчёт стоимости оборудования и монтажа
+      url: /montazh-i-raschet/
+      more: О монтаже
+    categories:
+      - title: Кондиционеры
+        url: /projects/kondicionery/
+        items:
+          - title: Настенные сплит-системы
+            url: "/projects/kondicionery/?type=wall"
+            items:
+              - {title: Roland FAVORITE II INVERTER, url: /projects/favorite-ii-inverter/}
+              - {title: Roland FAVORITE II, url: /projects/favorite-ii/}
+              - {title: Roland MAESTRO, url: /projects/maestro/}
+              - {title: Hisense настенные, url: /projects/hisense-nastennye/}
+              - {title: "LG Deluxe Pro, ARTCOOL, ProCool", url: /projects/lg/}
+          - title: Мульти-сплит системы
+            url: "/projects/kondicionery/?type=multi"
+            items:
+              - {title: Hisense мульти-сплит, url: /projects/hisense-multi-split/}
+              - {title: LG ProMulti, url: "/projects/lg/#promulti"}
+          - title: Промышленные кондиционеры
+            url: /projects/promyshlennye/
+            items:
+              - {title: Hisense кассетные, url: "/projects/promyshlennye/#kass"}
+              - {title: Hisense канальные, url: "/projects/promyshlennye/#duct"}
+              - {title: Hisense напольно-потолочные, url: "/projects/promyshlennye/#floor"}
+              - {title: Hisense колонные, url: "/projects/promyshlennye/#column"}
+          - title: Мобильные кондиционеры
+            url: /projects/hisense-mobilnye/
+          - title: Все кондиционеры с фильтрами
+            url: /projects/kondicionery/
+      - title: Осушители и увлажнители
+        url: /projects/osushiteli/
+        items:
+          - {title: Бытовые осушители Hisense, url: /projects/osushiteli/}
+      - title: Вентиляция
+        url: /projects/ventilyaciya/
+        items:
+          - {title: Приточно-вытяжные установки и воздуховоды, url: /projects/ventilyaciya/}
+      - title: Аксессуары и инструмент
+        url: "/price/#aksessuary"
+        items:
+          - {title: Аксессуары и монтажные материалы, url: "/price/#aksessuary"}
+          - {title: Прайс по брендам, url: /price/}
 
 - title: Прайс-лист
   url: /price/

@@ -1,0 +1,76 @@
+{{- /* Шапка сайта: логотип, главное меню (data/menu.yaml), «Оставить заявку». Поведение: assets/js/nav.js, assets/js/lead.js */ -}}
+{{- $page := . }}
+{{- $cur := $page.RelPermalink }}
+<header class="site-header" id="site-header">
+    <div class="site-header__bar">
+        <a class="site-logo" href="{{ "" | relURL }}" aria-label="Usplit — на главную"><img src="{{ "logo-header.png" | relURL }}" alt="Usplit — климатическая техника" width="{{ site.Params.logoWidth | default 112 }}" height="44"></a>
+        <nav class="site-nav" aria-label="Основное меню">
+            <ul class="nav-list" id="nav-list">
+                {{- range $i, $it := hugo.Data.menu }}
+                {{- $isCurrent := and $it.active (hasPrefix $cur $it.active) }}
+                {{- if $it.mega }}
+                <li class="nav-item nav-item--mega{{ if $isCurrent }} is-current{{ end }}">
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mega-{{ $i }}">{{ $it.title }}</button>
+                    <div class="mega" id="mega-{{ $i }}">
+                        <ul class="mega__cats">
+                            {{- range $ci, $cat := $it.mega.categories }}
+                            <li class="mega__cat{{ if eq $ci 0 }} is-active{{ end }}">
+                                <button type="button" class="mega__cat-btn" aria-expanded="{{ if eq $ci 0 }}true{{ else }}false{{ end }}" aria-controls="mega-{{ $i }}-sub-{{ $ci }}">{{ $cat.title }}</button>
+                                <div class="mega__sub" id="mega-{{ $i }}-sub-{{ $ci }}">
+                                    <p class="mega__sub-head"><a href="{{ $cat.url }}">{{ $cat.title }} <span aria-hidden="true">→</span></a></p>
+                                    <ul class="mega__list">
+                                        {{- range $si, $sub := $cat.items }}
+                                        <li class="mega__item{{ if $sub.items }} has-third{{ end }}">
+                                            <a href="{{ $sub.url }}"{{ if eq $cur $sub.url }} aria-current="page"{{ end }}>{{ $sub.title }}</a>
+                                            {{- if $sub.items }}
+                                            <button type="button" class="mega__chev" aria-expanded="false" aria-controls="mega-{{ $i }}-{{ $ci }}-{{ $si }}" aria-label="Показать: {{ $sub.title }}"></button>
+                                            <ul class="mega__third" id="mega-{{ $i }}-{{ $ci }}-{{ $si }}">
+                                                {{- range $sub.items }}
+                                                <li><a href="{{ .url }}"{{ if eq $cur .url }} aria-current="page"{{ end }}>{{ .title }}</a></li>
+                                                {{- end }}
+                                            </ul>
+                                            {{- end }}
+                                        </li>
+                                        {{- end }}
+                                    </ul>
+                                </div>
+                            </li>
+                            {{- end }}
+                        </ul>
+                        {{- with $it.mega.promo }}
+                        <aside class="mega__promo" aria-label="Монтаж и расчёт">
+                            <p class="mega__promo-title">{{ .title }}</p>
+                            <p class="mega__promo-text">{{ .text }}</p>
+                            <button type="button" class="btn btn--light js-lead" data-lead="{{ .lead }}">{{ .button }}</button>
+                            <a class="mega__promo-more" href="{{ .url }}">{{ .more }} <span aria-hidden="true">→</span></a>
+                        </aside>
+                        {{- end }}
+                    </div>
+                </li>
+                {{- else if $it.items }}
+                <li class="nav-item nav-item--sub{{ if $isCurrent }} is-current{{ end }}">
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-sub-{{ $i }}">{{ $it.title }}</button>
+                    <div class="nav-panel" id="nav-sub-{{ $i }}">
+                        <ul class="nav-sublist">
+                            {{- range $it.items }}
+                            <li><a href="{{ .url }}"{{ if eq $cur .url }} aria-current="page"{{ end }}>{{ .title }}</a></li>
+                            {{- end }}
+                        </ul>
+                    </div>
+                </li>
+                {{- else }}
+                <li class="nav-item{{ if $isCurrent }} is-current{{ end }}">
+                    <a class="nav-link" href="{{ $it.url }}"{{ if eq $cur $it.url }} aria-current="page"{{ end }}>{{ $it.title }}</a>
+                </li>
+                {{- end }}
+                {{- end }}
+            </ul>
+        </nav>
+        <div class="site-header__actions">
+            {{- with site.Params.contact }}<a class="header-phone" href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>{{ end }}
+            <button type="button" class="btn btn--primary btn--header js-lead" data-lead="Консультация по подбору оборудования">Оставить заявку</button>
+            <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-list" aria-label="Меню"><span class="nav-burger__bars" aria-hidden="true"></span></button>
+        </div>
+    </div>
+    <noscript><style>.mega{display:block!important;position:static!important}.nav-panel{display:block!important;position:static!important}.nav-list{display:flex!important}.nav-burger{display:none!important}</style></noscript>
+</header>

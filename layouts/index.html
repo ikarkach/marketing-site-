@@ -13,7 +13,7 @@
         {{ partial "head/localbusiness.html" . }}
     </head>
 
-    <body>
+    <body class="page-home">
         {{ partial "body-analytics.html" . }}
         {{ partial "site-header.html" . }}
         <main id="main">
@@ -34,11 +34,6 @@
                         {{ .Content }}
                     </div>
                     <!-- End title and tagline -->
-                    <!-- Some social icons -->
-                    <div class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
-                        {{ partial "home/social.html" . }}
-                    </div>
-                    <!-- End top social icons -->
                     {{ partial "contact-buttons.html" (dict "variant" "hero") }}
                 </div>
             </div> <!-- End of Hero body -->

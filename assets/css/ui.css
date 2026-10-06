@@ -298,7 +298,22 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
 .lead__copied[hidden] { display: none; }
 
 /* ---------- главная и общие поправки ---------- */
-.page-home .hero.is-fullheight { min-height: calc(100vh - var(--header-h)); }
+/* главная: первый экран без пустого места, разделы идут сразу после кнопок */
+.page-home .hero.is-fullheight { min-height: 0; }
+.page-home .hero-body { padding: 36px 24px 8px; }
+.page-home .hero-logo img { width: min(440px, 80%) !important; }
+.page-home .hero + .section, .page-home .hero ~ .section:first-of-type { padding-top: 24px; }
+/* «Каталог» в меню: сам пункт ведёт на страницу, стрелка открывает меню */
+.nav-item--mega { display: flex; align-items: center; }
+.nav-link--mega { padding-right: 4px; }
+.nav-toggle--chev { padding: 0 11px 0 3px; }
+.nav-item--mega.is-open > .nav-link, .nav-item--mega.is-open > .nav-toggle { background: var(--c-primary-light); }
+@media (max-width: 1023px) {
+  .nav-item--mega { flex-wrap: wrap; }
+  .nav-item--mega > .mega { flex: 0 0 100%; }
+  .nav-link--mega { flex: 1 1 0; width: auto; }
+  .nav-toggle--chev { flex: 0 0 56px; width: 56px; justify-content: center; }
+}
 .page-body { padding-top: 0; }
 .page-body > .container { max-width: var(--container); }
 main#main { display: block; }

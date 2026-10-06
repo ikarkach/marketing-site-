@@ -1,6 +1,6 @@
 """Чистит логотип Usplit: исходник static/logo.src.png (807x331) — мягкий, с шумом сжатия.
 Логотип одноцветный, форму задаёт прозрачность: увеличиваем маску, делаем границу резкой и возвращаем нужный размер со сглаживанием.
-Результат: static/logo.png (для главной, 1200 px) и static/logo-header.png (для шапки, 2x от 112x44).
+Результат: static/usplit-logo.png (для главной, 1200 px) и static/usplit-logo-header.png (для шапки, 2x от 112x44).
 Запуск:  python scripts/sharpen_logo.py   (нужен Pillow)
 """
 import os
@@ -27,5 +27,5 @@ def build(out_w, out_path, steep=5.0, mid=0.36):
 
 
 if __name__ == '__main__':
-    build(1200, os.path.join(ROOT, 'static', 'logo.png'))
-    build(260, os.path.join(ROOT, 'static', 'logo-header.png'))
+    build(1200, os.path.join(ROOT, 'static', 'usplit-logo.png'))
+    build(260, os.path.join(ROOT, 'static', 'usplit-logo-header.png'))

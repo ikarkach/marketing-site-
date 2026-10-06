@@ -3,14 +3,15 @@
 {{- $cur := $page.RelPermalink }}
 <header class="site-header" id="site-header">
     <div class="site-header__bar">
-        <a class="site-logo" href="{{ "" | relURL }}" aria-label="Usplit — на главную"><img src="{{ "logo-header.png" | relURL }}" alt="Usplit — климатическая техника" width="{{ site.Params.logoWidth | default 112 }}" height="44"></a>
+        <a class="site-logo" href="{{ "" | relURL }}" aria-label="Usplit — на главную"><img src="{{ "usplit-logo-header.png" | relURL }}" alt="Usplit — климатическая техника" width="{{ site.Params.logoWidth | default 112 }}" height="44"></a>
         <nav class="site-nav" aria-label="Основное меню">
             <ul class="nav-list" id="nav-list">
                 {{- range $i, $it := hugo.Data.menu }}
                 {{- $isCurrent := and $it.active (hasPrefix $cur $it.active) }}
                 {{- if $it.mega }}
                 <li class="nav-item nav-item--mega{{ if $isCurrent }} is-current{{ end }}">
-                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mega-{{ $i }}">{{ $it.title }}</button>
+                    <a class="nav-link nav-link--mega" href="{{ with $it.url }}{{ . }}{{ else }}/projects/{{ end }}">{{ $it.title }}</a>
+                    <button type="button" class="nav-toggle nav-toggle--chev" aria-expanded="false" aria-controls="mega-{{ $i }}" aria-label="Открыть меню «{{ $it.title }}»"></button>
                     <div class="mega" id="mega-{{ $i }}">
                         <ul class="mega__cats">
                             {{- range $ci, $cat := $it.mega.categories }}

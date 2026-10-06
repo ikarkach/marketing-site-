@@ -6,3 +6,8 @@ node_modules/
 Thumbs.db
 public-prod/
 __pycache__/
+.env
+.env.*
+*.env
+docs/**/*.png
+docs/**/*.jpg

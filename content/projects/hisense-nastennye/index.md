@@ -2,7 +2,7 @@
 title: "Hisense: настенные сплит-системы"
 seoTitle: "Настенные кондиционеры Hisense в Краснодаре — цены | Usplit"
 h1: "Настенные кондиционеры Hisense в Краснодаре — цены"
-description: "Настенные сплит-системы Hisense: инверторные и классические, серии Sensation Slider Pro, Vision Pro, Vibe Pro, Goal, City, Zoom. Цены за комплект. Звоните."
+description: "Настенные сплит-системы Hisense: инверторные и классические, серии Sensation Slider Pro, Vision Pro, Vibe Pro, Expert Pro, Goal. Цены за комплект. Звоните."
 brand: "Hisense"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
@@ -20,7 +20,5 @@ resources:
 
 {{< catalog page="hisense-nastennye" >}}
 
-Серия Zoom 2.0 выпускается и в обычном исполнении, и «с доработкой зимним комплектом»:
-такие комплекты выделены в отдельную таблицу выше.
 
 {{< contact-note >}}

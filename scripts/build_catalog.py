@@ -138,16 +138,14 @@ WALL = [  # (регулярка заголовка, секция, заголов
     (r'ZOOM 2\.0 CLASSIC', 'zoom', 'Классические (on/off)'),
     (r'STRONG VIBE', 'strong', None),
 ]
+# Серии, снятые с сайта по решению владельца (2026-10-10): строки распознаём, но в каталог не берём
+EXCLUDED_WALL = {'city', 'zoom', 'zoomw', 'strong'}
 WALL_TITLES = OrderedDict([
     ('sensation', 'Hisense Sensation Slider Pro'),
     ('vision', 'Hisense Vision Pro 2.0'),
     ('vibe', 'Hisense Vibe Pro EU'),
     ('expert', 'Hisense Expert Pro 2.0 EU'),
     ('goal', 'Hisense Goal 2.0'),
-    ('city', 'Hisense City 2.0'),
-    ('zoom', 'Hisense Zoom 2.0'),
-    ('zoomw', 'Hisense Zoom 2.0 с доработкой зимним комплектом'),
-    ('strong', 'Hisense Strong Vibe Classic A'),
 ])
 SEMI_TYPES = [('КАССЕТНОГО', 'kass', 'Кассетные'), ('НАПОЛЬНО-ПОТОЛОЧНОГО', 'floor', 'Напольно-потолочные и консольные'),
               ('КОНСОЛЬНОГО', 'floor', 'Напольно-потолочные и консольные'), ('КАНАЛЬНОГО', 'duct', 'Канальные'),
@@ -252,9 +250,9 @@ def build_hisense(path, pages, accessories, include_clearance):
         if mode in ('wall_inv', 'wall_cls'):
             if not cur:
                 continue
+            if cur['sid'] in EXCLUDED_WALL:
+                continue
             r = kit_row(c)
-            if cur['sid'] == 'zoomw' and 'комплект' not in r['model'].lower():
-                r['model'] += ' с зимним комплектом'
             sec = pages.section('hisense-nastennye', cur['sid'], WALL_TITLES[cur['sid']])
             key = cur['ttl'] or 'main'
             t = pages.table(sec, key, cur['ttl'], 'kit')
@@ -467,7 +465,7 @@ def finalize(pages, osushiteli):
 
 # ---------- индекс серий для каталога с фильтрами (data/series.json) ----------
 # Инверторность серий, у которых в таблицах нет разбивки «Инверторные / Классические»: по названиям серий в прайсах
-SERIES_TECH = {'sensation': 'yes', 'vision': 'yes', 'vibe': 'yes', 'expert': 'yes', 'strong': 'no',
+SERIES_TECH = {'sensation': 'yes', 'vision': 'yes', 'vibe': 'yes', 'expert': 'yes',
                'deluxepro': 'yes', 'artcoolmirror': 'yes', 'procool': 'yes', 'promulti': 'yes'}
 SERIES_TYPE = {'hisense-nastennye': 'wall', 'promyshlennye': 'semi', 'hisense-multi-split': 'multi',
                'hisense-mobilnye': 'mobile', 'lg': 'wall'}

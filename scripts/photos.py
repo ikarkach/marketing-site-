@@ -34,12 +34,6 @@ PHOTOS = {
         'expert': [(*b('hisense/expert-pro-2-0-eu-dc-inverter/expert-pro-2-0-eu-dc-inverter-03.png'), 'Hisense Expert Pro 2.0 — внутренний блок')],
         'goal': [(*b('hisense/split-system-goal-2-0-dc-inverter-wi-fi/split-system-goal-2-0-dc-inverter-wi-fi-02.png'), 'Hisense Goal 2.0 инверторный — внутренний блок'),
                  (*b('hisense/split-system-goal-2-0-classic-a-wi-fi/split-system-goal-2-0-classic-a-wi-fi-02.png'), 'Hisense Goal 2.0 классический — внутренний блок')],
-        'city': [(*b('hisense/invert-split-system-city-2-0-dc-inverter/invert-split-system-city-2-0-dc-inverter-03.png'), 'Hisense City 2.0 инверторный — внутренний блок'),
-                 (*b('hisense/classic-split-system-city-a/classic-split-system-city-a-03.png'), 'Hisense City 2.0 классический — внутренний блок')],
-        'zoom': [(*b('hisense/zoom-2-0-dc-inverter/zoom-2-0-dc-inverter-03.png'), 'Hisense Zoom 2.0 инверторный — внутренний блок'),
-                 (*b('hisense/zoom-classic-a/zoom-classic-a-03.png'), 'Hisense Zoom 2.0 классический — внутренний блок')],
-        'zoomw': [(*b('hisense/zoom-2-0-dc-inverter/zoom-2-0-dc-inverter-03.png'), 'Hisense Zoom 2.0 с зимним комплектом — внутренний блок')],
-        'strong': [(*b('hisense/classic-strong-vibe-a/classic-strong-vibe-a-03.png'), 'Hisense Strong Vibe Classic A — внутренний блок')],
     },
     'promyshlennye': {
         'kass': [(*b('hisense/split-sistem-kasset-heavy-eu-dc-inverter-wi-fi/split-sistem-kasset-heavy-eu-dc-inverter-wi-fi-01.png'), 'Hisense кассетный кондиционер HEAVY')],

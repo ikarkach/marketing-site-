@@ -430,6 +430,17 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 .page-blog main h3.title { font: 600 22px/1.3 var(--font-head); }
 .page-blog main .container a { color: var(--c-primary-text); }
 .page-blog .post-item { margin: 0 0 6px; list-style: none; }
+/* статья: строка не длиннее ~75 знаков, подзаголовки H2 меньше заголовка статьи */
+.page-blog main .markdown { font-size: 17px; line-height: 1.6; }
+.page-blog main .markdown > * { max-width: 75ch; }
+.page-blog main .markdown h2 { margin: 36px 0 12px; font: 600 24px/1.3 var(--font-head); color: #10233d; }
+.page-blog main .markdown ul, .page-blog main .markdown ol { margin: 0 0 1em 1.4em; }
+.page-blog main .markdown li { margin-bottom: 6px; }
+.page-blog main .markdown .cta { margin-top: 24px; }
+@media (max-width: 640px) {
+  .page-blog main .markdown { font-size: 16px; }
+  .page-blog main .markdown h2 { margin-top: 28px; font-size: 21px; }
+}
 
 /* ---------- ключевые характеристики на карточках серий ---------- */
 .series-card__specs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }

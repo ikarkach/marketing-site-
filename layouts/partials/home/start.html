@@ -1,0 +1,18 @@
+{{- /* Главная: призыв к действию — телефон, заявка, мессенджеры. Текст: content/home/start.md, контакты: hugo.toml [params.contact]. */ -}}
+{{- with site.GetPage "/home" }}{{ with .Resources.GetMatch "start.md" }}
+<section class="hs hs-cta" id="start" aria-labelledby="start-title">
+    <div class="hs__inner hs-cta__inner">
+        <div class="hs-cta__text">
+            <h2 class="hs__title" id="start-title">{{ .Title }}</h2>
+            <div class="hs-prose">{{ .Content }}</div>
+        </div>
+        <div class="hs-cta__actions">
+            {{- with site.Params.contact }}
+            <a class="hs-cta__phone" href="tel:{{ .phone }}" data-goal="call_click">{{ partial "icon.html" "phone" }}{{ .phoneDisplay }}</a>
+            {{- end }}
+            <button type="button" class="btn btn--light hs-cta__btn js-lead" data-lead="Консультация по подбору оборудования">Оставить заявку</button>
+            {{ partial "contact-buttons.html" (dict "variant" "section") }}
+        </div>
+    </div>
+</section>
+{{- end }}{{ end }}

@@ -1,46 +1,20 @@
-{{ with .Site.GetPage "/blog" }}
-<div class="section" id="{{ .Title | urlize }}">
-    <!-- Begin Blog container -->
-    <div class="container">
-        {{ if .Site.Params.home.showLatest | default true }}
-        <h2 class="title is-2 has-text-centered">{{ i18n "index_blog_latestPosts" . }}</h2>
-        {{ range first 1 .Pages.ByPublishDate.Reverse }}
-        <div class="summary">
-            {{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default ":date_medium") }}{{ end }}
-            <h3 class="title is-3 latest-post-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
-            <div class="markdown">
-                {{ .Summary }}
-                {{ if .Truncated }}
-                <a href="{{ .RelPermalink }}">{{ i18n "index_blog_readMore" . }}</a>
-                {{ end }}
-            </div>
+{{- /* Главная: три последние статьи блога. */ -}}
+{{- with site.GetPage "/blog" }}{{ with first 3 .Pages.ByPublishDate.Reverse }}
+<section class="hs hs--alt" id="blog" aria-labelledby="blog-title">
+    <div class="hs__inner">
+        <div class="hs__head">
+            <h2 class="hs__title" id="blog-title">Новое в блоге</h2>
+            <a class="hs__more" href="/blog/">Все статьи {{ partial "icon.html" "arrow-right" }}</a>
         </div>
-        {{ end }}
-        {{ end }}
+        <div class="hs-grid hs-grid--3">
+            {{- range . }}
+            <article class="hs-card hs-post">
+                {{- if .Params.date }}<time class="hs-post__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (site.Params.dateFormat | default ":date_medium") }}</time>{{ end }}
+                <h3 class="hs-card__title"><a class="hs-post__link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <p class="hs-card__text">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}</p>
+            </article>
+            {{- end }}
+        </div>
     </div>
-</div>
-{{ if .Site.Params.home.showAllPosts }}
-<div class="section" id="all-posts">
-    <div class="container">
-        <h2 class="title is-2 top-pad">{{ i18n "index_blog_allPosts" . }}</h2>
-        {{if .Site.Params.home.allPostsArchiveFormat}}
-        {{ partialCached "blog/archive.html" .}}
-        {{else}}
-            {{ partialCached "blog/li.html" . }}
-            {{end}}
-    </div>
-</div>
-{{ else }}
-<div class="container has-text-centered top-pad">
-    <a href="{{ .RelPermalink }}">{{ i18n "index_blog_allPosts" . }}</a>
-</div>
-{{ end }}
-
-<!-- End Blog container -->
-{{ partial "top-icon.html" . }}
-
-<!-- End Blog section -->
-<div class="container">
-    <hr>
-</div>
-{{ end }}
+</section>
+{{- end }}{{ end }}

@@ -1,0 +1,17 @@
+{{- /* Главная: преимущества с иконками. Данные: content/home/why.md. */ -}}
+{{- with site.GetPage "/home" }}{{ with .Resources.GetMatch "why.md" }}
+<section class="hs" id="why" aria-labelledby="why-title">
+    <div class="hs__inner">
+        <h2 class="hs__title" id="why-title">{{ .Title }}</h2>
+        <ul class="hs-grid hs-grid--3 hs-why">
+            {{- range .Params.items }}
+            <li class="hs-why__item">
+                <span class="hs-ico">{{ partial "icon.html" .icon }}</span>
+                <h3 class="hs-card__title">{{ .title }}</h3>
+                <p class="hs-card__text">{{ .text }}</p>
+            </li>
+            {{- end }}
+        </ul>
+    </div>
+</section>
+{{- end }}{{ end }}

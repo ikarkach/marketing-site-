@@ -1,5 +1,6 @@
 {{- /* Страница модели (серии) каталога: /projects/<страница>/<slug>/. Страницы создаёт адаптер content/projects/_content.gotmpl.
-       Тексты: data/models.toml; таблицы, фото, особенности: data/catalog.json; сводные цифры: data/series.json. */ -}}
+       Тексты: data/models.toml; таблицы, фото, особенности: data/catalog.json (кондиционеры) или data/climate.json (вентиляция, осушители);
+       сводные цифры: data/series.json / climate.json. */ -}}
 {{ define "title" }}{{ partial "page-banner.html" (dict "page" .) }}{{ end }}
 
 {{ define "main" }}
@@ -7,11 +8,13 @@
 {{- $sid := .Params.sid -}}
 {{- $parent := site.GetPage .Params.parentPage -}}
 {{- $m := index (index hugo.Data.models $page) $sid -}}
+{{- $all := merge hugo.Data.catalog.pages hugo.Data.climate.pages -}}
+{{- $series := partial "all-series.html" . -}}
 {{- $sec := dict -}}
-{{- range index hugo.Data.catalog.pages $page }}{{ if eq .id $sid }}{{ $sec = . }}{{ end }}{{ end -}}
+{{- range index $all $page }}{{ if eq .id $sid }}{{ $sec = . }}{{ end }}{{ end -}}
 {{- $s := dict -}}
-{{- range where hugo.Data.series "id" (printf "%s-%s" $page $sid) }}{{ $s = . }}{{ end -}}
-{{- $brand := cond (eq $page "lg") "LG" "Hisense" -}}
+{{- range where $series "url" (printf "/projects/%s/%s/" $page $m.slug) }}{{ $s = . }}{{ end -}}
+{{- $brand := $m.brand | default (cond (eq $page "lg") "LG" "Hisense") -}}
 {{- $prices := slice -}}
 {{- range $sec.tables }}{{ range .rows }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}{{ end -}}
 <div class="container model-page">
@@ -28,10 +31,14 @@
             {{- with $m.lead }}<p class="model-lead">{{ . }}</p>{{ end }}
             {{- if $s }}
             <ul class="model-facts">
-                {{- if $s.priceMin }}<li><span>Цена</span><b>от {{ partial "rub.html" $s.priceMin }}</b></li>{{ end }}
+                {{- if $s.priceMin }}<li><span>Цена</span><b>от {{ partial "rub.html" $s.priceMin }}</b></li>{{ else }}<li><span>Цена</span><b>По запросу</b></li>{{ end }}
+                {{- if $sec.facts }}
+                {{- range $sec.facts }}<li><span>{{ .l }}</span><b>{{ .v }}</b></li>{{ end }}
+                {{- else }}
                 {{- if $s.kwMin }}<li><span>Мощность охлаждения</span><b>{{ if ne $s.kwMin $s.kwMax }}{{ replace (printf "%v" $s.kwMin) "." "," }}–{{ replace (printf "%v" $s.kwMax) "." "," }}{{ else }}{{ replace (printf "%v" $s.kwMin) "." "," }}{{ end }} кВт</b></li>{{ end }}
                 {{- with $s.eff }}<li><span>Класс энергоэффективности</span><b>{{ delimit . ", " }}</b></li>{{ end }}
                 {{- if $s.noiseMin }}<li><span>Шум внутреннего блока</span><b>от {{ replace (printf "%v" $s.noiseMin) "." "," }} дБ(А)</b></li>{{ end }}
+                {{- end }}
                 {{- if $s.models }}<li><span>Позиций в таблице</span><b>{{ $s.models }}</b></li>{{ end }}
             </ul>
             {{- end }}
@@ -42,7 +49,7 @@
             </ul>
             {{- end }}
             <p class="series-cta">
-                <button type="button" class="btn btn--primary js-lead" data-lead="{{ $m.name }} ({{ $brand }})">Узнать цену</button>
+                <button type="button" class="btn btn--primary js-lead" data-lead="{{ $m.name }} ({{ $brand }})">{{ if $prices }}Узнать цену{{ else }}Узнать цену и наличие{{ end }}</button>
                 <button type="button" class="btn btn--outline js-lead" data-lead="{{ $m.name }} ({{ $brand }}), заказ с монтажом">Заказать с монтажом</button>
                 <button type="button" class="btn btn--outline js-copy-link" data-url="{{ .Permalink }}">Скопировать ссылку</button>
             </p>
@@ -55,10 +62,11 @@
         {{- range $sec.tables }}
         {{ partial "catalog-table.html" . }}
         {{- end }}
+        {{- with $sec.note }}<p class="catalog-note">{{ . }}</p>{{ end }}
     </section>
 
     {{- $others := slice }}
-    {{- range where hugo.Data.series "page" $page }}{{ if ne .id (printf "%s-%s" $page $sid) }}{{ $others = $others | append . }}{{ end }}{{ end }}
+    {{- range where $series "page" $page }}{{ if ne .url (printf "/projects/%s/%s/" $page $m.slug) }}{{ $others = $others | append . }}{{ end }}{{ end }}
     {{- with $others }}
     <section class="model-others">
         <h2>Другие модели раздела «{{ $parent.Title }}»</h2>
@@ -69,13 +77,13 @@
         </ul>
     </section>
     {{- end }}
-    <p class="model-back"><a href="{{ $parent.RelPermalink }}">← Все модели раздела «{{ $parent.Title }}»</a> · <a href="{{ .Params.categoryUrl | relURL }}">Каталог кондиционеров с фильтрами</a></p>
+    <p class="model-back"><a href="{{ $parent.RelPermalink }}">← Все модели раздела «{{ $parent.Title }}»</a> · <a href="{{ .Params.categoryUrl | relURL }}">{{ if eq .Params.category "Кондиционеры" }}Каталог кондиционеров с фильтрами{{ else }}Раздел «{{ .Params.category }}»{{ end }}</a></p>
 
     {{- with site.Params.contact }}
-    <p class="catalog-note">Цены указаны в рублях, рекомендованные розничные, действуют с {{ hugo.Data.catalog.priceDate }}. Наличие и актуальную стоимость уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
+    <p class="catalog-note">Цены указаны в рублях, рекомендованные розничные, действуют с {{ if eq $brand "Royal Clima" }}{{ hugo.Data.climate.priceDate }}{{ else }}{{ hugo.Data.catalog.priceDate }}{{ end }}. Наличие и актуальную стоимость уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
     {{- end }}
 
-    {{- /* разметка Product с диапазоном розничных цен */}}
+    {{- /* разметка Product с диапазоном розничных цен (если у серии есть цены) */}}
     {{- if $prices }}
     {{- $img := "" }}
     {{- with $sec.images }}{{ with $parent.Resources.GetMatch (index . 0).file }}{{ $img = .Permalink }}{{ end }}{{ end }}

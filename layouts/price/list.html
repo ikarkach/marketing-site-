@@ -17,6 +17,7 @@
             <button type="button" class="price-brand" data-brand="Roland">Roland</button>
             <button type="button" class="price-brand" data-brand="Hisense">Hisense</button>
             <button type="button" class="price-brand" data-brand="LG">LG</button>
+            <button type="button" class="price-brand" data-brand="Royal Clima">Royal Clima</button>
             <button type="button" class="price-brand" data-brand="Аксессуары">Аксессуары</button>
         </div>
         <p id="price-count" class="price-count" aria-live="polite"></p>
@@ -64,6 +65,26 @@
             {{ partial "catalog-table.html" . }}
             {{- end }}
         </div>
+        {{- end }}
+    </section>
+
+    {{/* ---- Royal Clima: вентиляция и осушители (data/climate.json, только позиции с розничной ценой) ---- */}}
+    {{- $climate := hugo.Data.climate -}}
+    <section class="price-group" data-brand="Royal Clima" id="royal-clima">
+        <h2>Royal Clima</h2>
+        <p>Цены действуют с {{ $climate.priceDate }}.</p>
+        {{- range $page, $title := dict "ventilyaciya/brizery" "Вентиляция: бризеры" "ventilyaciya/pritochnye" "Вентиляция: приточные установки" "ventilyaciya/rekuperatory" "Вентиляция: приточно-вытяжные установки" "osushiteli/dlya-basseynov" "Осушители для бассейнов" }}
+        <h3 class="price-page-title"><a href="{{ printf "projects/%s/" $page | relURL }}">{{ $title }}</a></h3>
+        {{- range index $climate.pages $page }}
+        {{- $sec := . }}
+        {{- $slug := (index (index hugo.Data.models $page) $sec.id).slug }}
+        <div class="price-block" data-tags="{{ $sec.title }}">
+            <h4><a href="{{ printf "projects/%s/%s/" $page $slug | relURL }}">{{ $sec.title }}</a></h4>
+            {{- range $sec.tables }}
+            {{ partial "catalog-table.html" . }}
+            {{- end }}
+        </div>
+        {{- end }}
         {{- end }}
     </section>
 

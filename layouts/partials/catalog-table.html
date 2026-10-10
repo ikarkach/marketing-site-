@@ -20,6 +20,12 @@
   {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Охлаждение / нагрев, кВт" "k" "capraw") (dict "l" "Шум внутр. блока, дБ(А)" "k" "noise") (dict "l" "Цена комплекта, ₽" "k" "price") -}}
 {{- else if eq $t.kind "dehum" -}}
   {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Производительность, л/сутки" "k" "perday") (dict "l" "Бак, л" "k" "tank") (dict "l" "Расход воздуха, м³/ч" "k" "air") (dict "l" "Шум, дБ(А)" "k" "noise") (dict "l" "Габариты (Д×В×Г), мм" "k" "dims") (dict "l" "Цена, ₽" "k" "price") -}}
+{{- else if eq $t.kind "vent" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Расход воздуха, м³/ч" "k" "flow") (dict "l" "Уровень звук. давления, дБ(А)" "k" "noise") (dict "l" "Электропитание, В" "k" "volt") (dict "l" "Габариты (Д×Ш×В), мм" "k" "dims") (dict "l" "Вес, кг" "k" "weight") (dict "l" "Цена, ₽" "k" "price") -}}
+{{- else if eq $t.kind "dehum-pool" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Производительность, л/сутки" "k" "perday") (dict "l" "Шум, дБ(А)" "k" "noise") (dict "l" "Габариты (Д×В×Г), мм" "k" "dims") (dict "l" "Вес, кг" "k" "weight") (dict "l" "Цена, ₽" "k" "price") -}}
+{{- else if eq $t.kind "dehum-req" -}}
+  {{- $cols = slice (dict "l" "Модель" "k" "model") (dict "l" "Цена, ₽" "k" "price") -}}
 {{- else -}}
   {{- $cols = slice (dict "l" "Артикул" "k" "name") (dict "l" "Описание" "k" "desc") (dict "l" "Цена, ₽" "k" "price") -}}
 {{- end -}}
@@ -35,9 +41,11 @@
         {{- range $cols }}
             {{- $k := .k }}
             {{- if eq $k "price" }}
-            <td data-label="{{ .l }}" class="is-price">{{ partial "rub.html" $r.price }}</td>
+            <td data-label="{{ .l }}" class="is-price">{{ if $r.price }}{{ partial "rub.html" $r.price }}{{ else }}По запросу{{ end }}</td>
             {{- else if eq $k "kw" }}
             <td data-label="{{ .l }}">{{ with $r.cool }}{{ . }}{{ if $r.heat }} / {{ $r.heat }}{{ end }}{{ else }}—{{ end }}</td>
+            {{- else if eq $k "weight" }}
+            <td data-label="{{ .l }}">{{ with $r.weight }}{{ replace (printf "%v" .) "." "," }}{{ else }}—{{ end }}</td>
             {{- else if eq $k "capraw" }}
             <td data-label="{{ .l }}">{{ $r.cap }}</td>
             {{- else }}

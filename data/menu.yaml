@@ -42,11 +42,14 @@
       - title: Осушители и увлажнители
         url: /projects/osushiteli/
         items:
-          - {title: Бытовые осушители Hisense, url: /projects/osushiteli/}
+          - {title: Бытовые осушители, url: /projects/osushiteli/bytovye/}
+          - {title: Осушители для бассейнов и больших помещений, url: /projects/osushiteli/dlya-basseynov/}
       - title: Вентиляция
         url: /projects/ventilyaciya/
         items:
-          - {title: Приточно-вытяжные установки и воздуховоды, url: /projects/ventilyaciya/}
+          - {title: Бризеры (приточно-очистительные комплексы), url: /projects/ventilyaciya/brizery/}
+          - {title: Приточные установки, url: /projects/ventilyaciya/pritochnye/}
+          - {title: Приточно-вытяжные установки с рекуперацией, url: /projects/ventilyaciya/rekuperatory/}
       - title: Аксессуары и инструмент
         url: "/price/#aksessuary"
         items:

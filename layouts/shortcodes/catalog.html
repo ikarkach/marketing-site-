@@ -1,8 +1,9 @@
 {{- /* {{< catalog page="hisense-nastennye" >}}: каталог серий страницы — карточки, каждая ведёт на страницу своей модели (layouts/projects/model.html).
-       Данные: data/series.json. Старые ссылки с якорями (#sensation и т.п.) перекидываются на страницу модели: id карточки = прежний якорь. */ -}}
+       Данные: data/series.json (кондиционеры) и data/climate.json (вентиляция, осушители). Старые ссылки с якорями (#sensation и т.п.)
+       перекидываются на страницу модели: id карточки = прежний якорь. */ -}}
 {{- $page := .Get "page" -}}
 <ul class="catalog-grid catalog-grid--models">
-{{- range $i, $s := where hugo.Data.series "page" $page }}
+{{- range $i, $s := where (partial "all-series.html" .) "page" $page }}
     {{ partial "series-card.html" (dict "s" $s "i" $i "anchor" (strings.TrimPrefix (printf "%s-" $page) $s.id)) }}
 {{- end }}
 </ul>

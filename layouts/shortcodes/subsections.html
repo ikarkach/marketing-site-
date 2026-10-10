@@ -1,0 +1,16 @@
+{{- /* {{< subsections >}}: плитки подразделов текущей страницы (вложенные разделы content/projects/<раздел>/<подраздел>/_index.md).
+       В плитке: название, описание (tile в front matter), число серий и цена «от». Данные: data/climate.json. */ -}}
+{{- $series := partial "all-series.html" . -}}
+<ul class="cat-tiles cat-tiles--sub">
+    {{- range .Page.Sections.ByWeight }}
+    {{- $key := strings.TrimPrefix "/projects/" .Path }}
+    {{- $list := where $series "page" $key }}
+    {{- $min := 0 }}
+    {{- range $list }}{{ with .priceMin }}{{ if or (eq $min 0) (lt . $min) }}{{ $min = . }}{{ end }}{{ end }}{{ end }}
+    <li class="cat-tile">
+        <a class="cat-tile__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- with .Params.tile }}<p class="cat-tile__text">{{ . }}</p>{{ end }}
+        <p class="cat-tile__more">{{ len $list }} {{ if eq (mod (len $list) 10) 1 }}серия{{ else if and (ge (mod (len $list) 10) 2) (le (mod (len $list) 10) 4) }}серии{{ else }}серий{{ end }}{{ if $min }} · от {{ partial "rub.html" $min }}{{ end }}</p>
+    </li>
+    {{- end }}
+</ul>

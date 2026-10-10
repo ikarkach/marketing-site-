@@ -3,7 +3,7 @@
 {{- $m := mod (int $s.models) 10 -}}
 {{- $h := mod (int $s.models) 100 -}}
 {{- $slug := replaceRE `[^a-z0-9]+` "" ($s.brand | lower) -}}
-<li class="series-card"{{ with .anchor }} id="{{ . }}" data-model-url="{{ $s.url | relURL }}"{{ end }} data-order="{{ .i }}" data-id="{{ $s.id }}" data-title="{{ $s.title }}" data-brand="{{ $slug }}" data-type="{{ $s.type }}" data-tech="{{ $s.tech }}" data-hp="{{ $s.hp }}" data-eff="{{ delimit $s.eff " " }}" data-kw-min="{{ with $s.kwMin }}{{ . }}{{ end }}" data-kw-max="{{ with $s.kwMax }}{{ . }}{{ end }}" data-price-min="{{ with $s.priceMin }}{{ . }}{{ end }}" data-price-max="{{ with $s.priceMax }}{{ . }}{{ end }}" data-noise="{{ with $s.noiseMin }}{{ . }}{{ end }}">
+<li class="series-card"{{ with .anchor }} id="{{ . }}" data-model-url="{{ $s.url | relURL }}"{{ end }} data-order="{{ .i }}" data-id="{{ $s.id }}" data-title="{{ $s.title }}" data-brand="{{ $slug }}" data-type="{{ $s.type }}" data-tech="{{ $s.tech }}" data-hp="{{ $s.hp }}" data-eff="{{ with $s.eff }}{{ delimit . " " }}{{ end }}" data-kw-min="{{ with $s.kwMin }}{{ . }}{{ end }}" data-kw-max="{{ with $s.kwMax }}{{ . }}{{ end }}" data-price-min="{{ with $s.priceMin }}{{ . }}{{ end }}" data-price-max="{{ with $s.priceMax }}{{ . }}{{ end }}" data-noise="{{ with $s.noiseMin }}{{ . }}{{ end }}">
     <a class="series-card__link" href="{{ $s.url | relURL }}">
         <span class="series-card__img">
             {{- $shown := false }}

@@ -1,0 +1,2 @@
+{{- /* Все серии каталога: кондиционеры (data/series.json) + вентиляция и осушители (data/climate.json). Вызов: partial "all-series.html" . */ -}}
+{{- return (hugo.Data.series | append hugo.Data.climate.series) -}}

@@ -1,4 +1,4 @@
 {{- /* {{< contact-note >}}: пояснение о ценах и телефон для подробностей. Телефон берётся из hugo.toml ([params.contact]) */ -}}
 {{- with site.Params.contact }}
-<p class="catalog-note">Цены указаны в рублях, рекомендованные розничные, действуют с {{ hugo.Data.catalog.priceDate }}. Наличие и актуальную стоимость уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
+<p class="catalog-note">Цены указаны в рублях, рекомендованные розничные, {{ with $.Page.Params.priceNote }}{{ . }}{{ else }}действуют с {{ hugo.Data.catalog.priceDate }}{{ end }}. Наличие и актуальную стоимость уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
 {{- end }}

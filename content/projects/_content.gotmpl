@@ -1,0 +1,29 @@
+{{- /* Страницы моделей каталога: /projects/<страница>/<slug>/ — по одной на каждую серию из data/catalog.json.
+       Названия, адреса и тексты берутся из data/models.toml, таблицы и цены — из catalog.json (шаблон layouts/projects/model.html).
+       Если у серии нет записи в models.toml, страница не создаётся. */ -}}
+{{- $pageWeight := dict "hisense-nastennye" 10 "promyshlennye" 11 "hisense-multi-split" 12 "hisense-mobilnye" 13 "lg" 20 -}}
+{{- range $page, $secs := hugo.Data.catalog.pages }}
+  {{- $meta := index hugo.Data.models $page }}
+  {{- range $i, $sec := $secs }}
+    {{- with index $meta $sec.id }}
+      {{- $m := . }}
+      {{- $.AddPage (dict
+          "path" (printf "%s/%s" $page $m.slug)
+          "kind" "page"
+          "layout" "model"
+          "title" $m.name
+          "description" $m.description
+          "weight" (add (mul (index $pageWeight $page) 100) $i)
+          "params" (dict
+              "seoTitle" $m.seoTitle
+              "h1" $m.h1
+              "page" $page
+              "sid" $sec.id
+              "parentPage" (printf "/projects/%s" $page)
+              "category" "Кондиционеры"
+              "categoryUrl" "/projects/kondicionery/"
+          )
+      ) }}
+    {{- end }}
+  {{- end }}
+{{- end }}

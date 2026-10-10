@@ -74,7 +74,7 @@
   "brand": "Hisense",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/hisense-nastennye/#sensation",
+  "url": "/projects/hisense-nastennye/sensation-slider-pro/",
   "page": "hisense-nastennye",
   "image": {
    "page": "hisense-nastennye",
@@ -97,7 +97,7 @@
   "brand": "Hisense",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/hisense-nastennye/#vision",
+  "url": "/projects/hisense-nastennye/vision-pro-2-0/",
   "page": "hisense-nastennye",
   "image": {
    "page": "hisense-nastennye",
@@ -121,7 +121,7 @@
   "brand": "Hisense",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/hisense-nastennye/#vibe",
+  "url": "/projects/hisense-nastennye/vibe-pro-eu/",
   "page": "hisense-nastennye",
   "image": {
    "page": "hisense-nastennye",
@@ -144,7 +144,7 @@
   "brand": "Hisense",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/hisense-nastennye/#expert",
+  "url": "/projects/hisense-nastennye/expert-pro-2-0-eu/",
   "page": "hisense-nastennye",
   "image": {
    "page": "hisense-nastennye",
@@ -167,7 +167,7 @@
   "brand": "Hisense",
   "type": "wall",
   "tech": "both",
-  "url": "/projects/hisense-nastennye/#goal",
+  "url": "/projects/hisense-nastennye/goal-2-0/",
   "page": "hisense-nastennye",
   "image": {
    "page": "hisense-nastennye",
@@ -190,7 +190,7 @@
   "brand": "Hisense",
   "type": "semi",
   "tech": "both",
-  "url": "/projects/promyshlennye/#kass",
+  "url": "/projects/promyshlennye/kassetnye/",
   "page": "promyshlennye",
   "image": {
    "page": "promyshlennye",
@@ -215,7 +215,7 @@
   "brand": "Hisense",
   "type": "semi",
   "tech": "both",
-  "url": "/projects/promyshlennye/#duct",
+  "url": "/projects/promyshlennye/kanalnye/",
   "page": "promyshlennye",
   "image": {
    "page": "promyshlennye",
@@ -240,7 +240,7 @@
   "brand": "Hisense",
   "type": "semi",
   "tech": "both",
-  "url": "/projects/promyshlennye/#floor",
+  "url": "/projects/promyshlennye/napolno-potolochnye/",
   "page": "promyshlennye",
   "image": {
    "page": "promyshlennye",
@@ -265,7 +265,7 @@
   "brand": "Hisense",
   "type": "semi",
   "tech": "no",
-  "url": "/projects/promyshlennye/#column",
+  "url": "/projects/promyshlennye/kolonnye/",
   "page": "promyshlennye",
   "image": {
    "page": "promyshlennye",
@@ -288,7 +288,7 @@
   "brand": "Hisense",
   "type": "multi",
   "tech": "yes",
-  "url": "/projects/hisense-multi-split/#outdoor",
+  "url": "/projects/hisense-multi-split/naruzhnye-bloki/",
   "page": "hisense-multi-split",
   "image": {
    "page": "hisense-multi-split",
@@ -313,7 +313,7 @@
   "brand": "Hisense",
   "type": "multi",
   "tech": "yes",
-  "url": "/projects/hisense-multi-split/#indoor",
+  "url": "/projects/hisense-multi-split/vnutrennie-bloki/",
   "page": "hisense-multi-split",
   "image": {
    "page": "hisense-multi-split",
@@ -336,7 +336,7 @@
   "brand": "Hisense",
   "type": "mobile",
   "tech": "",
-  "url": "/projects/hisense-mobilnye/#mobile-v",
+  "url": "/projects/hisense-mobilnye/seriya-v/",
   "page": "hisense-mobilnye",
   "image": {
    "page": "hisense-mobilnye",
@@ -359,7 +359,7 @@
   "brand": "Hisense",
   "type": "mobile",
   "tech": "",
-  "url": "/projects/hisense-mobilnye/#mobile-w",
+  "url": "/projects/hisense-mobilnye/seriya-w/",
   "page": "hisense-mobilnye",
   "image": {
    "page": "hisense-mobilnye",
@@ -382,7 +382,7 @@
   "brand": "Hisense",
   "type": "mobile",
   "tech": "",
-  "url": "/projects/hisense-mobilnye/#mobile-c",
+  "url": "/projects/hisense-mobilnye/seriya-c/",
   "page": "hisense-mobilnye",
   "image": {
    "page": "hisense-mobilnye",
@@ -405,7 +405,7 @@
   "brand": "LG",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/lg/#deluxepro",
+  "url": "/projects/lg/deluxe-pro/",
   "page": "lg",
   "image": {
    "page": "lg",
@@ -429,7 +429,7 @@
   "brand": "LG",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/lg/#artcoolmirror",
+  "url": "/projects/lg/artcool-mirror/",
   "page": "lg",
   "image": {
    "page": "lg",
@@ -452,7 +452,7 @@
   "brand": "LG",
   "type": "wall",
   "tech": "yes",
-  "url": "/projects/lg/#procool",
+  "url": "/projects/lg/procool/",
   "page": "lg",
   "image": {
    "page": "lg",
@@ -475,7 +475,7 @@
   "brand": "LG",
   "type": "multi",
   "tech": "yes",
-  "url": "/projects/lg/#promulti",
+  "url": "/projects/lg/promulti-2-0/",
   "page": "lg",
   "image": {
    "page": "lg",

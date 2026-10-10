@@ -1,0 +1,88 @@
+{{- /* Страница модели (серии) каталога: /projects/<страница>/<slug>/. Страницы создаёт адаптер content/projects/_content.gotmpl.
+       Тексты: data/models.toml; таблицы, фото, особенности: data/catalog.json; сводные цифры: data/series.json. */ -}}
+{{ define "title" }}{{ partial "page-banner.html" (dict "page" .) }}{{ end }}
+
+{{ define "main" }}
+{{- $page := .Params.page -}}
+{{- $sid := .Params.sid -}}
+{{- $parent := site.GetPage .Params.parentPage -}}
+{{- $m := index (index hugo.Data.models $page) $sid -}}
+{{- $sec := dict -}}
+{{- range index hugo.Data.catalog.pages $page }}{{ if eq .id $sid }}{{ $sec = . }}{{ end }}{{ end -}}
+{{- $s := dict -}}
+{{- range where hugo.Data.series "id" (printf "%s-%s" $page $sid) }}{{ $s = . }}{{ end -}}
+{{- $brand := cond (eq $page "lg") "LG" "Hisense" -}}
+{{- $prices := slice -}}
+{{- range $sec.tables }}{{ range .rows }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}{{ end -}}
+<div class="container model-page">
+    <div class="model-top">
+        {{- with $sec.images }}
+        <div class="model-gallery">
+            {{- range $ii, $img := . }}{{ with $parent.Resources.GetMatch $img.file }}
+            {{- $r := .Fit "640x420" }}
+            <figure><img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $img.alt }}"{{ if eq $ii 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async"></figure>
+            {{- end }}{{ end }}
+        </div>
+        {{- end }}
+        <div class="model-info">
+            {{- with $m.lead }}<p class="model-lead">{{ . }}</p>{{ end }}
+            {{- if $s }}
+            <ul class="model-facts">
+                {{- if $s.priceMin }}<li><span>Цена</span><b>от {{ partial "rub.html" $s.priceMin }}</b></li>{{ end }}
+                {{- if $s.kwMin }}<li><span>Мощность охлаждения</span><b>{{ if ne $s.kwMin $s.kwMax }}{{ replace (printf "%v" $s.kwMin) "." "," }}–{{ replace (printf "%v" $s.kwMax) "." "," }}{{ else }}{{ replace (printf "%v" $s.kwMin) "." "," }}{{ end }} кВт</b></li>{{ end }}
+                {{- with $s.eff }}<li><span>Класс энергоэффективности</span><b>{{ delimit . ", " }}</b></li>{{ end }}
+                {{- if $s.noiseMin }}<li><span>Шум внутреннего блока</span><b>от {{ replace (printf "%v" $s.noiseMin) "." "," }} дБ(А)</b></li>{{ end }}
+                {{- if $s.models }}<li><span>Позиций в таблице</span><b>{{ $s.models }}</b></li>{{ end }}
+            </ul>
+            {{- end }}
+            {{- with $sec.features }}
+            <h2 class="model-h2">Особенности</h2>
+            <ul class="catalog-features">
+                {{- range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+            {{- end }}
+            <p class="series-cta">
+                <button type="button" class="btn btn--primary js-lead" data-lead="{{ $m.name }} ({{ $brand }})">Узнать цену</button>
+                <button type="button" class="btn btn--outline js-lead" data-lead="{{ $m.name }} ({{ $brand }}), заказ с монтажом">Заказать с монтажом</button>
+                <button type="button" class="btn btn--outline js-copy-link" data-url="{{ .Permalink }}">Скопировать ссылку</button>
+            </p>
+            <p class="copy-note" role="status" aria-live="polite" hidden>Ссылка скопирована</p>
+        </div>
+    </div>
+
+    <section class="catalog-section model-prices markdown" id="models">
+        <h2>Модели и цены</h2>
+        {{- range $sec.tables }}
+        {{ partial "catalog-table.html" . }}
+        {{- end }}
+    </section>
+
+    {{- $others := slice }}
+    {{- range where hugo.Data.series "page" $page }}{{ if ne .id (printf "%s-%s" $page $sid) }}{{ $others = $others | append . }}{{ end }}{{ end }}
+    {{- with $others }}
+    <section class="model-others">
+        <h2>Другие модели раздела «{{ $parent.Title }}»</h2>
+        <ul class="model-others__list">
+            {{- range . }}
+            <li><a href="{{ .url | relURL }}">{{ .title }}</a>{{ with .priceMin }} <span>от {{ partial "rub.html" . }}</span>{{ end }}</li>
+            {{- end }}
+        </ul>
+    </section>
+    {{- end }}
+    <p class="model-back"><a href="{{ $parent.RelPermalink }}">← Все модели раздела «{{ $parent.Title }}»</a> · <a href="{{ .Params.categoryUrl | relURL }}">Каталог кондиционеров с фильтрами</a></p>
+
+    {{- with site.Params.contact }}
+    <p class="catalog-note">Цены указаны в рублях, рекомендованные розничные, действуют с {{ hugo.Data.catalog.priceDate }}. Наличие и актуальную стоимость уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
+    {{- end }}
+
+    {{- /* разметка Product с диапазоном розничных цен */}}
+    {{- if $prices }}
+    {{- $img := "" }}
+    {{- with $sec.images }}{{ with $parent.Resources.GetMatch (index . 0).file }}{{ $img = .Permalink }}{{ end }}{{ end }}
+    {{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (index (sort $prices) 0) "highPrice" (index (sort $prices "value" "desc") 0) "offerCount" (len $prices) "url" .Permalink }}
+    {{- $prod := dict "@context" "https://schema.org" "@type" "Product" "name" (printf "%s %s" $brand $m.name) "brand" (dict "@type" "Brand" "name" $brand) "offers" $offer "url" .Permalink }}
+    {{- if $img }}{{ $prod = merge $prod (dict "image" $img) }}{{ end }}
+    <script type="application/ld+json">{{ $prod | jsonify | safeJS }}</script>
+    {{- end }}
+</div>
+{{ end }}

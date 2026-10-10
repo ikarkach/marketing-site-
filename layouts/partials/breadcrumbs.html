@@ -4,6 +4,8 @@
 {{- if eq $p.Section "projects" -}}
   {{- if ne $p.RelPermalink "/projects/" }}{{ $crumbs = $crumbs | append (dict "t" "Каталог" "u" "/projects/") }}{{ end -}}
   {{- with $p.Params.category }}{{ $crumbs = $crumbs | append (dict "t" . "u" $p.Params.categoryUrl) }}{{ end -}}
+  {{- /* страница модели: перед названием модели — страница серии/типа, к которой она относится */ -}}
+  {{- with $p.Params.parentPage }}{{ with site.GetPage . }}{{ $crumbs = $crumbs | append (dict "t" (.Params.crumb | default (.Title | plainify)) "u" .RelPermalink) }}{{ end }}{{ end -}}
 {{- else if and $p.IsPage (eq $p.Section "blog") -}}
   {{- $crumbs = $crumbs | append (dict "t" "Блог" "u" "/blog/") -}}
 {{- end -}}

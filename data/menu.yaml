@@ -27,14 +27,14 @@
             url: "/projects/kondicionery/?type=multi"
             items:
               - {title: Hisense мульти-сплит, url: /projects/hisense-multi-split/}
-              - {title: LG ProMulti, url: "/projects/lg/#promulti"}
+              - {title: LG ProMulti, url: /projects/lg/promulti-2-0/}
           - title: Промышленные кондиционеры
             url: /projects/promyshlennye/
             items:
-              - {title: Hisense кассетные, url: "/projects/promyshlennye/#kass"}
-              - {title: Hisense канальные, url: "/projects/promyshlennye/#duct"}
-              - {title: Hisense напольно-потолочные, url: "/projects/promyshlennye/#floor"}
-              - {title: Hisense колонные, url: "/projects/promyshlennye/#column"}
+              - {title: Hisense кассетные, url: /projects/promyshlennye/kassetnye/}
+              - {title: Hisense канальные, url: /projects/promyshlennye/kanalnye/}
+              - {title: Hisense напольно-потолочные, url: /projects/promyshlennye/napolno-potolochnye/}
+              - {title: Hisense колонные, url: /projects/promyshlennye/kolonnye/}
           - title: Мобильные кондиционеры
             url: /projects/hisense-mobilnye/
           - title: Все кондиционеры с фильтрами

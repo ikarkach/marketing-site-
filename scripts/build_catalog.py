@@ -490,6 +490,14 @@ def _series_stats(rows, eff_key='eff'):
                 noiseMin=min(noises) if noises else None, eff=effs)
 
 
+def model_url(page, sid):
+    """Адрес страницы модели из data/models.toml (если записи нет, прежний адрес с якорем)."""
+    import tomllib
+    with open(os.path.join(ROOT, 'data', 'models.toml'), 'rb') as f:
+        m = tomllib.load(f).get(page, {}).get(sid)
+    return f"/projects/{page}/{m['slug']}/" if m else f"/projects/{page}/#{sid}"
+
+
 def build_series(cat):
     """Одна карточка = одна серия (раздел страницы каталога или страница Roland). Все данные берутся из catalog.json."""
     out = []
@@ -517,7 +525,7 @@ def build_series(cat):
                 title = 'Hisense ' + s['title'][0].lower() + s['title'][1:]
             img = s['images'][0]['file'] if s.get('images') else None
             out.append(dict(id=f"{page}-{s['id']}", title=title, brand='LG' if page == 'lg' else 'Hisense', type=typ,
-                            tech=tech_of(s['id'], s['tables']), url=f"/projects/{page}/#{s['id']}", page=page,
+                            tech=tech_of(s['id'], s['tables']), url=model_url(page, s['id']), page=page,
                             image=dict(page=page, file=img) if img else None, **_series_stats(rows)))
     dh = cat.get('osushiteli') or []
     if dh:

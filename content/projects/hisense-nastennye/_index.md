@@ -7,6 +7,7 @@ brand: "Hisense"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
 catalog: true
+layout: single
 weight: 10
 resources:
   - src: sensation-1.webp

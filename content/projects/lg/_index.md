@@ -7,6 +7,7 @@ brand: "LG"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
 catalog: true
+layout: single
 weight: 20
 resources:
   - src: deluxepro-1.webp

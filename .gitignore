@@ -11,3 +11,6 @@ __pycache__/
 *.env
 docs/**/*.png
 docs/**/*.jpg
+
+# оригиналы фото поставщика для галерей (тяжёлые, хранятся локально; на сайт идут WebP из static/images/models)
+source-images/

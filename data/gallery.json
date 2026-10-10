@@ -1,0 +1,1125 @@
+{
+ "hisense-nastennye/sensation-slider-pro": {
+  "dir": "/images/models/hisense/sensation-slider-pro",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид спереди, серебристый (Superior)"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид спереди, серебристый (Superior)"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, серебристый (Superior)"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, серебристый (Superior)"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, серебристый (Superior)"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, серебристый (Superior)"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид спереди, графит (Carbon)"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, графит (Carbon)"
+   },
+   {
+    "n": "09",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, графит (Carbon)"
+   },
+   {
+    "n": "10",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид под углом, графит (Carbon)"
+   },
+   {
+    "n": "11",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, вид сверху, графит (Carbon)"
+   },
+   {
+    "n": "12",
+    "alt": "Hisense Sensation Slider Pro — внутренний блок, панель открыта, графит (Carbon)"
+   }
+  ]
+ },
+ "hisense-nastennye/vision-pro-2-0": {
+  "dir": "/images/models/hisense/vision-pro-2-0",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид спереди, белый"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид под углом, белый"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид под углом, белый"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид под углом, белый"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид сбоку, белый"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид спереди, чёрный (Carbon)"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид под углом, чёрный (Carbon)"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид под углом, чёрный (Carbon)"
+   },
+   {
+    "n": "09",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид сбоку, чёрный (Carbon)"
+   },
+   {
+    "n": "10",
+    "alt": "Hisense Vision Pro 2.0 — наружный блок"
+   },
+   {
+    "n": "11",
+    "alt": "Hisense Vision Pro 2.0 — пульт управления"
+   },
+   {
+    "n": "12",
+    "alt": "Hisense Vision Pro 2.0 — внутренний блок, вид сверху, белый"
+   }
+  ]
+ },
+ "hisense-nastennye/expert-pro-2-0-eu": {
+  "dir": "/images/models/hisense/expert-pro-2-0-eu",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense Expert Pro 2.0 EU — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense Expert Pro 2.0 EU — внутренний блок, вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense Expert Pro 2.0 EU — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense Expert Pro 2.0 EU — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense Expert Pro 2.0 EU — внутренний блок, вид под углом"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense Expert Pro 2.0 EU — внутренний блок, вид под углом"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense Expert Pro 2.0 EU — наружный блок"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense Expert Pro 2.0 EU — пульт управления"
+   }
+  ]
+ },
+ "hisense-nastennye/vibe-pro-eu": {
+  "dir": "/images/models/hisense/vibe-pro-eu",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид спереди, чёрный (Carbon)"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид спереди, чёрный (Carbon)"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид под углом, чёрный (Carbon)"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид под углом, чёрный (Carbon)"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид под углом, чёрный (Carbon)"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид под углом, чёрный (Carbon)"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид спереди, шампань"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид под углом, шампань"
+   },
+   {
+    "n": "09",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид спереди, серебристый"
+   },
+   {
+    "n": "10",
+    "alt": "Hisense Vibe Pro EU — внутренний блок, вид под углом, серебристый"
+   },
+   {
+    "n": "11",
+    "alt": "Hisense Vibe Pro EU — пульт управления"
+   }
+  ]
+ },
+ "hisense-nastennye/goal-2-0": {
+  "dir": "/images/models/hisense/goal-2-0",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид спереди, инвертор"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид под углом, инвертор"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид под углом, инвертор"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид сбоку, инвертор"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид сбоку, инвертор"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид снизу, инвертор"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид спереди, классическая"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид под углом, классическая"
+   },
+   {
+    "n": "09",
+    "alt": "Hisense Goal 2.0 — внутренний блок, вид под углом, классическая"
+   },
+   {
+    "n": "10",
+    "alt": "Hisense Goal 2.0 — наружный блок, инвертор"
+   },
+   {
+    "n": "11",
+    "alt": "Hisense Goal 2.0 — наружный блок, классическая"
+   },
+   {
+    "n": "12",
+    "alt": "Hisense Goal 2.0 — пульт управления"
+   }
+  ]
+ },
+ "promyshlennye/kassetnye": {
+  "dir": "/images/models/hisense/kassetnye",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense HEAVY, кассетный кондиционер — внутренний блок, вид снизу"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense HEAVY, кассетный кондиционер — внутренний блок, вид снизу"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense HEAVY, кассетный кондиционер — внутренний блок, вид сбоку"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense HEAVY, кассетный кондиционер — наружный блок"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense HEAVY, кассетный кондиционер — наружный блок"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense HEAVY, кассетный кондиционер — пульт управления"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense HEAVY, кассетный кондиционер — пульт управления"
+   }
+  ]
+ },
+ "promyshlennye/kanalnye": {
+  "dir": "/images/models/hisense/kanalnye",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense HEAVY, канальный кондиционер — внутренний блок, вид под углом"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense HEAVY, канальный кондиционер — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense HEAVY, канальный кондиционер — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense HEAVY, канальный кондиционер — наружный блок"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense HEAVY, канальный кондиционер — наружный блок"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense HEAVY, канальный кондиционер — проводной пульт управления"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense HEAVY, канальный кондиционер — проводной пульт управления"
+   }
+  ]
+ },
+ "promyshlennye/napolno-potolochnye": {
+  "dir": "/images/models/hisense/napolno-potolochnye",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — общий вид"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — консольный блок, вид спереди"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — консольный блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — наружный блок"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — наружный блок"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — пульт управления"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense HEAVY, напольно-потолочный и консольный кондиционер — пульт управления"
+   }
+  ]
+ },
+ "promyshlennye/kolonnye": {
+  "dir": "/images/models/hisense/kolonnye",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense HEAVY, колонный кондиционер — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense HEAVY, колонный кондиционер — пульт управления"
+   }
+  ]
+ },
+ "lg/deluxe-pro": {
+  "dir": "/images/models/lg/deluxe-pro",
+  "items": [
+   {
+    "n": "01",
+    "alt": "LG Deluxe Pro — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "LG Deluxe Pro — внутренний блок, вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "LG Deluxe Pro — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "LG Deluxe Pro — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "LG Deluxe Pro — внутренний блок, вид под углом"
+   },
+   {
+    "n": "06",
+    "alt": "LG Deluxe Pro — внутренний блок, вид под углом"
+   },
+   {
+    "n": "07",
+    "alt": "LG Deluxe Pro — внутренний блок, вид под углом"
+   },
+   {
+    "n": "08",
+    "alt": "LG Deluxe Pro — внутренний блок, вид под углом"
+   },
+   {
+    "n": "09",
+    "alt": "LG Deluxe Pro — пульт управления"
+   }
+  ]
+ },
+ "lg/artcool-mirror": {
+  "dir": "/images/models/lg/artcool-mirror",
+  "items": [
+   {
+    "n": "01",
+    "alt": "LG ARTCOOL Mirror — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "LG ARTCOOL Mirror — пульт управления"
+   }
+  ]
+ },
+ "lg/procool": {
+  "dir": "/images/models/lg/procool",
+  "items": [
+   {
+    "n": "01",
+    "alt": "LG ProCool — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "LG ProCool — внутренний блок, вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "LG ProCool — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "LG ProCool — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "LG ProCool — внутренний блок, вид под углом"
+   },
+   {
+    "n": "06",
+    "alt": "LG ProCool — внутренний блок, вид под углом"
+   },
+   {
+    "n": "07",
+    "alt": "LG ProCool — внутренний блок, вид под углом"
+   },
+   {
+    "n": "08",
+    "alt": "LG ProCool — внутренний блок, вид сверху"
+   },
+   {
+    "n": "09",
+    "alt": "LG ProCool — пульт управления"
+   }
+  ]
+ },
+ "lg/promulti-2-0": {
+  "dir": "/images/models/lg/promulti-2-0",
+  "items": [
+   {
+    "n": "01",
+    "alt": "LG ProMulti 2.0 — наружный блок"
+   },
+   {
+    "n": "02",
+    "alt": "LG ProMulti 2.0 — наружный блок"
+   },
+   {
+    "n": "03",
+    "alt": "LG ProMulti 2.0 — наружный блок"
+   }
+  ]
+ },
+ "ventilyaciya/brizery/brezza-rcb-150-lux": {
+  "dir": "/images/models/royal-clima/brezza-rcb-150-lux",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — с пультом и мобильным приложением"
+   },
+   {
+    "n": "05",
+    "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — пульт управления"
+   },
+   {
+    "n": "06",
+    "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — система фильтрации"
+   }
+  ]
+ },
+ "ventilyaciya/brizery/brezza-xs-rcb-75": {
+  "dir": "/images/models/royal-clima/brezza-xs-rcb-75",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Бризер Royal Clima BREZZA XS RCB 75 — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Бризер Royal Clima BREZZA XS RCB 75 — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Бризер Royal Clima BREZZA XS RCB 75 — с пультом и мобильным приложением"
+   },
+   {
+    "n": "04",
+    "alt": "Бризер Royal Clima BREZZA XS RCB 75 — пульт управления"
+   }
+  ]
+ },
+ "ventilyaciya/brizery/brezza-luna-rcb-80-lux": {
+  "dir": "/images/models/royal-clima/brezza-luna-rcb-80-lux",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Бризер Royal Clima BREZZA LUNA RCB 80 LUX — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Бризер Royal Clima BREZZA LUNA RCB 80 LUX — вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "Бризер Royal Clima BREZZA LUNA RCB 80 LUX — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Бризер Royal Clima BREZZA LUNA RCB 80 LUX — вид под углом"
+   }
+  ]
+ },
+ "ventilyaciya/pritochnye/vento-rcv": {
+  "dir": "/images/models/royal-clima/vento-rcv",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Приточная установка Royal Clima VENTO RCV — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Приточная установка Royal Clima VENTO RCV — проводной пульт управления"
+   }
+  ]
+ },
+ "ventilyaciya/rekuperatory/fiato-rcf-70": {
+  "dir": "/images/models/royal-clima/fiato-rcf-70",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — вид сбоку"
+   },
+   {
+    "n": "04",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — вид без передней панели, жалюзи закрыты"
+   },
+   {
+    "n": "05",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — вид без передней панели, жалюзи открыты"
+   },
+   {
+    "n": "06",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — вид без передней панели, вентилятор"
+   },
+   {
+    "n": "07",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — устройство в разрезе"
+   },
+   {
+    "n": "08",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — воздуховод с наружной решёткой"
+   },
+   {
+    "n": "09",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — комплектация"
+   },
+   {
+    "n": "10",
+    "alt": "Рекуператор Royal Clima FIATO RCF 70 — пульт управления"
+   }
+  ]
+ },
+ "ventilyaciya/rekuperatory/soffio-uno": {
+  "dir": "/images/models/royal-clima/soffio-uno",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Рекуператор Royal Clima SOFFIO UNO — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Рекуператор Royal Clima SOFFIO UNO — пульт управления"
+   }
+  ]
+ },
+ "ventilyaciya/rekuperatory/soffio-uno-4-0": {
+  "dir": "/images/models/royal-clima/soffio-uno-4-0",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Рекуператор Royal Clima SOFFIO UNO 4.0 — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Рекуператор Royal Clima SOFFIO UNO 4.0 — пульт управления"
+   }
+  ]
+ },
+ "ventilyaciya/rekuperatory/soffio-primo-3-0": {
+  "dir": "/images/models/royal-clima/soffio-primo-3-0",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Рекуператор Royal Clima SOFFIO PRIMO 3.0 — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Рекуператор Royal Clima SOFFIO PRIMO 3.0 — пульт управления"
+   }
+  ]
+ },
+ "ventilyaciya/rekuperatory/soffio-primo-4-0": {
+  "dir": "/images/models/royal-clima/soffio-primo-4-0",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Рекуператор Royal Clima SOFFIO PRIMO 4.0 — общий вид"
+   },
+   {
+    "n": "02",
+    "alt": "Рекуператор Royal Clima SOFFIO PRIMO 4.0 — пульт управления"
+   }
+  ]
+ },
+ "osushiteli/bytovye/carisma-studio": {
+  "dir": "/images/models/royal-clima/carisma-studio",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид сзади"
+   },
+   {
+    "n": "07",
+    "alt": "Осушитель Royal Clima CARISMA Studio — вид сверху"
+   },
+   {
+    "n": "08",
+    "alt": "Осушитель Royal Clima CARISMA Studio — панель управления"
+   }
+  ]
+ },
+ "osushiteli/bytovye/carisma-loft": {
+  "dir": "/images/models/royal-clima/carisma-loft",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид сзади"
+   },
+   {
+    "n": "07",
+    "alt": "Осушитель Royal Clima CARISMA Loft — вид сверху"
+   },
+   {
+    "n": "08",
+    "alt": "Осушитель Royal Clima CARISMA Loft — панель управления"
+   }
+  ]
+ },
+ "osushiteli/bytovye/carisma-villa": {
+  "dir": "/images/models/royal-clima/carisma-villa",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид спереди"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид сзади"
+   },
+   {
+    "n": "07",
+    "alt": "Осушитель Royal Clima CARISMA Villa — вид сверху"
+   },
+   {
+    "n": "08",
+    "alt": "Осушитель Royal Clima CARISMA Villa — панель управления"
+   }
+  ]
+ },
+ "osushiteli/bytovye/pacific-studio": {
+  "dir": "/images/models/royal-clima/pacific-studio",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima PACIFIC Studio — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima PACIFIC Studio — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima PACIFIC Studio — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima PACIFIC Studio — вид спереди"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Royal Clima PACIFIC Studio — вид спереди"
+   }
+  ]
+ },
+ "osushiteli/bytovye/pacific-loft": {
+  "dir": "/images/models/royal-clima/pacific-loft",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima PACIFIC Loft — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima PACIFIC Loft — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima PACIFIC Loft — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima PACIFIC Loft — с извлечённым резервуаром для воды"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Royal Clima PACIFIC Loft — панель управления"
+   }
+  ]
+ },
+ "osushiteli/bytovye/pacific-villa": {
+  "dir": "/images/models/royal-clima/pacific-villa",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima PACIFIC Villa — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima PACIFIC Villa — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima PACIFIC Villa — вид сверху"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima PACIFIC Villa — панель управления"
+   }
+  ]
+ },
+ "osushiteli/bytovye/pacific-palazzo": {
+  "dir": "/images/models/royal-clima/pacific-palazzo",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Royal Clima PACIFIC Palazzo — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Royal Clima PACIFIC Palazzo — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Royal Clima PACIFIC Palazzo — вид сбоку"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Royal Clima PACIFIC Palazzo — вид сзади"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Royal Clima PACIFIC Palazzo — вид сверху"
+   }
+  ]
+ },
+ "osushiteli/bytovye/hisense-air-go-pro": {
+  "dir": "/images/models/hisense/hisense-air-go-pro",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель Hisense Air Go Pro — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Осушитель Hisense Air Go Pro — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Осушитель Hisense Air Go Pro — вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Осушитель Hisense Air Go Pro — вид сверху"
+   },
+   {
+    "n": "05",
+    "alt": "Осушитель Hisense Air Go Pro — вид сбоку"
+   }
+  ]
+ },
+ "osushiteli/dlya-basseynov/riviera": {
+  "dir": "/images/models/royal-clima/riviera",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Осушитель для бассейна Royal Clima RIVIERA — общий вид"
+   }
+  ]
+ },
+ "hisense-multi-split/naruzhnye-bloki": {
+  "dir": "/images/models/hisense/naruzhnye-bloki",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense мульти-сплит — наружный блок, серия Multi EU DC Inverter"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense мульти-сплит — наружный блок, серия Multi EU DC Inverter LP"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense мульти-сплит — наружный блок, серия Ultra Multi DC Inverter"
+   }
+  ]
+ },
+ "hisense-multi-split/vnutrennie-bloki": {
+  "dir": "/images/models/hisense/vnutrennie-bloki",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Hisense мульти-сплит — настенный блок, вид спереди, Sensation Pro"
+   },
+   {
+    "n": "02",
+    "alt": "Hisense мульти-сплит — настенный блок, вид под углом, Sensation Pro"
+   },
+   {
+    "n": "03",
+    "alt": "Hisense мульти-сплит — настенный блок, вид спереди, Vibe Pro"
+   },
+   {
+    "n": "04",
+    "alt": "Hisense мульти-сплит — настенный блок, вид под углом, Vibe Pro"
+   },
+   {
+    "n": "05",
+    "alt": "Hisense мульти-сплит — настенный блок, вид спереди, Vision Pro 2.0"
+   },
+   {
+    "n": "06",
+    "alt": "Hisense мульти-сплит — настенный блок, вид под углом, Vision Pro 2.0"
+   },
+   {
+    "n": "07",
+    "alt": "Hisense мульти-сплит — настенный блок, вид спереди, Zoom"
+   },
+   {
+    "n": "08",
+    "alt": "Hisense мульти-сплит — настенный блок, вид под углом, Zoom"
+   },
+   {
+    "n": "09",
+    "alt": "Hisense мульти-сплит — канальный блок"
+   },
+   {
+    "n": "10",
+    "alt": "Hisense мульти-сплит — кассетный блок"
+   },
+   {
+    "n": "11",
+    "alt": "Hisense мульти-сплит — консольный блок"
+   },
+   {
+    "n": "12",
+    "alt": "Hisense мульти-сплит — напольно-потолочный блок"
+   }
+  ]
+ },
+ "hisense-mobilnye/seriya-w": {
+  "dir": "/images/models/hisense/seriya-w",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Мобильный кондиционер Hisense серии W — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Мобильный кондиционер Hisense серии W — вид сбоку"
+   },
+   {
+    "n": "03",
+    "alt": "Мобильный кондиционер Hisense серии W — вид сбоку"
+   },
+   {
+    "n": "04",
+    "alt": "Мобильный кондиционер Hisense серии W — вид сзади"
+   },
+   {
+    "n": "05",
+    "alt": "Мобильный кондиционер Hisense серии W — панель управления"
+   }
+  ]
+ },
+ "hisense-mobilnye/seriya-c": {
+  "dir": "/images/models/hisense/seriya-c",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Мобильный кондиционер Hisense серии C — вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Мобильный кондиционер Hisense серии C — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Мобильный кондиционер Hisense серии C — панель управления"
+   },
+   {
+    "n": "04",
+    "alt": "Мобильный кондиционер Hisense серии C — пульт управления"
+   }
+  ]
+ },
+ "favorite-ii": {
+  "dir": "/images/models/roland/favorite-ii",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Roland FAVORITE II — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Roland FAVORITE II — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Roland FAVORITE II — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Roland FAVORITE II — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Roland FAVORITE II — наружный блок"
+   },
+   {
+    "n": "06",
+    "alt": "Roland FAVORITE II — пульт управления"
+   }
+  ]
+ },
+ "favorite-ii-inverter": {
+  "dir": "/images/models/roland/favorite-ii-inverter",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Roland FAVORITE II Inverter — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Roland FAVORITE II Inverter — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Roland FAVORITE II Inverter — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Roland FAVORITE II Inverter — внутренний блок, вид спереди"
+   },
+   {
+    "n": "05",
+    "alt": "Roland FAVORITE II Inverter — наружный блок"
+   },
+   {
+    "n": "06",
+    "alt": "Roland FAVORITE II Inverter — пульт управления"
+   }
+  ]
+ },
+ "maestro": {
+  "dir": "/images/models/roland/maestro",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Roland MAESTRO — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Roland MAESTRO — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Roland MAESTRO — наружный блок"
+   },
+   {
+    "n": "04",
+    "alt": "Roland MAESTRO — пульт управления"
+   }
+  ]
+ },
+ "hisense-mobilnye/seriya-v": {
+  "dir": "/images/models/hisense/seriya-v",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Мобильный кондиционер Hisense серии V — вид под углом"
+   },
+   {
+    "n": "02",
+    "alt": "Мобильный кондиционер Hisense серии V — вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Мобильный кондиционер Hisense серии V — панель управления"
+   },
+   {
+    "n": "04",
+    "alt": "Мобильный кондиционер Hisense серии V — вид сбоку"
+   },
+   {
+    "n": "05",
+    "alt": "Мобильный кондиционер Hisense серии V — вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Мобильный кондиционер Hisense серии V — вид сзади"
+   },
+   {
+    "n": "07",
+    "alt": "Мобильный кондиционер Hisense серии V — пульт управления"
+   }
+  ]
+ }
+}

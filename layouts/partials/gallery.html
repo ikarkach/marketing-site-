@@ -1,0 +1,31 @@
+{{- /* Галерея фото модели: большое фото, под ним полоса миниатюр со стрелками, увеличение по клику (assets/js/gallery.js).
+       Вызов: {{ partial "gallery.html" "<ключ из data/gallery.json>" }}. Фото лежат в static/images/models/..., список и подписи — в data/gallery.json
+       (его создаёт scripts/build_gallery.py). Без JS видна первая фотография. */ -}}
+{{- $g := index hugo.Data.gallery . -}}
+{{- with $g }}
+{{- $dir := .dir -}}
+{{- $n := len .items -}}
+<div class="gallery{{ if eq $n 1 }} gallery--single{{ end }}" data-gallery tabindex="0" role="group" aria-roledescription="галерея" aria-label="Фотографии модели">
+    <div class="gallery__stage">
+        {{- with index .items 0 }}
+        <button type="button" class="gallery__zoom" aria-label="Открыть фото на весь экран">
+            <img class="gallery__img" src="{{ printf "%s/%s.webp" $dir .n | relURL }}" width="1200" height="900" alt="{{ .alt }}" fetchpriority="high" decoding="async">
+        </button>
+        {{- end }}
+        {{- if gt $n 1 }}<span class="gallery__count" aria-hidden="true"><b data-gallery-cur>1</b> / {{ $n }}</span>{{ end }}
+    </div>
+    {{- if gt $n 1 }}
+    <div class="gallery__bar">
+        <button type="button" class="gallery__nav gallery__nav--prev" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="gallery__thumbs">
+            {{- range $i, $it := .items }}
+            <li><button type="button" class="gallery__thumb{{ if eq $i 0 }} is-active{{ end }}" data-full="{{ printf "%s/%s.webp" $dir $it.n | relURL }}" data-alt="{{ $it.alt }}" aria-label="Фото {{ add $i 1 }} из {{ $n }}"{{ if eq $i 0 }} aria-current="true"{{ end }}>
+                <img src="{{ printf "%s/%s-t.webp" $dir $it.n | relURL }}" width="200" height="150" alt=""{{ if gt $i 3 }} loading="lazy"{{ end }} decoding="async">
+            </button></li>
+            {{- end }}
+        </ul>
+        <button type="button" class="gallery__nav gallery__nav--next" aria-label="Следующее фото"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+    {{- end }}
+</div>
+{{- end }}

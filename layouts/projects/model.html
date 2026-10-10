@@ -18,7 +18,12 @@
 {{- $prices := slice -}}
 {{- range $sec.tables }}{{ range .rows }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}{{ end -}}
 <div class="container model-page">
+    {{- $gkey := printf "%s/%s" $page $m.slug -}}
+    {{- $gal := index hugo.Data.gallery $gkey -}}
     <div class="model-top">
+        {{- if $gal }}
+        {{ partial "gallery.html" $gkey }}
+        {{- else }}
         {{- with $sec.images }}
         <div class="model-gallery">
             {{- range $ii, $img := . }}{{ with $parent.Resources.GetMatch $img.file }}
@@ -26,6 +31,7 @@
             <figure><img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $img.alt }}"{{ if eq $ii 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async"></figure>
             {{- end }}{{ end }}
         </div>
+        {{- end }}
         {{- end }}
         <div class="model-info">
             {{- with $m.lead }}<p class="model-lead">{{ . }}</p>{{ end }}
@@ -87,6 +93,7 @@
     {{- if $prices }}
     {{- $img := "" }}
     {{- with $sec.images }}{{ with $parent.Resources.GetMatch (index . 0).file }}{{ $img = .Permalink }}{{ end }}{{ end }}
+    {{- if $gal }}{{ $img = printf "%s/01.webp" $gal.dir | absURL }}{{ end }}
     {{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (index (sort $prices) 0) "highPrice" (index (sort $prices "value" "desc") 0) "offerCount" (len $prices) "url" .Permalink }}
     {{- $prod := dict "@context" "https://schema.org" "@type" "Product" "name" (printf "%s %s" $brand $m.name) "brand" (dict "@type" "Brand" "name" $brand) "offers" $offer "url" .Permalink }}
     {{- if $img }}{{ $prod = merge $prod (dict "image" $img) }}{{ end }}

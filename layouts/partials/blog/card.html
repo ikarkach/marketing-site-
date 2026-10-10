@@ -1,0 +1,10 @@
+{{- /* Карточка статьи на странице «Блог»: рубрика, дата, заголовок-ссылка, краткое описание (description), «Читать статью». */ -}}
+<article class="blog-card">
+    <p class="blog-card__meta">
+        {{- with .Params.rubric }}<span class="blog-card__rubric">{{ . }}</span>{{ end }}
+        {{- if .Params.date }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (site.Params.dateFormat | default ":date_medium") }}</time>{{ end -}}
+    </p>
+    <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h3>
+    <p class="blog-card__text">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 180 }}{{ end }}</p>
+    <a class="blog-card__more" href="{{ .RelPermalink }}" aria-hidden="true" tabindex="-1">Читать статью <span>→</span></a>
+</article>

@@ -6,6 +6,7 @@ description: "Кондиционеры Royal Clima и LG: бытовые, мул
 date: 2026-09-21T10:00:00+03:00
 showDate: true
 draft: false
+rubric: "О компании"
 tags: ["Royal Clima", "LG", "ассортимент"]
 ---
 

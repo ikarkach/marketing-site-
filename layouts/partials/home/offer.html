@@ -1,0 +1,32 @@
+{{- /* Главная: «Что мы предлагаем» — услуги (карточки с иконками) и направления (ссылки на каталог). Данные: content/home/offer.md. */ -}}
+{{- with site.GetPage "/home" }}{{ with .Resources.GetMatch "offer.md" }}
+<section class="hs hs--alt" id="offer" aria-labelledby="offer-title">
+    <div class="hs__inner">
+        <h2 class="hs__title" id="offer-title">{{ .Title }}</h2>
+        <div class="hs-grid hs-grid--4">
+            {{- range .Params.services }}
+            <div class="hs-card">
+                <span class="hs-ico">{{ partial "icon.html" .icon }}</span>
+                <h3 class="hs-card__title">{{ .title }}</h3>
+                <p class="hs-card__text">{{ .text }}</p>
+            </div>
+            {{- end }}
+        </div>
+        {{- with .Params.directions }}
+        <h3 class="hs__subtitle">Направления</h3>
+        <ul class="hs-directions">
+            {{- range . }}
+            <li class="hs-direction">
+                {{- if .url }}
+                <a class="hs-direction__title" href="{{ .url }}">{{ .title }} {{ partial "icon.html" "arrow-right" }}</a>
+                {{- else }}
+                <span class="hs-direction__title">{{ .title }}</span>
+                {{- end }}
+                <p class="hs-direction__text">{{ .text }}</p>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </div>
+</section>
+{{- end }}{{ end }}

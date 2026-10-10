@@ -1,0 +1,3 @@
+{{- /* true, если layouts/projects/single.html выведет карусель OwlCarousel: нет галереи из data/gallery, не страница каталога и больше одного фото. */ -}}
+{{- $gkey := "" }}{{ with .File }}{{ $gkey = .ContentBaseName }}{{ end }}
+{{- return (and (not (index hugo.Data.gallery $gkey)) (not .Params.catalog) (gt (len (.Resources.ByType "image")) 1)) }}

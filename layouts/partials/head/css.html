@@ -1,26 +1,15 @@
-{{- /* Копия themes/introduction/layouts/partials/head/css.html с одним отличием: файлы из customCSS склеиваются и минифицируются
-       в один файл (один запрос вместо нескольких, меньше размер). Тема не изменена. */ -}}
-{{ $bundleRaw := resources.Get "sass/style.sass" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
-
-{{ if hugo.IsServer }}
-{{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
-{{ $bundle := $bundleRaw | css.Sass $cssOpts }}
-<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen">
-{{ else }}
-{{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
-{{ $postCSSOpts := (dict "use" "autoprefixer" ) }}
-{{ $bundle := $bundleRaw | css.Sass $cssOpts | css.PostCSS $postCSSOpts | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
-{{ end }}
-
-<!-- Custom css -->
+{{- /* Стили сайта одним файлом: Bulma темы (assets/sass/style.sass) + params.customCSS (ui.css, site.css).
+       Один файл важен для критического CSS (scripts/critical-css.mjs): встроенные правила идут в том же порядке,
+       что и в полном файле, поэтому его подключение ничего не меняет на экране. Тема не изменена. */ -}}
+{{- $sassRaw := resources.Get "sass/style.sass" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
 {{- $custom := slice }}
 {{- range .Site.Params.customCSS }}{{ with resources.Get . }}{{ $custom = $custom | append . }}{{ end }}{{ end }}
-{{- with $custom }}
 {{- if hugo.IsServer }}
-{{- range . }}<link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">{{ end }}
+{{- $main := $sassRaw | css.Sass (dict "targetPath" "css/main.css" "enableSourceMap" true) }}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}" media="screen">
+{{- range $custom }}<link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">{{ end }}
 {{- else }}
-{{- $site := resources.Concat "css/site.bundle.css" . | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $site.RelPermalink }}" integrity="{{ $site.Data.Integrity }}" crossorigin="anonymous" media="screen">
-{{- end }}
+{{- $main := $sassRaw | css.Sass (dict "targetPath" "css/main.css") | css.PostCSS (dict "use" "autoprefixer") }}
+{{- $bundle := slice $main | append $custom | resources.Concat "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous">
 {{- end }}

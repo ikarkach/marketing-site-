@@ -1,4 +1,6 @@
+{{- /* Карусель (OwlCarousel требует jQuery). Подключается только на страницах, где карусель действительно выводится. */ -}}
+{{ $jQuery := resources.Get "vendor/jquery/jquery-3.5.1.min.js" }}
 {{ $owlCarousel := resources.Get "vendor/owlCarousel/owl.carousel.min.js" }}
 {{ $initOwlCarousel := resources.Get "js/initOwlCarousel.js" | minify }}
-{{ $bundleOwlCarousel := slice $owlCarousel $initOwlCarousel | resources.Concat "js/bundleOwlCarousel.js" | fingerprint }}
-<script src="{{ $bundleOwlCarousel.RelPermalink }}"></script>
+{{ $bundleOwlCarousel := slice $jQuery $owlCarousel $initOwlCarousel | resources.Concat "js/bundleOwlCarousel.js" | fingerprint }}
+<script src="{{ $bundleOwlCarousel.RelPermalink }}" defer></script>

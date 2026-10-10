@@ -66,6 +66,13 @@ jobs:
           export PATH="$PWD/themes/introduction/node_modules/.bin:$PATH"
           hugo --gc --minify
 
+      - name: Inline critical CSS
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          # Встраивает в каждую страницу стили первой отрисовки, полный CSS подключается без блокировки (scripts/critical-css.mjs)
+          npm ci --ignore-scripts
+          node scripts/critical-css.mjs public
+
       - name: Check that no link points to the domain without www
         if: steps.check.outputs.ready == 'true'
         run: |

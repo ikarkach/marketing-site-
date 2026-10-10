@@ -1,0 +1,12 @@
+{
+  "name": "usplit-site-build",
+  "private": true,
+  "description": "Шаг после сборки Hugo: критический CSS инлайном (scripts/critical-css.mjs)",
+  "type": "module",
+  "scripts": {
+    "critical": "node scripts/critical-css.mjs public"
+  },
+  "devDependencies": {
+    "beasties": "0.4.3"
+  }
+}

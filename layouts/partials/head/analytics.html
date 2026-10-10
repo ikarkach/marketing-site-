@@ -8,12 +8,17 @@
 <meta name="google-site-verification" content="{{ . }}">
 {{- end }}
 {{- with site.Params.yandexMetrika }}
-<!-- Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter (загружается отложенно: при первом действии посетителя или через 3 с после загрузки страницы;
+     вызовы ym() до этого копятся в очереди и отправляются после загрузки) -->
 <script>
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+(function(m,e,t,r,i){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 m[i].l=1*new Date();
-for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+var done=false;
+function load(){if(done)return;done=true;
+for (var j = 0; j < e.scripts.length; j++) {if (e.scripts[j].src === r) { return; }}
+var k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)}
+["pointerdown","keydown","scroll","touchstart"].forEach(function(ev){m.addEventListener(ev,load,{once:true,passive:true})});
+m.addEventListener("load",function(){setTimeout(load,3000)})})
 (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id={{ int . }}", "ym");
 ym({{ int . }}, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
 // Цели: клики по кнопкам связи (call_click, whatsapp_click, telegram_click)

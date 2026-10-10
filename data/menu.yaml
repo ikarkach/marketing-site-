@@ -50,6 +50,10 @@
           - {title: Бризеры (приточно-очистительные комплексы), url: /projects/ventilyaciya/brizery/}
           - {title: Приточные установки, url: /projects/ventilyaciya/pritochnye/}
           - {title: Приточно-вытяжные установки с рекуперацией, url: /projects/ventilyaciya/rekuperatory/}
+      - title: Распродажа
+        url: /projects/rasprodazha/
+        items:
+          - {title: Все товары со скидкой, url: /projects/rasprodazha/}
       - title: Аксессуары и инструмент
         url: "/price/#aksessuary"
         items:

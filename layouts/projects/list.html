@@ -17,7 +17,7 @@
                 {{- end }}
             </ul>
             {{- if gt (len $c.items) 4 }}<p class="cat-tile__more">Ещё {{ sub (len $c.items) 4 }} {{ if eq (sub (len $c.items) 4) 1 }}категория{{ else }}категории{{ end }}</p>{{ end }}
-            <span class="cat-tile__ico" aria-hidden="true"><i class="fas {{ if eq $i 0 }}fa-snowflake{{ else if eq $i 1 }}fa-droplet{{ else if eq $i 2 }}fa-wind{{ else }}fa-screwdriver-wrench{{ end }}"></i></span>
+            <span class="cat-tile__ico" aria-hidden="true"><i class="fas {{ if eq $c.title "Распродажа" }}fa-tag{{ else if eq $i 0 }}fa-snowflake{{ else if eq $i 1 }}fa-droplet{{ else if eq $i 2 }}fa-wind{{ else }}fa-screwdriver-wrench{{ end }}"></i></span>
         </li>
         {{- end }}
     </ul>

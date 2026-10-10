@@ -1,0 +1,42 @@
+{{- /* Карточка товара распродажи. Вход: {it: позиция из data/sale.yaml, i: номер}. Разметка и стили карточки серии (series-card),
+       плюс бейдж скидки и цены «было / стало». Есть url — карточка ссылка, нет — кнопка, открывающая окно заявки. */ -}}
+{{- $it := .it -}}
+{{- $disc := 0 -}}
+{{- if and $it.oldPrice $it.price (gt (int $it.oldPrice) (int $it.price)) }}{{ $disc = int (math.Round (div (mul (sub (float $it.oldPrice) (float $it.price)) 100.0) (float $it.oldPrice))) }}{{ end -}}
+<li class="series-card sale-card">
+    {{- if $it.url }}
+    <a class="series-card__link" href="{{ $it.url | relURL }}">
+    {{- else }}
+    <button type="button" class="series-card__link js-lead" data-lead="{{ $it.title }} (распродажа)">
+    {{- end }}
+        {{- if $disc }}<span class="sale-badge">−{{ $disc }}%</span>{{ end }}
+        <span class="series-card__img">
+            {{- $shown := false }}
+            {{- with $it.image }}
+            {{- with site.GetPage "/projects/rasprodazha" }}
+            {{- with .Resources.GetMatch $it.image }}
+            {{- $r := .Fit "460x300" }}
+            <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $it.title }}" loading="lazy" decoding="async">
+            {{- $shown = true }}
+            {{- end }}
+            {{- end }}
+            {{- end }}
+            {{- if not $shown }}<span class="series-card__ph" aria-hidden="true">{{ with $it.brand }}{{ . }}{{ else }}Usplit{{ end }}</span>{{ end }}
+        </span>
+        <span class="series-card__title">{{ $it.title }}</span>
+        <span class="series-card__row">
+            <span>{{ with $it.brand }}Бренд: <b>{{ . }}</b>{{ end }}</span>
+            {{- with $it.note }}<span>{{ . }}</span>{{ end }}
+        </span>
+        <span class="sale-price">
+            {{- if $it.price }}
+            {{- if $it.oldPrice }}<s>{{ partial "rub.html" $it.oldPrice }}</s>{{ end }}
+            <b class="sale-price__new">{{ partial "rub.html" $it.price }}</b>
+            {{- else }}<b class="sale-price__new">Цена по запросу</b>{{ end }}
+        </span>
+    {{- if $it.url }}
+    </a>
+    {{- else }}
+    </button>
+    {{- end }}
+</li>

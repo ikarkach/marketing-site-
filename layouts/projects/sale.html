@@ -1,0 +1,35 @@
+{{- /* Раздел «Распродажа»: карточки товаров из data/sale.yaml. Пока товаров нет, показывается заглушка со связью.
+       Как добавить товары: docs/sale.md. */ -}}
+{{ define "title" }}{{ partial "page-banner.html" (dict "page" .) }}{{ end }}
+
+{{ define "main" }}
+{{- $items := hugo.Data.sale.items | default slice -}}
+<div class="container catalog-page sale-page">
+    {{- with .Content }}<div class="markdown catalog-intro">{{ . }}</div>{{ end }}
+
+    {{- if $items }}
+    <ul class="catalog-grid sale-grid">
+        {{- range $i, $it := $items }}
+        {{ partial "sale-card.html" (dict "it" $it "i" $i) }}
+        {{- end }}
+    </ul>
+    {{- with site.Params.contact }}
+    <p class="catalog-note">Цены указаны в рублях, действуют до распродажи остатков. Наличие и условия уточняйте у менеджера. За подробностями обратитесь по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
+    {{- end }}
+    {{- else }}
+    <div class="sale-empty">
+        <h2>Сейчас товаров по акции нет</h2>
+        <p>Раздел наполняется. Напишите или позвоните нам, и мы расскажем, что есть в наличии со скидкой, а также о ближайших распродажах.</p>
+        {{ partial "contact-buttons.html" (dict "variant" "section") }}
+    </div>
+    {{- end }}
+
+    <p class="model-back"><a href="{{ "projects/kondicionery/" | relURL }}">Каталог кондиционеров с фильтрами</a> · <a href="{{ "price/" | relURL }}">Полный прайс-лист</a></p>
+
+    {{- if $items }}
+    {{- $list := slice }}
+    {{- range $i, $it := $items }}{{ $list = $list | append (dict "@type" "ListItem" "position" (add $i 1) "name" $it.title) }}{{ end }}
+    <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "name" .Title "itemListElement" $list | jsonify | safeJS }}</script>
+    {{- end }}
+</div>
+{{ end }}

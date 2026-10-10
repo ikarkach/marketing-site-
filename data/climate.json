@@ -1,0 +1,1649 @@
+{
+ "priceDate": "08.06.2026",
+ "source": "Royal Clima, прайс-лист с 08.06.2026 (РИЦ)",
+ "pages": {
+  "ventilyaciya/brizery": [
+   {
+    "id": "rcb-150-lux",
+    "title": "Royal Clima BREZZA RCB 150 LUX",
+    "images": [
+     {
+      "file": "rcb-150-lux-1.webp",
+      "alt": "Бризер Royal Clima BREZZA RCB 150 LUX — общий вид",
+      "w": 401,
+      "h": 666
+     },
+     {
+      "file": "rcb-150-lux-2.webp",
+      "alt": "Бризер Royal Clima BREZZA RCB 150 LUX с пультом и приложением для смартфона",
+      "w": 544,
+      "h": 606
+     }
+    ],
+    "features": [
+     "Уникальная 5-ступенчатая система очистки",
+     "Производительность 150 м³/ч - для помещений до 75 м²",
+     "Встроенный Wi-Fi модуль",
+     "6 скоростей вентилятора",
+     "Бесшумный DC-электродвигатель",
+     "Глубина прибора всего 13,5 см",
+     "Управление установкой со смартфона",
+     "Простой монтаж на чистовую отделку"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "до 150 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 20 дБ(А)"
+     }
+    ],
+    "note": "Уровень звукового давления указан в окружении на расстоянии 1,5 м.",
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCB-H 150 LUX",
+        "flow": "30 / 50 / 70 / 90 / 110 / 150",
+        "noise": "20 / 24 / 29 / 31 / 35 / 38",
+        "volt": "230/1",
+        "dims": "135x400x620",
+        "weight": 7.5,
+        "price": 47900
+       },
+       {
+        "model": "RCB 150 LUX",
+        "flow": "30 / 50 / 70 / 90 / 110 / 150",
+        "noise": "20 / 24 / 29 / 31 / 35 / 38",
+        "volt": "230/1",
+        "dims": "135x400x620",
+        "weight": 7.5,
+        "price": 47900
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "EH-1000",
+        "desc": "Электрический нагреватель для RCB 150 LUX (обязательная опция при наружной температуре ниже 0 °С)",
+        "article": "EH-1000",
+        "price": null
+       },
+       {
+        "name": "RCB 150 F7",
+        "desc": "Сменная фильтрующая вставка F7 (класс очистки F7). Срок службы 6-12 месяцев",
+        "article": "RCB 150 F7",
+        "price": 2240
+       },
+       {
+        "name": "RCB 150 H12 + carbon",
+        "desc": "Сменная фильтрующая вставка Н12 + carbon (класс очистки Н12 + угольный фильтр). Срок службы 12-24 месяца",
+        "article": "RCB 150 Н12 + carbon",
+        "price": 3810
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "rcb-75",
+    "title": "Royal Clima BREZZA XS RCB 75",
+    "images": [
+     {
+      "file": "rcb-75-1.webp",
+      "alt": "Бризер Royal Clima BREZZA XS RCB 75 — вид спереди",
+      "w": 589,
+      "h": 919
+     }
+    ],
+    "features": [
+     "Ультракомпактное исполнение",
+     "3-ступенчатая система очистки воздуха",
+     "Встроенный электрический РТС нагреватель",
+     "3 режима работы: приточный, ночной, автоматический",
+     "Простой монтаж даже на чистовую отделку",
+     "3-скоростной бесшумный DC-электродвигатель",
+     "Встроенный датчик загрязнения воздуха РМ2.5"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "до 75 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 24 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCB 75",
+        "flow": "40 / 58 / 75",
+        "noise": "24 / 28 / 36",
+        "volt": "230/1",
+        "dims": "114х228х354",
+        "weight": 2.5,
+        "price": 20990
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "RCB 75 F7 + carbon",
+        "desc": "Сменная фильтрующая вставка F7 + carbon (класс очистки F7 + угольный фильтр). Срок службы 6-12 месяцев",
+        "article": "RCB 75 F7 + carbon",
+        "price": 2250
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "rcb-80-lux",
+    "title": "Royal Clima BREZZA LUNA RCB 80 LUX",
+    "images": [
+     {
+      "file": "rcb-80-lux-1.webp",
+      "alt": "Бризер Royal Clima BREZZA LUNA RCB 80 LUX — общий вид",
+      "w": 506,
+      "h": 871
+     },
+     {
+      "file": "rcb-80-lux-2.webp",
+      "alt": "Бризер Royal Clima BREZZA LUNA RCB 80 LUX — вид сбоку",
+      "w": 465,
+      "h": 824
+     }
+    ],
+    "features": [
+     "Ультракомпактное исполнение",
+     "3-ступенчатая система очистки воздуха",
+     "Встроенный электрический РТС нагреватель",
+     "3 режима работы: приточный, ночной, автоматический",
+     "Простой монтаж даже на чистовую отделку",
+     "4-скоростной бесшумный DC-электродвигатель",
+     "Управления с пульта ДУ и с сенсорных кнопок-индикаторов или по WiFi"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "до 80 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 24 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCB 80 LUX",
+        "flow": "10 / 40 / 60 / 80",
+        "noise": "24 / 29 / 33 / 38",
+        "volt": "230/1",
+        "dims": "115х233х390",
+        "weight": 2.5,
+        "price": 27900
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "RCB 80 F7 + carbon",
+        "desc": "Сменная фильтрующая вставка F7 + carbon (класс очистки F7 + угольный фильтр). Срок службы 6-12 месяцев",
+        "article": "RCB 80 F7 + carbon",
+        "price": 2290
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "ventilyaciya/pritochnye": [
+   {
+    "id": "vento",
+    "title": "Royal Clima VENTO RCV",
+    "images": [
+     {
+      "file": "vento-1.webp",
+      "alt": "Приточная установка Royal Clima VENTO RCV — общий вид",
+      "w": 897,
+      "h": 472
+     },
+     {
+      "file": "vento-2.webp",
+      "alt": "Сенсорный пульт управления приточной установки Royal Clima VENTO",
+      "w": 578,
+      "h": 587
+     }
+    ],
+    "features": [
+     "Производительность 220–890 м3/ч",
+     "Встроенный воздушный клапан с приводом",
+     "Основной фильтр F5 + угольный фильтр Carbon",
+     "Возможность выбора мощности электрических нагревателей",
+     "Минимальный уровень шума — от 24 дБ(А)",
+     "Энергоэффективный DC-электродвигатель",
+     "Интегрированная система автоматики с сенсорным пультом управления в комплекте",
+     "Простой монтаж, не требующий специальных навыков"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "от 495 до 890 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 24 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCV-500 LUX + EH-1700",
+        "flow": "495",
+        "noise": "24/45 (мин./макс.)",
+        "volt": "230/1",
+        "dims": "807x403x231",
+        "weight": 15.7,
+        "price": 91650
+       },
+       {
+        "model": "RCV-500 LUX + EH-3400",
+        "flow": "495",
+        "noise": "24/45 (мин./макс.)",
+        "volt": "230/1",
+        "dims": "807x403x231",
+        "weight": 15.7,
+        "price": 94710
+       },
+       {
+        "model": "RCV-900 LUX + EH-2800 (1-фазный)",
+        "flow": "890",
+        "noise": "34/45 (мин./макс.)",
+        "volt": "230/1",
+        "dims": "995x463x300",
+        "weight": 28.2,
+        "price": 111020
+       },
+       {
+        "model": "RCV-900 LUX + EH-3000",
+        "flow": "890",
+        "noise": "34/45 (мин./макс.)",
+        "volt": "400/3",
+        "dims": "995x463x300",
+        "weight": 28.2,
+        "price": 113110
+       },
+       {
+        "model": "RCV-900 LUX + EH-6000",
+        "flow": "890",
+        "noise": "34/45 (мин./макс.)",
+        "volt": "400/3",
+        "dims": "995x463x300",
+        "weight": 28.2,
+        "price": 122840
+       },
+       {
+        "model": "RCV-900 LUX + EH-9000",
+        "flow": "890",
+        "noise": "34/45 (мин./макс.)",
+        "volt": "400/3",
+        "dims": "995x463x300",
+        "weight": 28.2,
+        "price": 132570
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "RCV-500 F5",
+        "desc": "Сменная фильтрующая вставка RCV-500 F5 (класс очистки F5). Срок службы 6-12 месяцев",
+        "article": "RCV-500 F5",
+        "price": 4370
+       },
+       {
+        "name": "RCV-500 Carbon",
+        "desc": "Сменная фильтрующая вставка RCV-500 Carbon (угольный фильтр). Срок службы 12-24 месяца",
+        "article": "RCV-500 Carbon",
+        "price": 3940
+       },
+       {
+        "name": "RCV-900 F5",
+        "desc": "Сменная фильтрующая вставка RCV-900 F5 (класс очистки F5). Срок службы 6-12 месяцев",
+        "article": "RCV-900 F5",
+        "price": 6310
+       },
+       {
+        "name": "RCV-900 Carbon",
+        "desc": "Сменная фильтрующая вставка RCV-900 Carbon (угольный фильтр). Срок службы 12-24 месяца",
+        "article": "RCV-900 Carbon",
+        "price": 5300
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "ventilyaciya/rekuperatory": [
+   {
+    "id": "rcf-70",
+    "title": "Royal Clima FIATO RCF 70",
+    "images": [
+     {
+      "file": "rcf-70-1.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima FIATO RCF 70 — вид спереди",
+      "w": 643,
+      "h": 643
+     },
+     {
+      "file": "rcf-70-2.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima FIATO RCF 70 — вид под углом",
+      "w": 506,
+      "h": 627
+     }
+    ],
+    "features": [
+     "Современный, компактный и привлекательный дизайн",
+     "2 переменных цикла: приток и вытяжка",
+     "2-ступенчатая система очистки воздуха",
+     "3-скоростной бесшумный EC-электродвигатель",
+     "Керамический теплообменник эффективностью до 97%",
+     "Низкий уровень шума от 11 дБ(А)"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "до 70 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 11 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCF-70",
+        "flow": "30 / 45 / 70",
+        "noise": "11 / 24 / 36",
+        "volt": "230/1",
+        "dims": "206x206x450",
+        "weight": 3.4,
+        "price": 23990
+       },
+       {
+        "model": "RCF-70 LUX",
+        "flow": "30 / 45 / 70",
+        "noise": "11 / 24 / 36",
+        "volt": "230/1",
+        "dims": "206x206x450",
+        "weight": 3.4,
+        "price": 26790
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "RCF-70 F7",
+        "desc": "Сменная фильтрующая вставка F7",
+        "article": "RCF-70 F7",
+        "price": 3280
+       },
+       {
+        "name": "RCF-70 G3",
+        "desc": "Сменная фильтрующая вставка G3 (компл 2 шт)",
+        "article": "RCF-70 G3",
+        "price": 950
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "soffio-uno",
+    "title": "Royal Clima SOFFIO UNO",
+    "images": [
+     {
+      "file": "soffio-uno-1.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO UNO",
+      "w": 671,
+      "h": 311
+     },
+     {
+      "file": "soffio-uno-2.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO UNO — вид под углом",
+      "w": 438,
+      "h": 465
+     }
+    ],
+    "features": [
+     "Эффективность рекуперации до 89 %",
+     "Класс энергоэффективности — А",
+     "Универсальный монтаж — горизонтальный или вертикальный",
+     "Энергоэффективные 3-скоростные АС-двигатели",
+     "Встроенная система автоматики с пультом управления в комплекте",
+     "Возможность управления предварительным или основным электрическим нагревателем",
+     "Система предусматривает специальные режимы работы при низких темп. воздуха",
+     "Простой монтаж, не требующий специальных навыков"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "от 1257 до 1854 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 34 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCS-1250-U",
+        "flow": "1257",
+        "noise": "34/42 (мин./макс.)",
+        "volt": "",
+        "dims": "1116х1134х388",
+        "weight": 70,
+        "price": 193740
+       },
+       {
+        "model": "RCS-1800-U",
+        "flow": "1854",
+        "noise": "38/43 (мин./макс.)",
+        "volt": "",
+        "dims": "1129х1216х388",
+        "weight": 79,
+        "price": 226640
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "LB-12100-RU",
+        "desc": "Дистанционный пульт управления с сенсорным дисплеем (подходит для Uno)",
+        "article": "LB-12100-RU_",
+        "price": 11270
+       },
+       {
+        "name": "Датчик влажности для RCS",
+        "desc": "При повышении заданного пользователем макс. значения влажности или уровня СО2",
+        "article": "65002_",
+        "price": 6790
+       },
+       {
+        "name": "Датчик CO2 для RCS",
+        "desc": null,
+        "article": "CM1101",
+        "price": 26310
+       },
+       {
+        "name": "Wi-fi модуль",
+        "desc": "Управление параметрами установок со смартфона",
+        "article": "RCE-WFM",
+        "price": 6790
+       },
+       {
+        "name": "Фильтр G4 для RCS-1250-U",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-U",
+        "article": "10102496",
+        "price": 2000
+       },
+       {
+        "name": "Фильтр G4 для RCS-1800-U",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-U",
+        "article": "11362506",
+        "price": 2200
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "soffio-uno-4-0",
+    "title": "Royal Clima SOFFIO UNO 4.0",
+    "images": [
+     {
+      "file": "soffio-uno-4-0-1.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO UNO 4.0",
+      "w": 593,
+      "h": 418
+     },
+     {
+      "file": "soffio-uno-4-0-2.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO UNO 4.0 — вид под углом",
+      "w": 481,
+      "h": 569
+     }
+    ],
+    "features": [
+     "Эффективность рекуператора 70% (перекрестноточный рекуператор)",
+     "Энергоэффективные вентиляторы с 3-скоростными АС-двигателями",
+     "Пульт управления с сенсорным экраном Touch Screen",
+     "Интеллектуальная система управления",
+     "Компактные размеры, универсальный монтаж",
+     "Встроенный модуль Wi-Fi",
+     "Встроенный датчик влажности"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "от 350 до 800 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 37 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCS-350-U 4.0",
+        "flow": "350",
+        "noise": "37",
+        "volt": "230/1",
+        "dims": "700x640x223",
+        "weight": 20.5,
+        "price": 67500
+       },
+       {
+        "model": "RCS-500-U 4.0",
+        "flow": "500",
+        "noise": "40",
+        "volt": "230/1",
+        "dims": "800x785x233",
+        "weight": 32,
+        "price": 74700
+       },
+       {
+        "model": "RCS-650-U 4.0",
+        "flow": "650",
+        "noise": "42",
+        "volt": "230/1",
+        "dims": "1185×805×270",
+        "weight": 38,
+        "price": 80000
+       },
+       {
+        "model": "RCS-800-U 4.0",
+        "flow": "800",
+        "noise": "44",
+        "volt": "230/1",
+        "dims": "1330×870×345",
+        "weight": 48,
+        "price": 89000
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "Фильтр G4 для RCS-350-U",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-U",
+        "article": "4461626",
+        "price": 800
+       },
+       {
+        "name": "Фильтр G4 для RCS-500-U",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-U",
+        "article": "4661656",
+        "price": 900
+       },
+       {
+        "name": "Фильтр G4 для RCS-650-U",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-U",
+        "article": "6701656",
+        "price": 1200
+       },
+       {
+        "name": "Фильтр G4 для RCS-800-U",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-U",
+        "article": "7701656",
+        "price": 1300
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "soffio-primo-3-0",
+    "title": "Royal Clima SOFFIO PRIMO 3.0",
+    "images": [
+     {
+      "file": "soffio-primo-3-0-1.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO PRIMO 3.0",
+      "w": 695,
+      "h": 372
+     },
+     {
+      "file": "soffio-primo-3-0-2.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO PRIMO 3.0 — вид под углом",
+      "w": 470,
+      "h": 470
+     }
+    ],
+    "features": [
+     "Эффективность рекуперации до 92 %",
+     "Класс энергоэффективности — А +",
+     "Универсальный монтаж — горизонтальный или вертикальный",
+     "Энергоэффективные многоскоростные DC-двигатели вентиляторов",
+     "Встроенная система автоматики с пультом управления в комплекте",
+     "Возможность подключения предварительного и основного электрического нагревателя",
+     "Система предусматривает режимы работы при низких температурах воздуха"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "от 200 до 1280 м³/ч"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCS-200-P 3.0",
+        "flow": "200",
+        "noise": "до 29",
+        "volt": "230/1",
+        "dims": "780x610x289",
+        "weight": 20,
+        "price": 85000
+       },
+       {
+        "model": "RCS-300-P 3.0",
+        "flow": "280",
+        "noise": "до 28",
+        "volt": "230/1",
+        "dims": "780x735x289",
+        "weight": 23,
+        "price": 90000
+       },
+       {
+        "model": "RCS-450-P 3.0",
+        "flow": "440",
+        "noise": "до 32",
+        "volt": "230/1",
+        "dims": "884x874x331",
+        "weight": 30,
+        "price": 104000
+       },
+       {
+        "model": "RCS-600-P 3.0",
+        "flow": "590",
+        "noise": "до 34",
+        "volt": "230/1",
+        "dims": "884x1016x331",
+        "weight": 33,
+        "price": 120000
+       },
+       {
+        "model": "RCS-800-P 3.0",
+        "flow": "750",
+        "noise": "до 35",
+        "volt": "230/1",
+        "dims": "908x954x404",
+        "weight": 38,
+        "price": 160000
+       },
+       {
+        "model": "RCS-1000-P 3.0",
+        "flow": "1050",
+        "noise": "до 35",
+        "volt": "230/1",
+        "dims": "1144x1004x404",
+        "weight": 45,
+        "price": 185000
+       },
+       {
+        "model": "RCS-1300-P 3.0",
+        "flow": "1280",
+        "noise": "до 37",
+        "volt": "230/1",
+        "dims": "1231x1231x404",
+        "weight": 54,
+        "price": 217000
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "Датчик влажности для RCS 3.0",
+        "desc": "Установка включает режим повышенной производительности.",
+        "article": "65002_3.0",
+        "price": 6790
+       },
+       {
+        "name": "Датчик CO2 для RCS 3.0",
+        "desc": null,
+        "article": "CM1101 3.0",
+        "price": 26310
+       },
+       {
+        "name": "Wi-fi модуль",
+        "desc": "Для управления со смартфона установками SOFFIO 3.0",
+        "article": "RCE-WFM 3.0",
+        "price": 6790
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "soffio-primo-4-0",
+    "title": "Royal Clima SOFFIO PRIMO 4.0",
+    "images": [
+     {
+      "file": "soffio-primo-4-0-1.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO PRIMO 4.0",
+      "w": 593,
+      "h": 418
+     },
+     {
+      "file": "soffio-primo-4-0-2.webp",
+      "alt": "Приточно-вытяжная установка Royal Clima SOFFIO PRIMO 4.0 — вид под углом",
+      "w": 481,
+      "h": 569
+     }
+    ],
+    "features": [
+     "Эффективность рекуператора 90% (противоточный рекуператор)",
+     "Энергоэффективные вентиляторы с 9-скоростными DС-двигателями",
+     "Пульт управления с сенсорным экраном Touch Screen",
+     "Интеллектуальная система управления",
+     "Встроенный модуль Wi-Fi",
+     "Встроенный датчик СО2",
+     "Встроенный датчик влажности"
+    ],
+    "facts": [
+     {
+      "l": "Расход воздуха",
+      "v": "от 250 до 500 м³/ч"
+     },
+     {
+      "l": "Уровень звукового давления",
+      "v": "от 32 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "vent",
+      "rows": [
+       {
+        "model": "RCS-250-P 4.0",
+        "flow": "250",
+        "noise": "32",
+        "volt": "230/1",
+        "dims": "680x600x220",
+        "weight": 20.5,
+        "price": 116100
+       },
+       {
+        "model": "RCS-350-P 4.0",
+        "flow": "350",
+        "noise": "35",
+        "volt": "230/1",
+        "dims": "700x640x240",
+        "weight": 22,
+        "price": 129200
+       },
+       {
+        "model": "RCS-500-P 4.0",
+        "flow": "500",
+        "noise": "38",
+        "volt": "230/1",
+        "dims": "800x785x250",
+        "weight": 32,
+        "price": 142300
+       }
+      ]
+     },
+     {
+      "title": "Опции и комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "Фильтр G4 для RCS-250-P",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-P",
+        "article": "4461626",
+        "price": 800
+       },
+       {
+        "name": "Фильтр G4 для RCS-350-P",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-P",
+        "article": "4661656",
+        "price": 900
+       },
+       {
+        "name": "Фильтр G4 для RCS-500-P",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-P",
+        "article": "6701656",
+        "price": 1200
+       },
+       {
+        "name": "Фильтр F9 для RCS-250-P",
+        "desc": "1 шт - Необходимое количество фильтров для 1-ой модели RCS-P",
+        "article": "45411740",
+        "price": 4700
+       },
+       {
+        "name": "Фильтр F9 для RCS-350-P",
+        "desc": "1 шт - Необходимое количество фильтров для 1-ой модели RCS-P",
+        "article": "47312040",
+        "price": 4800
+       },
+       {
+        "name": "Фильтр F9 для RCS-500-P",
+        "desc": "2 шт - Необходимое количество фильтров для 1-ой модели RCS-P",
+        "article": "33712040",
+        "price": 4900
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "osushiteli/bytovye": [
+   {
+    "id": "carisma-studio",
+    "title": "Royal Clima CARISMA Studio",
+    "images": [
+     {
+      "file": "carisma-studio-1.webp",
+      "alt": "Осушитель воздуха Royal Clima CARISMA Studio — общий вид",
+      "w": 408,
+      "h": 669
+     },
+     {
+      "file": "carisma-studio-2.webp",
+      "alt": "Осушитель воздуха Royal Clima CARISMA Studio — вид сбоку",
+      "w": 394,
+      "h": 859
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Легкая транспортировка",
+     "Ультракомпактные размеры",
+     "Электронное управление",
+     "Таймер 1-24 часа",
+     "Природный хладагент R290",
+     "Функция разморозки",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 14 м²",
+     "Индикация заполненности конденсата",
+     "Возможность подключения шланга",
+     "Индикация текущего и установленного уровня влажности"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-CR10-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "carisma-loft",
+    "title": "Royal Clima CARISMA Loft",
+    "images": [
+     {
+      "file": "carisma-loft-1.webp",
+      "alt": "Осушитель воздуха Royal Clima CARISMA Loft — общий вид",
+      "w": 384,
+      "h": 679
+     },
+     {
+      "file": "carisma-loft-2.webp",
+      "alt": "Осушитель воздуха Royal Clima CARISMA Loft — вид сбоку",
+      "w": 390,
+      "h": 692
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Индикация уровня влажности",
+     "Блокировка от детей",
+     "Легкая транспортировка",
+     "Режим сушки белья",
+     "Природный хладагент R290",
+     "Таймер 1-24 часа",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 23-29 м²",
+     "Функция разморозки",
+     "Индикация заполненности конденсата",
+     "Возможность подключения шланга"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-CR16-E",
+        "price": null
+       },
+       {
+        "model": "RD-CR20-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "carisma-villa",
+    "title": "Royal Clima CARISMA Villa",
+    "images": [
+     {
+      "file": "carisma-villa-1.webp",
+      "alt": "Осушитель воздуха Royal Clima CARISMA Villa — общий вид",
+      "w": 520,
+      "h": 817
+     },
+     {
+      "file": "carisma-villa-2.webp",
+      "alt": "Осушитель воздуха Royal Clima CARISMA Villa — вид под углом",
+      "w": 531,
+      "h": 834
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Легкая транспортировка",
+     "Таймер 1-24 часа",
+     "Электронное управление",
+     "Предустановленные автоматические режимы",
+     "Автоперезапуск",
+     "Функция разморозки",
+     "Природный хладагент R290",
+     "Индикация заполненности конденсата",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 43-57 м²",
+     "Индикация текущего и установленного уровня влажности",
+     "Возможность подключения шланга",
+     "Блокировка от детей"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-CR30-E",
+        "price": null
+       },
+       {
+        "model": "RD-CR40-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pacific-studio",
+    "title": "Royal Clima PACIFIC Studio",
+    "images": [
+     {
+      "file": "pacific-studio-1.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Studio — вид спереди",
+      "w": 522,
+      "h": 926
+     },
+     {
+      "file": "pacific-studio-2.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Studio — вид под углом",
+      "w": 587,
+      "h": 933
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Легкая транспортировка",
+     "Ультракомпактные размеры",
+     "Электронное управление",
+     "Таймер 1-24 часа",
+     "Природный хладагент R290",
+     "Функция разморозки",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 17-23 м²",
+     "Индикация заполненности конденсата",
+     "Возможность подключения шланга",
+     "Индикация текущего и установленного уровня влажности",
+     "RD-PC12-EW: Встроенный модуль Wi-Fi"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-PC12-EW",
+        "price": null
+       },
+       {
+        "model": "RD-PC16-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pacific-loft",
+    "title": "Royal Clima PACIFIC Loft",
+    "images": [
+     {
+      "file": "pacific-loft-1.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Loft — вид спереди",
+      "w": 563,
+      "h": 915
+     },
+     {
+      "file": "pacific-loft-2.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Loft — вид под углом",
+      "w": 461,
+      "h": 736
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Индикация уровня влажности",
+     "Блокировка от детей",
+     "Легкая транспортировка",
+     "Режим непрерывной работы",
+     "Природный хладагент R290",
+     "Таймер 1-24 часа",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 23-29 м²",
+     "Функция разморозки",
+     "Индикация заполненности конденсата",
+     "Возможность подключения шланга"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-PC25-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pacific-villa",
+    "title": "Royal Clima PACIFIC Villa",
+    "images": [
+     {
+      "file": "pacific-villa-1.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Villa — вид спереди",
+      "w": 528,
+      "h": 921
+     },
+     {
+      "file": "pacific-villa-2.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Villa — вид под углом",
+      "w": 581,
+      "h": 943
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Легкая транспортировка",
+     "Таймер 1-24 часа",
+     "Электронное управление",
+     "Предустановленные автоматические режимы",
+     "Автоперезапуск",
+     "Функция разморозки",
+     "Природный хладагент R290",
+     "Индикация заполненности конденсата",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 43-57 м²",
+     "Индикация текущего и установленного уровня влажности",
+     "Возможность подключения шланга",
+     "Блокировка от детей"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-PC-40-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pacific-palazzo",
+    "title": "Royal Clima PACIFIC Palazzo",
+    "images": [
+     {
+      "file": "pacific-palazzo-1.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Palazzo — вид под углом",
+      "w": 489,
+      "h": 656
+     },
+     {
+      "file": "pacific-palazzo-2.webp",
+      "alt": "Осушитель воздуха Royal Clima PACIFIC Palazzo — вид спереди",
+      "w": 394,
+      "h": 623
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Индикация уровня влажности",
+     "Режим непрерывной работы",
+     "Легкая транспортировка",
+     "Таймер 1-24 часа",
+     "Природный хладагент R290",
+     "Функция разморозки",
+     "Прибор предназначен для осушения воздуха в бытовых помещениях до 90 м²",
+     "Индикация заполненности конденсата",
+     "Возможность подключения шланга"
+    ],
+    "facts": [],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-req",
+      "rows": [
+       {
+        "model": "RD-PC70-E",
+        "price": null
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "hisense-air-go-pro",
+    "title": "Hisense Air Go Pro",
+    "images": [
+     {
+      "file": "hisense-air-go-pro-1.webp",
+      "alt": "Осушитель воздуха Hisense Air Go Pro — общий вид",
+      "w": 413,
+      "h": 560
+     },
+     {
+      "file": "hisense-air-go-pro-2.webp",
+      "alt": "Осушитель воздуха Hisense Air Go Pro — вид под углом",
+      "w": 410,
+      "h": 577
+     }
+    ],
+    "features": [],
+    "facts": [
+     {
+      "l": "Производительность",
+      "v": "12 л/сут"
+     },
+     {
+      "l": "Объём бака",
+      "v": "2 л"
+     },
+     {
+      "l": "Уровень шума",
+      "v": "40 дБ(А)"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum",
+      "rows": [
+       {
+        "model": "DH-12S4GLU00",
+        "perday": "12",
+        "tank": "2",
+        "air": "100",
+        "noise": "40",
+        "dims": "310х400х203",
+        "price": 13590
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "osushiteli/dlya-basseynov": [
+   {
+    "id": "riviera",
+    "title": "Royal Clima RIVIERA",
+    "images": [
+     {
+      "file": "riviera-1.webp",
+      "alt": "Осушитель воздуха Royal Clima RIVIERA для бассейнов",
+      "w": 1000,
+      "h": 883
+     }
+    ],
+    "features": [
+     "Встроенный гигростат",
+     "Индикация уровня влажности",
+     "Режим непрерывной работы",
+     "Легкая транспортировка",
+     "Таймер 1-24 часа",
+     "Прибор предназначен для осушения воздуха в бытовых и промышленных помещениях до 280 м²",
+     "Функция разморозки",
+     "Возможность подключения шланга"
+    ],
+    "facts": [
+     {
+      "l": "Производительность",
+      "v": "от 60 до 204 л/сут"
+     }
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "dehum-pool",
+      "rows": [
+       {
+        "model": "DAR 060",
+        "perday": 60,
+        "noise": "≤46",
+        "dims": "890х255х750",
+        "weight": 40,
+        "price": 208930
+       },
+       {
+        "model": "DAR 100",
+        "perday": 100,
+        "noise": "≤48",
+        "dims": "890х255х750",
+        "weight": 50,
+        "price": 250570
+       },
+       {
+        "model": "DAR 144",
+        "perday": 144,
+        "noise": "≤52",
+        "dims": "1120х315х900",
+        "weight": 70,
+        "price": 314340
+       },
+       {
+        "model": "DAR 204",
+        "perday": 204,
+        "noise": "≤56",
+        "dims": "1120х315х900",
+        "weight": 79,
+        "price": 414550
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "series": [
+  {
+   "id": "ventilyaciya-brizery-rcb-150-lux",
+   "title": "Royal Clima BREZZA RCB 150 LUX",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/brizery/brezza-rcb-150-lux/",
+   "page": "ventilyaciya/brizery",
+   "sid": "rcb-150-lux",
+   "models": 2,
+   "priceMin": 47900,
+   "priceMax": 47900,
+   "image": {
+    "page": "ventilyaciya/brizery",
+    "file": "rcb-150-lux-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-brizery-rcb-75",
+   "title": "Royal Clima BREZZA XS RCB 75",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/brizery/brezza-xs-rcb-75/",
+   "page": "ventilyaciya/brizery",
+   "sid": "rcb-75",
+   "models": 1,
+   "priceMin": 20990,
+   "priceMax": 20990,
+   "image": {
+    "page": "ventilyaciya/brizery",
+    "file": "rcb-75-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-brizery-rcb-80-lux",
+   "title": "Royal Clima BREZZA LUNA RCB 80 LUX",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/brizery/brezza-luna-rcb-80-lux/",
+   "page": "ventilyaciya/brizery",
+   "sid": "rcb-80-lux",
+   "models": 1,
+   "priceMin": 27900,
+   "priceMax": 27900,
+   "image": {
+    "page": "ventilyaciya/brizery",
+    "file": "rcb-80-lux-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-pritochnye-vento",
+   "title": "Royal Clima VENTO RCV",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/pritochnye/vento-rcv/",
+   "page": "ventilyaciya/pritochnye",
+   "sid": "vento",
+   "models": 6,
+   "priceMin": 91650,
+   "priceMax": 132570,
+   "image": {
+    "page": "ventilyaciya/pritochnye",
+    "file": "vento-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-rekuperatory-rcf-70",
+   "title": "Royal Clima FIATO RCF 70",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/rekuperatory/fiato-rcf-70/",
+   "page": "ventilyaciya/rekuperatory",
+   "sid": "rcf-70",
+   "models": 2,
+   "priceMin": 23990,
+   "priceMax": 26790,
+   "image": {
+    "page": "ventilyaciya/rekuperatory",
+    "file": "rcf-70-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-rekuperatory-soffio-uno",
+   "title": "Royal Clima SOFFIO UNO",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/rekuperatory/soffio-uno/",
+   "page": "ventilyaciya/rekuperatory",
+   "sid": "soffio-uno",
+   "models": 2,
+   "priceMin": 193740,
+   "priceMax": 226640,
+   "image": {
+    "page": "ventilyaciya/rekuperatory",
+    "file": "soffio-uno-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-rekuperatory-soffio-uno-4-0",
+   "title": "Royal Clima SOFFIO UNO 4.0",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/rekuperatory/soffio-uno-4-0/",
+   "page": "ventilyaciya/rekuperatory",
+   "sid": "soffio-uno-4-0",
+   "models": 4,
+   "priceMin": 67500,
+   "priceMax": 89000,
+   "image": {
+    "page": "ventilyaciya/rekuperatory",
+    "file": "soffio-uno-4-0-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-rekuperatory-soffio-primo-3-0",
+   "title": "Royal Clima SOFFIO PRIMO 3.0",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/rekuperatory/soffio-primo-3-0/",
+   "page": "ventilyaciya/rekuperatory",
+   "sid": "soffio-primo-3-0",
+   "models": 7,
+   "priceMin": 85000,
+   "priceMax": 217000,
+   "image": {
+    "page": "ventilyaciya/rekuperatory",
+    "file": "soffio-primo-3-0-1.webp"
+   }
+  },
+  {
+   "id": "ventilyaciya-rekuperatory-soffio-primo-4-0",
+   "title": "Royal Clima SOFFIO PRIMO 4.0",
+   "brand": "Royal Clima",
+   "type": "vent",
+   "url": "/projects/ventilyaciya/rekuperatory/soffio-primo-4-0/",
+   "page": "ventilyaciya/rekuperatory",
+   "sid": "soffio-primo-4-0",
+   "models": 3,
+   "priceMin": 116100,
+   "priceMax": 142300,
+   "image": {
+    "page": "ventilyaciya/rekuperatory",
+    "file": "soffio-primo-4-0-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-carisma-studio",
+   "title": "Royal Clima CARISMA Studio",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/carisma-studio/",
+   "page": "osushiteli/bytovye",
+   "sid": "carisma-studio",
+   "models": 1,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "carisma-studio-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-carisma-loft",
+   "title": "Royal Clima CARISMA Loft",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/carisma-loft/",
+   "page": "osushiteli/bytovye",
+   "sid": "carisma-loft",
+   "models": 2,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "carisma-loft-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-carisma-villa",
+   "title": "Royal Clima CARISMA Villa",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/carisma-villa/",
+   "page": "osushiteli/bytovye",
+   "sid": "carisma-villa",
+   "models": 2,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "carisma-villa-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-pacific-studio",
+   "title": "Royal Clima PACIFIC Studio",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/pacific-studio/",
+   "page": "osushiteli/bytovye",
+   "sid": "pacific-studio",
+   "models": 2,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "pacific-studio-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-pacific-loft",
+   "title": "Royal Clima PACIFIC Loft",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/pacific-loft/",
+   "page": "osushiteli/bytovye",
+   "sid": "pacific-loft",
+   "models": 1,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "pacific-loft-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-pacific-villa",
+   "title": "Royal Clima PACIFIC Villa",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/pacific-villa/",
+   "page": "osushiteli/bytovye",
+   "sid": "pacific-villa",
+   "models": 1,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "pacific-villa-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-pacific-palazzo",
+   "title": "Royal Clima PACIFIC Palazzo",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/pacific-palazzo/",
+   "page": "osushiteli/bytovye",
+   "sid": "pacific-palazzo",
+   "models": 1,
+   "priceMin": null,
+   "priceMax": null,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "pacific-palazzo-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-dlya-basseynov-riviera",
+   "title": "Royal Clima RIVIERA",
+   "brand": "Royal Clima",
+   "type": "dehum",
+   "url": "/projects/osushiteli/dlya-basseynov/riviera/",
+   "page": "osushiteli/dlya-basseynov",
+   "sid": "riviera",
+   "models": 4,
+   "priceMin": 208930,
+   "priceMax": 414550,
+   "image": {
+    "page": "osushiteli/dlya-basseynov",
+    "file": "riviera-1.webp"
+   }
+  },
+  {
+   "id": "osushiteli-bytovye-hisense-air-go-pro",
+   "title": "Hisense Air Go Pro",
+   "brand": "Hisense",
+   "type": "dehum",
+   "url": "/projects/osushiteli/bytovye/hisense-air-go-pro/",
+   "page": "osushiteli/bytovye",
+   "sid": "hisense-air-go-pro",
+   "models": 1,
+   "priceMin": 13590,
+   "priceMax": 13590,
+   "image": {
+    "page": "osushiteli/bytovye",
+    "file": "hisense-air-go-pro-1.webp"
+   }
+  }
+ ]
+}

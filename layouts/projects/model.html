@@ -66,7 +66,7 @@
     <section class="catalog-section model-prices markdown" id="models">
         <h2>Модели и цены</h2>
         {{- range $sec.tables }}
-        {{ partial "catalog-table.html" . }}
+        {{ partial "catalog-table.html" (dict "title" .title "kind" .kind "rows" .rows "lead" (printf "%s %s" $brand $m.name)) }}
         {{- end }}
         {{- with $sec.note }}<p class="catalog-note">{{ . }}</p>{{ end }}
     </section>

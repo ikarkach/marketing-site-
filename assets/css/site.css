@@ -80,32 +80,49 @@
 .cta--sticky { display: none; }
 
 @media (max-width: 768px) {
+  /* Компактная панель: широкая кнопка «Позвонить» и три квадратные кнопки мессенджеров (только значки, подписи для скринридеров) */
   .cta--sticky {
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1000;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(0, 1fr);
-    gap: 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    gap: 8px;
     margin: 0;
-    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    padding: 6px 12px calc(6px + env(safe-area-inset-bottom));
     background: rgba(255, 255, 255, 0.97);
-    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.16);
   }
 
   .cta--sticky .cta-btn {
-    flex-direction: column;
-    gap: 4px;
-    min-height: 52px;
-    padding: 6px 2px;
-    font-size: 12px;
+    position: relative;
+    flex: 0 0 48px;
+    width: 48px;
+    min-height: 44px;
+    padding: 0;
+    border-radius: 10px;
   }
 
+  .cta--sticky .cta-btn > span:last-child {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .cta--sticky .cta-call { flex: 1 1 auto; width: auto; gap: 10px; font-size: 15px; }
+  .cta--sticky .cta-call > span:last-child { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+
+  /* те же кнопки в первом экране не дублируем: панель внизу всегда на виду */
+  .cta--hero, .cta--inline { display: none; }
+
   /* панель не должна перекрывать конец страницы */
-  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  body { padding-bottom: calc(60px + env(safe-area-inset-bottom)); }
 }
 
 /* ===== Таблицы из Markdown (layouts/_default/_markup/render-table.html) =====
@@ -270,8 +287,8 @@
 .cta-ico--tg { color: #229ed9; font-size: 22px; }
 .cta-ico svg { display: block; width: 20px; height: 20px; }
 @media (max-width: 768px) {
-  .cta--sticky .cta-ico { width: 26px; height: 26px; font-size: 13px; }
-  .cta--sticky .cta-ico--wa { font-size: 19px; }
-  .cta--sticky .cta-ico--tg { font-size: 20px; }
-  .cta--sticky .cta-ico svg { width: 18px; height: 18px; }
+  .cta--sticky .cta-ico { width: 30px; height: 30px; font-size: 15px; }
+  .cta--sticky .cta-ico--wa { font-size: 21px; }
+  .cta--sticky .cta-ico--tg { font-size: 22px; }
+  .cta--sticky .cta-ico svg { width: 20px; height: 20px; }
 }

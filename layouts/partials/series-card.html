@@ -20,15 +20,19 @@
             {{- if not $shown }}<span class="series-card__ph" aria-hidden="true">{{ with $s.brand }}{{ . }}{{ else }}Usplit{{ end }}</span>{{ end }}
         </span>
         <span class="series-card__title">{{ $s.title }}</span>
+        {{- /* ключевые характеристики видны сразу (на телефоне нет наведения): мощность, тип, шум, класс */ -}}
+        {{- $specs := slice }}
+        {{- if $s.kwMin }}{{ $specs = $specs | append (printf "%s кВт" (cond (ne $s.kwMin $s.kwMax) (printf "%s–%s" (replace (printf "%v" $s.kwMin) "." ",") (replace (printf "%v" $s.kwMax) "." ",")) (replace (printf "%v" $s.kwMin) "." ","))) }}{{ end }}
+        {{- if eq $s.tech "yes" }}{{ $specs = $specs | append "Инвертор" }}{{ else if eq $s.tech "no" }}{{ $specs = $specs | append "On/off" }}{{ else if eq $s.tech "both" }}{{ $specs = $specs | append "Инвертор и on/off" }}{{ end }}
+        {{- with $s.eff }}{{ $specs = $specs | append (printf "Класс %s" (delimit . ", ")) }}{{ end }}
+        {{- with $s.noiseMin }}{{ $specs = $specs | append (printf "от %s дБ(А)" (replace (printf "%v" .) "." ",")) }}{{ end }}
+        {{- with $specs }}
+        <ul class="series-card__specs" aria-label="Характеристики серии">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+        {{- end }}
         <span class="series-card__row">
             <span>{{ with $s.brand }}Бренд: <b>{{ . }}</b>{{ else }}Подбор и монтаж{{ end }}</span>
             {{- if $s.models }}<span>В серии: <b>{{ $s.models }} {{ if and (eq $m 1) (ne $h 11) }}модель{{ else if and (ge $m 2) (le $m 4) (not (and (ge $h 12) (le $h 14))) }}модели{{ else }}моделей{{ end }}</b></span>{{ end }}
         </span>
         {{- if $s.priceMin }}<span class="series-card__price">от {{ partial "rub.html" $s.priceMin }}</span>{{ else }}<span class="series-card__price series-card__price--none">Цена по запросу</span>{{ end }}
     </a>
-    {{- if $s.kwMin }}
-    <span class="series-card__info" tabindex="0" role="note" aria-label="Характеристики серии: мощность {{ $s.kwMin }}–{{ $s.kwMax }} кВт{{ with $s.eff }}, класс {{ index . 0 }}{{ end }}{{ with $s.noiseMin }}, шум от {{ . }} дБ(А){{ end }}">
-        <span class="series-card__tip">Мощность охлаждения: {{ $s.kwMin }}–{{ $s.kwMax }} кВт{{ with $s.eff }}<br>Класс энергоэффективности: {{ delimit . ", " }}{{ end }}{{ with $s.noiseMin }}<br>Шум от {{ . }} дБ(А){{ end }}</span>
-    </span>
-    {{- end }}
 </li>

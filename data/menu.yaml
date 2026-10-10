@@ -9,8 +9,9 @@
       text: Подберём модель под ваше помещение, рассчитаем стоимость и установим оборудование.
       button: Рассчитать стоимость
       lead: Расчёт стоимости оборудования и монтажа
-      url: /montazh-i-raschet/
-      more: О монтаже
+      # Когда страница /montazh-i-raschet/ будет наполнена, верните ссылку «О монтаже»:
+      #   url: /montazh-i-raschet/
+      #   more: О монтаже
     categories:
       - title: Кондиционеры
         url: /projects/kondicionery/
@@ -64,9 +65,11 @@
   url: /price/
   active: /price/
 
-- title: Монтаж и расчёт
-  url: /montazh-i-raschet/
-  active: /montazh-i-raschet/
+# Пункт «Монтаж и расчёт» временно скрыт, пока на странице нет текста (страница существует, но закрыта от индексации).
+# Когда наполните /montazh-i-raschet/, раскомментируйте пункт и удалите noindex/sitemap-флаги в content/montazh-i-raschet/index.md:
+# - title: Монтаж и расчёт
+#   url: /montazh-i-raschet/
+#   active: /montazh-i-raschet/
 
 - title: Компания
   active: ""

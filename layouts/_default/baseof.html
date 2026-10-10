@@ -15,7 +15,7 @@
         {{ block "customCSS" . }}
         {{ end }}
     </head>
-    <body class="page-{{ with .Section }}{{ . }}{{ else }}home{{ end }}">
+    <body class="page-{{ with .Section }}{{ . }}{{ else }}home{{ end }}{{ if .Params.banner }} is-text-page{{ end }}">
         {{ partial "body-analytics.html" . }}
         {{ partial "site-header.html" . }}
         {{- $banner := or .Params.banner (in (slice "projects" "price" "kontakty" "montazh-i-raschet" "blog") .Section) }}

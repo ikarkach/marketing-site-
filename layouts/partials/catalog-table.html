@@ -29,11 +29,13 @@
 {{- else -}}
   {{- $cols = slice (dict "l" "Артикул" "k" "name") (dict "l" "Описание" "k" "desc") (dict "l" "Цена, ₽" "k" "price") -}}
 {{- end -}}
+{{- /* $t.lead (необязательно): название серии с брендом. Если задано, в конце каждой строки появляется кнопка «Заказать» / «Узнать цену», в заявку подставляется название серии и модель из строки */ -}}
+{{- $lead := $t.lead -}}
 {{- with $t.title }}<h3>{{ . }}</h3>{{ end }}
 <div class="table-wrap catalog-table"{{ with $t.title }} data-title="{{ . }}"{{ end }}>
 <table>
     <thead>
-        <tr>{{ range $cols }}<th>{{ .l }}</th>{{ end }}</tr>
+        <tr>{{ range $cols }}<th>{{ .l }}</th>{{ end }}{{ if $lead }}<th class="is-action">Заказ</th>{{ end }}</tr>
     </thead>
     <tbody>
     {{- range $r := $t.rows }}
@@ -51,6 +53,9 @@
             {{- else }}
             <td data-label="{{ .l }}">{{ with index $r $k }}{{ . }}{{ else }}—{{ end }}</td>
             {{- end }}
+        {{- end }}
+        {{- if $lead }}
+            <td class="is-action"><button type="button" class="btn btn--outline btn--sm js-lead" data-lead="{{ printf "%s %s" $lead (or (index $r "model") (index $r "name") "") | strings.TrimSpace }}">{{ if $r.price }}Заказать{{ else }}Узнать цену{{ end }}</button></td>
         {{- end }}
         </tr>
     {{- end }}

@@ -8,12 +8,9 @@
             {{ with .hoursText }}<br>{{ . }}{{ end }}
         </p>
     {{ end }}
+    {{- /* Подпись темы Hugo убрана. Свой текст подвала можно задать в hugo.toml: params.footerText */ -}}
     {{ with .Site.Params.footerText }}
         {{ . | markdownify }}
-    {{ else }}
-        <span class="footer-text">
-            {{ i18n "footer_text" . | markdownify }}
-        </span>
     {{ end }}
     </div>
 </div>

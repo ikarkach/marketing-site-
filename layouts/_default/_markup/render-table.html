@@ -1,4 +1,9 @@
-{{- /* Таблицы из Markdown: у каждой ячейки есть подпись столбца (data-label), на узком экране строки превращаются в карточки */ -}}
+{{- /* Таблицы из Markdown: у каждой ячейки есть подпись столбца (data-label), на узком экране строки превращаются в карточки.
+       У страниц Roland в таблицах с ценой добавляется кнопка «Заказать» (название серии берётся из заголовка страницы, модель из первой ячейки строки). */ -}}
+{{- $act := false }}
+{{- if eq .Page.Params.brand "Roland" }}
+{{- range index .THead 0 }}{{ if findRE `(?i)цена` .Text }}{{ $act = true }}{{ end }}{{ end }}
+{{- end }}
 <div class="table-wrap">
 <table>
     <thead>
@@ -7,6 +12,7 @@
         {{- range . }}
             <th{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</th>
         {{- end }}
+        {{- if $act }}<th class="is-action">Заказ</th>{{ end }}
         </tr>
     {{- end }}
     </thead>
@@ -17,6 +23,9 @@
             {{- $label := "" }}
             {{- with index $.THead 0 }}{{ with index . $i }}{{ $label = .Text | plainify }}{{ end }}{{ end }}
             <td data-label="{{ $label }}"{{ if findRE `(?i)цена` $label }} class="is-price"{{ end }}{{ with $cell.Alignment }} style="text-align: {{ . }}"{{ end }}>{{ $cell.Text }}</td>
+        {{- end }}
+        {{- if $act }}
+            <td class="is-action"><button type="button" class="btn btn--outline btn--sm js-lead" data-lead="{{ printf "%s %s" $.Page.Title (index . 0).Text | plainify | strings.TrimSpace }}">Заказать</button></td>
         {{- end }}
         </tr>
     {{- end }}

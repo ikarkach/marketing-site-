@@ -43,7 +43,9 @@
                             <p class="mega__promo-title">{{ .title }}</p>
                             <p class="mega__promo-text">{{ .text }}</p>
                             <button type="button" class="btn btn--light js-lead" data-lead="{{ .lead }}">{{ .button }}</button>
+                            {{- if and .url .more }}
                             <a class="mega__promo-more" href="{{ .url }}">{{ .more }} <span aria-hidden="true">→</span></a>
+                            {{- end }}
                         </aside>
                         {{- end }}
                     </div>

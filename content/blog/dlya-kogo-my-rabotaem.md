@@ -6,6 +6,7 @@ description: "Usplit подбирает технику для квартир, о
 date: 2026-09-21T09:00:00+03:00
 showDate: true
 draft: false
+rubric: "О компании"
 tags: ["клиенты", "решения"]
 ---
 

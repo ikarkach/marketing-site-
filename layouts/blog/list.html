@@ -1,32 +1,29 @@
+{{- /* Страница «Блог»: статьи разделены по рубрикам (параметр rubric в статье), каждая статья — отдельная карточка.
+       Порядок рубрик задан ниже, новые рубрики добавляются в конец; статьи без рубрики попадают в «Другое».
+       Стили: assets/css/ui.css, «блог: рубрики и карточки». */ -}}
 {{ define "main" }}
-<div class="container markdown top-pad">
-    {{ .Content }}
-</div>
-<div class="container">
-    {{ if .Site.Params.home.showLatest | default true }}
-    <h2 class="title is-2 top-pad">{{ i18n "index_blog_latestPosts" . }}</h2>
-    {{ range first 1 .Pages.ByPublishDate.Reverse }}
-    <div class="summary">
-        {{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default ":date_medium") }}{{ end }}
-        <h3 class="title is-3 strong-post-title">
-            <a href="{{ .RelPermalink }}">
-                {{ .Title | markdownify }}
-            </a>
-        </h3>
-        <div class="markdown">
-            {{ .Summary }}
-            {{ if .Truncated }}
-            <a href="{{ .RelPermalink }}">{{ i18n "index_blog_readMore" . }}</a>
-            {{ end }}
+{{- $posts := .Pages.ByPublishDate.Reverse }}
+{{- $rubrics := slice "Кондиционеры" "Вентиляция" "О компании" }}
+{{- range $posts }}{{ with .Params.rubric }}{{ if not (in $rubrics .) }}{{ $rubrics = $rubrics | append . }}{{ end }}{{ end }}{{ end }}
+{{- $groups := slice }}
+{{- range $rubrics }}{{ $items := where $posts "Params.rubric" . }}{{ if $items }}{{ $groups = $groups | append (dict "title" . "id" (. | urlize) "items" $items) }}{{ end }}{{ end }}
+{{- with where $posts "Params.rubric" "==" nil }}{{ $groups = $groups | append (dict "title" "Другое" "id" "drugoe" "items" .) }}{{ end }}
+<div class="container blog-index">
+    {{- with .Content }}<div class="blog-index__intro">{{ . }}</div>{{ end }}
+    {{- if gt (len $groups) 1 }}
+    <nav class="blog-rubrics" aria-label="Рубрики блога">
+        {{- range $groups }}
+        <a class="chip" href="#{{ .id }}">{{ .title }} <span class="blog-rubrics__count">{{ len .items }}</span></a>
+        {{- end }}
+    </nav>
+    {{- end }}
+    {{- range $groups }}
+    <section class="blog-rubric" id="{{ .id }}" aria-labelledby="{{ .id }}-title">
+        <h2 class="blog-rubric__title" id="{{ .id }}-title">{{ .title }}</h2>
+        <div class="blog-cards">
+            {{- range .items }}{{ partial "blog/card.html" . }}{{ end }}
         </div>
-    </div>
-    {{ end }}
-    {{ end }}
-    <h2 class="title is-2 top-pad">{{ i18n "index_blog_allPosts" . }}</h2>
-    {{if .Site.Params.home.allPostsArchiveFormat}}
-    {{ partialCached "blog/archive.html" .}}
-    {{else}}
-        {{ partialCached "blog/li.html" . }}
-        {{end}}
+    </section>
+    {{- end }}
 </div>
 {{ end }}

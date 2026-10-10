@@ -5,3 +5,6 @@
     other = "Все записи"
 [index_blog_readMore]
     other = "Читать дальше"
+[blog_readingTime]
+    one = "Время чтения: {{ .Count }} мин."
+    other = "Время чтения: {{ .Count }} мин."

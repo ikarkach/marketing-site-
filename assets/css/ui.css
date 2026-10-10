@@ -430,16 +430,43 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 .page-blog main h3.title { font: 600 22px/1.3 var(--font-head); }
 .page-blog main .container a { color: var(--c-primary-text); }
 .page-blog .post-item { margin: 0 0 6px; list-style: none; }
+/* блог: рубрики и карточки (layouts/blog/list.html, layouts/partials/blog/card.html) */
+.blog-index { padding-bottom: 48px; }
+.blog-index__intro { max-width: 75ch; margin: 24px 0 8px; font-size: 17px; line-height: 1.6; }
+.blog-rubrics { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+.blog-rubrics .chip { text-decoration: none; }
+.blog-rubrics__count { margin-left: 4px; color: var(--muted); font-weight: 500; }
+.blog-rubric { padding-top: 32px; }
+.blog-rubric + .blog-rubric { margin-top: 16px; border-top: 1px solid var(--c-line); }
+.page-blog main h2.blog-rubric__title { margin: 0 0 18px; font: 600 26px/1.25 var(--font-head); color: #10233d; }
+.blog-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.blog-card { position: relative; display: flex; flex-direction: column; padding: 24px; background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius); transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+.blog-card:hover, .blog-card:focus-within { transform: translateY(-3px); border-color: transparent; box-shadow: 0 12px 28px rgba(16, 35, 61, .12); }
+.blog-card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 12px; font-size: 14px; color: var(--muted); }
+.blog-card__rubric { padding: 3px 10px; font: 600 12px/1.4 var(--font-head); color: var(--c-primary-text); background: var(--c-primary-light); border-radius: 999px; }
+.page-blog main h3.blog-card__title { margin: 0 0 10px; font: 600 20px/1.3 var(--font-head); }
+.page-blog main .blog-card__title a { color: #10233d; text-decoration: none; }
+.page-blog main .blog-card__title a::after { content: ""; position: absolute; inset: 0; }
+.page-blog main .blog-card:hover .blog-card__title a { color: var(--c-primary-text); }
+.blog-card__text { flex: 1 1 auto; margin: 0 0 16px; font-size: 16px; line-height: 1.55; color: #3c4756; }
+.page-blog main .blog-card__more { font: 600 14px var(--font-head); color: var(--c-primary-text); text-decoration: none; }
+@media (max-width: 640px) {
+  .blog-cards { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .blog-card { padding: 18px; }
+  .page-blog main h2.blog-rubric__title { font-size: 22px; }
+}
 /* статья: строка не длиннее ~75 знаков, подзаголовки H2 меньше заголовка статьи */
 .page-blog main .markdown { font-size: 17px; line-height: 1.6; }
 .page-blog main .markdown > * { max-width: 75ch; }
 .page-blog main .markdown h2 { margin: 36px 0 12px; font: 600 24px/1.3 var(--font-head); color: #10233d; }
+.page-blog main .markdown h3 { margin: 26px 0 10px; font: 600 19px/1.35 var(--font-head); color: #10233d; }
 .page-blog main .markdown ul, .page-blog main .markdown ol { margin: 0 0 1em 1.4em; }
 .page-blog main .markdown li { margin-bottom: 6px; }
 .page-blog main .markdown .cta { margin-top: 24px; }
 @media (max-width: 640px) {
   .page-blog main .markdown { font-size: 16px; }
   .page-blog main .markdown h2 { margin-top: 28px; font-size: 21px; }
+  .page-blog main .markdown h3 { font-size: 18px; }
 }
 
 /* ---------- ключевые характеристики на карточках серий ---------- */

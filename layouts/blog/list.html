@@ -3,7 +3,7 @@
        Стили: assets/css/ui.css, «блог: рубрики и карточки». */ -}}
 {{ define "main" }}
 {{- $posts := .Pages.ByPublishDate.Reverse }}
-{{- $rubrics := slice "Кондиционеры" "Вентиляция" "О компании" }}
+{{- $rubrics := slice "Кондиционеры" "Вентиляция" "Осушение" "О компании" }}
 {{- range $posts }}{{ with .Params.rubric }}{{ if not (in $rubrics .) }}{{ $rubrics = $rubrics | append . }}{{ end }}{{ end }}{{ end }}
 {{- $groups := slice }}
 {{- range $rubrics }}{{ $items := where $posts "Params.rubric" . }}{{ if $items }}{{ $groups = $groups | append (dict "title" . "id" (. | urlize) "items" $items) }}{{ end }}{{ end }}

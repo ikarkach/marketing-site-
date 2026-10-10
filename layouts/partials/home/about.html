@@ -1,0 +1,21 @@
+{{- /* Главная: «О компании». Текст и факты — content/home/about.md. */ -}}
+{{- with site.GetPage "/home" }}{{ with .Resources.GetMatch "about.md" }}
+<section class="hs" id="about" aria-labelledby="about-title">
+    <div class="hs__inner hs-about">
+        <div class="hs-about__text">
+            <h2 class="hs__title" id="about-title">{{ .Title }}</h2>
+            <div class="hs-prose">{{ .Content }}</div>
+        </div>
+        {{- with .Params.facts }}
+        <ul class="hs-facts">
+            {{- range . }}
+            <li class="hs-fact">
+                <span class="hs-ico">{{ partial "icon.html" .icon }}</span>
+                <span><strong class="hs-fact__title">{{ .title }}</strong><span class="hs-fact__text">{{ .text }}</span></span>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </div>
+</section>
+{{- end }}{{ end }}

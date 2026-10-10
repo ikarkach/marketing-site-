@@ -16,7 +16,7 @@
                     {{ if $moreThanOneImage }}
                     <div class="item owl-height">
                     {{ end }}
-                        <img src="{{ $image.RelPermalink }}" class="img-responsive" alt="{{ $image.Name }}">
+                        <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="img-responsive" alt="{{ $image.Name }}" loading="lazy" decoding="async">
                     {{ if $moreThanOneImage }}
                     </div>
                     {{ end }}
@@ -33,10 +33,11 @@
     {{ partial "comments.html" . }}
 {{ end }}
 
+{{- /* Карусель нужна, только если на странице выводится больше одного фото без галереи (условие то же, что в main) */ -}}
 {{ define "customCSS" }}
-{{ partial "css/owlCarousel.html" . }}
+{{ if partial "projects/has-carousel.html" . }}{{ partial "css/owlCarousel.html" . }}{{ end }}
 {{ end }}
 
 {{ define "customScripts" }}
-{{ partial "js/owlCarousel.html" . }}
+{{ if partial "projects/has-carousel.html" . }}{{ partial "js/owlCarousel.html" . }}{{ end }}
 {{ end }}

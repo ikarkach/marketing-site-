@@ -35,7 +35,9 @@
 
 Тема Introduction подключает полный Bulma, FontAwesome и academicons в светлой и тёмной версиях (≈470 КБ). В проекте:
 `assets/sass/style.sass` и соседние `_*-import.sass` (переопределяют файлы темы, сама тема не менялась) оставляют только используемое — ≈64 КБ.
-Кастомные `ui.css` и `site.css` склеиваются и минифицируются в `layouts/partials/head/css.html`. Новая иконка FontAwesome: дописать её код в `assets/sass/_fontawesome-import.sass`.
+Bulma и кастомные `ui.css`, `site.css` склеиваются в один файл с хешем в имени (`layouts/partials/head/css.html`); критический CSS встраивается в страницы после сборки (`scripts/critical-css.mjs`).
+Новая иконка FontAwesome: дописать её код в `assets/sass/_fontawesome-import.sass` и запустить `python scripts/subset_icons.py` (шрифты урезаны до используемых иконок).
+Подробнее о скорости загрузки и настройках CDN — `docs/performance.md`.
 
 ## Тема
 

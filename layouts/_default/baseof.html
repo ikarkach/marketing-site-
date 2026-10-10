@@ -41,13 +41,11 @@
 
                 {{ block "main" . }}
                 {{ end }}
-
-                {{ block "footer" . }}
-                {{ partial "top-icon-with-hr.html" . }}
-                {{ partial "footer/text.html" . }}
-                {{ end }}
             </div>
         </main>
+        {{ block "footer" . }}
+        {{ partial "footer/text.html" . }}
+        {{ end }}
         {{ partial "contact-buttons.html" (dict "variant" "sticky") }}
         {{ partial "lead-modal.html" . }}
         {{ block "js-include" . }}

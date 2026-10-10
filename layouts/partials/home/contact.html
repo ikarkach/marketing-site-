@@ -1,0 +1,21 @@
+{{- /* Главная: контакты. Текст: content/home/contact.md; адрес, режим, телефон и e-mail — hugo.toml ([params.business], [params.contact], email). */ -}}
+{{- with site.GetPage "/home" }}{{ with .Resources.GetMatch "contact.md" }}
+<section class="hs" id="contact" aria-labelledby="contact-title">
+    <div class="hs__inner">
+        <h2 class="hs__title" id="contact-title">{{ .Title }}</h2>
+        <div class="hs-prose">{{ .Content }}</div>
+        <ul class="hs-grid hs-grid--4 hs-contacts">
+            {{- with site.Params.business }}
+            <li class="hs-contact"><span class="hs-ico">{{ partial "icon.html" "map-pin" }}</span><span><strong>Адрес</strong>{{ .addressText }}</span></li>
+            <li class="hs-contact"><span class="hs-ico">{{ partial "icon.html" "clock" }}</span><span><strong>Режим работы</strong>{{ .hoursText }}</span></li>
+            {{- end }}
+            {{- with site.Params.contact }}
+            <li class="hs-contact"><span class="hs-ico">{{ partial "icon.html" "phone" }}</span><span><strong>Телефон</strong><a href="tel:{{ .phone }}" data-goal="call_click">{{ .phoneDisplay }}</a></span></li>
+            {{- end }}
+            {{- with site.Params.email }}
+            <li class="hs-contact"><span class="hs-ico">{{ partial "icon.html" "mail" }}</span><span><strong>E-mail</strong><a href="mailto:{{ . }}">{{ . }}</a></span></li>
+            {{- end }}
+        </ul>
+    </div>
+</section>
+{{- end }}{{ end }}

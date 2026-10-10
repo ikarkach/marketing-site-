@@ -6,9 +6,8 @@
         {{ if .Site.Params.plausible }}{{ partial "head/plausible.html" . }}{{ end }}
         {{ partial "head/openGraph.html" . }}
         {{ partial "head/favicons.html" . }}
-        {{ partial "head/css.html" . }}
-        {{ partial "css/owlCarousel.html" . }}
         {{ partial "head/fonts.html" . }}
+        {{ partial "head/css.html" . }}
         {{ partial "head/analytics.html" . }}
         {{ partial "head/localbusiness.html" . }}
     </head>
@@ -18,106 +17,20 @@
         {{ partial "site-header.html" . }}
         <main id="main">
         {{ partial "home/catalog.html" . }}
-
-        {{ with .Site.GetPage "/home" }}
-        {{ $home := . }}
-        {{ $pages := where (.Resources.ByType "page") "Draft" false }}
-
-        {{ with .Site.GetPage "/blog" }}
-            {{ $pages = $pages | append . }}
-        {{ end }}
-
-        {{ range sort $pages "Params.weight" }}
-        {{ if ne .Name "contact.md" }}
-        {{ if and .IsSection (eq .Section "blog") }}
-            <!-- Let`s show some blog posts -->
-            {{ partial "home/blog.html" . }}
-        {{ else if .File }}
-
-        <!-- Range through all sections in /home execept contact.md -->
-        <div class="section" id="{{ .File.TranslationBaseName }}">
-            <div class="container">
-                <h2 class="title is-2 has-text-centered">{{ .Title | markdownify }}</h2>
-                {{ if .Params.Image }}
-                <div class="columns">
-                    <div class="column is-one-third has-text-centered">
-                        {{ with $home.Resources.GetMatch .Params.Image }}
-                        {{ with .Resize "320x" }}
-                        <img class="img-responsive avatar" src="{{ .RelPermalink }}" alt="{{ .Name }}">
-                        {{ end }}
-                        {{ end }}
-                    </div>
-                    <div class="markdown column">
-                        {{ .Content }}
-                    </div>
-                </div>
-                {{ else }}
-                <div class="markdown has-text-centered">
-                    {{ .Content }}
-                </div>
-                {{ end }}
-            </div>
-            <!-- End About container-->
-            {{ partial "top-icon.html" . }}
-        </div>
-        <div class="container">
-            <hr>
-        </div>
-        {{ end }}
-        {{ end }}
-        {{ end }}
-        <!-- Let`s chat, shall we? -->
-        {{ with .Resources.GetMatch "contact.md" }}
-        {{ if not .Draft }}
-        <div class="section" id="{{ .File.TranslationBaseName }}">
-            <div class="container has-text-centered">
-                <h2 class="title is-2">{{ .Title | markdownify }}</h2>
-                <div class="markdown">
-                    {{ .Content }}
-                </div>
-                {{ if .Site.Params.home.localTime }}
-                <p>{{ i18n "index_currentTime" . }} <span id="time"></span>.</p>
-                {{ end }}
-                {{ with .Site.Params.email }}
-                <h3 class="subtitle is-3 has-text-centered top-pad">
-                    <a href="mailto:{{ . }}">{{ . }}</a>
-                </h3>
-                {{ end }}
-                {{ partial "home/social.html" . }}
-            </div>
-            <!-- End Contact container -->
-            {{ partial "top-icon.html" . }}
-        </div>
-        <div class="container">
-            <hr>
-        </div>
-        {{ end }}
-        {{ end }}
-        <!-- End Contact section -->
-        {{ end }}
-
-        {{ partial "footer/text.html" . }}
+        {{ partial "home/about.html" . }}
+        {{ partial "home/offer.html" . }}
+        {{ partial "home/why.html" . }}
+        {{ partial "home/blog.html" . }}
+        {{ partial "home/start.html" . }}
+        {{ partial "home/contact.html" . }}
         </main>
+        {{ partial "footer/text.html" . }}
 
         {{ partial "contact-buttons.html" (dict "variant" "sticky") }}
         {{ partial "lead-modal.html" . }}
 
-        <!-- End of fade in three section -->
         {{ partial "footer/scripts.html" . }}
-        {{ partial "js/owlCarousel.html" . }}
 
-        {{ if .Site.Params.home.localTime }}
-        <script>
-            function update_localtime() {
-                const time = new Date().toLocaleTimeString('{{ .Site.Params.home.timeFormat }}', { timeZone: '{{ .Site.Params.home.timeZone }}', timeStyle: 'short' });
-                const element = document.getElementById('time');
-                if (element) element.textContent = time;
-            }
-            update_localtime();
-            // Updating every second to prevent seconds looking like stood still when timeStyle is ignored.
-            setInterval(update_localtime, 1000);
-        </script>
-        {{ end }}
     </body>
 
 </html>

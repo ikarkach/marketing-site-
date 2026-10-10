@@ -35,11 +35,12 @@
                 <fieldset class="filter-group" data-group="series" data-limit="6">
                     <legend>Серия</legend>
                     <div class="filter-options">
-                        {{- range $series }}
-                        <label class="filter-opt"><input type="checkbox" name="series" value="{{ .id }}"><span class="filter-opt__t">{{ .title }}</span><span class="filter-opt__n"></span></label>
+                        {{- /* первые 6 видны сразу, остальные свёрнуты ещё до работы скрипта (catalog.js, limitGroups), чтобы фильтры не «прыгали» */}}
+                        {{- range $i, $_ := $series }}
+                        <label class="filter-opt"{{ if ge $i 6 }} style="display:none"{{ end }}><input type="checkbox" name="series" value="{{ .id }}"><span class="filter-opt__t">{{ .title }}</span><span class="filter-opt__n"></span></label>
                         {{- end }}
                     </div>
-                    <button type="button" class="filter-more" hidden></button>
+                    <button type="button" class="filter-more"{{ if le (len $series) 6 }} hidden{{ end }}>{{ if gt (len $series) 6 }}Показать ещё {{ sub (len $series) 6 }}{{ end }}</button>
                 </fieldset>
                 <fieldset class="filter-group" data-group="inverter">
                     <legend>Инверторная технология</legend>

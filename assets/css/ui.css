@@ -4,11 +4,7 @@
    Токены (светлая тема) и тёмный вариант заданы переменными ниже.
    ========================================================================== */
 
-/* ---------- шрифты (файлы лежат в static/fonts, подключены без обращения к Google) ---------- */
-@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500 600; font-display: swap; src: url('/fonts/montserrat-cyrillic.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500 600; font-display: swap; src: url('/fonts/montserrat-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('/fonts/roboto-cyrillic.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('/fonts/roboto-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* ---------- шрифты: @font-face Montserrat и Roboto — в <head> (layouts/partials/head/fonts.html), чтобы не ждать этот файл ---------- */
 
 /* ---------- токены ---------- */
 :root {
@@ -232,7 +228,7 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
 .series-card__link:hover, .series-card__link:focus-visible, .series-card__link:active { color: #fff !important; }
 .series-card__link:hover::after, .series-card__link:focus-visible::after, .series-card__link:active::after { opacity: 1; }
 .series-card__img { display: flex; align-items: center; justify-content: center; height: 190px; margin-bottom: 8px; }
-.series-card__img img { max-width: 100%; max-height: 190px; width: auto; height: auto; object-fit: contain; }
+.series-card__img img { display: block; width: 100%; height: 100%; object-fit: contain; }   /* занимает весь блок сразу: при загрузке фото ничего не сдвигается */
 .series-card__ph { font: 600 24px var(--font-head); letter-spacing: .04em; color: var(--muted); }
 .series-card__title { margin-top: 6px; font: 600 14px/1.4 var(--font-body); overflow-wrap: anywhere; }
 .series-card__row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 10px; margin-top: auto; font-size: 12px; opacity: .9; }
@@ -245,7 +241,6 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
 .catalog-grid.is-list { grid-template-columns: 1fr; gap: 14px; }
 .catalog-grid.is-list .series-card__link { flex-direction: row; flex-wrap: wrap; align-items: center; min-height: 0; padding: 16px 24px; gap: 8px 24px; }
 .catalog-grid.is-list .series-card__img { width: 190px; height: 110px; margin: 0; }
-.catalog-grid.is-list .series-card__img img { max-height: 110px; }
 .catalog-grid.is-list .series-card__title { flex: 1 1 260px; margin: 0; font-size: 16px; }
 .catalog-grid.is-list .series-card__specs { flex: 0 1 260px; }
 .catalog-grid.is-list .series-card__row { flex: 0 1 260px; margin: 0; flex-direction: column; }
@@ -333,6 +328,119 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
   .page-home .hc-card__more { margin-bottom: 16px; }
   .hc-card__img { width: 112px; }
 }
+/* ---------- главная: секции под каталогом (layouts/partials/home/*.html) ----------
+   Одна сетка и ширина (--container), одинаковые отступы между секциями, текст слева, строка до 70 знаков. */
+.hs { --hs-pad: 72px; padding: var(--hs-pad) 20px; background: #fff; color: var(--c-text); }
+.hs--alt { background: #F2F4F7; }
+.hs__inner { max-width: var(--container); margin: 0 auto; }
+.hs__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 28px; }
+.hs__head .hs__title { margin: 0; }
+.hs__title { margin: 0 0 28px; font: 600 32px/1.2 var(--font-head); color: #10233d; }
+.hs__subtitle { margin: 48px 0 8px; font: 600 22px/1.3 var(--font-head); color: #10233d; }
+.hs-prose { max-width: 70ch; font-size: 17px; line-height: 1.6; }
+.hs-prose p { margin: 0 0 1em; }
+.hs-prose p:last-child { margin-bottom: 0; }
+.hs-prose strong { font-weight: 600; color: #10233d; }
+.hs-grid { display: grid; gap: 24px; margin: 0; padding: 0; list-style: none; }
+.hs-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.hs-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hs-ico { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 48px; height: 48px; color: var(--c-primary-text); background: var(--c-primary-light); border-radius: 50%; }
+.hs-ico .icon { width: 24px; height: 24px; }
+.hs-card { position: relative; padding: 28px 24px; background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius); }
+.hs--alt .hs-card { border-color: transparent; box-shadow: 0 1px 2px rgba(16, 35, 61, .04); }
+.hs-card__title { margin: 18px 0 8px; font: 600 19px/1.3 var(--font-head); color: #10233d; }
+.hs-card__text { margin: 0; font-size: 16px; line-height: 1.55; color: #3c4756; }
+.page-home main a:not([class]) { color: var(--c-primary-text); }
+/* О компании */
+.hs-about { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px 64px; align-items: start; }
+.hs-facts { margin: 0; padding: 0; list-style: none; }
+.hs-fact { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--c-line); }
+.hs-fact:first-child { padding-top: 0; }
+.hs-fact__title { display: block; margin: 2px 0 4px; font: 600 17px/1.3 var(--font-head); color: #10233d; }
+.hs-fact__text { display: block; font-size: 15px; line-height: 1.5; color: #3c4756; }
+/* Что мы предлагаем: направления */
+.hs-directions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; margin: 0; padding: 0; list-style: none; }
+.hs-direction { padding: 18px 0; border-bottom: 1px solid #dde2e9; }
+.hs-direction__title { display: inline-flex; align-items: center; gap: 8px; font: 600 18px/1.3 var(--font-head); color: #10233d; text-decoration: none; }
+a.hs-direction__title { color: var(--c-primary-text); }
+a.hs-direction__title:hover { color: var(--c-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+.hs-direction__title .icon, .hs__more .icon { width: 18px; height: 18px; transition: transform .2s; }
+a.hs-direction__title:hover .icon, .hs__more:hover .icon { transform: translateX(3px); }
+.hs-direction__text { max-width: 60ch; margin: 6px 0 0; font-size: 16px; line-height: 1.55; color: #3c4756; }
+/* Преимущества */
+.hs-why { gap: 40px 48px; }
+.hs-why__item .hs-card__title { margin-top: 16px; }
+/* Блог */
+.hs__more { display: inline-flex; align-items: center; gap: 6px; font: 600 15px var(--font-head); color: var(--c-primary-text); text-decoration: none; }
+.hs-post { display: flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease; }
+.hs-post:hover, .hs-post:focus-within { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(16, 35, 61, .12); }
+.hs-post__date { font-size: 14px; color: var(--muted); }
+.hs-post .hs-card__title { margin-top: 10px; }
+.hs-post__link { color: #10233d; text-decoration: none; }
+.hs-post__link::after { content: ""; position: absolute; inset: 0; }
+.hs-post:hover .hs-post__link { color: var(--c-primary-text); }
+/* Призыв к действию */
+.hs-cta { color: #fff; background: var(--grad-banner); }
+.hs-cta__inner { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
+.hs-cta .hs__title { color: #fff; }
+.hs-cta .hs-prose, .hs-cta .hs-prose p { color: rgba(255, 255, 255, .92); }
+.hs-cta__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.hs-cta__phone { display: inline-flex; align-items: center; gap: 12px; font: 600 30px/1.2 var(--font-head); color: #fff; text-decoration: none; white-space: nowrap; }
+.hs-cta__phone:hover { text-decoration: underline; text-underline-offset: 4px; }
+.hs-cta__phone .icon { width: 28px; height: 28px; }
+.hs-cta__btn { min-height: 48px; padding: 0 28px; font-size: 15px; }
+.hs-cta .cta--section { justify-content: flex-start; margin: 4px 0 0; }
+/* Контакты */
+.hs-contacts { margin-top: 32px; }
+.hs-contact { display: flex; gap: 14px; font-size: 16px; line-height: 1.5; }
+.hs-contact strong { display: block; margin: 2px 0 4px; font: 600 15px/1.3 var(--font-head); color: #10233d; }
+@media (max-width: 1023px) {
+  .hs { --hs-pad: 56px; }
+  .hs-grid--4, .hs-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hs-about, .hs-cta__inner { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .hs { --hs-pad: 44px; padding-left: 16px; padding-right: 16px; }
+  .hs__title { margin-bottom: 20px; font-size: 26px; }
+  .hs__subtitle { margin-top: 36px; font-size: 20px; }
+  .hs-prose { font-size: 16px; }
+  .hs-grid { gap: 16px; }
+  .hs-grid--4, .hs-grid--3, .hs-directions { grid-template-columns: minmax(0, 1fr); }
+  .hs-why { gap: 28px; }
+  .hs-card { padding: 22px 18px; }
+  .hs-cta__phone { font-size: 26px; }
+  .hs-cta__btn { width: 100%; }
+}
+/* на телефоне мессенджеры уже в закреплённой панели внизу экрана */
+@media (max-width: 768px) {
+  .hs-cta .cta--section { display: none; }
+}
+
+/* ---------- подвал всех страниц (layouts/partials/footer/text.html) ---------- */
+.site-footer { padding: 0 20px; color: rgba(255, 255, 255, .78); background: #0f2340; font-size: 15px; line-height: 1.55; }
+.site-footer__inner { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.3fr); gap: 32px 40px; max-width: var(--container); margin: 0 auto; padding: 56px 0 40px; }
+.site-footer__logo { display: inline-flex; margin-bottom: 16px; padding: 8px 12px; background: #fff; border-radius: var(--radius); }
+.site-footer__logo img { display: block; width: auto; height: 36px; border: 0; box-shadow: none; border-radius: 0; }
+.site-footer p { margin: 0 0 10px; max-width: 42ch; color: inherit; }
+.site-footer .site-footer__slogan { color: #fff; font-weight: 500; }
+.site-footer__head { margin: 4px 0 14px !important; font: 600 13px/1.3 var(--font-head); color: #fff; text-transform: uppercase; letter-spacing: .06em; }
+.site-footer ul { margin: 0; padding: 0; list-style: none; }
+.site-footer li { margin: 0 0 10px; }
+.site-footer a { color: #fff; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.site-footer__phone { font: 600 18px var(--font-head); }
+.site-footer__bottom { max-width: var(--container); margin: 0 auto; padding: 18px 0 24px; font-size: 14px; border-top: 1px solid rgba(255, 255, 255, .12); }
+.site-footer__bottom p { margin: 0; }
+@media (max-width: 1023px) {
+  .site-footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .site-footer { padding: 0 16px; }
+  .site-footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; padding: 40px 0 28px; }
+  .site-footer__brand, .site-footer__inner > .site-footer__col:last-child { grid-column: 1 / -1; }
+  .site-footer__bottom { padding: 16px 0; }
+}
+
 /* «Каталог» в меню: сам пункт ведёт на страницу, стрелка открывает меню */
 .nav-item--mega { display: flex; align-items: center; }
 .nav-link--mega { padding-right: 4px; }
@@ -456,8 +564,6 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 .breadcrumbs ol { align-items: center; }
 .breadcrumbs li { display: flex; align-items: center; }
 .breadcrumbs li[aria-current] { padding: 5px 0; }
-/* главная: ссылки темы (бирюзовые, контраст 2.4:1) в фирменный синий */
-.page-home main a:not(.cta-btn):not(.btn):not(.series-card__link):not(.hc-link) { color: var(--c-primary-text); }
 
 /* блог: заголовки и ссылки в стиле остальных страниц (тема давала тонкий тёмный шрифт и бирюзовые ссылки) */
 .page-blog main h2.title, .is-text-page main .markdown h2 { margin: 28px 0 14px; font: 600 28px/1.25 var(--font-head); color: var(--c-primary-text); }

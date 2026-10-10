@@ -1,16 +1,43 @@
-<div class="section" id="footer">
-    <div class="container has-text-centered">
-    {{ with site.Params.business }}
-        <p class="footer-nap">
-            <strong>{{ .name }}</strong> — {{ with .addressText }}{{ . }}{{ else }}{{ .city }}{{ end }}
-            {{ with site.Params.contact }}· <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>{{ end }}
-            {{ with site.Params.email }}· <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
-            {{ with .hoursText }}<br>{{ . }}{{ end }}
-        </p>
-    {{ end }}
-    {{- /* Подпись темы Hugo убрана. Свой текст подвала можно задать в hugo.toml: params.footerText */ -}}
-    {{ with .Site.Params.footerText }}
-        {{ . | markdownify }}
-    {{ end }}
+{{- /* Подвал всех страниц: о компании, разделы, контакты (данные — hugo.toml: [params.business], [params.contact], email; меню — data/menu.yaml). */ -}}
+<footer class="site-footer" id="footer">
+    <div class="site-footer__inner">
+        <div class="site-footer__col site-footer__brand">
+            <a class="site-footer__logo" href="/" aria-label="Usplit — на главную"><img src="/usplit-logo-header.webp" alt="Usplit — климатическая техника" width="112" height="44" loading="lazy" decoding="async"></a>
+            <p>Продажа, подбор, монтаж и сервисное обслуживание климатического оборудования в Краснодаре и по всей России.</p>
+            <p class="site-footer__slogan">Usplit — климат, который работает.</p>
+        </div>
+        <nav class="site-footer__col" aria-label="Каталог">
+            <p class="site-footer__head">Каталог</p>
+            <ul>
+                {{- range (index (where hugo.Data.menu "title" "Каталог") 0).mega.categories }}
+                {{- if ne .url "/projects/rasprodazha/" }}<li><a href="{{ .url }}">{{ .title }}</a></li>{{ end }}
+                {{- end }}
+                <li><a href="/price/">Прайс-лист</a></li>
+            </ul>
+        </nav>
+        <nav class="site-footer__col" aria-label="Компания">
+            <p class="site-footer__head">Компания</p>
+            <ul>
+                <li><a href="/#about">О компании</a></li>
+                <li><a href="/#offer">Что мы предлагаем</a></li>
+                <li><a href="/blog/">Блог</a></li>
+                <li><a href="/kontakty/">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="site-footer__col">
+            <p class="site-footer__head">Контакты</p>
+            <ul class="site-footer__contacts">
+                {{- with site.Params.contact }}<li><a class="site-footer__phone" href="tel:{{ .phone }}" data-goal="call_click">{{ .phoneDisplay }}</a></li>{{ end }}
+                {{- with site.Params.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+                {{- with site.Params.business }}
+                <li>{{ .addressText }}</li>
+                <li>{{ .hoursText }}</li>
+                {{- end }}
+            </ul>
+        </div>
     </div>
-</div>
+    <div class="site-footer__bottom">
+        <p>© {{ now.Year }} {{ with site.Params.business }}{{ .name }}{{ end }}</p>
+        {{- with site.Params.footerText }}<div class="footer-text">{{ . | markdownify }}</div>{{ end }}
+    </div>
+</footer>

@@ -1,0 +1,60 @@
+# Блок «Каталог» на главной (layouts/partials/home/catalog.html).
+# Каждая карточка: название и ссылка на раздел, подкатегории (видны первые 4, остальные — «Ещё N категорий»), фото.
+# Фото: static/images/home/cat-<photo>.webp и @2x, готовятся scripts/home_catalog_photos.py.
+# Ссылки проверяются при сборке: адрес, которого нет на сайте, останавливает сборку с ошибкой;
+# раздел без моделей не выводится (ни карточка, ни подкатегория).
+- title: Настенные сплит-системы
+  url: "/projects/kondicionery/?type=wall"
+  photo: wall
+  alt: Настенная сплит-система Roland
+  items:
+    - {title: Roland Favorite II Inverter, url: /projects/favorite-ii-inverter/}
+    - {title: Roland Favorite II, url: /projects/favorite-ii/}
+    - {title: Roland Maestro, url: /projects/maestro/}
+    - {title: Hisense настенные, url: /projects/hisense-nastennye/}
+    - {title: "LG Deluxe Pro, ARTCOOL, ProCool", url: /projects/lg/}
+
+- title: Мульти-сплит системы
+  url: "/projects/kondicionery/?type=multi"
+  photo: multi
+  alt: Наружный блок мульти-сплит системы LG
+  items:
+    - {title: Hisense — наружные блоки, url: /projects/hisense-multi-split/naruzhnye-bloki/}
+    - {title: Hisense — внутренние блоки, url: /projects/hisense-multi-split/vnutrennie-bloki/}
+    - {title: LG ProMulti 2.0, url: /projects/lg/promulti-2-0/}
+
+- title: Промышленные кондиционеры
+  url: /projects/promyshlennye/
+  photo: semi
+  alt: Кассетный кондиционер Hisense
+  items:
+    - {title: Кассетные, url: /projects/promyshlennye/kassetnye/}
+    - {title: Канальные, url: /projects/promyshlennye/kanalnye/}
+    - {title: Напольно-потолочные, url: /projects/promyshlennye/napolno-potolochnye/}
+    - {title: Колонные, url: /projects/promyshlennye/kolonnye/}
+
+- title: Мобильные кондиционеры
+  url: /projects/hisense-mobilnye/
+  photo: mobile
+  alt: Мобильный кондиционер Hisense
+  items:
+    - {title: Hisense серии V, url: /projects/hisense-mobilnye/seriya-v/}
+    - {title: Hisense серии W, url: /projects/hisense-mobilnye/seriya-w/}
+    - {title: Hisense серии C, url: /projects/hisense-mobilnye/seriya-c/}
+
+- title: Вентиляция
+  url: /projects/ventilyaciya/
+  photo: vent
+  alt: Бризер Royal Clima BREZZA
+  items:
+    - {title: Бризеры, url: /projects/ventilyaciya/brizery/}
+    - {title: Приточные установки, url: /projects/ventilyaciya/pritochnye/}
+    - {title: Приточно-вытяжные с рекуперацией, url: /projects/ventilyaciya/rekuperatory/}
+
+- title: Осушители воздуха
+  url: /projects/osushiteli/
+  photo: dry
+  alt: Бытовой осушитель воздуха Royal Clima
+  items:
+    - {title: Бытовые осушители, url: /projects/osushiteli/bytovye/}
+    - {title: Для бассейнов и больших помещений, url: /projects/osushiteli/dlya-basseynov/}

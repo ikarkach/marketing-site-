@@ -17,28 +17,7 @@
         {{ partial "body-analytics.html" . }}
         {{ partial "site-header.html" . }}
         <main id="main">
-        {{ with .Site.GetPage "/home" }}
-        <section id="top" class="hero is-{{ .Site.Params.home.introHeight | default "fullheight" }}">
-            <!-- Hero head section to play nice with Bulma -->
-            <div class="hero-head"></div>
-
-            <!-- Super sweet Hero body title -->
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <!-- Title and tagline -->
-                    <div class="hero-logo {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
-                        {{ .Title | markdownify }}
-                    </div>
-                    <h1 class="hero-h1 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">{{ with $.Params.h1 }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}</h1>
-                    <div class="subtitle is-3 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
-                        {{ .Content }}
-                    </div>
-                    <!-- End title and tagline -->
-                    {{ partial "contact-buttons.html" (dict "variant" "hero") }}
-                </div>
-            </div> <!-- End of Hero body -->
-            {{ end }}
-        </section> <!-- Done with Hero -->
+        {{ partial "home/catalog.html" . }}
 
         {{ with .Site.GetPage "/home" }}
         {{ $home := . }}
@@ -48,16 +27,9 @@
             {{ $pages = $pages | append . }}
         {{ end }}
 
-        {{ with .Site.GetPage "/projects" }}
-            {{ $pages = $pages | append . }}
-        {{ end }}
-
         {{ range sort $pages "Params.weight" }}
         {{ if ne .Name "contact.md" }}
-        {{ if and .IsSection (eq .Section "projects") }}
-            <!-- Now for some cool projects -->
-            {{ partial "home/projects.html" . }}
-        {{ else if and .IsSection (eq .Section "blog") }}
+        {{ if and .IsSection (eq .Section "blog") }}
             <!-- Let`s show some blog posts -->
             {{ partial "home/blog.html" . }}
         {{ else if .File }}

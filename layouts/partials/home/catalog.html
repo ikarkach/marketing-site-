@@ -1,0 +1,39 @@
+{{- /* Первый экран главной: заголовок страницы (H1) и карточки категорий каталога.
+       Данные: data/home-catalog.yaml, фото: static/images/home/ (scripts/home_catalog_photos.py). Стили: assets/css/ui.css, «блок Каталог». */ -}}
+{{- $home := site.GetPage "/home" }}
+<section class="hc" id="katalog" aria-labelledby="hc-title">
+    <div class="hc__grid">
+        <div class="hc__head">
+            <span class="hc__deco" aria-hidden="true">Каталог</span>
+            <h1 class="hc__title" id="hc-title">{{ with .Params.h1 }}{{ . }}{{ else }}{{ site.Title }}{{ end }}</h1>
+            {{- with $home }}<div class="hc__lead">{{ .Content }}</div>{{ end }}
+            {{ partial "contact-buttons.html" (dict "variant" "hero") }}
+        </div>
+        {{- $n := 0 }}
+        {{- range index hugo.Data "home-catalog" }}
+        {{- if partial "home/catalog-link-ok.html" .url }}
+        {{- $items := slice }}
+        {{- range .items }}{{ if partial "home/catalog-link-ok.html" .url }}{{ $items = $items | append . }}{{ end }}{{ end }}
+        {{- $n = add $n 1 }}
+        <article class="hc-card">
+            <h2 class="hc-card__title"><a class="hc-link" href="{{ .url }}">{{ .title }}</a></h2>
+            {{- with $items }}
+            <ul class="hc-card__list">
+                {{- range first 4 . }}
+                <li><a class="hc-link" href="{{ .url }}">{{ .title }}</a></li>
+                {{- end }}
+            </ul>
+            {{- end }}
+            {{- $more := sub (len $items) 4 }}
+            {{- if gt $more 0 }}
+            {{- $word := "категорий" }}
+            {{- $m10 := mod $more 10 }}{{ $m100 := mod $more 100 }}
+            {{- if and (eq $m10 1) (ne $m100 11) }}{{ $word = "категория" }}{{ else if and (ge $m10 2) (le $m10 4) (or (lt $m100 12) (gt $m100 14)) }}{{ $word = "категории" }}{{ end }}
+            <a class="hc-card__more hc-link" href="{{ .url }}">Ещё {{ $more }} {{ $word }}</a>
+            {{- end }}
+            <img class="hc-card__img" src="/images/home/cat-{{ .photo }}.webp" srcset="/images/home/cat-{{ .photo }}.webp 1x, /images/home/cat-{{ .photo }}@2x.webp 2x" width="200" height="160" alt="{{ .alt }}"{{ if gt $n 3 }} loading="lazy"{{ end }} decoding="async">
+        </article>
+        {{- end }}
+        {{- end }}
+    </div>
+</section>

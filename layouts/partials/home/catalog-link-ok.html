@@ -1,0 +1,13 @@
+{{- /* Проверка ссылки из data/home-catalog.yaml. Нет такой страницы на сайте — сборка останавливается с ошибкой.
+       Раздел без моделей — false (не выводим). Параметры (?type=...) и якоря при проверке отбрасываются. */ -}}
+{{- $path := index (split (index (split . "#") 0) "?") 0 }}
+{{- $p := site.GetPage (strings.TrimSuffix "/" $path) }}
+{{- $ok := false }}
+{{- if not $p }}
+{{- errorf "data/home-catalog.yaml: на сайте нет страницы %q" . }}
+{{- else if $p.IsSection }}
+{{- $ok = gt (len $p.RegularPagesRecursive) 0 }}
+{{- else }}
+{{- $ok = true }}
+{{- end }}
+{{- return $ok }}

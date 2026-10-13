@@ -611,6 +611,8 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 
 /* ---------- ключевые характеристики на карточках серий ---------- */
 .series-card__specs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.markdown ul.series-card__specs { margin: 0; padding: 0; list-style: none; }   /* на страницах разделов карточки лежат в .markdown: без маркеров списка */
+.markdown .series-card__specs li { list-style: none; }
 .series-card__specs li { margin: 0; padding: 3px 9px; font: 500 12px/1.4 var(--font-body); color: inherit; background: var(--c-primary-light); border: 1px solid var(--c-line); border-radius: 999px; transition: background-color .3s, border-color .3s; }
 .series-card__link:hover .series-card__specs li, .series-card__link:focus-visible .series-card__specs li { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .55); }
 

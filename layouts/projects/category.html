@@ -1,10 +1,10 @@
 {{- /* Страница категории «Кондиционеры»: баннер, «таблетки» типов, панель фильтров, сортировка и карточки серий.
-       Данные: data/series.json (собирает scripts/build_catalog.py). Поведение: assets/js/catalog.js. Состояние фильтров пишется в адрес (?brand=hisense&inverter=1). */ -}}
+       Данные: data/series.json (scripts/build_catalog.py) и data/climate.json (Royal Clima, scripts/build_royalclima.py). Поведение: assets/js/catalog.js. Состояние фильтров пишется в адрес (?brand=hisense&inverter=1). */ -}}
 {{ define "title" }}{{ partial "page-banner.html" (dict "page" . "toggle" true) }}{{ end }}
 
 {{ define "main" }}
 {{- $series := slice }}
-{{- range hugo.Data.series }}{{ if in (slice "wall" "multi" "semi" "mobile") .type }}{{ $series = $series | append . }}{{ end }}{{ end }}
+{{- range partial "all-series.html" . }}{{ if in (slice "wall" "multi" "semi" "mobile") .type }}{{ $series = $series | append . }}{{ end }}{{ end }}
 {{- $types := slice (dict "k" "wall" "t" "Настенные сплит-системы") (dict "k" "multi" "t" "Мульти-сплит системы") (dict "k" "semi" "t" "Промышленные кондиционеры") (dict "k" "mobile" "t" "Мобильные кондиционеры") -}}
 <div class="container catalog-page">
     {{- if .Content }}<div class="markdown catalog-intro">{{ .Content }}</div>{{ end }}
@@ -27,7 +27,7 @@
                 <fieldset class="filter-group" data-group="brand">
                     <legend>Бренд</legend>
                     <div class="filter-options">
-                        {{- range slice (dict "v" "roland" "t" "Roland") (dict "v" "hisense" "t" "Hisense") (dict "v" "lg" "t" "LG") }}
+                        {{- range slice (dict "v" "roland" "t" "Roland") (dict "v" "hisense" "t" "Hisense") (dict "v" "lg" "t" "LG") (dict "v" "royalclima" "t" "Royal Clima") }}
                         <label class="filter-opt"><input type="checkbox" name="brand" value="{{ .v }}"><span class="filter-opt__t">{{ .t }}</span><span class="filter-opt__n"></span></label>
                         {{- end }}
                     </div>

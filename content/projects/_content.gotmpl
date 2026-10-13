@@ -2,7 +2,7 @@
        Кондиционеры: data/catalog.json; вентиляция и осушители Royal Clima (+Hisense): data/climate.json (scripts/build_royalclima.py).
        Названия, адреса и тексты берутся из data/models.toml, таблицы и цены — из данных (шаблон layouts/projects/model.html).
        Если у серии нет записи в models.toml, страница не создаётся. */ -}}
-{{- $pageWeight := dict "hisense-nastennye" 10 "promyshlennye" 11 "hisense-multi-split" 12 "hisense-mobilnye" 13 "lg" 20 "ventilyaciya/brizery" 40 "ventilyaciya/pritochnye" 41 "ventilyaciya/rekuperatory" 42 "osushiteli/bytovye" 50 "osushiteli/dlya-basseynov" 51 -}}
+{{- $pageWeight := dict "hisense-nastennye" 10 "promyshlennye" 11 "hisense-multi-split" 12 "hisense-mobilnye" 13 "lg" 20 "royal-clima" 21 "ventilyaciya/brizery" 40 "ventilyaciya/pritochnye" 41 "ventilyaciya/rekuperatory" 42 "osushiteli/bytovye" 50 "osushiteli/dlya-basseynov" 51 -}}
 {{- $all := merge hugo.Data.catalog.pages hugo.Data.climate.pages -}}
 {{- range $page, $secs := $all }}
   {{- $meta := index hugo.Data.models $page }}

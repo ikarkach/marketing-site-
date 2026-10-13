@@ -14,4 +14,7 @@ layout: single
 
 {{< subsections >}}
 
+Нужны и кондиционер, и свежий воздух в одной комнате? Посмотрите [сплит-системы Royal Clima ROYAL FRESH](/projects/royal-clima/royal-fresh/)
+со встроенной приточной вентиляцией и фильтром HEPA H11.
+
 {{< contact-note >}}

@@ -68,11 +68,25 @@
         {{- end }}
     </section>
 
-    {{/* ---- Royal Clima: вентиляция и осушители (data/climate.json, только позиции с розничной ценой) ---- */}}
+    {{/* ---- Royal Clima: сплит-системы, вентиляция и осушители (data/climate.json, только позиции с розничной ценой) ---- */}}
     {{- $climate := hugo.Data.climate -}}
     <section class="price-group" data-brand="Royal Clima" id="royal-clima">
         <h2>Royal Clima</h2>
         <p>Цены действуют с {{ $climate.priceDate }}.</p>
+        {{- /* сначала настенные сплит-системы, затем вентиляция и осушители */}}
+        {{- range $page, $title := dict "royal-clima" "Настенные сплит-системы" }}
+        <h3 class="price-page-title"><a href="{{ printf "projects/%s/" $page | relURL }}">{{ $title }}</a></h3>
+        {{- range index $climate.pages $page }}
+        {{- $sec := . }}
+        {{- $slug := (index (index hugo.Data.models $page) $sec.id).slug }}
+        <div class="price-block" data-tags="{{ $sec.title }}">
+            <h4><a href="{{ printf "projects/%s/%s/" $page $slug | relURL }}">{{ $sec.title }}</a></h4>
+            {{- range $sec.tables }}
+            {{ partial "catalog-table.html" . }}
+            {{- end }}
+        </div>
+        {{- end }}
+        {{- end }}
         {{- range $page, $title := dict "ventilyaciya/brizery" "Вентиляция: бризеры" "ventilyaciya/pritochnye" "Вентиляция: приточные установки" "ventilyaciya/rekuperatory" "Вентиляция: приточно-вытяжные установки" "osushiteli/dlya-basseynov" "Осушители для бассейнов" }}
         <h3 class="price-page-title"><a href="{{ printf "projects/%s/" $page | relURL }}">{{ $title }}</a></h3>
         {{- range index $climate.pages $page }}

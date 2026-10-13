@@ -1354,6 +1354,430 @@
      }
     ]
    }
+  ],
+  "royal-clima": [
+   {
+    "id": "supremo",
+    "title": "Royal Clima ROYAL SUPREMO",
+    "images": [
+     {
+      "file": "supremo-1.webp",
+      "alt": "Royal Clima ROYAL SUPREMO"
+     },
+     {
+      "file": "supremo-2.webp",
+      "alt": "Royal Clima ROYAL SUPREMO"
+     }
+    ],
+    "features": [
+     "Полностью инверторная (Full DC Inverter), высокая энергоэффективность",
+     "Любое направление потока воздуха",
+     "7 скоростей вентилятора внутреннего блока",
+     "Мягкое распределение воздушного потока",
+     "Биполярный ионизатор воздуха",
+     "Фильтры тонкой очистки Active Carbon и Silver Ion",
+     "UV-обработка воздуха",
+     "Тише шелеста листьев: от 19 дБ(А)",
+     "Работа на охлаждение до −15 °C",
+     "Голосовое управление через Яндекс.Алису",
+     "Расширенная гарантия 3+2 года"
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": "Royal Supremo Nero",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RCI-RSN30HN",
+        "cool": "2,8",
+        "heat": "3,63",
+        "eff": "A++/A+",
+        "noise": "19–37",
+        "price": 52790
+       },
+       {
+        "model": "RCI-RSN40HN",
+        "cool": "3,7",
+        "heat": "3,95",
+        "eff": "A++/A+",
+        "noise": "19–37",
+        "price": 57290
+       },
+       {
+        "model": "RCI-RSN55HN",
+        "cool": "5,5",
+        "heat": "5,65",
+        "eff": "A++/A+",
+        "noise": "23–42",
+        "price": 90590
+       },
+       {
+        "model": "RCI-RSN75HN",
+        "cool": "7,3",
+        "heat": "7,5",
+        "eff": "A++/A+",
+        "noise": "25–43",
+        "price": 111490
+       }
+      ]
+     },
+     {
+      "title": "Royal Supremo Blanco",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RCI-RSB30HN",
+        "cool": "2,8",
+        "heat": "3,63",
+        "eff": "A++/A+",
+        "noise": "19–37",
+        "price": 50890
+       },
+       {
+        "model": "RCI-RSB40HN",
+        "cool": "3,7",
+        "heat": "3,95",
+        "eff": "A++/A+",
+        "noise": "19–37",
+        "price": 55190
+       },
+       {
+        "model": "RCI-RSB55HN",
+        "cool": "5,5",
+        "heat": "5,65",
+        "eff": "A++/A+",
+        "noise": "23–42",
+        "price": 87290
+       },
+       {
+        "model": "RCI-RSB75HN",
+        "cool": "7,3",
+        "heat": "7,5",
+        "eff": "A++/A+",
+        "noise": "25–43",
+        "price": 107390
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fresh",
+    "title": "Royal Clima ROYAL FRESH",
+    "images": [
+     {
+      "file": "fresh-1.webp",
+      "alt": "Royal Clima ROYAL FRESH"
+     },
+     {
+      "file": "fresh-2.webp",
+      "alt": "Royal Clima ROYAL FRESH"
+     }
+    ],
+    "features": [
+     "Встроенная приточная вентиляция: свежий воздух с улицы без открытого окна",
+     "Фильтр HEPA H11 на притоке",
+     "Полностью инверторная (Full DC Inverter), высокая энергоэффективность",
+     "Встроенное управление по Wi-Fi, Яндекс.Алиса",
+     "7 скоростей вентилятора внутреннего блока",
+     "Равномерное мягкое распределение воздушного потока",
+     "Тихая работа: от 18 дБ(А) у Royal Fresh, от 19,5 дБ(А) у Royal Fresh Standard",
+     "Royal Fresh: любое направление потока воздуха, UV-обработка воздуха",
+     "Royal Fresh Standard: функция 3D Auto Air",
+     "Расширенная гарантия 3+2 года"
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": "Royal Fresh",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RCI-RF30HN",
+        "cool": "2,9",
+        "heat": "3,1",
+        "eff": "A+++/A++",
+        "noise": "18–38",
+        "price": 64790
+       },
+       {
+        "model": "RCI-RF40HN",
+        "cool": "3,9",
+        "heat": "4,1",
+        "eff": "A+++/A++",
+        "noise": "18–38",
+        "price": 67590
+       }
+      ]
+     },
+     {
+      "title": "Royal Fresh Standard",
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RCI-RFS28HN",
+        "cool": "2,75",
+        "heat": "2,95",
+        "eff": "A+++/A++",
+        "noise": "19,5–39",
+        "price": 59890
+       },
+       {
+        "model": "RCI-RFS35HN",
+        "cool": "3,6",
+        "heat": "3,8",
+        "eff": "A+++/A++",
+        "noise": "19,5–39",
+        "price": 62590
+       }
+      ]
+     },
+     {
+      "title": "Комплектующие",
+      "kind": "acc",
+      "rows": [
+       {
+        "name": "RCI-RF H11",
+        "desc": "HEPA фильтр H11 для моделей RCI-RF30HN и RCI-RF40HN",
+        "article": "НС-1414750",
+        "price": 2770
+       },
+       {
+        "name": "RCI-RFS H11",
+        "desc": "HEPA фильтр H11 для моделей RCI-RFS28HN и RCI-RFS35HN",
+        "article": "НС-1511465",
+        "price": 2850
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "felicita-heat-pump",
+    "title": "Royal Clima FELICITA HEAT PUMP",
+    "images": [
+     {
+      "file": "felicita-heat-pump-1.webp",
+      "alt": "Royal Clima FELICITA HEAT PUMP"
+     }
+    ],
+    "features": [
+     "Работа на охлаждение и обогрев до −30 °C",
+     "Полностью инверторная (Full DC Inverter), высокая энергоэффективность",
+     "Самоочистка замораживанием",
+     "Функция I FEEL",
+     "Функция 3D Auto Air",
+     "Управление по Wi-Fi, Яндекс.Алиса",
+     "Фильтры Active Carbon и Silver Ion",
+     "Низкий уровень шума: от 18,2 дБ(А)",
+     "Расширенная гарантия 3+2 года"
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RCI-FHE28HN",
+        "cool": "2,64",
+        "heat": "2,93",
+        "eff": "A+++/A++",
+        "noise": "18,2–39",
+        "price": 68890
+       },
+       {
+        "model": "RCI-FHE40HN",
+        "cool": "3,52",
+        "heat": "3,81",
+        "eff": "A+++/A++",
+        "noise": "18,2–39",
+        "price": 74990
+       },
+       {
+        "model": "RCI-FHE55HN",
+        "cool": "5,33",
+        "heat": "5,57",
+        "eff": "A++/A+",
+        "noise": "19–42",
+        "price": 107790
+       },
+       {
+        "model": "RCI-FHE75HN",
+        "cool": "7,21",
+        "heat": "7,56",
+        "eff": "A++/A+",
+        "noise": "19,5–48,5",
+        "price": 143690
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "felicita-inverter",
+    "title": "Royal Clima FELICITA Inverter",
+    "images": [
+     {
+      "file": "felicita-inverter-1.webp",
+      "alt": "Royal Clima FELICITA Inverter"
+     }
+    ],
+    "features": [
+     "Инверторный компрессор",
+     "Встроенный Wi-Fi модуль, Яндекс.Алиса",
+     "Функция I FEEL",
+     "Функция 3D Auto Air и фильтры Silver Ion, Active Carbon (модели 22, 28, 35)",
+     "7 скоростей вентилятора внутреннего блока (модели, произведённые после 01.12.2025)",
+     "Работа на охлаждение и обогрев до −15 °C",
+     "Шумоизоляция компрессора",
+     "Антикоррозийное покрытие теплообменников Golden Fin"
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RCI-FC22HN",
+        "cool": "2,35",
+        "heat": "2,55",
+        "eff": "A/A",
+        "noise": "20–35",
+        "price": 31990
+       },
+       {
+        "model": "RCI-FC28HN",
+        "cool": "2,65",
+        "heat": "2,98",
+        "eff": "A/A",
+        "noise": "20–35",
+        "price": 35290
+       },
+       {
+        "model": "RCI-FC35HN",
+        "cool": "3,65",
+        "heat": "3,77",
+        "eff": "A/A",
+        "noise": "20,5–38,5",
+        "price": 42690
+       },
+       {
+        "model": "RCI-FCE24HN",
+        "cool": "2,65",
+        "heat": "2,9",
+        "eff": "A/A",
+        "noise": "20–35",
+        "price": 32190
+       },
+       {
+        "model": "RCI-FCE30HN",
+        "cool": "3",
+        "heat": "3,45",
+        "eff": "A/A",
+        "noise": "20–35",
+        "price": 35490
+       },
+       {
+        "model": "RCI-FCE35HN",
+        "cool": "3,6",
+        "heat": "3,8",
+        "eff": "A/A",
+        "noise": "20,5–38,5",
+        "price": 42890
+       },
+       {
+        "model": "RCI-FC55HN",
+        "cool": "5,65",
+        "heat": "6,1",
+        "eff": "A++/A+",
+        "noise": "24–41",
+        "price": 72390
+       },
+       {
+        "model": "RCI-FC75HN",
+        "cool": "7,65",
+        "heat": "7,9",
+        "eff": "A++/A+",
+        "noise": "26–46",
+        "price": 90190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "felicita",
+    "title": "Royal Clima FELICITA",
+    "images": [
+     {
+      "file": "felicita-1.webp",
+      "alt": "Royal Clima FELICITA"
+     }
+    ],
+    "features": [
+     "Классический (on/off) компрессор",
+     "Встроенный Wi-Fi модуль, Яндекс.Алиса",
+     "Функция I FEEL",
+     "Функция 3D Auto Air",
+     "Фильтры Silver Ion и Active Carbon (модели 22, 28, 35)",
+     "4 скорости вентилятора внутреннего блока",
+     "Шумоизоляция компрессора",
+     "Антикоррозийное покрытие теплообменников Golden Fin",
+     "Работа на охлаждение до −40 °C с зимним комплектом"
+    ],
+    "note": null,
+    "tables": [
+     {
+      "title": null,
+      "kind": "kit",
+      "rows": [
+       {
+        "model": "RC-FC22HN",
+        "cool": "2,4",
+        "heat": "2,5",
+        "eff": "A/A",
+        "noise": "23–38",
+        "price": 27390
+       },
+       {
+        "model": "RC-FC28HN",
+        "cool": "2,7",
+        "heat": "2,8",
+        "eff": "A/A",
+        "noise": "23–40",
+        "price": 29290
+       },
+       {
+        "model": "RC-FC35HN",
+        "cool": "3,6",
+        "heat": "3,7",
+        "eff": "A/A",
+        "noise": "25–39,5",
+        "price": 39390
+       },
+       {
+        "model": "RC-FC55HN",
+        "cool": "5,35",
+        "heat": "5,65",
+        "eff": "A/A",
+        "noise": "29–43",
+        "price": 63190
+       },
+       {
+        "model": "RC-FC70HN",
+        "cool": "7,15",
+        "heat": "7,35",
+        "eff": "A/A",
+        "noise": "31–48",
+        "price": 79590
+       }
+      ]
+     }
+    ]
+   }
   ]
  },
  "series": [
@@ -1627,6 +2051,128 @@
    "image": {
     "page": "osushiteli/dlya-basseynov",
     "file": "riviera-1.webp"
+   }
+  },
+  {
+   "id": "royal-clima-supremo",
+   "title": "Royal Clima ROYAL SUPREMO",
+   "brand": "Royal Clima",
+   "type": "wall",
+   "url": "/projects/royal-clima/royal-supremo/",
+   "page": "royal-clima",
+   "sid": "supremo",
+   "models": 8,
+   "priceMin": 50890,
+   "priceMax": 111490,
+   "tech": "yes",
+   "hp": "yes",
+   "kwMin": 2.8,
+   "kwMax": 7.3,
+   "noiseMin": 19.0,
+   "eff": [
+    "A++"
+   ],
+   "image": {
+    "page": "royal-clima",
+    "file": "supremo-1.webp"
+   }
+  },
+  {
+   "id": "royal-clima-fresh",
+   "title": "Royal Clima ROYAL FRESH",
+   "brand": "Royal Clima",
+   "type": "wall",
+   "url": "/projects/royal-clima/royal-fresh/",
+   "page": "royal-clima",
+   "sid": "fresh",
+   "models": 4,
+   "priceMin": 59890,
+   "priceMax": 67590,
+   "tech": "yes",
+   "hp": "yes",
+   "kwMin": 2.75,
+   "kwMax": 3.9,
+   "noiseMin": 18.0,
+   "eff": [
+    "A+++"
+   ],
+   "image": {
+    "page": "royal-clima",
+    "file": "fresh-1.webp"
+   }
+  },
+  {
+   "id": "royal-clima-felicita-heat-pump",
+   "title": "Royal Clima FELICITA HEAT PUMP",
+   "brand": "Royal Clima",
+   "type": "wall",
+   "url": "/projects/royal-clima/felicita-heat-pump/",
+   "page": "royal-clima",
+   "sid": "felicita-heat-pump",
+   "models": 4,
+   "priceMin": 68890,
+   "priceMax": 143690,
+   "tech": "yes",
+   "hp": "yes",
+   "kwMin": 2.64,
+   "kwMax": 7.21,
+   "noiseMin": 18.2,
+   "eff": [
+    "A++",
+    "A+++"
+   ],
+   "image": {
+    "page": "royal-clima",
+    "file": "felicita-heat-pump-1.webp"
+   }
+  },
+  {
+   "id": "royal-clima-felicita-inverter",
+   "title": "Royal Clima FELICITA Inverter",
+   "brand": "Royal Clima",
+   "type": "wall",
+   "url": "/projects/royal-clima/felicita-inverter/",
+   "page": "royal-clima",
+   "sid": "felicita-inverter",
+   "models": 8,
+   "priceMin": 31990,
+   "priceMax": 90190,
+   "tech": "yes",
+   "hp": "yes",
+   "kwMin": 2.35,
+   "kwMax": 7.65,
+   "noiseMin": 20.0,
+   "eff": [
+    "A",
+    "A++"
+   ],
+   "image": {
+    "page": "royal-clima",
+    "file": "felicita-inverter-1.webp"
+   }
+  },
+  {
+   "id": "royal-clima-felicita",
+   "title": "Royal Clima FELICITA",
+   "brand": "Royal Clima",
+   "type": "wall",
+   "url": "/projects/royal-clima/felicita/",
+   "page": "royal-clima",
+   "sid": "felicita",
+   "models": 5,
+   "priceMin": 27390,
+   "priceMax": 79590,
+   "tech": "no",
+   "hp": "yes",
+   "kwMin": 2.4,
+   "kwMax": 7.15,
+   "noiseMin": 23.0,
+   "eff": [
+    "A"
+   ],
+   "image": {
+    "page": "royal-clima",
+    "file": "felicita-1.webp"
    }
   },
   {

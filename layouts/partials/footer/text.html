@@ -22,7 +22,7 @@
                 <li><a href="/#offer">Что мы предлагаем</a></li>
                 <li><a href="/blog/">Блог</a></li>
                 {{- /* страницы услуг и условий: ссылка появляется, когда страница опубликована (без noindex) */}}
-                {{- range slice "/optom" "/montazh-i-raschet" "/dostavka-i-oplata" "/garantiya" }}{{ with site.GetPage . }}{{ if not .Params.noindex }}
+                {{- range slice "/montazh" "/optom" "/dostavka-i-oplata" "/garantiya" }}{{ with site.GetPage . }}{{ if not .Params.noindex }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{- end }}{{ end }}{{ end }}
                 <li><a href="/kontakty/">Контакты</a></li>

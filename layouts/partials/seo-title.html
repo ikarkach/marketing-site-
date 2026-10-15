@@ -4,6 +4,6 @@
 {{- with .Params.seoTitle }}{{ . }}{{ else }}
 {{- $t := .Title | plainify }}
 {{- if eq .Title site.Title }}{{ $t }}
-{{- else if and (in (slice "projects" "montazh-i-raschet" "dostavka-i-oplata" "garantiya" "optom") .Section) (not (strings.Contains $t "Краснодар")) }}{{ $t }} в Краснодаре | {{ site.Title }}
+{{- else if and (in (slice "projects" "montazh" "dostavka-i-oplata" "garantiya" "optom") .Section) (not (strings.Contains $t "Краснодар")) }}{{ $t }} в Краснодаре | {{ site.Title }}
 {{- else }}{{ $t }} | {{ site.Title }}{{ end }}
 {{- end -}}

@@ -7,7 +7,8 @@
             {{- range .Params.services }}
             <div class="hs-card">
                 <span class="hs-ico">{{ partial "icon.html" .icon }}</span>
-                <h3 class="hs-card__title">{{ .title }}</h3>
+                {{- $t := .title }}
+                <h3 class="hs-card__title">{{ with .url }}<a class="hs-card__link" href="{{ . }}">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}</h3>
                 <p class="hs-card__text">{{ .text }}</p>
             </div>
             {{- end }}

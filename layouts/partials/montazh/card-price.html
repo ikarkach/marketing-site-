@@ -1,0 +1,9 @@
+{{- /* Строка «Монтаж — от … ₽» для карточки серии: только для типов из data/montazh_prices.yaml → cards (настенные, полупромышленные).
+       Вход: тип серии (wall, semi, …). Ссылка ведёт на /montazh/. */ -}}
+{{- $d := hugo.Data.montazh_prices }}
+{{- with index $d.cards . }}
+{{- $id := . }}
+{{- range $d.groups }}{{ range .rows }}{{ if and (eq .id $id) (not .utochnit) }}
+<a class="series-card__mount" href="/montazh/">Монтаж — от {{ partial "rub.html" .price }}</a>
+{{- end }}{{ end }}{{ end }}
+{{- end -}}

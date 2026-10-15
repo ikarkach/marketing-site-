@@ -35,4 +35,6 @@
         </span>
         {{- if $s.priceMin }}<span class="series-card__price">от {{ partial "rub.html" $s.priceMin }}</span>{{ else }}<span class="series-card__price series-card__price--none">Цена по запросу</span>{{ end }}
     </a>
+    {{- /* строка «Монтаж — от … ₽» (настенные и полупромышленные; цена — data/montazh_prices.yaml) — вне ссылки карточки */}}
+    {{- partial "montazh/card-price.html" $s.type }}
 </li>

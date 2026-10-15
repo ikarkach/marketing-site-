@@ -1,10 +1,10 @@
 {{- /* {{< faq >}}: блок «Вопросы и ответы» из параметра faq во front matter (список {q, a}; a — Markdown)
-       + разметка FAQPage (JSON-LD). Вопросы, в ответе которых есть «ЗАПОЛНИТЬ», не выводятся. */ -}}
+       + разметка FAQPage (JSON-LD). Не выводятся вопросы с draft: true и с «ЗАПОЛНИТЬ» / «УТОЧНИТЬ» в ответе. */ -}}
 {{- $items := slice }}
-{{- range .Page.Params.faq }}{{ if not (strings.Contains .a "ЗАПОЛНИТЬ") }}{{ $items = $items | append . }}{{ end }}{{ end }}
+{{- range .Page.Params.faq }}{{ if not (or .draft (strings.Contains .a "ЗАПОЛНИТЬ") (strings.Contains .a "УТОЧНИТЬ")) }}{{ $items = $items | append . }}{{ end }}{{ end }}
 {{- with $items }}
 <section class="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Вопросы и ответы</h2>
+    <h2 id="faq-title">{{ $.Page.Params.faqTitle | default "Вопросы и ответы" }}</h2>
     {{- range . }}
     <details class="faq__item">
         <summary>{{ .q }}</summary>

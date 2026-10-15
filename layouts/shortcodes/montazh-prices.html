@@ -1,0 +1,35 @@
+{{- /* {{< montazh-prices >}}: таблицы цен на монтаж из data/montazh_prices.yaml (строки с utochnit не выводятся).
+       Разметка как у таблиц прайса: на телефоне строки превращаются в карточки (стили .markdown .table-wrap). */ -}}
+{{- $d := hugo.Data.montazh_prices }}
+{{- with $d.updated }}<p class="montazh-updated">Цены актуальны на {{ . }} г.</p>{{ end }}
+{{- range $g := $d.groups }}
+{{- $rows := partial "montazh/rows.html" $g }}
+{{- if $rows }}
+<h3 id="ceny-{{ $g.id }}">{{ $g.title }}</h3>
+<div class="table-wrap">
+<table>
+    <thead>
+        <tr>
+        {{- if $g.columns }}{{ range $g.columns }}<th>{{ . }}</th>{{ end }}{{ else }}<th>Работа</th><th>Цена</th>{{ end }}
+        </tr>
+    </thead>
+    <tbody>
+    {{- range $rows }}
+        <tr>
+        {{- if $g.columns }}
+            <td data-label="{{ index $g.columns 0 }}">{{ .name }}</td>
+            <td data-label="{{ index $g.columns 1 }}">{{ .power }}</td>
+            <td data-label="{{ index $g.columns 2 }}">{{ .area }}</td>
+            <td data-label="{{ index $g.columns 3 }}" class="is-price">{{ partial "montazh/price.html" . }}</td>
+        {{- else }}
+            <td data-label="Работа">{{ .name }}</td>
+            <td data-label="Цена" class="is-price">{{ partial "montazh/price.html" . }}</td>
+        {{- end }}
+        </tr>
+    {{- end }}
+    </tbody>
+</table>
+</div>
+{{- with $g.note }}<p class="montazh-note">{{ . }}</p>{{ end }}
+{{- end }}
+{{- end }}

@@ -648,3 +648,43 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 
 /* ссылки в тексте страниц каталога — фирменный синий вместо бирюзового цвета темы */
 .page-projects .markdown a:not([class]) { color: var(--c-primary-text); }
+
+/* ---------- страница «Монтаж кондиционеров» (layouts/montazh/single.html) ---------- */
+.montazh-hero { padding: 24px 0 8px; }
+.montazh-hero__lead { max-width: 70ch; margin: 0 0 18px; font-size: 18px; line-height: 1.55; color: #10233d; }
+.montazh-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.montazh-hero__btn { min-height: 48px; padding: 0 28px; font-size: 15px; }
+.montazh-hero__phone { font: 600 22px/1.2 var(--font-head); color: #10233d !important; text-decoration: none; white-space: nowrap; }
+.montazh-hero .cta--inline { justify-content: flex-start; margin: 16px 0 0; }
+.montazh-adv { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+.montazh-adv li { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 8px 14px; font: 500 14px/1.3 var(--font-head); color: #10233d; background: var(--c-primary-light); border-radius: 999px; }
+.montazh-adv li::before { content: ""; flex: none; width: 14px; height: 8px; margin-top: -3px; border-left: 2px solid var(--c-primary); border-bottom: 2px solid var(--c-primary); transform: rotate(-45deg); }
+.montazh-text { max-width: 100%; padding-top: 8px; font-size: 17px; line-height: 1.6; }
+.montazh-text > p, .montazh-text > ul, .montazh-text > h2, .montazh-text > h3 { max-width: 75ch; }
+.montazh-text h2 { margin: 40px 0 14px; font: 600 26px/1.25 var(--font-head); color: #10233d; }
+.montazh-text h3 { margin: 28px 0 10px; font: 600 19px/1.35 var(--font-head); color: #10233d; }
+.montazh-text h2 a, .montazh-text h3 a { color: inherit; text-decoration: none; }
+.montazh-updated { margin: -4px 0 8px; font-size: 14px; color: var(--muted); }
+.montazh-note { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.montazh-text .table-wrap { max-width: 900px; }
+.montazh-callout { margin: 24px 0 0; padding: 16px 20px; max-width: 75ch; background: var(--c-primary-light); border-left: 4px solid var(--c-primary); border-radius: var(--radius); }
+.montazh-address { margin-top: 12px; font-size: 15px; color: var(--muted); }
+@media (max-width: 640px) {
+  .montazh-hero__lead { font-size: 16px; }
+  .montazh-hero__btn { width: 100%; }
+  .montazh-text { font-size: 16px; }
+  .montazh-text h2 { font-size: 22px; }
+}
+/* строка «Монтаж — от … ₽» на карточке серии */
+.series-card__mount { display: block; margin: 0 24px 18px; font: 500 14px/1.3 var(--font-head); color: var(--c-primary-text) !important; text-decoration: none; }
+.series-card__mount:hover { text-decoration: underline; }
+.hs-card__link { color: inherit !important; text-decoration: none; }
+.hs-card__link:hover { color: var(--c-primary-text) !important; text-decoration: underline; }
+.series-card:has(.series-card__mount) { display: flex; flex-direction: column; }
+.series-card:has(.series-card__mount) .series-card__link { flex: 1 1 auto; height: auto; }
+/* таблицы-карточки на телефоне: длинное название в заголовке карточки переносится, а не обрезается */
+@media (max-width: 640px) {
+  .markdown .table-wrap td:first-child { display: block; white-space: normal; overflow-wrap: anywhere; }
+}
+/* страница монтажа: кнопки связи в тексте — по левому краю, как текст */
+.montazh-text .cta { justify-content: flex-start; }

@@ -64,10 +64,10 @@
   url: /price/
   active: /price/
 
-# Страница монтажа — /montazh/ (content/montazh). Отдельный пункт верхнего меню при необходимости — раскомментируйте ниже:
-# - title: Монтаж
-#   url: /montazh/
-#   active: /montazh/
+# Страница монтажа — /montazh/ (content/montazh)
+- title: Монтаж
+  url: /montazh/
+  active: /montazh/
 
 - title: Компания
   active: ""

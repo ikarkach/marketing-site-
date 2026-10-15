@@ -107,6 +107,13 @@ h1, h2, h3, .title, .bold-title, .nav-link, .nav-toggle, .chip, .btn { font-fami
 .mega__promo-more { margin-top: auto; font: 600 14px var(--font-head); color: #fff !important; text-decoration: none !important; }
 .mega__promo-more:hover { text-decoration: underline !important; }
 
+/* узкий десктоп: шесть пунктов меню, телефон и кнопка в одну строку */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .site-header__bar { gap: 12px; }
+  .nav-link, .nav-toggle { padding: 0 9px; }
+  .site-header__actions { gap: 12px; }
+}
+
 /* ---------- мобильное меню (до 1023 px) ---------- */
 @media (max-width: 1023px) {
   :root { --header-h: 56px; }
@@ -394,6 +401,8 @@ a.hs-direction__title:hover .icon, .hs__more:hover .icon { transform: translateX
 .hs-contacts { margin-top: 32px; }
 .hs-contact { display: flex; gap: 14px; font-size: 16px; line-height: 1.5; }
 .hs-contact strong { display: block; margin: 2px 0 4px; font: 600 15px/1.3 var(--font-head); color: #10233d; }
+.hs-contact > span { min-width: 0; }
+.hs-contact a { overflow-wrap: anywhere; }
 @media (max-width: 1023px) {
   .hs { --hs-pad: 56px; }
   .hs-grid--4, .hs-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }

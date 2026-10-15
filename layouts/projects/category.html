@@ -119,6 +119,7 @@
             <p id="catalog-empty" class="catalog-empty" hidden>По выбранным параметрам серий не найдено. Измените фильтры или позвоните нам: подберём оборудование вручную.</p>
         </div>
     </div>
+    {{ partial "related-posts.html" . }}
 
     {{- /* разметка ItemList для поисковиков */}}
     {{- $items := slice }}

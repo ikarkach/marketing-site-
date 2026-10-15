@@ -1,0 +1,9 @@
+{{- /* Реквизиты из hugo.toml [params.legal]. Пустые поля не выводятся. Вход: dict sep (разделитель перед блоком и между полями). */ -}}
+{{- with site.Params.legal }}
+{{- $parts := slice }}
+{{- with .name }}{{ $parts = $parts | append . }}{{ end }}
+{{- with .inn }}{{ $parts = $parts | append (printf "ИНН %s" .) }}{{ end }}
+{{- with .ogrn }}{{ $parts = $parts | append (printf "%s %s" (cond (eq (len .) 15) "ОГРНИП" "ОГРН") .) }}{{ end }}
+{{- with .address }}{{ $parts = $parts | append . }}{{ end }}
+{{- with $parts }}{{ $.sep }}{{ delimit . $.sep }}{{ end }}
+{{- end -}}

@@ -1,0 +1,44 @@
+{{- /* Посадочная страница-подборка каталога (вместо фильтров ?type=): настенные, инверторные, мульти-сплит, страницы брендов.
+       Серии берутся из тех же данных, что и каталог (partial all-series.html), по условиям из front matter:
+         filter:
+           type: wall | multi | semi | mobile     — тип оборудования
+           tech: inverter                          — инверторные (tech yes или both)
+           brand: Hisense                          — бренд
+       priceUnit: подпись к цене «от …» (по умолчанию «за комплект»; «-» — без подписи).
+       Текст страницы — содержимое .md (в нём можно {{< faq >}}). Карточки, «Полезно знать», ItemList — шаблон. */ -}}
+{{ define "title" }}{{ partial "page-banner.html" (dict "page" .) }}{{ end }}
+
+{{ define "main" }}
+{{- $f := .Params.filter | default dict }}
+{{- $series := slice }}
+{{- $ftype := $f.type | default "" }}{{ $ftech := $f.tech | default "" }}{{ $fbrand := $f.brand | default "" }}
+{{- range partial "all-series.html" . }}
+  {{- $ok := in (slice "wall" "multi" "semi" "mobile") .type }}
+  {{- if and $ftype (ne .type $ftype) }}{{ $ok = false }}{{ end }}
+  {{- if and (eq $ftech "inverter") (not (in (slice "yes" "both") .tech)) }}{{ $ok = false }}{{ end }}
+  {{- if and $fbrand (ne .brand $fbrand) }}{{ $ok = false }}{{ end }}
+  {{- if $ok }}{{ $series = $series | append . }}{{ end }}
+{{- end }}
+{{- if not $series }}{{ errorf "landing %s: по условиям filter не найдено ни одной серии" .RelPermalink }}{{ end }}
+{{- $prices := slice }}{{ range $series }}{{ with .priceMin }}{{ $prices = $prices | append . }}{{ end }}{{ end }}
+<div class="container catalog-page landing-page">
+    <div class="markdown catalog-intro">
+        <p class="landing-summary">В подборке {{ len $series }} {{ partial "plural.html" (dict "n" (len $series) "forms" (slice "серия" "серии" "серий")) }}{{ with $prices }} — цены от {{ partial "rub.html" (index (sort .) 0) }}{{ with $.Params.priceUnit | default "за комплект" }}{{ if ne . "-" }} {{ . }}{{ end }}{{ end }}{{ end }}. Все модели — в <a href="/projects/kondicionery/">каталоге с фильтрами</a>.</p>
+    </div>
+    <ul class="catalog-grid catalog-grid--models">
+    {{- range $i, $s := $series }}
+        {{ partial "series-card.html" (dict "s" $s "i" $i) }}
+    {{- end }}
+    </ul>
+    <div class="markdown landing-text">
+        {{ .Content }}
+    </div>
+    {{ partial "related-posts.html" . }}
+    {{- with site.Params.contact }}
+    <p class="catalog-note">Цены указаны в рублях, рекомендованные розничные. Наличие и актуальную стоимость уточняйте у менеджера по номеру <a href="tel:{{ .phone }}">{{ .phoneDisplay }}</a>.</p>
+    {{- end }}
+    {{- $items := slice }}
+    {{- range $i, $s := $series }}{{ $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $s.title "url" ($s.url | absURL)) }}{{ end }}
+    <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "name" (.Params.h1 | default .Title) "itemListElement" $items | jsonify | safeJS }}</script>
+</div>
+{{ end }}

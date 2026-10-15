@@ -1,2 +1,9 @@
-{{- /* Текст <title> и og:title: seoTitle из front matter, иначе «Заголовок | Usplit» */ -}}
-{{- with .Params.seoTitle }}{{ . }}{{ else }}{{ .Title | plainify }}{{ if ne .Title site.Title }} | {{ site.Title }}{{ end }}{{ end -}}
+{{- /* Текст <title> и og:title.
+       1) seoTitle из front matter (или из data/models.toml для страниц моделей);
+       2) иначе шаблон: для каталога и услуг — «Заголовок в Краснодаре | Usplit» (если города в заголовке нет), для остальных — «Заголовок | Usplit». */ -}}
+{{- with .Params.seoTitle }}{{ . }}{{ else }}
+{{- $t := .Title | plainify }}
+{{- if eq .Title site.Title }}{{ $t }}
+{{- else if and (in (slice "projects" "montazh-i-raschet" "dostavka-i-oplata" "garantiya" "optom") .Section) (not (strings.Contains $t "Краснодар")) }}{{ $t }} в Краснодаре | {{ site.Title }}
+{{- else }}{{ $t }} | {{ site.Title }}{{ end }}
+{{- end -}}

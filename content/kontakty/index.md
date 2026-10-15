@@ -24,3 +24,5 @@ banner: true
 **Телефон:** [8 (960) 477-71-14](tel:+79604777114)
 
 **E-mail:** [karkachev2010@yandex.ru](mailto:karkachev2010@yandex.ru)
+
+{{< legal >}}

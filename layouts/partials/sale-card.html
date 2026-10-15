@@ -15,7 +15,7 @@
             {{- with $it.image }}
             {{- with site.GetPage "/projects/rasprodazha" }}
             {{- with .Resources.GetMatch $it.image }}
-            {{- $r := .Fit "460x300" }}
+            {{- $r := .Fit "460x300 webp" }}
             <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $it.title }}" loading="lazy" decoding="async">
             {{- $shown = true }}
             {{- end }}

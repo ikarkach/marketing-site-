@@ -28,8 +28,18 @@
         {{ end }}
         {{ end }}
         {{ .Content }}
+        {{ partial "related-posts.html" . }}
     </div>
     <!-- End post content -->
+    {{- /* страницы Roland (/projects/favorite-ii/ и др.): разметка Product по ценам из data/catalog.json (блок roland) */}}
+    {{- $base := "" }}{{ with .File }}{{ $base = .ContentBaseName }}{{ end }}
+    {{- range hugo.Data.catalog.roland }}
+    {{- if eq .page $base }}
+    {{- $prices := slice }}{{ range .rows }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}
+    {{- $img := "" }}{{ with $.Resources.GetMatch "photo.*" }}{{ $img = .Permalink }}{{ end }}
+    {{ partial "schema/product.html" (dict "name" .title "brand" "Roland" "prices" $prices "url" $.Permalink "image" $img "description" $.Description) }}
+    {{- end }}
+    {{- end }}
     {{ partial "comments.html" . }}
 {{ end }}
 

@@ -11,6 +11,9 @@ catalog: true
 weight: 1
 priceNote: "действуют с 08.06.2026"
 layout: single
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/pritochno-vytyazhnaya-ventilyaciya/"
 ---
 
 Бризер забирает воздух с улицы, очищает его и подаёт в комнату, поэтому проветривать можно при закрытых окнах.

@@ -1,0 +1,6 @@
+{{- /* {{< legal >}}: блок «Реквизиты» на странице (данные — hugo.toml [params.legal]); пока реквизиты не заполнены, ничего не выводится. */ -}}
+{{- $l := partial "legal.html" (dict "sep" "; ") }}
+{{- with strings.TrimPrefix "; " $l }}
+<h2>Реквизиты</h2>
+<p>{{ . }}</p>
+{{- end }}

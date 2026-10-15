@@ -1,0 +1,8 @@
+{{- /* meta description и og:description.
+       1) description из front matter (или data/models.toml);
+       2) иначе начало текста страницы (до 155 знаков), чтобы не было одинаковых описаний;
+       3) для страниц без текста — общее описание сайта из hugo.toml. */ -}}
+{{- $d := .Description }}
+{{- if not $d }}{{ with .Summary | plainify | strings.TrimSpace }}{{ $d = . | truncate 155 }}{{ end }}{{ end }}
+{{- if not $d }}{{ $d = site.Params.description }}{{ end }}
+{{- $d -}}

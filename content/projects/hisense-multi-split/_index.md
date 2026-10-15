@@ -9,6 +9,10 @@ categoryUrl: "/projects/kondicionery/"
 catalog: true
 layout: single
 weight: 12
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/multi-split-sistemy-kak-vybrat/"
+  - "/blog/vrf-sistemy-kak-vybrat/"
 ---
 
 Мульти-сплит система состоит из одного наружного блока и нескольких внутренних для разных помещений.

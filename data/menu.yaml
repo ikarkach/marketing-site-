@@ -17,7 +17,7 @@
         url: /projects/kondicionery/
         items:
           - title: Настенные сплит-системы
-            url: "/projects/kondicionery/?type=wall"
+            url: /projects/nastennye-kondicionery/
             items:
               - {title: Roland FAVORITE II INVERTER, url: /projects/favorite-ii-inverter/}
               - {title: Roland FAVORITE II, url: /projects/favorite-ii/}
@@ -26,7 +26,7 @@
               - {title: "LG Deluxe Pro, ARTCOOL, ProCool", url: /projects/lg/}
               - {title: "Royal Clima Supremo, Fresh, Felicita", url: /projects/royal-clima/}
           - title: Мульти-сплит системы
-            url: "/projects/kondicionery/?type=multi"
+            url: /projects/multi-split-sistemy/
             items:
               - {title: Hisense мульти-сплит, url: /projects/hisense-multi-split/}
               - {title: LG ProMulti, url: /projects/lg/promulti-2-0/}
@@ -80,6 +80,7 @@
     - {title: Почему Usplit, url: "/#why"}
     - {title: Как начать, url: "/#start"}
     - {title: Для кого мы работаем, url: /blog/dlya-kogo-my-rabotaem/}
+    - {title: Оптом и дилерам, url: /optom/}
 
 - title: Блог
   url: /blog/

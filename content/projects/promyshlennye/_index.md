@@ -2,7 +2,7 @@
 title: "Промышленные кондиционеры"
 seoTitle: "Промышленные кондиционеры Hisense в Краснодаре — цены | Usplit"
 h1: "Промышленные кондиционеры Hisense в Краснодаре — цены"
-description: "Промышленные и полупромышленные кондиционеры Hisense HEAVY: кассетные, канальные, напольно-потолочные, колонные. Цены за комплект. Рассчитаем и подберём — звоните."
+description: "Полупромышленные кондиционеры Hisense HEAVY: кассетные, канальные, напольно-потолочные, колонные. Цены за комплект, расчёт и монтаж в Краснодаре."
 brand: "Hisense"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
@@ -15,6 +15,10 @@ resources:
   - src: kass-1.webp
     params:
       weight: -100
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/vrf-sistemy-kak-vybrat/"
+  - "/blog/kak-podobrat-moshchnost-split-sistemy/"
 ---
 
 Промышленные и полупромышленные кондиционеры Hisense серий HEAVY для офисов, магазинов, кафе и больших помещений:

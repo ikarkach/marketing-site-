@@ -14,3 +14,4 @@ related:
 ---
 
 Подберите кондиционер по бренду, технологии, мощности и цене. Цены указаны за комплект (внутренний и наружный блок), рекомендованные розничные.
+Подборки: [настенные](/projects/nastennye-kondicionery/), [инверторные](/projects/invertornye-kondicionery/) и [мульти-сплит системы](/projects/multi-split-sistemy/). Бренды: [Roland](/projects/roland/), [Hisense](/projects/hisense/), [LG](/projects/lg/), [Royal Clima](/projects/royal-clima/).

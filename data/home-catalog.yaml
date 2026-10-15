@@ -4,7 +4,7 @@
 # Ссылки проверяются при сборке: адрес, которого нет на сайте, останавливает сборку с ошибкой;
 # раздел без моделей не выводится (ни карточка, ни подкатегория).
 - title: Настенные сплит-системы
-  url: "/projects/kondicionery/?type=wall"
+  url: /projects/nastennye-kondicionery/
   photo: wall
   alt: Настенная сплит-система Roland
   items:
@@ -16,7 +16,7 @@
     - {title: "Royal Clima Supremo, Fresh, Felicita", url: /projects/royal-clima/}
 
 - title: Мульти-сплит системы
-  url: "/projects/kondicionery/?type=multi"
+  url: /projects/multi-split-sistemy/
   photo: multi
   alt: Наружный блок мульти-сплит системы LG
   items:

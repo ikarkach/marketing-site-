@@ -1,0 +1,5 @@
+{{- /* Форма слова для числа: partial "plural.html" (dict "n" 5 "forms" (slice "серия" "серии" "серий")) */ -}}
+{{- $n := int .n }}{{ $m10 := mod $n 10 }}{{ $m100 := mod $n 100 }}
+{{- if and (eq $m10 1) (ne $m100 11) }}{{ index .forms 0 }}
+{{- else if and (ge $m10 2) (le $m10 4) (or (lt $m100 12) (gt $m100 14)) }}{{ index .forms 1 }}
+{{- else }}{{ index .forms 2 }}{{ end -}}

@@ -645,3 +645,6 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 .faq__item summary { padding: 14px 18px; font: 600 16px/1.4 var(--font-head); color: #10233d; cursor: pointer; list-style-position: inside; }
 .faq__item[open] summary { border-bottom: 1px solid var(--c-line); }
 .faq__a { padding: 12px 18px 4px; font-size: 16px; line-height: 1.6; }
+
+/* ссылки в тексте страниц каталога — фирменный синий вместо бирюзового цвета темы */
+.page-projects .markdown a:not([class]) { color: var(--c-primary-text); }

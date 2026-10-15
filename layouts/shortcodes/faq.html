@@ -1,0 +1,18 @@
+{{- /* {{< faq >}}: блок «Вопросы и ответы» из параметра faq во front matter (список {q, a}; a — Markdown)
+       + разметка FAQPage (JSON-LD). Вопросы, в ответе которых есть «ЗАПОЛНИТЬ», не выводятся. */ -}}
+{{- $items := slice }}
+{{- range .Page.Params.faq }}{{ if not (strings.Contains .a "ЗАПОЛНИТЬ") }}{{ $items = $items | append . }}{{ end }}{{ end }}
+{{- with $items }}
+<section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Вопросы и ответы</h2>
+    {{- range . }}
+    <details class="faq__item">
+        <summary>{{ .q }}</summary>
+        <div class="faq__a">{{ .a | markdownify }}</div>
+    </details>
+    {{- end }}
+</section>
+{{- $qa := slice }}
+{{- range . }}{{ $qa = $qa | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" (.a | markdownify | plainify))) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $qa | jsonify | safeJS }}</script>
+{{- end }}

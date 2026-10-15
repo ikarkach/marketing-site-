@@ -1,5 +1,5 @@
 {{- $title := partial "seo-title.html" . -}}
-{{- $desc := cond (ne .Description "") .Description .Site.Params.description -}}
+{{- $desc := partial "seo-description.html" . -}}
 {{- $isPost := and .IsPage (eq .Section "blog") -}}
 
 <link rel="canonical" href="{{ .Permalink }}"/>

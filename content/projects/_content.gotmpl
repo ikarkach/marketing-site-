@@ -10,6 +10,10 @@
   {{- $categoryUrl := "/projects/kondicionery/" }}
   {{- if hasPrefix $page "ventilyaciya" }}{{ $category = "Вентиляция" }}{{ $categoryUrl = "/projects/ventilyaciya/" }}{{ end }}
   {{- if hasPrefix $page "osushiteli" }}{{ $category = "Осушители и увлажнители" }}{{ $categoryUrl = "/projects/osushiteli/" }}{{ end }}
+  {{- /* lastmod для sitemap.xml: дата прайса, по которому собраны цены страницы (ДД.ММ.ГГГГ из catalog.json / climate.json) */}}
+  {{- $pd := cond (isset hugo.Data.climate.pages $page) hugo.Data.climate.priceDate hugo.Data.catalog.priceDate }}
+  {{- $parts := split $pd "." }}
+  {{- $lastmod := time.AsTime (printf "%s-%s-%sT00:00:00+03:00" (index $parts 2) (index $parts 1) (index $parts 0)) }}
   {{- range $i, $sec := $secs }}
     {{- with index $meta $sec.id }}
       {{- $m := . }}
@@ -20,6 +24,8 @@
           "title" $m.name
           "description" $m.description
           "weight" (add (mul (index $pageWeight $page | default 60) 100) $i)
+          "dates" (dict "lastmod" $lastmod)
+          "sitemap" (dict "priority" -1)
           "params" (dict
               "seoTitle" $m.seoTitle
               "h1" $m.h1

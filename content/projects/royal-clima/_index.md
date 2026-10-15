@@ -2,7 +2,7 @@
 title: "Royal Clima: настенные сплит-системы"
 seoTitle: "Кондиционеры Royal Clima в Краснодаре — цены на сплит-системы | Usplit"
 h1: "Кондиционеры Royal Clima в Краснодаре — цены на сплит-системы"
-description: "Сплит-системы Royal Clima: флагманская Royal Supremo, Royal Fresh с приточной вентиляцией, Felicita Heat Pump до −30 °C, Felicita инверторная и on/off. Цены за комплект, монтаж в Краснодаре."
+description: "Сплит-системы Royal Clima: Royal Supremo, Royal Fresh с приточной вентиляцией, Felicita Heat Pump до −30 °C, Felicita. Цены и монтаж в Краснодаре."
 brand: "Royal Clima"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"

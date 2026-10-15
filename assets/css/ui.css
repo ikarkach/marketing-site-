@@ -697,3 +697,12 @@ button.series-card__link { width: 100%; font: inherit; text-align: left; cursor:
 }
 /* страница монтажа: кнопки связи в тексте — по левому краю, как текст */
 .montazh-text .cta { justify-content: flex-start; }
+/* страница монтажа: все таблицы одной ширины, столбец цены одинаковый — границы совпадают по вертикали */
+@media (min-width: 641px) {
+  .montazh-text .table-wrap table { width: 100%; table-layout: fixed; }
+  .montazh-text .table-wrap td:first-child { white-space: normal; }
+  .montazh-text .table-wrap td { vertical-align: middle; }
+  .montazh-text .table-wrap th:last-child, .montazh-text .table-wrap td:last-child { width: 180px; }
+  .montazh-text .table-wrap th:nth-child(2):not(:last-child) { width: 120px; }
+  .montazh-text .table-wrap th:nth-child(3):not(:last-child) { width: 160px; }
+}

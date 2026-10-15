@@ -18,10 +18,10 @@
     <body class="page-{{ with .Section }}{{ . }}{{ else }}home{{ end }}{{ if .Params.banner }} is-text-page{{ end }}">
         {{ partial "body-analytics.html" . }}
         {{ partial "site-header.html" . }}
-        {{- $banner := or .Params.banner (in (slice "projects" "price" "kontakty" "montazh-i-raschet" "blog") .Section) }}
+        {{- $banner := or .Params.banner (in (slice "projects" "price" "kontakty" "montazh" "blog") .Section) }}
         <main id="main">
             {{ block "title" . }}
-            {{- $banner := or .Params.banner (in (slice "projects" "price" "kontakty" "montazh-i-raschet" "blog") .Section) }}
+            {{- $banner := or .Params.banner (in (slice "projects" "price" "kontakty" "montazh" "blog") .Section) }}
             {{- if $banner }}
             {{ partial "page-banner.html" (dict "page" .) }}
             {{- else }}

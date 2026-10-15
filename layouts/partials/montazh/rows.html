@@ -1,0 +1,4 @@
+{{- /* Опубликованные строки группы цен: без строк с полем utochnit. Вход: группа. Возвращает слайс. */ -}}
+{{- $out := slice }}
+{{- range .rows }}{{ if not .utochnit }}{{ $out = $out | append . }}{{ end }}{{ end }}
+{{- return $out -}}

@@ -1,0 +1,38 @@
+{{- /* Страница «Монтаж кондиционеров» (/montazh/). Текст — content/montazh/index.md, цены — data/montazh_prices.yaml
+       (таблицы — шорткод montazh-prices, разметка Service — ниже), вопросы — faq во front matter (шорткод faq).
+       Первый экран: подзаголовок (lead), кнопки, плашки преимуществ (advantages). */ -}}
+{{ define "main" }}
+<div class="container montazh-page">
+    <div class="montazh-hero">
+        {{- with .Params.lead }}<p class="montazh-hero__lead">{{ . }}</p>{{ end }}
+        <div class="montazh-hero__actions">
+            <button type="button" class="btn btn--primary montazh-hero__btn js-lead" data-lead="Расчёт стоимости монтажа кондиционера">Рассчитать стоимость</button>
+            {{- with site.Params.contact }}<a class="montazh-hero__phone" href="tel:{{ .phone }}" data-goal="call_click">{{ .phoneDisplay }}</a>{{ end }}
+        </div>
+        {{ partial "contact-buttons.html" (dict "variant" "inline") }}
+        {{- with .Params.advantages }}
+        <ul class="montazh-adv">
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{- end }}
+    </div>
+    <div class="markdown montazh-text">
+        {{ .Content }}
+    </div>
+</div>
+
+{{- /* JSON-LD Service: исполнитель — организация сайта, цены — опубликованные строки data/montazh_prices.yaml */}}
+{{- $offers := slice }}
+{{- range hugo.Data.montazh_prices.groups }}
+{{- range partial "montazh/rows.html" . }}
+{{- $name := .name }}{{ with .power }}{{ if ne . "—" }}{{ $name = printf "%s %s" $name . }}{{ end }}{{ end }}
+{{- $o := dict "@type" "Offer" "name" $name "priceCurrency" "RUB" "url" $.Permalink }}
+{{- if .from }}{{ $o = merge $o (dict "priceSpecification" (dict "@type" "PriceSpecification" "minPrice" (string (int .price)) "priceCurrency" "RUB")) }}{{ else }}{{ $o = merge $o (dict "price" (string (int .price))) }}{{ end }}
+{{- $offers = $offers | append $o }}
+{{- end }}
+{{- end }}
+{{- $b := site.Params.business }}
+{{- $provider := dict "@type" "HVACBusiness" "name" $b.name "url" site.Home.Permalink "telephone" site.Params.contact.phone "address" (dict "@type" "PostalAddress" "addressLocality" $b.city "addressRegion" $b.region "streetAddress" $b.streetAddress "addressCountry" $b.country) }}
+{{- $svc := dict "@context" "https://schema.org" "@type" "Service" "serviceType" "Монтаж кондиционеров" "name" (.Params.h1 | default .Title) "description" (partial "seo-description.html" .) "url" .Permalink "provider" $provider "areaServed" (slice (dict "@type" "City" "name" "Краснодар") (dict "@type" "AdministrativeArea" "name" "Краснодарский край")) "offers" $offers }}
+<script type="application/ld+json">{{ $svc | jsonify | safeJS }}</script>
+{{ end }}

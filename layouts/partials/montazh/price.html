@@ -1,0 +1,2 @@
+{{- /* Цена строки из data/montazh_prices.yaml: «от 7 000 ₽», «2 200 ₽/м», «от 8 ₽/г». Вход: строка (dict). */ -}}
+{{- if .from }}от {{ end }}{{ partial "rub.html" .price | strings.TrimSpace | safeHTML }}{{ with .unit }}{{ strings.TrimPrefix "₽" . }}{{ end -}}

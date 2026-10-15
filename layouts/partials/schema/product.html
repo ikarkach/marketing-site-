@@ -1,0 +1,10 @@
+{{- /* JSON-LD Product с диапазоном розничных цен. Вход: dict name, brand, prices (слайс цен, ₽), url, image (абс. адрес, необяз.), description (необяз.).
+       Без цен ничего не выводится: Product без offers поисковики считают ошибкой. */ -}}
+{{- with .prices }}
+{{- $p := sort . }}
+{{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (index $p 0) "highPrice" (index $p (sub (len $p) 1)) "offerCount" (len $p) "url" $.url }}
+{{- $prod := dict "@context" "https://schema.org" "@type" "Product" "name" $.name "brand" (dict "@type" "Brand" "name" $.brand) "offers" $offer "url" $.url }}
+{{- with $.image }}{{ $prod = merge $prod (dict "image" .) }}{{ end }}
+{{- with $.description }}{{ $prod = merge $prod (dict "description" .) }}{{ end }}
+<script type="application/ld+json">{{ $prod | jsonify | safeJS }}</script>
+{{- end }}

@@ -7,6 +7,9 @@ brand: "Вентиляция и осушители"
 weight: 5
 priceNote: "действуют: Royal Clima с 08.06.2026, Hisense с 15.09.2026"
 layout: single
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/osushiteli-dlya-vlazhnyh-pomeshcheniy-i-basseynov/"
 ---
 
 Контроль влажности воздуха в квартире, доме, на складе и у бассейна: бытовые осушители и модели для больших помещений.

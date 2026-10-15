@@ -11,6 +11,9 @@ catalog: true
 weight: 3
 priceNote: "действуют с 08.06.2026"
 layout: single
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/pritochno-vytyazhnaya-ventilyaciya/"
 ---
 
 Такие установки одновременно подают свежий воздух и удаляют отработанный, а рекуператор возвращает часть тепла, чтобы зимой не терять его с вытяжкой.

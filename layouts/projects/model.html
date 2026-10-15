@@ -27,7 +27,7 @@
         {{- with $sec.images }}
         <div class="model-gallery">
             {{- range $ii, $img := . }}{{ with $parent.Resources.GetMatch $img.file }}
-            {{- $r := .Fit "640x420" }}
+            {{- $r := .Fit "640x420 webp" }}
             <figure><img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $img.alt }}"{{ if eq $ii 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async"></figure>
             {{- end }}{{ end }}
         </div>
@@ -83,6 +83,7 @@
         </ul>
     </section>
     {{- end }}
+    {{ partial "related-posts.html" . }}
     <p class="model-back"><a href="{{ $parent.RelPermalink }}">← Все модели раздела «{{ $parent.Title }}»</a> · <a href="{{ .Params.categoryUrl | relURL }}">{{ if eq .Params.category "Кондиционеры" }}Каталог кондиционеров с фильтрами{{ else }}Раздел «{{ .Params.category }}»{{ end }}</a></p>
 
     {{- with site.Params.contact }}
@@ -94,10 +95,7 @@
     {{- $img := "" }}
     {{- with $sec.images }}{{ with $parent.Resources.GetMatch (index . 0).file }}{{ $img = .Permalink }}{{ end }}{{ end }}
     {{- if $gal }}{{ $img = printf "%s/01.webp" $gal.dir | absURL }}{{ end }}
-    {{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (index (sort $prices) 0) "highPrice" (index (sort $prices "value" "desc") 0) "offerCount" (len $prices) "url" .Permalink }}
-    {{- $prod := dict "@context" "https://schema.org" "@type" "Product" "name" (printf "%s %s" $brand $m.name) "brand" (dict "@type" "Brand" "name" $brand) "offers" $offer "url" .Permalink }}
-    {{- if $img }}{{ $prod = merge $prod (dict "image" $img) }}{{ end }}
-    <script type="application/ld+json">{{ $prod | jsonify | safeJS }}</script>
+    {{ partial "schema/product.html" (dict "name" (printf "%s %s" $brand $m.name) "brand" $brand "prices" $prices "url" .Permalink "image" $img "description" $m.description) }}
     {{- end }}
 </div>
 {{ end }}

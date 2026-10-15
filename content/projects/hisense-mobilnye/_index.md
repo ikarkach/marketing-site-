@@ -13,6 +13,9 @@ resources:
   - src: mobile-v-1.webp
     params:
       weight: -100
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/kak-podobrat-moshchnost-split-sistemy/"
 ---
 
 Мобильные кондиционеры Hisense для квартир и небольших помещений: серии V, W и C. Цены указаны за один прибор.

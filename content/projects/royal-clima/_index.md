@@ -10,6 +10,10 @@ catalog: true
 layout: single
 weight: 21
 priceNote: "действуют с 08.06.2026"
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/kak-podobrat-moshchnost-split-sistemy/"
+  - "/blog/pritochno-vytyazhnaya-ventilyaciya/"
 ---
 
 Настенные сплит-системы Royal Clima: флагманская инверторная серия Royal Supremo, Royal Fresh со встроенной

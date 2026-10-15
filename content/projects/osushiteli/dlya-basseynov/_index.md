@@ -11,6 +11,9 @@ catalog: true
 weight: 2
 priceNote: "действуют с 08.06.2026"
 layout: single
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/osushiteli-dlya-vlazhnyh-pomeshcheniy-i-basseynov/"
 ---
 
 Для бассейнов, спа-зон и помещений с высокой влажностью нужны приборы с большой производительностью.

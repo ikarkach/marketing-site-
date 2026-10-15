@@ -13,6 +13,9 @@ resources:
   - src: sensation-1.webp
     params:
       weight: -100
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/kak-podobrat-moshchnost-split-sistemy/"
 ---
 
 Настенные сплит-системы Hisense для квартир, домов и небольших офисов: от недорогих классических моделей

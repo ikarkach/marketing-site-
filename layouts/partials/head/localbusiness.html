@@ -20,6 +20,10 @@
     "areaServed" (slice (dict "@type" "City" "name" $b.city) (dict "@type" "Country" "name" "Россия"))
 }}
 {{- with $b.openingHours }}{{ $data = merge $data (dict "openingHours" .) }}{{ end }}
+{{- if and $b.latitude $b.longitude }}{{ $data = merge $data (dict "geo" (dict "@type" "GeoCoordinates" "latitude" $b.latitude "longitude" $b.longitude)) }}{{ end }}
+{{- with $b.mapUrl }}{{ $data = merge $data (dict "hasMap" .) }}{{ end }}
+{{- with $b.sameAs }}{{ $data = merge $data (dict "sameAs" .) }}{{ end }}
+{{- with site.Params.contact }}{{ $data = merge $data (dict "contactPoint" (dict "@type" "ContactPoint" "telephone" .phone "contactType" "sales" "areaServed" "RU" "availableLanguage" "Russian")) }}{{ end }}
 <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
 {{- end }}
 {{- end }}

@@ -7,6 +7,9 @@ brand: "Вентиляция и осушители"
 weight: 4
 priceNote: "действуют с 08.06.2026"
 layout: single
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/pritochno-vytyazhnaya-ventilyaciya/"
 ---
 
 Свежий воздух в квартире, доме и офисе: бризеры, приточные установки и приточно-вытяжные системы с рекуперацией тепла.

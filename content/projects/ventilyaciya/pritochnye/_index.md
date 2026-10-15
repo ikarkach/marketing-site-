@@ -11,6 +11,9 @@ catalog: true
 weight: 2
 priceNote: "действуют с 08.06.2026"
 layout: single
+# статьи блога в блоке «Полезно знать» (layouts/partials/related-posts.html)
+related:
+  - "/blog/pritochno-vytyazhnaya-ventilyaciya/"
 ---
 
 Приточная установка подаёт в помещение очищенный наружный воздух и при необходимости подогревает его электрическим нагревателем.

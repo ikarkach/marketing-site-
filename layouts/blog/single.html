@@ -1,8 +1,6 @@
 {{ define "main" }}
 <div class="container">
-    <h2 class="title is-1 top-pad strong-post-title">
-        <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-    </h2>
+    {{- /* название статьи — H1 в баннере (page-banner.html); здесь не дублируем */}}
     {{ if .Params.author }}
     <h4 class="title is-4">
         {{ $data := .Params.author }}

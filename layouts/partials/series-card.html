@@ -11,7 +11,7 @@
             {{- $pg := site.GetPage (printf "/projects/%s" .page) }}
             {{- with $pg }}
             {{- with .Resources.GetMatch $s.image.file }}
-            {{- $r := .Fit "460x300" }}
+            {{- $r := .Fit "460x300 webp" }}
             <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $s.title }}"{{ if lt (int $.i) 3 }}{{ if eq (int $.i) 0 }} fetchpriority="high"{{ end }}{{ else }} loading="lazy"{{ end }} decoding="async">
             {{- $shown = true }}
             {{- end }}

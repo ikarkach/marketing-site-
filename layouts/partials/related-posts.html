@@ -1,0 +1,17 @@
+{{- /* «Полезно знать»: статьи блога по теме раздела каталога. Список — параметр related во front matter раздела
+       (пути статей, например /blog/multi-split-sistemy-kak-vybrat/). Страницы моделей берут список у своего раздела (parentPage). */ -}}
+{{- $p := . }}
+{{- $list := $p.Params.related }}
+{{- if and (not $list) $p.Params.parentPage }}{{ with site.GetPage $p.Params.parentPage }}{{ $list = .Params.related }}{{ end }}{{ end }}
+{{- $posts := slice }}
+{{- range $list }}{{ with site.GetPage (strings.TrimSuffix "/" .) }}{{ $posts = $posts | append . }}{{ else }}{{ errorf "related: нет статьи %q (%s)" . $p.RelPermalink }}{{ end }}{{ end }}
+{{- with $posts }}
+<aside class="related-posts" aria-labelledby="related-posts-title">
+    <h2 class="related-posts__title" id="related-posts-title">Полезно знать</h2>
+    <ul class="related-posts__list">
+        {{- range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<span>{{ . }}</span>{{ end }}</li>
+        {{- end }}
+    </ul>
+</aside>
+{{- end }}

@@ -1,7 +1,7 @@
 # Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
 brand: "roland"
 tables:
-  - title: "FAVORITE II"
+  - title: ""
     source: "https://breez.ru/products/classic-favorite-2-2024/"
     models: ["FU-07HSS010/N6", "FU-09HSS010/N6", "FU-12HSS010/N6", "FU-18HSS010/N6", "FU-24HSS010/N6"]
     groups:

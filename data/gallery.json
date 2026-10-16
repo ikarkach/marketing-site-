@@ -1121,5 +1121,222 @@
     "alt": "Мобильный кондиционер Hisense серии V — пульт управления"
    }
   ]
+ },
+ "royal-clima/royal-supremo": {
+  "dir": "/images/models/royal-clima/royal-supremo",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид спереди, Blanco (белый)"
+   },
+   {
+    "n": "02",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид под углом, Blanco (белый)"
+   },
+   {
+    "n": "03",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид под углом, Blanco (белый)"
+   },
+   {
+    "n": "04",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид сбоку, Blanco (белый)"
+   },
+   {
+    "n": "05",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид спереди, Nero (чёрный)"
+   },
+   {
+    "n": "06",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид под углом, Nero (чёрный)"
+   },
+   {
+    "n": "07",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид под углом, Nero (чёрный)"
+   },
+   {
+    "n": "08",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид сбоку, Nero (чёрный)"
+   },
+   {
+    "n": "09",
+    "alt": "Royal Clima ROYAL SUPREMO — наружный блок"
+   },
+   {
+    "n": "10",
+    "alt": "Royal Clima ROYAL SUPREMO — пульт управления, Blanco (белый)"
+   },
+   {
+    "n": "11",
+    "alt": "Royal Clima ROYAL SUPREMO — пульт управления, Nero (чёрный)"
+   },
+   {
+    "n": "12",
+    "alt": "Royal Clima ROYAL SUPREMO — внутренний блок, вид сверху, Blanco (белый)"
+   }
+  ]
+ },
+ "royal-clima/royal-fresh": {
+  "dir": "/images/models/royal-clima/royal-fresh",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид спереди, Royal Fresh"
+   },
+   {
+    "n": "02",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид под углом, Royal Fresh"
+   },
+   {
+    "n": "03",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид под углом, Royal Fresh"
+   },
+   {
+    "n": "04",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид сбоку, Royal Fresh"
+   },
+   {
+    "n": "05",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид спереди, Royal Fresh Standard"
+   },
+   {
+    "n": "06",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид под углом, Royal Fresh Standard"
+   },
+   {
+    "n": "07",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид под углом, Royal Fresh Standard"
+   },
+   {
+    "n": "08",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид под углом, Royal Fresh Standard"
+   },
+   {
+    "n": "09",
+    "alt": "Royal Clima ROYAL FRESH — наружный блок"
+   },
+   {
+    "n": "10",
+    "alt": "Royal Clima ROYAL FRESH — пульт управления, Royal Fresh"
+   },
+   {
+    "n": "11",
+    "alt": "Royal Clima ROYAL FRESH — пульт управления, Royal Fresh Standard"
+   },
+   {
+    "n": "12",
+    "alt": "Royal Clima ROYAL FRESH — внутренний блок, вид сверху, Royal Fresh"
+   }
+  ]
+ },
+ "royal-clima/felicita": {
+  "dir": "/images/models/royal-clima/felicita",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Royal Clima FELICITA — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Royal Clima FELICITA — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Royal Clima FELICITA — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Royal Clima FELICITA — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Royal Clima FELICITA — внутренний блок, вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Royal Clima FELICITA — внутренний блок, панель открыта"
+   },
+   {
+    "n": "07",
+    "alt": "Royal Clima FELICITA — наружный блок"
+   },
+   {
+    "n": "08",
+    "alt": "Royal Clima FELICITA — пульт управления"
+   }
+  ]
+ },
+ "royal-clima/felicita-inverter": {
+  "dir": "/images/models/royal-clima/felicita-inverter",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Royal Clima FELICITA Inverter — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Royal Clima FELICITA Inverter — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Royal Clima FELICITA Inverter — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Royal Clima FELICITA Inverter — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Royal Clima FELICITA Inverter — внутренний блок, вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Royal Clima FELICITA Inverter — внутренний блок, панель открыта"
+   },
+   {
+    "n": "07",
+    "alt": "Royal Clima FELICITA Inverter — наружный блок"
+   },
+   {
+    "n": "08",
+    "alt": "Royal Clima FELICITA Inverter — пульт управления"
+   }
+  ]
+ },
+ "royal-clima/felicita-heat-pump": {
+  "dir": "/images/models/royal-clima/felicita-heat-pump",
+  "items": [
+   {
+    "n": "01",
+    "alt": "Royal Clima FELICITA HEAT PUMP — внутренний блок, вид спереди"
+   },
+   {
+    "n": "02",
+    "alt": "Royal Clima FELICITA HEAT PUMP — внутренний блок, вид под углом"
+   },
+   {
+    "n": "03",
+    "alt": "Royal Clima FELICITA HEAT PUMP — внутренний блок, вид под углом"
+   },
+   {
+    "n": "04",
+    "alt": "Royal Clima FELICITA HEAT PUMP — внутренний блок, вид под углом"
+   },
+   {
+    "n": "05",
+    "alt": "Royal Clima FELICITA HEAT PUMP — внутренний блок, вид сбоку"
+   },
+   {
+    "n": "06",
+    "alt": "Royal Clima FELICITA HEAT PUMP — внутренний блок, панель открыта"
+   },
+   {
+    "n": "07",
+    "alt": "Royal Clima FELICITA HEAT PUMP — наружный блок"
+   },
+   {
+    "n": "08",
+    "alt": "Royal Clima FELICITA HEAT PUMP — пульт управления"
+   }
+  ]
  }
 }

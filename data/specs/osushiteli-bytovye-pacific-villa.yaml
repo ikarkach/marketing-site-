@@ -1,0 +1,68 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/pacific-villa/"
+    models: ["RD-PC-40-E"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["RD-PC40-E"]
+          - label: "Серия"
+            values: ["PACIFIC"]
+          - label: "Цвет прибора"
+            values: ["белый"]
+          - label: "Страна производства"
+            values: ["КНР"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["57"]
+          - label: "Объем бака, л"
+            values: ["5,1"]
+      - name: "Производительность"
+        rows:
+          - label: "Производительность по осушению, л/сутки"
+            values: ["40"]
+          - label: "Номинальная потребляемая мощность, кВт"
+            values: ["0,535"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["≤ 46"]
+          - label: "Расход воздуха прибора, м³/ч"
+            values: ["180"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["220-240/50/1"]
+          - label: "Номинальный ток, А"
+            values: ["2,5"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["368×620×256"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["421×665×310"]
+          - label: "Тип хладагента"
+            values: ["R290"]
+          - label: "Заводская заправка хладагента, г"
+            values: ["120"]
+      - name: "Безопасность"
+        rows:
+          - label: "Класс защиты от влаги"
+            values: ["IPX0"]
+          - label: "Класс электрозащиты"
+            values: ["I"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["17,5"]
+          - label: "Вес брутто, кг"
+            values: ["19"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["5 ~ 35"]
+docs:
+  - title: "Инструкция Осушитель воздуха серии PACIFIC Villa"
+    file: "/docs/royal-clima/pacific-villa/royal-clima-pacific-villa-instrukciya.pdf"
+    size: 2680940
+    kind: "instrukciya"

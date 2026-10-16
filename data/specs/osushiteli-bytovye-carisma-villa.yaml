@@ -1,0 +1,68 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/carisma-villa-rd-cr/"
+    models: ["RD-CR30-E", "RD-CR40-E"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA", "ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["RD-CR30-E", "RD-CR40-E"]
+          - label: "Серия"
+            values: ["Carisma", "Carisma"]
+          - label: "Цвет прибора"
+            values: ["белый", "белый"]
+          - label: "Страна производства"
+            values: ["КНР", "КНР"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["43", "57"]
+          - label: "Объем бака, л"
+            values: ["4", "4"]
+      - name: "Производительность"
+        rows:
+          - label: "Производительность по осушению, л/сутки"
+            values: ["30", "40"]
+          - label: "Номинальная потребляемая мощность, кВт"
+            values: ["0,52", "0,68"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["≤53", "≤53"]
+          - label: "Расход воздуха прибора, м³/ч"
+            values: ["180", "180"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["220-240/50/1", "220-240/50/1"]
+          - label: "Номинальный ток, А"
+            values: ["2", "2,26"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["350×500×260", "350×500×260"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["394×523×310", "394×523×310"]
+          - label: "Тип хладагента"
+            values: ["R290", "R290"]
+          - label: "Заводская заправка хладагента, г"
+            values: ["90", "130"]
+      - name: "Безопасность"
+        rows:
+          - label: "Класс защиты от влаги"
+            values: ["IPX0", "IPX0"]
+          - label: "Класс электрозащиты"
+            values: ["I", "I"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["14,5", "15,5"]
+          - label: "Вес брутто, кг"
+            values: ["16", "17"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["5 ~ 35", "5 ~ 35"]
+docs:
+  - title: "Инструкция Осушитель воздуха серии CARISMA Villa"
+    file: "/docs/royal-clima/carisma-villa/royal-clima-carisma-villa-rd-cr-instrukciya.pdf"
+    size: 1563871
+    kind: "instrukciya"

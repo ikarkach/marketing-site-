@@ -54,6 +54,12 @@ SOURCES = {
     'osushiteli/bytovye/pacific-palazzo': ('royal-clima', [B + 'pacific-palazzo/']),
     'osushiteli/bytovye/hisense-air-go-pro': ('hisense', [B + 'osushit-vozd-air-go-pro/']),
     'osushiteli/dlya-basseynov/riviera': ('royal-clima', [B + 'riviera/']),
+    # ---- Royal Clima: настенные сплит-системы
+    'royal-clima/royal-supremo': ('royal-clima', [B + 'royal-supremo-blanco-inv/', B + 'royal-supremo-nero-inv/']),
+    'royal-clima/royal-fresh': ('royal-clima', [B + 'royal-fresh-full-dc-inverter/', B + 'royal-fresh-standard-full-dc-inverter/']),
+    'royal-clima/felicita-heat-pump': ('royal-clima', [B + 'felicita-heat-pump-full-dc-eu-inverter/']),
+    'royal-clima/felicita-inverter': ('royal-clima', [B + 'felicita-inverter/']),
+    'royal-clima/felicita': ('royal-clima', [B + 'felicita/']),
     # ---- Roland (на breez бренд лежит в папке rln)
     'favorite-ii': ('roland', [B + 'classic-favorite-2-2024/']),
     'favorite-ii-inverter': ('roland', [B + 'invert-favorite-2-2024/']),

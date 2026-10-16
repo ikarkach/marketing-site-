@@ -1,0 +1,68 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/carisma-loft-rd-cr/"
+    models: ["RD-CR16-E", "RD-CR20-E"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA", "ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["RD-CR16-E", "RD-CR20-E"]
+          - label: "Серия"
+            values: ["Carisma", "Carisma"]
+          - label: "Цвет прибора"
+            values: ["белый", "белый"]
+          - label: "Страна производства"
+            values: ["КНР", "КНР"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["23", "29"]
+          - label: "Объем бака, л"
+            values: ["4", "4"]
+      - name: "Производительность"
+        rows:
+          - label: "Производительность по осушению, л/сутки"
+            values: ["16", "20"]
+          - label: "Номинальная потребляемая мощность, кВт"
+            values: ["0,26", "0,31"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["≤47", "≤47"]
+          - label: "Расход воздуха прибора, м³/ч"
+            values: ["180", "250"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["220-240/50/1", "220-240/50/1"]
+          - label: "Номинальный ток, А"
+            values: ["1,13", "1,34"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["342×561×251", "342×561×251"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["394×603×296", "394×603×296"]
+          - label: "Тип хладагента"
+            values: ["R290", "R290"]
+          - label: "Заводская заправка хладагента, г"
+            values: ["75", "80"]
+      - name: "Безопасность"
+        rows:
+          - label: "Класс защиты от влаги"
+            values: ["IPX0", "IPX0"]
+          - label: "Класс электрозащиты"
+            values: ["I", "I"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["13", "15"]
+          - label: "Вес брутто, кг"
+            values: ["16", "17"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["5 ~ 35", "5 ~ 35"]
+docs:
+  - title: "Инструкция Осушитель воздуха серии CARISMA Loft"
+    file: "/docs/royal-clima/carisma-loft/royal-clima-carisma-loft-rd-cr-instrukciya.pdf"
+    size: 3123308
+    kind: "instrukciya"

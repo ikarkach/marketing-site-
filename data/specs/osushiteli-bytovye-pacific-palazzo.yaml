@@ -1,0 +1,72 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/pacific-palazzo/"
+    models: ["RD-PC70-E"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["RD-PC70-E"]
+          - label: "Серия"
+            values: ["PACIFIC"]
+          - label: "Цвет прибора"
+            values: ["Белый"]
+          - label: "Страна производства"
+            values: ["КНР"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["90"]
+          - label: "Объем бака, л"
+            values: ["8"]
+          - label: "Управление c мобильного приложения по Wi-Fi"
+            values: ["нет"]
+      - name: "Производительность"
+        rows:
+          - label: "Производительность по осушению, л/сутки"
+            values: ["70"]
+          - label: "Номинальная потребляемая мощность, кВт"
+            values: ["0,88"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["≤52"]
+          - label: "Минимальный уровень шума прибора, дБ(А)"
+            values: ["48"]
+          - label: "Расход воздуха прибора, м³/ч"
+            values: ["180"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["220-240/50/1"]
+          - label: "Номинальный ток, А"
+            values: ["3,8"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["460×710×302"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["526×765×366"]
+          - label: "Тип хладагента"
+            values: ["R290"]
+          - label: "Заводская заправка хладагента, г"
+            values: ["255"]
+      - name: "Безопасность"
+        rows:
+          - label: "Класс защиты от влаги"
+            values: ["IPX0"]
+          - label: "Класс электрозащиты"
+            values: ["I"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["27"]
+          - label: "Вес брутто, кг"
+            values: ["29"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["5 ~ 35"]
+docs:
+  - title: "Инструкция Осушитель воздуха серии PACIFIC Palazzo"
+    file: "/docs/royal-clima/pacific-palazzo/royal-clima-pacific-palazzo-instrukciya.pdf"
+    size: 2211935
+    kind: "instrukciya"

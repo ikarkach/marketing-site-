@@ -1,0 +1,68 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/osushit-pacific-loft/"
+    models: ["RD-PC25-E"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["RD-PC25-E"]
+          - label: "Серия"
+            values: ["PACIFIC"]
+          - label: "Цвет прибора"
+            values: ["белый"]
+          - label: "Страна производства"
+            values: ["КНР"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["36"]
+          - label: "Объем бака, л"
+            values: ["4"]
+      - name: "Производительность"
+        rows:
+          - label: "Производительность по осушению, л/сутки"
+            values: ["25"]
+          - label: "Номинальная потребляемая мощность, кВт"
+            values: ["0,37"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["≤45"]
+          - label: "Расход воздуха прибора, м³/ч"
+            values: ["160"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["220-240/50/1"]
+          - label: "Номинальный ток, А"
+            values: ["2"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["350×578×235"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["411×638×300"]
+          - label: "Тип хладагента"
+            values: ["R290"]
+          - label: "Заводская заправка хладагента, г"
+            values: ["70"]
+      - name: "Безопасность"
+        rows:
+          - label: "Класс защиты от влаги"
+            values: ["IPX0"]
+          - label: "Класс электрозащиты"
+            values: ["I"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["14"]
+          - label: "Вес брутто, кг"
+            values: ["15,5"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["5 ~ 35"]
+docs:
+  - title: "Инструкция Осушитель воздуха серии PACIFIC Loft"
+    file: "/docs/royal-clima/pacific-loft/royal-clima-osushit-pacific-loft-instrukciya.pdf"
+    size: 1854599
+    kind: "instrukciya"

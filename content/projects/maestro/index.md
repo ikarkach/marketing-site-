@@ -7,6 +7,7 @@ brand: "Roland"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
 weight: 3
+specs: roland-maestro
 resources:
   - src: photo.png
     params:

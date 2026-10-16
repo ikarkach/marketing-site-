@@ -134,22 +134,51 @@ def parse_specs(rows):
     return models, groups
 
 
-def match_models(wanted, models):
-    """Наш артикул -> столбец Бриза (точное совпадение без пробелов; «(B)» и «(S)» сохраняются)."""
-    by = {norm(m): m for m in models}
+MODEL_ROWS = ('Модель', 'Модель внутреннего блока', 'Модель наружного блока')
+
+
+def column_names(groups, models):
+    """Для каждого столбца: заголовок, значения строк «Модель», «Модель внутреннего/наружного блока»."""
+    info = {m: {'head': norm(m), 'model': set(), 'in': set(), 'out': set()} for m in models}
+    for g in groups:
+        for label, vals in g['rows']:
+            key = {'Модель': 'model', 'Модель внутреннего блока': 'in', 'Модель наружного блока': 'out'}.get(label)
+            if key:
+                for m, v in vals.items():
+                    if m in info and v:
+                        info[m][key].add(norm(v))
+    return info
+
+
+def match_models(wanted, models, info, aliases=None):
+    """Наш артикул -> столбец Бриза. Правила по порядку: заголовок равен артикулу; наш артикул содержит и внутренний, и наружный блок
+    столбца (комплекты «внутренний/наружный»); значение строки «Модель» равно артикулу или одной его части. Названия у нас не меняются:
+    aliases позволяет только указать, под каким именем модель искать на Бризе."""
     out = {}
     for w in wanted:
-        toks = [norm(t) for t in re.split(r'\s*[+/]\s*', w) if t.strip()]
-        for cand in [norm(w)] + toks:
-            if cand in by:
-                out[w] = by[cand]
-                break
+        nw = norm((aliases or {}).get(w, w))
+        parts = {norm(t) for t in re.split(r'\s*[+/]\s*', (aliases or {}).get(w, w)) if t.strip()}
+        hit = next((m for m in models if info[m]['head'] == nw), None)
+        if hit is None:
+            best = None
+            for m in models:
+                i, o = info[m]['in'], info[m]['out']
+                if i and o and any(x and x in nw for x in i) and any(x and x in nw for x in o):
+                    ln = max(len(x) for x in i) + max(len(x) for x in o)
+                    if best is None or ln > best[0]:
+                        best = (ln, m)
+            hit = best[1] if best else None
+        if hit is None:
+            hit = next((m for m in models if (info[m]['model'] & ({nw} | parts)) or info[m]['head'] in parts), None)
+        if hit is not None:
+            out[w] = hit
     return out
 
 
-def build_table(series_url, wanted, xlsx_path):
+def build_table(series_url, wanted, xlsx_path, aliases=None):
     models, groups = parse_specs(read_xlsx(xlsx_path))
-    pick = match_models(wanted, models) if wanted else {m: m for m in models}
+    info = column_names(groups, models)
+    pick = match_models(wanted, models, info, aliases) if wanted else {m: m for m in models}
     ours = [w for w in (wanted or models) if w in pick]
     out = []
     for g in groups:
@@ -164,8 +193,8 @@ def build_table(series_url, wanted, xlsx_path):
     return ours, out, missing
 
 
-def merge_tables(parts):
-    """Цвета одной серии в одну таблицу: объединяем модели, строки по порядку первого появления."""
+def merge_tables(parts, order=None):
+    """Цвета одной серии в одну таблицу: объединяем модели, строки по порядку первого появления; столбцы по нашему порядку."""
     models, groups = [], []
     for ms, gs in parts:
         base = len(models)
@@ -185,8 +214,13 @@ def merge_tables(parts):
     for g in groups:
         for r in g['rows']:
             r['values'] += [''] * (len(models) - len(r['values']))
+    if order:
+        idx = sorted(range(len(models)), key=lambda k: order.index(models[k]) if models[k] in order else 10 ** 6)
+        models = [models[k] for k in idx]
+        for g in groups:
+            for r in g['rows']:
+                r['values'] = [r['values'][k] for k in idx]
     return models, groups
-
 
 # ---------- документы ----------
 def find_docs(series_url, cache_html):
@@ -205,13 +239,15 @@ def find_docs(series_url, cache_html):
 
 
 def doc_kind(url):
-    low = url.lower()
-    if 'info-list' in low or 'buklet' in low:
+    """Тип документа по имени файла: буклет, инструкция, остальное (например alice, salut) по суффиксу после названия серии."""
+    base = url.rsplit('/', 1)[-1].rsplit('.', 1)[0].lower()
+    series = url.rstrip('/').split('/')[-2].lower()
+    suffix = base[len(series):].strip('-_') if base.startswith(series) else base
+    if 'info-list' in base or suffix in ('buklet', 'info'):
         return 'buklet', 'Буклет'
-    if 'instruction' in low or 'instr' in low:
+    if 'instruction' in base or 'instriction' in base or suffix in ('instr', 'instrukciya'):
         return 'instrukciya', 'Инструкция'
-    return 'dokument', 'Документ'
-
+    return (re.sub(r'[^a-z0-9]+', '-', suffix).strip('-') or 'dokument'), 'Документ'
 
 # ---------- YAML без библиотек ----------
 def q(s):
@@ -244,13 +280,13 @@ def dump_yaml(d):
 
 
 # ---------- основной сценарий ----------
-def fetch_series(url, wanted):
+def fetch_series(url, wanted, aliases=None):
     slug = url.rstrip('/').split('/')[-1]
     xlsx = os.path.join(CACHE, slug + '.xlsx')
     if not (os.path.exists(xlsx) and os.path.getsize(xlsx) > 3000):
         if not curl(url.rstrip('/') + '/?download_as_xls', xlsx, 3000):
             raise RuntimeError('не скачалась выгрузка ' + url)
-    return build_table(url, wanted, xlsx)
+    return build_table(url, wanted, xlsx, aliases)
 
 
 def download_docs(urls_titles, brand, folder, docname, max_mb=15):

@@ -1,0 +1,68 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/carisma-studio-rd-cr/"
+    models: ["RD-CR10-E"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["RD-CR10-E"]
+          - label: "Серия"
+            values: ["Carisma"]
+          - label: "Цвет прибора"
+            values: ["белый"]
+          - label: "Страна производства"
+            values: ["КНР"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["14"]
+          - label: "Объем бака, л"
+            values: ["2"]
+      - name: "Производительность"
+        rows:
+          - label: "Производительность по осушению, л/сутки"
+            values: ["10"]
+          - label: "Номинальная потребляемая мощность, кВт"
+            values: ["0,205"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["≤42"]
+          - label: "Расход воздуха прибора, м³/ч"
+            values: ["90"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["220-240/50/1"]
+          - label: "Номинальный ток, А"
+            values: ["0,89"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["270×408×205"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["311×448×241"]
+          - label: "Тип хладагента"
+            values: ["R290"]
+          - label: "Заводская заправка хладагента, г"
+            values: ["45"]
+      - name: "Безопасность"
+        rows:
+          - label: "Класс защиты от влаги"
+            values: ["IPX0"]
+          - label: "Класс электрозащиты"
+            values: ["I"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["9,5"]
+          - label: "Вес брутто, кг"
+            values: ["10,5"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["5 ~ 35"]
+docs:
+  - title: "Инструкция Осушитель воздуха серии CARISMA Studio"
+    file: "/docs/royal-clima/carisma-studio/royal-clima-carisma-studio-rd-cr-instrukciya.pdf"
+    size: 1242269
+    kind: "instrukciya"

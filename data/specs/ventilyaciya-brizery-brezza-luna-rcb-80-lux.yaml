@@ -1,0 +1,92 @@
+# Создано scripts/fetch_breez.py из общедоступной выгрузки каталога breez.ru. Руками не править: перезапишется.
+brand: "royal-clima"
+tables:
+  - title: ""
+    source: "https://breez.ru/products/brezza-luna/"
+    models: ["RCB 80 LUX"]
+    groups:
+      - name: "Основные"
+        rows:
+          - label: "Бренд"
+            values: ["ROYAL CLIMA"]
+          - label: "Модель"
+            values: ["BREZZA LUNA"]
+          - label: "Серия"
+            values: ["RCB 80 LUX"]
+          - label: "Тип прибора"
+            values: ["Вентиляционная установка"]
+          - label: "Цвет прибора"
+            values: ["чёрный"]
+          - label: "Мощность электрического нагревателя, Вт"
+            values: ["600"]
+          - label: "Кол-во ступеней фильтрации"
+            values: ["2"]
+          - label: "Количество фильтров, шт."
+            values: ["2"]
+          - label: "Срок гарантии, мес."
+            values: ["24"]
+          - label: "Страна производства"
+            values: ["КНР"]
+      - name: "Монтажные"
+        rows:
+          - label: "Электропитание, В/Гц/Ф"
+            values: ["230/50/1"]
+          - label: "Потребляемый ток, А"
+            values: ["2,69"]
+          - label: "Диаметр воздуховода, мм"
+            values: ["114"]
+      - name: "Эксплуатационные"
+        rows:
+          - label: "Потребляемая мощность вентилятора, кВт"
+            values: ["0,019"]
+          - label: "Эффективен для помещений площадью до, м²"
+            values: ["40"]
+          - label: "Рабочие температурные границы прибора, °C"
+            values: ["-40 ~ +50"]
+      - name: "Безопасность"
+        rows:
+          - label: "Степень пылевлагозащиты"
+            values: ["IP20"]
+          - label: "Класс электрозащиты"
+            values: ["II"]
+      - name: "Производительность"
+        rows:
+          - label: "Расход воздуха прибора, м3/ч"
+            values: ["10/40/60/80"]
+          - label: "Уровень шума прибора, дБ(А)"
+            values: ["19/25/34/39"]
+          - label: "Минимальный уровень шума прибора, дБ(А)"
+            values: ["25"]
+      - name: "Комплектация"
+        rows:
+          - label: "Пульт управления в комплекте"
+            values: ["да"]
+          - label: "Ионизатор воздуха"
+            values: ["нет"]
+          - label: "Датчик контроля качества воздуха"
+            values: ["да"]
+          - label: "Цифровой дисплей"
+            values: ["нет"]
+          - label: "Фильтр предварительной очистки"
+            values: ["да"]
+          - label: "Фильтр HEPA"
+            values: ["нет"]
+      - name: "Управление"
+        rows:
+          - label: "Управление c мобильного приложения по Wi-Fi"
+            values: ["да"]
+      - name: "Массо-габаритные"
+        rows:
+          - label: "Вес нетто, кг"
+            values: ["2"]
+          - label: "Вес брутто, кг"
+            values: ["3,1"]
+          - label: "Габаритные размеры (ШxВxГ), мм"
+            values: ["233×390×115"]
+          - label: "Габаритные размеры в упаковке (ШxВxГ), мм"
+            values: ["270×400×160"]
+docs:
+  - title: "Инструкция Приточно-очистительный комплекс серии BREZZA LUNA"
+    file: "/docs/royal-clima/brezza-luna-rcb-80-lux/royal-clima-brezza-luna-instrukciya.pdf"
+    size: 2023597
+    kind: "instrukciya"

@@ -7,6 +7,7 @@ brand: "Roland"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
 weight: 1
+specs: roland-favorite-ii-inverter
 resources:
   - src: photo.png
     params:

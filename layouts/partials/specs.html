@@ -1,0 +1,34 @@
+{{- /* Технические характеристики серии. Вход: dict name (имя файла из data/specs без .yaml), title (название серии для заголовка).
+       Данные создаёт scripts/fetch_breez.py. Группы раскрываются как аккордеон (открыты «Основные» и «Монтажные»), модели идут столбцами,
+       первый столбец закреплён при горизонтальной прокрутке. Таблицы обычный HTML, чтобы их читали поисковики. */ -}}
+{{- $d := index hugo.Data.specs .name -}}
+{{- with $d }}
+{{- $title := $.title }}
+<section class="specs" id="specs">
+    <h2>Технические характеристики {{ $title }}</h2>
+    {{- range $d.tables }}
+    {{- $t := . }}
+    {{- if gt (len $d.tables) 1 }}{{ with .title }}<h3 class="specs__title">{{ . }}</h3>{{ end }}{{ end }}
+    <div class="specs-scroll" tabindex="0" role="region" aria-label="Характеристики{{ with $t.title }}: {{ . }}{{ else }} {{ $title }}{{ end }}, модели по столбцам" style="--n: {{ len .models }}">
+        <div class="specs-inner">
+            <div class="specs-head" aria-hidden="true"><span class="specs-corner">Параметр</span>{{ range .models }}<span>{{ . }}</span>{{ end }}</div>
+            {{- range .groups }}
+            <details class="specs-group"{{ if or (eq .name "Основные") (eq .name "Монтажные") }} open{{ end }}>
+                <summary>{{ .name }}</summary>
+                <table>
+                    <colgroup><col class="specs-c1">{{ range $t.models }}<col>{{ end }}</colgroup>
+                    <caption class="vh">{{ .name }}</caption>
+                    <thead class="vh"><tr><th scope="col">Параметр</th>{{ range $t.models }}<th scope="col">{{ . }}</th>{{ end }}</tr></thead>
+                    <tbody>
+                    {{- range .rows }}
+                        <tr><th scope="row">{{ .label }}</th>{{ range .values }}<td>{{ with . }}{{ . }}{{ else }}—{{ end }}</td>{{ end }}</tr>
+                    {{- end }}
+                    </tbody>
+                </table>
+            </details>
+            {{- end }}
+        </div>
+    </div>
+    {{- end }}
+</section>
+{{- end }}

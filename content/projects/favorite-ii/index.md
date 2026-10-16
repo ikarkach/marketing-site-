@@ -7,6 +7,7 @@ brand: "Roland"
 category: "Кондиционеры"
 categoryUrl: "/projects/kondicionery/"
 weight: 2
+specs: roland-favorite-ii
 resources:
   - src: photo.png
     params:

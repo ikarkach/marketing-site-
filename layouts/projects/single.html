@@ -27,7 +27,15 @@
         </div>
         {{ end }}
         {{ end }}
+        {{- /* характеристики и документация из data/specs (имя файла в front matter: specs) */}}
+        {{- $specs := .Params.specs }}
+        {{- with $specs }}{{ partial "page-anchors.html" . }}{{ end }}
+        <span id="description"></span>
         {{ .Content }}
+        {{- with $specs }}
+        {{ partial "specs.html" (dict "name" . "title" $.Title) }}
+        {{ partial "docs.html" . }}
+        {{- end }}
         {{ partial "related-posts.html" . }}
     </div>
     <!-- End post content -->
@@ -38,6 +46,8 @@
     {{- $prices := slice }}{{ range .rows }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}
     {{- $img := "" }}{{ with $.Resources.GetMatch "photo.*" }}{{ $img = .Permalink }}{{ end }}
     {{ partial "schema/product.html" (dict "name" .title "brand" "Roland" "prices" $prices "url" $.Permalink "image" $img "description" $.Description) }}
+    {{- $rows := .rows }}
+    {{- with $.Params.specs }}{{ partial "schema/model-products.html" (dict "name" $.Title "brand" "Roland" "specs" . "rows" $rows "url" $.Permalink) }}{{ end }}
     {{- end }}
     {{- end }}
     {{ partial "comments.html" . }}

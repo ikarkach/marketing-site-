@@ -1,0 +1,18 @@
+{{- /* Раздел «Документация»: PDF из static/docs (список в data/specs/<name>.yaml, поле docs). Вход: имя файла из data/specs. Ссылка открывает PDF в новой вкладке, у неё есть атрибут download. */ -}}
+{{- $d := index hugo.Data.specs . -}}
+{{- with $d }}{{ with .docs }}
+<section class="docs" id="docs">
+    <h2>Документация</h2>
+    <ul class="docs__list">
+        {{- range . }}
+        <li>
+            <a class="docs__item" href="{{ .file | relURL }}" target="_blank" rel="noopener" download>
+                <svg class="docs__ico" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><path d="M12 4h17l9 9v31H12z" fill="#fff" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M29 4v9h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 21v13m-5-5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="docs__name">{{ .title }}</span>
+                <span class="docs__meta">PDF, {{ replace (printf "%.1f" (div (float .size) 1048576)) "." "," }} МБ</span>
+            </a>
+        </li>
+        {{- end }}
+    </ul>
+</section>
+{{- end }}{{ end }}

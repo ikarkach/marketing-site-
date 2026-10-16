@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
+# PDF-документация поставщика (буклеты, инструкции) не должна индексироваться как дубли; ссылки на скачивание на страницах остаются рабочими
+Disallow: /docs/
 
 # Яндекс: параметры фильтров каталога и рекламных меток не меняют содержимое страницы — не обходить их варианты отдельно.
 # Параметры фильтров — assets/js/catalog.js (функция, которая пишет состояние в адрес).
 User-agent: Yandex
 Allow: /
+Disallow: /docs/
 Clean-param: type&brand&series&inverter&hp&eff&kw&pmin&pmax&noise&sort&dir&view /projects/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&ysclid&from
 

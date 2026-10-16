@@ -1,0 +1,34 @@
+{{- /* JSON-LD: отдельный Product для каждой модели серии с ключевыми характеристиками (additionalProperty) и розничной ценой.
+       Вход: dict name (бренд и серия), brand, specs (имя файла data/specs), rows (наши строки таблиц: model, price), url.
+       Модель без цены в разметку не попадает: Product без offers поисковики считают ошибкой. Значения берутся из data/specs как есть. */ -}}
+{{- $d := index hugo.Data.specs .specs -}}
+{{- with $d }}
+{{- $defs := slice
+    (dict "n" "Холодопроизводительность, кВт" "re" `^Холодопроизводительность \(кВт\)`)
+    (dict "n" "Рекомендуемая площадь помещения, м²" "re" `^Эффективен для помещений`)
+    (dict "n" "Тип хладагента" "re" `^Тип хладагента`)
+    (dict "n" "Диаметр жидкостной трубы, мм" "re" `^Диаметр жидкостной трубы, мм`)
+    (dict "n" "Диаметр газовой трубы, мм" "re" `^Диаметр газовой трубы, мм`)
+    (dict "n" "Электропитание, В/Гц/Ф" "re" `^Электропитание`) -}}
+{{- $list := slice }}
+{{- range $t := .tables }}
+{{- range $i, $m := $t.models }}
+{{- $price := 0 }}
+{{- range $.rows }}{{ if eq .model $m }}{{ with .price }}{{ $price = . }}{{ end }}{{ end }}{{ end }}
+{{- if $price }}
+{{- $props := slice }}
+{{- range $df := $defs }}
+{{- $val := "" }}
+{{- range $t.groups }}{{ range .rows }}{{ if and (not $val) (findRE $df.re .label 1) }}{{ $val = index .values $i }}{{ end }}{{ end }}{{ end }}
+{{- if $val }}{{ $props = $props | append (dict "@type" "PropertyValue" "name" $df.n "value" $val) }}{{ end }}
+{{- end }}
+{{- $p := dict "@context" "https://schema.org" "@type" "Product" "name" (printf "%s %s" $.name $m) "model" $m "brand" (dict "@type" "Brand" "name" $.brand) "url" $.url "offers" (dict "@type" "Offer" "priceCurrency" "RUB" "price" (string $price) "url" $.url) }}
+{{- if $props }}{{ $p = merge $p (dict "additionalProperty" $props) }}{{ end }}
+{{- $list = $list | append $p }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- with $list }}
+<script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+{{- end }}
+{{- end }}

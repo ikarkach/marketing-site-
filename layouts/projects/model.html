@@ -33,7 +33,7 @@
         </div>
         {{- end }}
         {{- end }}
-        <div class="model-info">
+        <div class="model-info" id="description">
             {{- with $m.lead }}<p class="model-lead">{{ . }}</p>{{ end }}
             {{- if $s }}
             <ul class="model-facts">
@@ -63,6 +63,10 @@
         </div>
     </div>
 
+    {{- /* характеристики и документация: data/specs/<страница>-<slug>.yaml (или имя из models.toml, поле specs) */}}
+    {{- $specs := $m.specs | default (printf "%s-%s" (replace $page "/" "-") $m.slug) }}
+    {{- if index hugo.Data.specs $specs }}{{ partial "page-anchors.html" $specs }}{{ end }}
+
     <section class="catalog-section model-prices markdown" id="models">
         <h2>Модели и цены</h2>
         {{- range $sec.tables }}
@@ -70,6 +74,9 @@
         {{- end }}
         {{- with $sec.note }}<p class="catalog-note">{{ . }}</p>{{ end }}
     </section>
+
+    {{ partial "specs.html" (dict "name" $specs "title" (printf "%s %s" $brand $m.name)) }}
+    {{ partial "docs.html" $specs }}
 
     {{- $others := slice }}
     {{- range where $series "page" $page }}{{ if ne .url (printf "/projects/%s/%s/" $page $m.slug) }}{{ $others = $others | append . }}{{ end }}{{ end }}
@@ -97,5 +104,8 @@
     {{- if $gal }}{{ $img = printf "%s/01.webp" $gal.dir | absURL }}{{ end }}
     {{ partial "schema/product.html" (dict "name" (printf "%s %s" $brand $m.name) "brand" $brand "prices" $prices "url" .Permalink "image" $img "description" $m.description) }}
     {{- end }}
+    {{- /* по каждой модели: характеристики из data/specs + цена */}}
+    {{- $allrows := slice }}{{ range $sec.tables }}{{ range .rows }}{{ $allrows = $allrows | append . }}{{ end }}{{ end }}
+    {{ partial "schema/model-products.html" (dict "name" (printf "%s %s" $brand $m.name) "brand" $brand "specs" $specs "rows" $allrows "url" .Permalink) }}
 </div>
 {{ end }}

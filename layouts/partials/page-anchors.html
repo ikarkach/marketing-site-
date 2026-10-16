@@ -1,0 +1,9 @@
+{{- /* Якоря под описанием: «Характеристики · Описание · Документация». Вход: имя файла из data/specs (если данных нет, ничего не выводится). */ -}}
+{{- $d := index hugo.Data.specs . -}}
+{{- with $d }}
+<nav class="page-anchors" aria-label="Разделы страницы">
+    <a href="#specs">Характеристики</a>
+    <a href="#description">Описание</a>
+    {{- if .docs }}<a href="#docs">Документация</a>{{ end }}
+</nav>
+{{- end }}

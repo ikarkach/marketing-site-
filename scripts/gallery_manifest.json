@@ -1175,5 +1175,244 @@
     "kind": "пульт управления"
    }
   ]
+ },
+ "royal-clima/royal-supremo": {
+  "name": "Royal Clima ROYAL SUPREMO",
+  "photos": [
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-01.png",
+    "kind": "внутренний блок, вид спереди",
+    "variant": "Blanco (белый)"
+   },
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-03.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Blanco (белый)"
+   },
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-04.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Blanco (белый)"
+   },
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-07.png",
+    "kind": "внутренний блок, вид сбоку",
+    "variant": "Blanco (белый)"
+   },
+   {
+    "file": "royal-supremo-nero-inv__royal-supremo-nero-inv-01.png",
+    "kind": "внутренний блок, вид спереди",
+    "variant": "Nero (чёрный)"
+   },
+   {
+    "file": "royal-supremo-nero-inv__royal-supremo-nero-inv-03.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Nero (чёрный)"
+   },
+   {
+    "file": "royal-supremo-nero-inv__royal-supremo-nero-inv-04.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Nero (чёрный)"
+   },
+   {
+    "file": "royal-supremo-nero-inv__royal-supremo-nero-inv-07.png",
+    "kind": "внутренний блок, вид сбоку",
+    "variant": "Nero (чёрный)"
+   },
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-10.png",
+    "kind": "наружный блок"
+   },
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-11.png",
+    "kind": "пульт управления",
+    "variant": "Blanco (белый)"
+   },
+   {
+    "file": "royal-supremo-nero-inv__royal-supremo-nero-inv-11.png",
+    "kind": "пульт управления",
+    "variant": "Nero (чёрный)"
+   },
+   {
+    "file": "royal-supremo-blanco-inv__royal-supremo-blanco-inv-06.png",
+    "kind": "внутренний блок, вид сверху",
+    "variant": "Blanco (белый)"
+   }
+  ]
+ },
+ "royal-clima/royal-fresh": {
+  "name": "Royal Clima ROYAL FRESH",
+  "photos": [
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-02.png",
+    "kind": "внутренний блок, вид спереди",
+    "variant": "Royal Fresh"
+   },
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-04.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Royal Fresh"
+   },
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-05.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Royal Fresh"
+   },
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-07.png",
+    "kind": "внутренний блок, вид сбоку",
+    "variant": "Royal Fresh"
+   },
+   {
+    "file": "royal-fresh-standard-full-dc-inverter__royal-fresh-standard-full-dc-inverter-01.png",
+    "kind": "внутренний блок, вид спереди",
+    "variant": "Royal Fresh Standard"
+   },
+   {
+    "file": "royal-fresh-standard-full-dc-inverter__royal-fresh-standard-full-dc-inverter-04.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Royal Fresh Standard"
+   },
+   {
+    "file": "royal-fresh-standard-full-dc-inverter__royal-fresh-standard-full-dc-inverter-05.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Royal Fresh Standard"
+   },
+   {
+    "file": "royal-fresh-standard-full-dc-inverter__royal-fresh-standard-full-dc-inverter-06.png",
+    "kind": "внутренний блок, вид под углом",
+    "variant": "Royal Fresh Standard"
+   },
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-08.png",
+    "kind": "наружный блок"
+   },
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-10.png",
+    "kind": "пульт управления",
+    "variant": "Royal Fresh"
+   },
+   {
+    "file": "royal-fresh-standard-full-dc-inverter__royal-fresh-standard-full-dc-inverter-11.png",
+    "kind": "пульт управления",
+    "variant": "Royal Fresh Standard"
+   },
+   {
+    "file": "royal-fresh-full-dc-inverter__royal-fresh-full-dc-inverter-09.png",
+    "kind": "внутренний блок, вид сверху",
+    "variant": "Royal Fresh"
+   }
+  ]
+ },
+ "royal-clima/felicita": {
+  "name": "Royal Clima FELICITA",
+  "photos": [
+   {
+    "file": "felicita__felicita-01.png",
+    "kind": "внутренний блок, вид спереди"
+   },
+   {
+    "file": "felicita__felicita-02.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita__felicita-03.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita__felicita-04.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita__felicita-05.png",
+    "kind": "внутренний блок, вид сбоку"
+   },
+   {
+    "file": "felicita__felicita-06.png",
+    "kind": "внутренний блок, панель открыта"
+   },
+   {
+    "file": "felicita__felicita-08.png",
+    "kind": "наружный блок"
+   },
+   {
+    "file": "felicita__felicita-09.png",
+    "kind": "пульт управления"
+   }
+  ]
+ },
+ "royal-clima/felicita-inverter": {
+  "name": "Royal Clima FELICITA Inverter",
+  "photos": [
+   {
+    "file": "felicita-inverter__felicita-inverter-01.png",
+    "kind": "внутренний блок, вид спереди"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-02.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-03.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-04.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-05.png",
+    "kind": "внутренний блок, вид сбоку"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-06.png",
+    "kind": "внутренний блок, панель открыта"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-08.png",
+    "kind": "наружный блок"
+   },
+   {
+    "file": "felicita-inverter__felicita-inverter-09.png",
+    "kind": "пульт управления"
+   }
+  ]
+ },
+ "royal-clima/felicita-heat-pump": {
+  "name": "Royal Clima FELICITA HEAT PUMP",
+  "photos": [
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-01.png",
+    "kind": "внутренний блок, вид спереди"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-02.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-03.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-04.png",
+    "kind": "внутренний блок, вид под углом"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-05.png",
+    "kind": "внутренний блок, вид сбоку"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-06.png",
+    "kind": "внутренний блок, панель открыта"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-9.png",
+    "kind": "наружный блок"
+   },
+   {
+    "file": "felicita-heat-pump-full-dc-eu-inverter__felicita-heat-pump-full-dc-eu-inverter-08.png",
+    "kind": "пульт управления"
+   }
+  ]
  }
 }

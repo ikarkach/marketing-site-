@@ -22,7 +22,9 @@
 {{- range $t.groups }}{{ range .rows }}{{ if and (not $val) (findRE $df.re .label 1) }}{{ $val = index .values $i }}{{ end }}{{ end }}{{ end }}
 {{- if $val }}{{ $props = $props | append (dict "@type" "PropertyValue" "name" $df.n "value" $val) }}{{ end }}
 {{- end }}
-{{- $p := dict "@context" "https://schema.org" "@type" "Product" "name" (printf "%s %s" $.name $m) "model" $m "brand" (dict "@type" "Brand" "name" $.brand) "url" $.url "offers" (dict "@type" "Offer" "priceCurrency" "RUB" "price" (string $price) "url" $.url) }}
+{{- $p := dict "@context" "https://schema.org" "@type" "Product" "name" (printf "%s %s" $.name $m) "model" $m "brand" (dict "@type" "Brand" "name" $.brand) "url" $.url "offers" (dict "@type" "Offer" "priceCurrency" "RUB" "price" (string $price) "url" $.url "availability" "https://schema.org/InStock") }}
+{{- with $.image }}{{ $p = merge $p (dict "image" .) }}{{ end }}
+{{- with $.description }}{{ $p = merge $p (dict "description" .) }}{{ end }}
 {{- if $props }}{{ $p = merge $p (dict "additionalProperty" $props) }}{{ end }}
 {{- $list = $list | append $p }}
 {{- end }}

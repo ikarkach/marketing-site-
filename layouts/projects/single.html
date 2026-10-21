@@ -47,7 +47,7 @@
     {{- $img := "" }}{{ with $.Resources.GetMatch "photo.*" }}{{ $img = .Permalink }}{{ end }}
     {{ partial "schema/product.html" (dict "name" .title "brand" "Roland" "prices" $prices "url" $.Permalink "image" $img "description" $.Description) }}
     {{- $rows := .rows }}
-    {{- with $.Params.specs }}{{ partial "schema/model-products.html" (dict "name" $.Title "brand" "Roland" "specs" . "rows" $rows "url" $.Permalink) }}{{ end }}
+    {{- with $.Params.specs }}{{ partial "schema/model-products.html" (dict "name" $.Title "brand" "Roland" "specs" . "rows" $rows "url" $.Permalink "image" $img "description" $.Description) }}{{ end }}
     {{- end }}
     {{- end }}
     {{ partial "comments.html" . }}

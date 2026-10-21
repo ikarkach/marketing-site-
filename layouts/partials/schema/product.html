@@ -2,7 +2,7 @@
        Без цен ничего не выводится: Product без offers поисковики считают ошибкой. */ -}}
 {{- with .prices }}
 {{- $p := sort . }}
-{{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (string (index $p 0)) "highPrice" (string (index $p (sub (len $p) 1))) "offerCount" (len $p) "url" $.url }}
+{{- $offer := dict "@type" "AggregateOffer" "priceCurrency" "RUB" "lowPrice" (string (index $p 0)) "highPrice" (string (index $p (sub (len $p) 1))) "offerCount" (len $p) "url" $.url "availability" "https://schema.org/InStock" }}
 {{- $prod := dict "@context" "https://schema.org" "@type" "Product" "name" $.name "brand" (dict "@type" "Brand" "name" $.brand) "offers" $offer "url" $.url }}
 {{- with $.image }}{{ $prod = merge $prod (dict "image" .) }}{{ end }}
 {{- with $.description }}{{ $prod = merge $prod (dict "description" .) }}{{ end }}
